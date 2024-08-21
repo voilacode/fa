@@ -3981,6 +3981,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
     width: 400px;
   }
 
+  .md\:w-2\/5 {
+    width: 40%;
+  }
+
   .md\:grid-flow-col {
     grid-auto-flow: column;
   }
