@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         'teal-custom': "#036041",
         'side-heading': "#66ade1",
+        'clr-custom': "#9eabb8",
       },
       animation: {
         fade: 'fadeOut 0.5s ease-in-out',
