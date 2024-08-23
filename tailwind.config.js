@@ -15,12 +15,13 @@ module.exports = {
       colors: {
         'teal-custom': "#036041",
         'side-heading': "#66ade1",
+        'clr-custom': "#9eabb8",
       },
       animation: {
         fade: 'fadeOut 0.5s ease-in-out',
       },
       screens: {
-        'md': '800px', // Custom breakpoint at 1440px
+        'md': '1000px', // Custom breakpoint at 1440px
       },
       keyframes: theme => ({
         fadeOut: {

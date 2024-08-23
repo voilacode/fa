@@ -22,16 +22,38 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>Best TOEFL Coaching in Ameerpet | Best TOEFL Coaching in Madhapur | GRE Coaching in Hyderabad | Best TOEFL
         Coaching in Hyderabad | Best TOEFL Online Coaching</title>
+
+        <style>
+            @media (min-width: 768px) and (max-width: 800px) {
+                .count,
+                .count-label {
+                    font-size: 1.5rem !important;
+                }
+            }
+            @media (min-width: 1000px) {
+                .parent{
+                    grid-template-columns: repeat(10, 1fr);
+                }
+                .left{
+                    grid-column: span 7;
+                }
+                .right{
+                    grid-column: span 3;
+                }
+    
+            }
+        </style>
 </head>
 
 <body class="font-open">
 
-    <header class="fixed z-50 w-screen border-b border-gray-200">
-        <nav class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
+    <header class="fixed z-10 w-screen border-b border-gray-200">
+        <nav
+            class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
             <div class="items-center justify-between max-w-screen-xl px-4 py-2 mx-auto lg:flex sm:px-[60px] ">
                 <div class="flex justify-between">
                     <div>
-                        <a href="./index.html"
+                        <a href="#"
                             class="inline-flex py-2 text-xl font-bold tracking-wider uppercase me-auto">
                             <img src="https://prep.firstacademy.in/images/logo.png" alt="logo" width="180px">
                         </a>
@@ -42,9 +64,9 @@
                             <ul>
                                 <li class="flex items-center gap-2">
                                     <a href="./contactus.html"
-                                        class="flex items-center px-5 py-2 font-semibold bg-teal-600 rounded-lg group"
+                                        class="flex items-center px-5 py-2 font-semibold bg-teal-custom text-white rounded-lg group"
                                         id="chatButton">
-                                        <span class="mr-2 font-open">Chat</span>
+                                        <span class="mr-2 ">Chat</span>
                                         <svg class="stroke-current" width="10" height="10" stroke-width="2"
                                             viewBox="0 0 10 10" aria-hidden="true" class="hidden sm:flex">
                                             <g fill-rule="evenodd">
@@ -78,93 +100,103 @@
                             class="flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-1 mt-1.5 transition-all duration-300 ease-in-out  text-xl ls-2">
                             <li>
                                 <a href="./index.html"
-                                    class="flex px-4 py-2 font-medium duration-300 ease-in-out rounded-md text-[16px] font-open hover:text-teal-500">
+                                    class="flex px-4 py-2 font-medium duration-300 ease-in-out rounded-md text-[16px] hover:text-teal-500">
                                     Home
                                 </a>
                             </li>
                             <li class="relative" onmouseover="showDropdown('dropdownMenu1')"
                                 onmouseout="hideDropdown('dropdownMenu1')" onclick="toggleDropdown('dropdownMenu1')">
                                 <button
-                                    class="flex w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] font-open"
+                                    class="flex justify-between items-center w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle1">
                                     Courses
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                      </svg>
+                                      
                                 </button>
                                 <div class="right-0 hidden w-full p-2 rounded-md lg:absolute dropdown-menu lg:w-[400px] "
                                     id="dropdownMenu1">
                                     <div
-                                        class="grid grid-cols-5 transform bg-white rounded-lg shadow lg:translate-x-40">
+                                        class="grid grid-cols-5 transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow md:bg-white lg:translate-x-40 lg:border-none">
                                         <div class="col-span-2">
                                             <p
-                                                class="uppercase tracking-wider text-gray-500 font-medium text-[13px] pt-2 px-6">
+                                                class="uppercase  tracking-wider text-gray-800 font-medium text-[13px] pt-2 px-6">
                                                 Get started</p>
                                             <ul class="mt-3 text-[16px]">
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
                                                     <a href="./courses.html"
                                                         class="block m-0 font-medium text-gray-800 ">
                                                         All Courses
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
-                                                    <a href="./ielts.html" class="block m-0 font-medium text-gray-800 ">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./ielts.html"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         IELTS
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
-                                                    <a href="./gre.html" class="block m-0 font-medium text-gray-800 ">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./gre.html"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         GRE
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
-                                                    <a href="./pte.html" class="block m-0 font-medium text-gray-800 ">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./pte.html"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         PTE
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
-                                                    <a href="./oet.html" class="block m-0 font-medium text-gray-800 ">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./oet.html"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         OET
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
-                                                    <a href="./sat.html" class="block m-0 font-medium text-gray-800 ">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./sat.html"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         SAT
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-span-3">
-                                            <p
-                                                class="uppercase tracking-wider text-gray-500 font-medium text-[13px] px-6 mt-2">
+                                            <p class="uppercase  tracking-wider text-gray-800 font-medium text-[13px] px-6 mt-2">
                                                 Other Courses</p>
                                             <ul class="mt-3 text-[16px]">
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
-                                                    <a href="./toefl.html" class="block m-0 font-medium text-gray-800 ">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./toefl.html"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         TOEFL
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
-                                                    <a href="./det.html" class="block m-0 font-medium text-gray-800 ">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./det.html"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         DET
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
                                                     <a href="./ielts-band9-training.html"
                                                         class="block m-0 font-medium text-gray-800 ">
                                                         IELTS Band 9 Training
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
                                                     <a href="./pteonline.html"
                                                         class="block m-0 font-medium text-gray-800 ">
                                                         PTE Personalized
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
                                                     <a href="./custom.html"
                                                         class="block m-0 font-medium text-gray-800 ">
                                                         Corporate Training
                                                     </a>
                                                 </li>
-                                                <li class="px-6 py-3 m-0 hover:bg-blue-100">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
                                                     <a href="./spokenenglish.html"
                                                         class="block m-0 font-medium text-gray-800 ">
                                                         English Language Training
@@ -178,36 +210,43 @@
                             <li class="relative" onmouseover="showDropdown('dropdownMenu')"
                                 onmouseout="hideDropdown('dropdownMenu')" onclick="toggleDropdown('dropdownMenu')">
                                 <button
-                                    class="flex w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] font-open"
+                                    class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
+                                    class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle">
                                     Material
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                      </svg>
                                 </button>
                                 <div class="right-0 hidden p-2 lg:absolute dropdown-menu" id="dropdownMenu">
-                                    <div class="transform bg-white rounded-lg shadow lg:translate-x-28">
+                                    <div
+                                        class="transform lg:border-0 bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow md:bg-white lg:translate-x-28">
                                         <ul class=" text-[15px] lg:w-52">
-                                            <li class="px-4 py-3 m-0 rounded-t-xl hover:bg-blue-100">
-                                                <a href="./reading.html" class="block m-0 font-medium text-gray-800 ">
+                                            <li class="px-4 py-3 m-0 rounded-t-xl hover:bg-teal-100">
+                                                <a href="./reading.html"
+                                                    class="block m-0 font-medium text-gray-800  ">
                                                     IELTS Reading
                                                 </a>
                                             </li>
-                                            <li class="px-4 py-3 m-0 hover:bg-blue-100">
+                                            <li class="px-4 py-3 m-0 hover:bg-teal-100">
                                                 <a href="https://firstacademy.in/grer"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Solutions
                                                 </a>
                                             </li>
-                                            <li class="px-4 py-3 m-0 hover:bg-blue-100">
-                                                <a href="./downloads.html" class="block m-0 font-medium text-gray-800 ">
+                                            <li class="px-4 py-3 m-0 hover:bg-teal-100">
+                                                <a href="./downloads.html"
+                                                    class="block m-0 font-medium text-gray-800 ">
                                                     Downloads
                                                 </a>
                                             </li>
-                                            <li class="px-4 py-3 m-0 hover:bg-blue-100">
+                                            <li class="px-4 py-3 m-0 hover:bg-teal-100">
                                                 <a href="https://prep.firstacademy.in"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     Practice Tests
                                                 </a>
                                             </li>
-                                            <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-blue-100">
+                                            <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-teal-100">
                                                 <a href="https://super.firstacademy.in/"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Login
@@ -219,38 +258,45 @@
                             </li>
                             <li>
                                 <a href="https://firstacademy.in/blog"
-                                    class="flex px-4 py-2 font-medium rounded-md text-[16px] font-open  hover:text-teal-500">
+                                    class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                     Blog
                                 </a>
                             </li>
                             <li>
                                 <a href="./studyabroad.html"
-                                    class="flex px-4 py-2 font-medium rounded-md hover:text-teal-500 text-[16px] font-open">
+                                    class="flex px-4 py-2 font-medium rounded-md hover:text-teal-500 text-[16px] ">
                                     Study Abroad
                                 </a>
                             </li>
                             <li class="relative" onmouseover="showDropdown('dropdownMenu2')"
                                 onmouseout="hideDropdown('dropdownMenu2')" onclick="toggleDropdown('dropdownMenu2')">
                                 <button
-                                    class="flex w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] font-open"
+                                    class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle2">
                                     About
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                      </svg>
                                 </button>
                                 <div class="right-0 hidden p-2 lg:absolute dropdown-menu" id="dropdownMenu2">
-                                    <div class="transform bg-white rounded-lg shadow lg:translate-x-28">
+                                    <div
+                                        class="transform lg:border-0 bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow md:bg-white lg:translate-x-28">
                                         <ul class="text-[16px] lg:w-48">
-                                            <li class="px-4 py-3 m-0 rounded-t-lg hover:bg-blue-100">
-                                                <a href="./about-us.html" class="block m-0 font-medium text-gray-800 ">
+                                            <li class="px-4 py-3 m-0 rounded-t-lg hover:bg-teal-100">
+                                                <a href="./about-us.html"
+                                                    class="block m-0 font-medium text-gray-800  ">
                                                     Us
                                                 </a>
                                             </li>
-                                            <li class="px-4 py-3 m-0 hover:bg-blue-100">
-                                                <a href="./team.html" class="block m-0 font-medium text-gray-800 ">
+                                            <li class="px-4 py-3 m-0 hover:bg-teal-100">
+                                                <a href="./team.html"
+                                                    class="block m-0 font-medium text-gray-800 ">
                                                     Team
                                                 </a>
                                             </li>
-                                            <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-blue-100">
-                                                <a href="./contactus.html" class="block m-0 font-medium text-gray-800 ">
+                                            <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-teal-100">
+                                                <a href="./contactus.html"
+                                                    class="block m-0 font-medium text-gray-800 ">
                                                     Contact
                                                 </a>
                                             </li>
@@ -261,9 +307,9 @@
 
                             <li class="items-center hidden gap-2 my-auto lg:flex text-md">
                                 <a href="./contactus.html"
-                                    class="flex items-center px-5 py-1.5 my-auto mb-1  font-semibold rounded-lg bg-teal-500 group"
+                                    class="flex items-center px-5 py-1.5 my-auto mb-1  font-semibold rounded-lg bg-teal-custom text-white group"
                                     id="chatButton">
-                                    <span class="mr-2 text-[16px] font-open">Chat</span>
+                                    <span class="mr-2 text-[16px] ">Chat</span>
                                     <svg class="stroke-current" width="10" height="10" stroke-width="2"
                                         viewBox="0 0 10 10" aria-hidden="true" class="hidden sm:flex">
                                         <g fill-rule="evenodd">
@@ -287,6 +333,15 @@
             </div>
         </nav>
     </header>
+
+    <hr>
+    <!--Latest Post-->
+    <div class="flex items-center justify-center mt-16 bg-gray-100">
+        <div class="flex items-center my-1 space-x-2 overflow-hidden text-center">
+            <div class="p-1 px-3 text-xs font-semibold text-white bg-teal-custom rounded-full">Latest Post</div>
+            <div class="text-sm font-semibold md:text-base">Two Questions in One - WT2</div>
+        </div>
+    </div>
     <section class="  font-open">
         <div class="max-w-screen-xl px-3 pt-24 mx-auto sm:px-16 ">
             <div class="container space-y-2 space-md-3 py-4">
@@ -297,14 +352,14 @@
                     </div>
                     <div class="md:w-7/12 md:mb-0 md:mt-7">
                         <div class="mb-7">
-                            <h1 class="text-4xl font-bold font-open mb-4">TOEFL</h1>
+                            <h1 class="py-1 text-4xl font-semibold lg:text-6xl font-open mb-4">TOEFL</h1>
                             <p class="text-lg font-open">The TOEFL is a simple English test. You won't require any
                                 coaching if you are fluent in the language.</p>
                             <p class="text-lg font-open">To determine if you require training, come to one of our free
                                 sessions. You'll receive unbiased guidance from our trainers.</p>
                         </div>
-                        <div class="flex my-4 justify-items-start space-x-2 sm:space-x-4 lg:me-auto">
-                            <button class="block w-40 px-2 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-full sm:p-3 lg:mx-auto bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session" data-popup="popup">Get Started</button>
+                        <div class="my-4 justify-items-start space-x-2 sm:space-x-4 lg:me-auto">
+                            <button class="w-40 px-2 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-full sm:p-3 lg:mx-auto bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session" data-popup="popup">Get Started</button>
     
                             
                         </div>
@@ -704,8 +759,8 @@
                 <div> When will I get my results?</div>
                 <div class="text-xl font-bold icon">+</div>
             </button>
-            <div class="hidden p-5 overflow-hidden border border-gray-200 rounded-b shadow-xl panel">
-                <p class="mb-2 font-open text-gray-500 dark:text-gray-400">
+            <div class="hidden px-3 overflow-hidden border border-gray-200 rounded-b shadow-xl panel">
+                <p class=" font-open text-gray-500 dark:text-gray-400">
                     Scores are released usually within 6 days after the test. You will be able to download a PDF
                     copy of your results in 8 days after the test. You may choose to receive a paper score report
                     during registration. Delivery times vary based on your location.
@@ -724,7 +779,7 @@
                 <div>What do I carry for the exam?</div>
                 <div class="text-xl font-bold icon">+</div>
             </button>
-            <div class="hidden p-3 overflow-hidden border border-gray-200 rounded-b shadow-xl panel">
+            <div class="hidden px-3 overflow-hidden border border-gray-200 rounded-b shadow-xl panel">
                 <p class="mb-2 font-open text-gray-500 dark:text-gray-400">The GRE is a different beast. You can
                     take the test
                     Just two things. 1) Your passport, and 2) Registration Confirmation email. Mobile devices or
@@ -743,7 +798,7 @@
                 <div>Can I use earphones or headphones in the home TOEFL Test?</div>
                 <div class="text-xl font-bold icon">+</div>
             </button>
-            <div class="hidden p-3 overflow-hidden border border-gray-200 rounded-b shadow-xl panel">
+            <div class="hidden px-3 overflow-hidden border border-gray-200 rounded-b shadow-xl panel">
                 <p class="mb-2 font-open text-gray-500 dark:text-gray-400"> No. No equipment other than the desktop
                     or the laptop are allowed. You will have to listen to the audio over the speakers. Ensure your
                     speakers are functioning well and are clear.
@@ -761,7 +816,7 @@
                 <div>Is dressing important in the take from home test?</div>
                 <div class="text-xl font-bold icon">+</div>
             </button>
-            <div class="hidden p-3 overflow-hidden border border-gray-200 rounded-b shadow-xl panel">
+            <div class="hidden px-3 overflow-hidden border border-gray-200 rounded-b shadow-xl panel">
                 <p class="mb-2 font-open text-gray-500 dark:text-gray-400">Yes. Your photo will be shared with the
                     institutions that receive your scores. Also, make sure you do not have any jewellry, clips,
                     smartwatches etc, on you while you are taking the test.
@@ -777,70 +832,56 @@
     <section class="bg-green-50">
         <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
             <div class="container mx-auto font-open">
-                <a href="#" class="card shadow-none bg-soft-success text-inherit p-4 md:p-7">
-                    <div class="md:flex space-y-4 md:space-y-0">
-                        <!-- Left Column -->
-                        <div class="md:w-8/12 order-1 md:order-2 space-y-4 md:space-y-0">
-                            <div class="mb-5">
-                                <img class="w-full h-auto rounded"
-                                    src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_img15.jpg"
-                                    alt="Image Description">
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2">
-                                <div class="col-span-1 md:col-span-1 mb-3 md:mb-0">
-                                    <h4 class="pb-2 text-lg md:text-xl">Regular Session Timings</h4>
-                                    <p class="text-base md:text-lg text-body">
-                                        9:00am – 10:00am<br>
-                                        <span class="pt-1 md:pt-2">10:30am – 12:00 noon</span>
-                                    </p>
-                                </div>
-                                <div class="col-span-1 md:col-span-1">
-                                    <h4 class="text-lg md:text-xl">Course Duration</h4>
-                                    <p class="text-base md:text-lg text-body">2 days to 4 Weeks</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Right Column -->
-                        <div class="md:w-4/12 order-2 md:order-1 mb-5 md:mb-0 space-y-4 md:space-y-0">
+                <a href="#" class="block shadow-none bg-green-100 text-inherit p-4 md:p-7 rounded-lg">
+                    <div class="grid gap-5 grid-cols-1 parent">
+                        <!-- Right Column (20%) -->
+                        <div class="right col-span-full  w-full md:order-2">
                             <div class="flex flex-col h-full">
                                 <div class="mb-7">
                                     <h2 class="text-2xl md:text-4xl font-bold">Custom Training</h2>
-                                    <p class="text-base md:text-lg text-body">Personalized, Online, and Sectional
-                                        Training at custom timings are available.</p>
+                                    <p class="text-base md:text-lg text-gray-700">Personalized, Online, and Sectional Training at custom timings are available.</p>
                                     <div class="mt-4">
-                                        <button
-                                            class="flex items-center px-4 py-2 duration-200 ease-in  text-white rounded bg-teal-custom hover:bg-green-500">
+                                        <button class="flex items-center px-4 py-2 text-white bg-teal-600 rounded hover:bg-green-500 transition duration-200 ease-in">
                                             <span class="my-auto">Talk to Us</span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                stroke-width="1.5" stroke="currentColor"
-                                                class="w-4 h-4 my-auto font-bold ms-2">
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-2 font-bold">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                             </svg>
                                         </button>
                                     </div>
                                 </div>
-                                <div class="card shadow-none p-4 mt-auto">
+                                <div class="bg-white p-4 shadow-none mt-auto rounded-lg">
                                     <div class="mb-3">
-                                        <blockquote class="text-dark">"Since IELTS has gained wide acceptance in the
-                                            US, most people today are taking the IELTS test in place of TOEFL."
-                                        </blockquote>
+                                        <blockquote class="text-gray-800">"Since IELTS has gained wide acceptance in the US, most people today are taking the IELTS test in place of TOEFL."</blockquote>
                                     </div>
-                                    <div class="media">
-                                        <div class="avatar avatar-circle mr-3">
-                                            <img class="avatar-img"
-                                                src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_img3.jpg"
-                                                alt="IELTS or TOEFL">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                                            <img class="w-full h-full object-cover" src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_img3.jpg" alt="IELTS or TOEFL">
                                         </div>
-                                        <div class="media-body">
+                                        <div>
                                             <span class="block text-xl md:text-2xl font-semibold">Ben Spiel</span>
-                                            <small class="block text-muted text-base md:text-lg">University
-                                                Consultant</small>
+                                            <small class="block text-gray-500 text-base md:text-lg">University Consultant</small>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Left Column (80%) -->
+                        <div class="left col-span-full w-full md:order-1">
+                            <div class="mb-5">
+                                <img class="w-full h-auto rounded" src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_img15.jpg" alt="Image Description">
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="col-span-1">
+                                    <h4 class="pb-2 text-lg md:text-xl">Regular Session Timings</h4>
+                                    <p class="text-base md:text-lg text-gray-700">
+                                        9:00am – 10:00am<br>
+                                        <span class="pt-1 md:pt-2">10:30am – 12:00 noon</span>
+                                    </p>
+                                </div>
+                                <div class="col-span-1">
+                                    <h4 class="text-lg md:text-xl">Course Duration</h4>
+                                    <p class="text-base md:text-lg text-gray-700">2 days to 4 Weeks</p>
                                 </div>
                             </div>
                         </div>
@@ -849,7 +890,8 @@
             </div>
         </div>
     </section>
-
+   
+    
     <footer class="mb-10">
         <!--attend drives-->
         <div class="p-6 text-white" style="background-color: #363636;">
