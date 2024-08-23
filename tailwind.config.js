@@ -20,7 +20,7 @@ module.exports = {
         fade: 'fadeOut 0.5s ease-in-out',
       },
       screens: {
-        'md': '800px', // Custom breakpoint at 1440px
+        'md': '1000px', // Custom breakpoint at 1440px
       },
       keyframes: theme => ({
         fadeOut: {
