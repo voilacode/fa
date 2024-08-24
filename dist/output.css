@@ -4007,6 +4007,18 @@ lite-youtube.lyt-activated>.lty-playbtn {
     top: -5rem;
   }
 
+  .md\:-top-\[72px\] {
+    top: -72px;
+  }
+
+  .md\:-top-12 {
+    top: -3rem;
+  }
+
+  .md\:-top-16 {
+    top: -4rem;
+  }
+
   .md\:order-1 {
     order: 1;
   }
