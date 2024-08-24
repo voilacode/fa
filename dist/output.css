@@ -3732,10 +3732,6 @@ lite-youtube.lyt-activated>.lty-playbtn {
     width: 50%;
   }
 
-  .sm\:w-8\/12 {
-    width: 66.666667%;
-  }
-
   .sm\:-translate-y-40 {
     --tw-translate-y: -10rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -3906,6 +3902,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
     padding-bottom: 1rem;
   }
 
+  .sm\:pt-0 {
+    padding-top: 0px;
+  }
+
   .sm\:pt-8 {
     padding-top: 2rem;
   }
@@ -3979,12 +3979,32 @@ lite-youtube.lyt-activated>.lty-playbtn {
     position: relative;
   }
 
+  .md\:-top-24 {
+    top: -6rem;
+  }
+
+  .md\:-top-\[78px\] {
+    top: -78px;
+  }
+
+  .md\:bottom-28 {
+    bottom: 7rem;
+  }
+
+  .md\:left-0 {
+    left: 0px;
+  }
+
   .md\:right-5 {
     right: 1.25rem;
   }
 
   .md\:top-10 {
     top: 2.5rem;
+  }
+
+  .md\:-top-20 {
+    top: -5rem;
   }
 
   .md\:order-1 {
