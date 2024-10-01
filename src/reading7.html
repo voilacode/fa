@@ -340,7 +340,6 @@
                 <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading7.html'">Chapter 7</button>
                 <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading8.html'">Chapter 8</button>
             </div>
-            
     
             <!-- Questions Container -->
             <div id="questionsContainer" class="p-6 bg-white rounded-lg shadow-md">
@@ -349,7 +348,6 @@
             </div>
         </div>
     </main>
-    
     
     
     
@@ -899,7 +897,7 @@
         }
     
         async function loadChapter(chapterNumber) {
-            const url = `https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_BBC${chapterNumber}.json`; // Dynamic URL based on chapter number
+            const url = `https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_BBGTP1.json`; // Dynamic URL based on chapter number
     
             try {
                 const response = await fetch(url);
@@ -1058,8 +1056,6 @@
             scoreElem.textContent = '';
         }
     </script>
-    
-    
     
 
     <script src="../dist/voilaui.js"></script>
