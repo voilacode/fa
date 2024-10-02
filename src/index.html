@@ -58,7 +58,7 @@
             z-index: 5;
             display: none;
         }
-        .active {
+        .active1 {
             display: block;
         }
     </style>
@@ -496,7 +496,7 @@
                 </div>
 
                 <div class="mx-auto my-auto">
-                    <div class="overflow-hidden carousel">
+                    <div class="overflow-hidden relative carousel">
                         <video width="640" height="360" class="carousel-item w-[400px] md:w-[300px] lg:w-[400px] block mx-auto active" autoplay loop muted style="border-bottom-left-radius: 50%;">
                             <source src="../assets/videos/1.mp4" type="video/webm">
                         </video>
@@ -1230,9 +1230,9 @@
         
                 // Fetch and load quiz
                 const fetchAndLoadQuiz = async (quizUrl) => {
-                    overlay.classList.add('active');
-                    popupQn.classList.add('active');
-        
+                    overlay.classList.add('active1');
+                    popupQn.classList.add('active1');
+        1
                     // Reset the submit button listeners before loading the new quiz
                     resetSubmitButton();
         
@@ -1352,8 +1352,8 @@
                 closePopupQnButton.addEventListener('click', closePopupQn);
         
                 function closePopupQn() {
-                    overlay.classList.remove('active');
-                    popupQn.classList.remove('active');
+                    overlay.classList.remove('active1');
+                    popupQn.classList.remove('active1');
                     answersContainer.innerHTML = '';
                     questionsContainer.innerHTML = '';
         
