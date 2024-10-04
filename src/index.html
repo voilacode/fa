@@ -348,12 +348,6 @@
     
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
-    <!-- <div class="flex items-center justify-center mt-16 bg-gray-100">
-        <div class="flex items-center my-1 space-x-2 overflow-hidden text-center">
-            <div class="p-1 px-3 text-xs font-semibold text-white rounded-full bg-teal-custom">Latest Post</div>
-            <div class="text-sm font-semibold md:text-base">Two Questions in One - WT2</div>
-        </div>
-    </div> -->
 
     <main>
         <!--hero-->
@@ -1370,8 +1364,7 @@
             </div>
 
         </section>
-        </section>
-        
+        </section> 
 
     </main>
 
@@ -1840,33 +1833,33 @@
             <div class="bg-gray-100">
                 <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="checkbox" name="courses" id="gre" value="GRE">
+                        <input class="form-checkbox" type="checkbox" name="courses[]" id="gre" value="GRE">
                         <label class="ml-2" for="gre">GRE</label>
                     </div>
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="checkbox" name="courses" id="ielts" value="IELTS">
+                        <input class="form-checkbox" type="checkbox" name="courses[]" id="ielts" value="IELTS">
                         <label class="ml-2" for="ielts">IELTS</label>
                     </div>
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="checkbox" name="courses" id="toefl" value="TOEFL">
+                        <input class="form-checkbox" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
                         <label class="ml-2" for="toefl">TOEFL</label>
                     </div>
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="checkbox" name="courses" id="pte" value="PTE">
+                        <input class="form-checkbox" type="checkbox" name="courses[]" id="pte" value="PTE">
                         <label class="ml-2" for="pte">PTE</label>
                     </div>
                 </div>
                 <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="checkbox" name="courses" id="oet" value="OET">
+                        <input class="form-checkbox" type="checkbox" name="courses[]" id="oet" value="OET">
                         <label class="ml-2" for="oet">OET</label>
                     </div>
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="checkbox" name="courses" id="sat" value="SAT">
+                        <input class="form-checkbox" type="checkbox" name="courses[]" id="sat" value="SAT">
                         <label class="ml-2" for="sat">SAT</label>
                     </div>
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="checkbox" name="courses" id="others" value="OTHERS">
+                        <input class="form-checkbox" type="checkbox" name="courses[]" id="others" value="OTHERS">
                         <label class="ml-2" for="others">OTHERS</label>
                     </div>
                 </div>
@@ -1885,7 +1878,6 @@
     <script src="../dist/lite-yt-embed.js"></script>
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="../dist/mail.js"></script>    
     <script src="../dist/token.js"></script>    
  
 </body>

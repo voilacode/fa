@@ -1,29 +1,36 @@
 document.getElementById('demoForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 
-    // Fetch CSRF token from Laravel
-    const csrfResponse = await fetch('/csrf-token');
-    const csrfData = await csrfResponse.json();
-    const csrfToken = csrfData.csrfToken;
+    try {
+        // Fetch CSRF token from Laravel
+        const csrfResponse = await fetch('/csrf-token');
+        const csrfData = await csrfResponse.json();
+        const csrfToken = csrfData.csrfToken;
 
-    const formData = new FormData(this);
+        const formData = new FormData(this);
 
-    // Set up request options
-    const requestOptions = {
-        method: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': csrfToken, 
-            'Accept': 'application/json'
-        },
-        body: formData
-    };
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken, 
+                'Accept': 'application/json'
+            },
+            body: formData
+        };
 
-    // Send the request to Laravel
-    const response = await fetch('/mail/send', requestOptions);
+        const response = await fetch('/admin/mail', requestOptions); 
 
-    if (response.ok) {
-        console.log('Email sent successfully');
-    } else {
-        console.error('Error sending email');
+        if (response.ok) {
+            const responseData = await response.json(); 
+            console.log('Email sent successfully', responseData);
+            alert('Email sent successfully!'); 
+        } else {
+            const errorData = await response.json(); 
+            console.error('Error sending email', errorData);
+            alert('Error sending email: ' + errorData.message || 'Unknown error');
+        }
+    } catch (error) {
+        console.error('Network error:', error);
+        alert('Network error. Please try again.');
     }
 });
