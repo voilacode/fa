@@ -1179,27 +1179,18 @@
             
             <div id="overlay" class="overlay"></div>
         
-            <!-- <div id="popupQn" class="popupQn rounded shadow-lg p-6">
-                <div class="flex items-center bg-blue-200 p-2 justify-between">
-                    <h2 class="text-xl font-semibold mb-4">Available Answers for Fill-ups:</h2>
-                    <button id="closePopupQn" class="font-bold p-2 rounded ml-2">X</button>
-                </div>
-                <div id="answersContainer" class="mb-4 bg-blue-200 p-5 grid grid-cols-3 m-auto"></div>
-                <div id="questionsContainer" class="mb-4"></div>
-                <button id="submitQuiz" class="bg-green-500 text-white font-semibold text-xl p-2 rounded">Submit</button>
-                <div id="scoreDisplay" class="mt-4 font-bold"></div>
-            </div> -->
+            
             <div id="popupQn" class="popupQn rounded shadow-lg p-6">
-                <div class="flex items-center bg-blue-200 p-2 justify-between">
-                    <div id="directionsContainer" class=" px-4 sm:text-2xl text-xl bg-blue-200 font-bold"></div>
+                <div class="flex items-center bg-teal-200 py-5 px-2 justify-between">
+                    <div id="directionsContainer" class=" px-4 sm:text-2xl text-xl bg-teal-200 font-bold"></div>
                     <button id="closePopupQn" class="font-bold p-2 rounded ml-2">X</button>
                 </div>
-                <!-- Directions will appear here -->
                 
                 
-                <div id="answersContainer" class="mb-4 bg-blue-200 p-5 grid sm:grid-cols-1 grid-cols-1 md:grid-cols-3 m-auto"></div>
+                
+                <div id="answersContainer" class="mb-4 bg-teal-200 px-5 grid sm:grid-cols-1 grid-cols-1 md:grid-cols-3 m-auto"></div>
                 <div id="questionsContainer" class="mb-4"></div>
-                <button id="submitQuiz" class="bg-green-500 text-white font-semibold text-xl p-2 rounded">Submit</button>
+                <button id="submitQuiz" class="bg-teal-500 text-white font-semibold text-xl p-2 rounded">Submit</button>
                 <div id="scoreDisplay" class="mt-4 font-bold"></div>
             </div>
             
@@ -1277,8 +1268,8 @@
                         
                             if (qdata.type === 'mcq') {
                                 questionDiv.innerHTML = `
-                                <div class="font-bold flex space-x-2">
-                                    <div>${index + 1}.</div>
+                                <div class="flex space-x-2">
+                                    <div class="font-bold">${index + 1}.</div>
                                     <div>${qdata.question}</div>
                                 </div>
                                     <div>
@@ -1289,7 +1280,7 @@
                                     </div>`;
                             } else if (qdata.type === 'fillup') {
                                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
-                                questionDiv.innerHTML = `<div class="font-bold flex space-x-2"><div>${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
+                                questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
                                     return `<input type="text" class="inline-input border-b outline-none border-gray-500 w-100" data-correct-answer="${correctAnswer}" />`;
                                 })}</div></div>`;
                             }
