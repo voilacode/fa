@@ -211,6 +211,14 @@ function startAnimationOnScroll() {
   
 window.addEventListener('scroll', startAnimationOnScroll);
 
+// close popup
+document.querySelectorAll('[data-popup-close]').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const popupId = this.getAttribute('data-popup-close');
+        document.getElementById(popupId).classList.add('hidden');
+    });
+});
+
 
 // quick tests
 const openPopupQnButton1 = document.getElementById('openPopupQn1');
@@ -327,7 +335,6 @@ const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k2db2
 fetchAndLoadQuiz(quiz5Url);
 });
 
-
 openPopupQnButton6.addEventListener('click', () => {
 const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k2e4cd0/pict5k2e4cd0_questionbank.json';
 fetchAndLoadQuiz(quiz6Url);
@@ -352,7 +359,6 @@ openPopupQnButton10.addEventListener('click', () => {
     const quiz10Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k205b27/pict5k205b27_questionbank.json';
     fetchAndLoadQuiz(quiz10Url);
 });
-
 
 // Close popupQn when clicking outside (on the overlay)
 overlay.addEventListener('click', (event) => {

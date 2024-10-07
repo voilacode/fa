@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         @media (min-width: 768px) and (max-width: 800px) {
             .count, .count-label {
@@ -357,7 +358,33 @@
                 <button onclick="location.href='reading8.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
                     Chapter 8
                 </button>
+            <div class="mb-6 flex flex-wrap justify-center gap-4">
+                <button onclick="location.href='reading.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 1
+                </button>
+                <button onclick="location.href='reading2.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 2
+                </button>
+                <button onclick="location.href='reading3.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 3
+                </button>
+                <button onclick="location.href='reading4.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 4
+                </button>
+                <button onclick="location.href='reading5.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 5
+                </button>
+                <button onclick="location.href='reading6.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 6
+                </button>
+                <button onclick="location.href='reading7.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 7
+                </button>
+                <button onclick="location.href='reading8.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 8
+                </button>
             </div>
+
 
             <!-- Questions Container -->
             <div id="questionsContainer" class="bg-gray-50 p-5 rounded-lg shadow-md">
@@ -367,6 +394,8 @@
             </div>
         </div>
     </main>
+
+  
 
   
     <footer class="mb-10">
@@ -922,6 +951,7 @@
     
                 let setCount = 1;
                 let questionCount = 59;
+                let questionCount = 59;
                 let totalQuestions = 0;
     
                 // Loop through all sets (e.g., set1, set2, etc.)
@@ -933,7 +963,12 @@
                     headingElem.innerHTML = setData.heading;
                     headingElem.style.fontWeight = "bold";
                     headingElem.classList.add('text-xl', 'mb-3');
+                    headingElem.innerHTML = setData.heading;
+                    headingElem.style.fontWeight = "bold";
+                    headingElem.classList.add('text-xl', 'mb-3');
                     questionsContainer.appendChild(headingElem);
+
+
 
 
     

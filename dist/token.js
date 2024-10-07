@@ -3,7 +3,17 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
 
     try {
         // Fetch CSRF token from Laravel
-        const csrfResponse = await fetch('/csrf-token');
+        const csrfResponse = await fetch('/csrf-token', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (!csrfResponse.ok) {
+            throw new Error('Failed to fetch CSRF token');
+        }
+
         const csrfData = await csrfResponse.json();
         const csrfToken = csrfData.csrfToken;
 
@@ -12,25 +22,30 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
         const requestOptions = {
             method: 'POST',
             headers: {
-                'X-CSRF-TOKEN': csrfToken, 
+                'X-CSRF-TOKEN': csrfToken,
                 'Accept': 'application/json'
             },
             body: formData
         };
 
-        const response = await fetch('/admin/mail', requestOptions); 
+        const response = await fetch('/admin/mail', requestOptions);
 
+        // Check if the response was OK
         if (response.ok) {
-            const responseData = await response.json(); 
-            console.log('Email sent successfully', responseData);
-            alert('Email sent successfully!'); 
+            const responseData = await response.json();
+
+            document.getElementById('popup').classList.add('hidden');
+
+            document.getElementById('successPopup').classList.remove('hidden');
+
         } else {
-            const errorData = await response.json(); 
-            console.error('Error sending email', errorData);
-            alert('Error sending email: ' + errorData.message || 'Unknown error');
+            const errorData = await response.json();
+            console.error('Error in response:', errorData);
         }
+
     } catch (error) {
-        console.error('Network error:', error);
-        alert('Network error. Please try again.');
+        console.error('Caught network error:', error);
+        document.getElementById('popup').classList.add('hidden');
+        document.getElementById('errorPopup').classList.remove('hidden');
     }
 });
