@@ -9,6 +9,11 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
                 'Accept': 'application/json'
             }
         });
+
+        if (!csrfResponse.ok) {
+            throw new Error('Failed to fetch CSRF token');
+        }
+
         const csrfData = await csrfResponse.json();
         const csrfToken = csrfData.csrfToken;
 
@@ -25,21 +30,22 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
 
         const response = await fetch('https://your-laravel-app.com/admin/mail', requestOptions);
 
+        // Check if the response was OK
         if (response.ok) {
-            // Close the current form popup
+            const responseData = await response.json();
+
             document.getElementById('popup').classList.add('hidden');
 
-            // Show the success popup
             document.getElementById('successPopup').classList.remove('hidden');
+
         } else {
-            // Check for possible API errors
             const errorData = await response.json();
-            console.error('Error sending email', errorData);
-            // Display error message (optional) or log for debugging
+            console.error('Error in response:', errorData);
         }
+
     } catch (error) {
-        // Handle network or CORS issues
-        console.error('Network or CORS error:', error);
-        // Show a user-friendly error message (or log for debugging)
+        console.error('Caught network error:', error);
+        document.getElementById('popup').classList.add('hidden');
+        document.getElementById('errorPopup').classList.remove('hidden');
     }
 });
