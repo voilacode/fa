@@ -327,36 +327,45 @@
     </div>
 
     <!-- Main section -->
-    <main class="min-h-screen p-6 bg-gray-50">
-        <div class="max-w-screen-xl mx-auto">
+    <main class="min-h-screen p-4 sm:p-6 bg-gray-50">
+        <div class="max-w-screen-xl px-4 py-2 mx-auto  ">
             <!-- Chapter Navigation Buttons -->
-            <div class="mb-6 flex justify-center space-x-4">
-                <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading.html'">Chapter 1</button>
-                <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading2.html'">Chapter 2</button>
-                <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading3.html'">Chapter 3</button>
-                <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading4.html'">Chapter 4</button>
-                <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading5.html'">Chapter 5</button>
-                <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading6.html'">Chapter 6</button>
-                <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading7.html'">Chapter 7</button>
-                <button class="px-6 py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600" onclick="location.href='reading8.html'">Chapter 8</button>
+            <div class="mb-6 flex flex-wrap justify-center gap-4">
+                <button onclick="location.href='reading.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 1
+                </button>
+                <button onclick="location.href='reading2.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 2
+                </button>
+                <button onclick="location.href='reading3.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 3
+                </button>
+                <button onclick="location.href='reading4.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 4
+                </button>
+                <button onclick="location.href='reading5.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 5
+                </button>
+                <button onclick="location.href='reading6.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 6
+                </button>
+                <button onclick="location.href='reading7.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 7
+                </button>
+                <button onclick="location.href='reading8.html'" class="px-4 sm:px-6 py-2 sm:py-3 bg-teal-500 text-white rounded-md shadow hover:bg-teal-600">
+                    Chapter 8
+                </button>
             </div>
-    
+
             <!-- Questions Container -->
-            <div id="questionsContainer" class="p-6 bg-white rounded-lg shadow-md">
-                <h2 class="text-2xl font-semibold text-center mb-4">Loading questions for Chapter 3...</h2>
-                <div id="questions" class="space-y-4"></div>
+            <div id="questionsContainer" class=" bg-white rounded-lg shadow-md">
+                <div class="max-w-screen-xl px-4 py-2 mx-auto  sm:px-[60px]">
+                    <div id="questions" class="space-y-4"></div>
+                </div>
             </div>
         </div>
     </main>
     
-    
-    
-    
-    
-      
-      
-      
-
     <footer class="mb-10">
         <!--attend drives-->
         <div class="p-6 text-white" style="background-color: #363636;">
@@ -909,7 +918,7 @@
                 questionsContainer.innerHTML = ''; // Clear previous questions
     
                 let setCount = 1;
-                let questionCount = 1;
+                let questionCount = 305;
                 let totalQuestions = 0;
     
                 // Loop through all sets (e.g., set1, set2, etc.)
@@ -918,7 +927,9 @@
     
                     // Display passage heading
                     const headingElem = document.createElement('div');
-                    headingElem.innerHTML = `<h3 class="text-xl font-bold mb-3">Passage ${setCount}: ${setData.heading}</h3>`;
+                    headingElem.innerHTML = setData.heading;
+                    headingElem.style.fontWeight = "bold";
+                    headingElem.classList.add('text-xl', 'mb-3');
                     questionsContainer.appendChild(headingElem);
     
                     // Create a container for the questions
