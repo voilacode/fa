@@ -28,7 +28,7 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
             body: formData
         };
 
-        const response = await fetch('https://your-laravel-app.com/admin/mail', requestOptions);
+        const response = await fetch('/admin/mail', requestOptions);
 
         // Check if the response was OK
         if (response.ok) {
