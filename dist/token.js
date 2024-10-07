@@ -12,22 +12,24 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
         const requestOptions = {
             method: 'POST',
             headers: {
-                'X-CSRF-TOKEN': csrfToken, 
+                'X-CSRF-TOKEN': csrfToken,
                 'Accept': 'application/json'
             },
             body: formData
         };
 
-        const response = await fetch('/admin/mail', requestOptions); 
+        const response = await fetch('/admin/mail', requestOptions);
 
         if (response.ok) {
-            const responseData = await response.json(); 
-            console.log('Email sent successfully', responseData);
-            alert('Email sent successfully!'); 
+            // Close the current popup (form)
+            document.getElementById('popup').classList.add('hidden');
+
+            // Show the success popup
+            document.getElementById('successPopup').classList.remove('hidden');
         } else {
-            const errorData = await response.json(); 
+            const errorData = await response.json();
             console.error('Error sending email', errorData);
-            alert('Error sending email: ' + errorData.message || 'Unknown error');
+            alert('Error sending email: ' + (errorData.message || 'Unknown error'));
         }
     } catch (error) {
         console.error('Network error:', error);

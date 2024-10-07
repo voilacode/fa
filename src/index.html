@@ -1873,6 +1873,19 @@
         </form>
     </div>
 
+    <div id="successPopup" class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+        <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+            <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
+                <div class="w-full text-center text-green-800">
+                    <h3 class="text-lg font-bold">Success!</h3>
+                    <p>Your mail has been sent successfully.</p>
+                </div>
+            </div>
+            <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block" data-popup-close="successPopup">Close</button>
+        </div>
+    </div>
+    
+
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/ielts_carousel.js"></script>
     <script src="../dist/lite-yt-embed.js"></script>

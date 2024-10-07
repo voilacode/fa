@@ -211,6 +211,14 @@ function startAnimationOnScroll() {
   
 window.addEventListener('scroll', startAnimationOnScroll);
 
+// close popup
+document.querySelectorAll('[data-popup-close]').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const popupId = this.getAttribute('data-popup-close');
+        document.getElementById(popupId).classList.add('hidden');
+    });
+});
+
 
 // quick tests
 const openPopupQnButton1 = document.getElementById('openPopupQn1');
