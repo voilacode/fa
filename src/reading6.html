@@ -363,7 +363,7 @@
             <!-- Questions Container -->
             <div id="questionsContainer" class="bg-gray-50 p-5 rounded-lg shadow-md">
                 
-                <h2 class="text-xl sm:text-4xl font-semibold   mb-4">Questions 1 - 58</h2>
+                <h2 class="text-xl sm:text-4xl font-semibold   mb-4">Questions 305 - 361</h2>
                 <div id="questions" class="space-y-4"></div>
             </div>
         </div>
@@ -897,7 +897,7 @@
 
     <!-- Questions rendering -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const chapterNumber = getChapterNumberFromURL();
             loadChapter(chapterNumber);
         });
@@ -915,15 +915,13 @@
             try {
                 const response = await fetch(url);
                 const data = await response.json();
-
+    
                 window.data = data;
     
                 const questionsContainer = document.getElementById("questions");
                 questionsContainer.innerHTML = ''; // Clear previous questions
     
-                let setCount = 1;
                 let questionCount = 305;
-                let totalQuestions = 0;
     
                 // Loop through all sets (e.g., set1, set2, etc.)
                 for (const setKey in data) {
@@ -934,14 +932,13 @@
                     headingElem.innerHTML = setData.heading;
                     headingElem.style.fontWeight = "bold";
                     headingElem.classList.add('text-xl', 'mb-3');
-                    headingElem.innerHTML = setData.heading;
-                    headingElem.style.fontWeight = "bold";
-                    headingElem.classList.add('text-xl', 'mb-3');
                     questionsContainer.appendChild(headingElem);
     
                     // Create a container for the questions
                     const passageContainer = document.createElement('div');
                     passageContainer.classList.add('mb-4');
+    
+                    let totalQuestionsInSet = 0; // To track total questions in the current set
     
                     // Loop through questions inside each set
                     Object.keys(setData.questions).forEach((key) => {
@@ -951,7 +948,6 @@
     
                         // Render the question based on its type
                         if (question.type === 'mcq') {
-                            // MCQ Type
                             questionElem.innerHTML = `
                                 <p>${questionCount}. ${question.question}</p>
                                 <label><input type="radio" name="question${setKey}${key}" value="a"> ${question.a}</label><br>
@@ -960,7 +956,6 @@
                                 <span id="result${setKey}${key}" class="ml-4"></span>
                             `;
                         } else if (question.type === 'fillup') {
-                            // Fill-up Type
                             questionElem.innerHTML = `
                                 <p>${questionCount}. ${question.question || 'Fill in the blank'}:</p>
                                 <input type="text" id="fillup${setKey}${key}" class="border px-2 py-1 rounded" />
@@ -971,7 +966,7 @@
                         // Append the question to the passage container
                         passageContainer.appendChild(questionElem);
                         questionCount++;
-                        totalQuestions++;
+                        totalQuestionsInSet++;
                     });
     
                     // Add "Check Answers" and "Clear Answers" buttons
@@ -979,7 +974,7 @@
                     buttonContainer.classList.add('mt-4');
     
                     buttonContainer.innerHTML = `
-                        <button class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600" onclick="checkAnswers('${setKey}', ${totalQuestions})">Check Answers</button>
+                        <button class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600" onclick="checkAnswers('${setKey}')">Check Answers</button>
                         <button class="ml-4 px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400" onclick="clearAnswers('${setKey}')">Clear Answers</button>
                         <span id="score${setKey}" class="ml-4 text-lg font-bold"></span>
                     `;
@@ -990,8 +985,6 @@
                     // Add a horizontal line to separate sets
                     const hr = document.createElement('hr');
                     questionsContainer.appendChild(hr);
-    
-                    setCount++;
                 }
             } catch (error) {
                 console.error("Error fetching the data:", error);
@@ -999,9 +992,10 @@
         }
     
         // Function to check answers for a specific set
-        function checkAnswers(setKey, totalQuestions) {
+        function checkAnswers(setKey) {
             let correctAnswersCount = 0;
-            const dataSet = data[setKey]; // Assuming 'data' is the dynamically loaded JSON for the current chapter
+            let totalQuestions = 0;
+            const dataSet = window.data[setKey]; // Assuming 'data' is the dynamically loaded JSON for the current chapter
     
             // Check MCQ answers
             Object.keys(dataSet.questions).forEach((key) => {
@@ -1009,6 +1003,7 @@
                 const resultElem = document.getElementById(`result${setKey}${key}`);
     
                 if (question.type === 'mcq') {
+                    totalQuestions++;
                     const selectedOption = document.querySelector(`input[name="question${setKey}${key}"]:checked`);
                     if (selectedOption) {
                         const selectedValue = selectedOption.value;
@@ -1035,6 +1030,7 @@
                 const resultElem = document.getElementById(`result${setKey}${key}`);
     
                 if (question.type === 'fillup') {
+                    totalQuestions++;
                     const userAnswer = document.getElementById(`fillup${setKey}${key}`).value.trim();
                     const correctAnswer = question.answer;
     
@@ -1056,28 +1052,39 @@
     
         // Function to clear answers for a specific set
         function clearAnswers(setKey) {
-            const questions = document.querySelectorAll(`input[name^="question${setKey}"], input[id^="fillup${setKey}"]`);
-            questions.forEach(question => {
-                if (question.type === "radio") {
-                    question.checked = false;
-                } else if (question.type === "text") {
-                    question.value = '';
+            const dataSet = window.data[setKey];
+    
+            // Clear MCQ answers
+            Object.keys(dataSet.questions).forEach((key) => {
+                const question = dataSet.questions[key];
+                const resultElem = document.getElementById(`result${setKey}${key}`);
+    
+                if (question.type === 'mcq') {
+                    const selectedOption = document.querySelector(`input[name="question${setKey}${key}"]:checked`);
+                    if (selectedOption) {
+                        selectedOption.checked = false;
+                    }
+                    resultElem.textContent = '';
                 }
             });
     
-            const resultElems = document.querySelectorAll(`[id^="result${setKey}"]`);
-            resultElems.forEach(resultElem => {
-                resultElem.textContent = '';
+            // Clear Fill-up answers
+            Object.keys(dataSet.questions).forEach((key) => {
+                const question = dataSet.questions[key];
+                const resultElem = document.getElementById(`result${setKey}${key}`);
+    
+                if (question.type === 'fillup') {
+                    document.getElementById(`fillup${setKey}${key}`).value = '';
+                    resultElem.textContent = '';
+                }
             });
     
+            // Clear the score display
             const scoreElem = document.getElementById(`score${setKey}`);
             scoreElem.textContent = '';
         }
     </script>
     
-
-    
-
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/ielts_carousel.js"></script>
     <script src="../dist/lite-yt-embed.js"></script>
