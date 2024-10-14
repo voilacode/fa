@@ -318,16 +318,13 @@
         </nav>
     </header>
     <hr>
-     <!--Latest Post-->
-     <x-homepage.post.index :data="$data" />
-
-    
-
-    
+    <!--Latest Post-->
+    <x-homepage.post.index :data="$data" />
 
     <!-- Main section -->
     <main class="min-h-screen p-4 sm:p-6 ">
         <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-[60px]">
+            
             <!-- Chapter Navigation Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-6">
                 <button onclick="location.href='reading'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
@@ -355,17 +352,18 @@
                     Chapter 8
                 </button>
             </div>
-        
+            
+
+
             <!-- Questions Container -->
             <div id="questionsContainer" class="p-5 rounded-lg shadow-md bg-gray-50">
-                <h2 class="pt-4 mb-4 text-xl font-semibold sm:text-4xl">Yes | No | Not Given</h2>
-                <h2 class="mb-4 text-xl font-semibold sm:text-4xl">Questions 1 - 58</h2>
+                <h2 class="pt-4 mb-4 text-xl font-semibold sm:text-4xl">Matching Questions</h2>
+                <h2 class="mb-4 text-xl font-semibold sm:text-4xl">Questions 174 - 284</h2>
                 <div id="questions" class="space-y-4"></div>
             </div>
         </div>
     </main>
-    
-    
+
     <footer class="mb-10">
         <!--attend drives-->
         <div class="p-6 text-white" style="background-color: #363636;">
@@ -917,7 +915,7 @@
                 const questionsContainer = document.getElementById("questions");
                 questionsContainer.innerHTML = ''; // Clear previous questions
     
-                let questionCount = 1;
+                let questionCount = 174;
     
                 // Loop through all sets (e.g., set1, set2, etc.)
                 for (const setKey in data) {
@@ -1081,6 +1079,9 @@
         }
     </script>
     
+
+    
+
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/ielts_carousel.js"></script>
     <script src="../dist/lite-yt-embed.js"></script>

@@ -321,13 +321,10 @@
      <!--Latest Post-->
      <x-homepage.post.index :data="$data" />
 
-    
-
-    
-
     <!-- Main section -->
     <main class="min-h-screen p-4 sm:p-6 ">
         <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-[60px]">
+            
             <!-- Chapter Navigation Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-6">
                 <button onclick="location.href='reading'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
@@ -355,16 +352,14 @@
                     Chapter 8
                 </button>
             </div>
-        
+
             <!-- Questions Container -->
             <div id="questionsContainer" class="p-5 rounded-lg shadow-md bg-gray-50">
-                <h2 class="pt-4 mb-4 text-xl font-semibold sm:text-4xl">Yes | No | Not Given</h2>
-                <h2 class="mb-4 text-xl font-semibold sm:text-4xl">Questions 1 - 58</h2>
+                <h2 class="mb-4 text-xl font-semibold sm:text-4xl">Questions 362 - 401</h2>
                 <div id="questions" class="space-y-4"></div>
             </div>
         </div>
     </main>
-    
     
     <footer class="mb-10">
         <!--attend drives-->
@@ -893,12 +888,13 @@
 
     <!-- Questions rendering -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        // Wait for the page to load before starting
+        document.addEventListener("DOMContentLoaded", function() {
             const chapterNumber = getChapterNumberFromURL();
             loadChapter(chapterNumber);
         });
     
-        // Helper function to get the chapter number from the page URL
+        // Get the chapter number from the URL
         function getChapterNumberFromURL() {
             const url = window.location.href;
             const match = url.match(/reading(\d+)/);
@@ -906,44 +902,42 @@
         }
     
         async function loadChapter(chapterNumber) {
-            const url = `https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_BBC${chapterNumber}.json`; // Dynamic URL based on chapter number
-    
+            const url = `https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_BBGTP1.json`; // Static URL for testing
+        
             try {
                 const response = await fetch(url);
                 const data = await response.json();
-    
-                window.data = data;
+                window.data = data; // Store the data globally so it can be accessed later in the checkAnswers function
     
                 const questionsContainer = document.getElementById("questions");
                 questionsContainer.innerHTML = ''; // Clear previous questions
-    
-                let questionCount = 1;
-    
-                // Loop through all sets (e.g., set1, set2, etc.)
+        
+                let questionCount = 362; // Start question numbering from 362
+        
+                // Loop through all sets of questions in the data
                 for (const setKey in data) {
                     const setData = data[setKey];
-    
-                    // Display passage heading
+        
+                    // Create and display the heading for each set
                     const headingElem = document.createElement('div');
                     headingElem.innerHTML = setData.heading;
                     headingElem.style.fontWeight = "bold";
                     headingElem.classList.add('text-xl', 'mb-3');
                     questionsContainer.appendChild(headingElem);
-    
-                    // Create a container for the questions
+        
+                    // Create a container for the questions in this set
                     const passageContainer = document.createElement('div');
                     passageContainer.classList.add('mb-4');
-    
-                    let totalQuestionsInSet = 0; // To track total questions in the current set
-    
-                    // Loop through questions inside each set
+        
+                    // Loop through the questions in the current set
                     Object.keys(setData.questions).forEach((key) => {
                         const question = setData.questions[key];
                         const questionElem = document.createElement('div');
                         questionElem.classList.add('mb-2');
-    
+        
                         // Render the question based on its type
                         if (question.type === 'mcq') {
+                            // Render MCQ type question
                             questionElem.innerHTML = `
                                 <p>${questionCount}. ${question.question}</p>
                                 <label><input type="radio" name="question${setKey}${key}" value="a"> ${question.a}</label><br>
@@ -952,32 +946,32 @@
                                 <span id="result${setKey}${key}" class="ml-4"></span>
                             `;
                         } else if (question.type === 'fillup') {
+                            // Render Fill-up type question
                             questionElem.innerHTML = `
                                 <p>${questionCount}. ${question.question || 'Fill in the blank'}:</p>
                                 <input type="text" id="fillup${setKey}${key}" class="px-2 py-1 border rounded" />
                                 <span id="result${setKey}${key}" class="ml-4"></span>
                             `;
                         }
-    
-                        // Append the question to the passage container
+        
+                        // Add the question to the container
                         passageContainer.appendChild(questionElem);
-                        questionCount++;
-                        totalQuestionsInSet++;
+                        questionCount++; // Increment question count
                     });
-    
-                    // Add "Check Answers" and "Clear Answers" buttons
+        
+                    // Add the "Check Answers" and "Clear Answers" buttons
                     const buttonContainer = document.createElement('div');
                     buttonContainer.classList.add('mt-4');
-    
+        
                     buttonContainer.innerHTML = `
                         <button class="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600" onclick="checkAnswers('${setKey}')">Check Answers</button>
                         <button class="px-4 py-2 ml-4 text-black bg-gray-300 rounded hover:bg-gray-400" onclick="clearAnswers('${setKey}')">Clear Answers</button>
                         <span id="score${setKey}" class="ml-4 text-lg font-bold"></span>
                     `;
-    
+        
                     passageContainer.appendChild(buttonContainer);
                     questionsContainer.appendChild(passageContainer);
-    
+        
                     // Add a horizontal line to separate sets
                     const hr = document.createElement('hr');
                     questionsContainer.appendChild(hr);
@@ -991,24 +985,24 @@
         function checkAnswers(setKey) {
             let correctAnswersCount = 0;
             let totalQuestions = 0;
-            const dataSet = window.data[setKey]; // Assuming 'data' is the dynamically loaded JSON for the current chapter
-    
+            const dataSet = window.data[setKey]; // Access the stored data for the current set
+        
             // Check MCQ answers
             Object.keys(dataSet.questions).forEach((key) => {
                 const question = dataSet.questions[key];
                 const resultElem = document.getElementById(`result${setKey}${key}`);
-    
+        
                 if (question.type === 'mcq') {
-                    totalQuestions++;
+                    totalQuestions++; // Increment total questions count
                     const selectedOption = document.querySelector(`input[name="question${setKey}${key}"]:checked`);
                     if (selectedOption) {
                         const selectedValue = selectedOption.value;
-                        const correctAnswer = question.answer;
-    
+                        const correctAnswer = question.answer; // Get the correct answer from the dataset
+        
                         if (selectedValue === correctAnswer) {
                             resultElem.textContent = '✔ Correct';
                             resultElem.style.color = 'green';
-                            correctAnswersCount++;
+                            correctAnswersCount++; // Increment correct answers count
                         } else {
                             resultElem.textContent = '✖ Incorrect';
                             resultElem.style.color = 'red';
@@ -1019,28 +1013,28 @@
                     }
                 }
             });
-    
+        
             // Check Fill-up answers
             Object.keys(dataSet.questions).forEach((key) => {
                 const question = dataSet.questions[key];
                 const resultElem = document.getElementById(`result${setKey}${key}`);
-    
+        
                 if (question.type === 'fillup') {
-                    totalQuestions++;
+                    totalQuestions++; // Increment total questions count
                     const userAnswer = document.getElementById(`fillup${setKey}${key}`).value.trim();
-                    const correctAnswer = question.answer;
-    
+                    const correctAnswer = question.answer; // Get the correct answer
+        
                     if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
                         resultElem.textContent = '✔ Correct';
                         resultElem.style.color = 'green';
-                        correctAnswersCount++;
+                        correctAnswersCount++; // Increment correct answers count
                     } else {
                         resultElem.textContent = '✖ Incorrect';
                         resultElem.style.color = 'red';
                     }
                 }
             });
-    
+        
             // Display the total score
             const scoreElem = document.getElementById(`score${setKey}`);
             scoreElem.textContent = `Score: ${correctAnswersCount}/${totalQuestions}`;
@@ -1048,34 +1042,20 @@
     
         // Function to clear answers for a specific set
         function clearAnswers(setKey) {
-            const dataSet = window.data[setKey];
-    
-            // Clear MCQ answers
-            Object.keys(dataSet.questions).forEach((key) => {
-                const question = dataSet.questions[key];
-                const resultElem = document.getElementById(`result${setKey}${key}`);
-    
-                if (question.type === 'mcq') {
-                    const selectedOption = document.querySelector(`input[name="question${setKey}${key}"]:checked`);
-                    if (selectedOption) {
-                        selectedOption.checked = false;
-                    }
-                    resultElem.textContent = '';
+            const questions = document.querySelectorAll(`input[name^="question${setKey}"], input[id^="fillup${setKey}"]`);
+            questions.forEach(question => {
+                if (question.type === "radio") {
+                    question.checked = false;
+                } else if (question.type === "text") {
+                    question.value = '';
                 }
             });
     
-            // Clear Fill-up answers
-            Object.keys(dataSet.questions).forEach((key) => {
-                const question = dataSet.questions[key];
-                const resultElem = document.getElementById(`result${setKey}${key}`);
-    
-                if (question.type === 'fillup') {
-                    document.getElementById(`fillup${setKey}${key}`).value = '';
-                    resultElem.textContent = '';
-                }
+            const resultElems = document.querySelectorAll(`[id^="result${setKey}"]`);
+            resultElems.forEach(resultElem => {
+                resultElem.textContent = '';
             });
     
-            // Clear the score display
             const scoreElem = document.getElementById(`score${setKey}`);
             scoreElem.textContent = '';
         }

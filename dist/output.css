@@ -845,6 +845,10 @@ video {
   margin: 2rem;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -1099,6 +1103,10 @@ video {
   margin-top: auto;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -1205,6 +1213,10 @@ video {
 .h-max {
   height: -moz-max-content;
   height: max-content;
+}
+
+.h-9 {
+  height: 2.25rem;
 }
 
 .max-h-0 {
@@ -1394,6 +1406,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .min-w-full {
@@ -2290,6 +2306,16 @@ video {
   background-color: rgb(161 98 7 / var(--tw-bg-opacity));
 }
 
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+}
+
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
@@ -2989,6 +3015,16 @@ video {
 .text-yellow-800 {
   --tw-text-opacity: 1;
   color: rgb(133 77 14 / var(--tw-text-opacity));
+}
+
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.text-green-800 {
+  --tw-text-opacity: 1;
+  color: rgb(22 101 52 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3751,6 +3787,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
   .sm\:items-center {
     align-items: center;
   }
@@ -3808,6 +3848,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .sm\:p-8 {
     padding: 2rem;
+  }
+
+  .sm\:p-6 {
+    padding: 1.5rem;
   }
 
   .sm\:px-0 {
@@ -3893,6 +3937,11 @@ lite-youtube.lyt-activated>.lty-playbtn {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .sm\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .sm\:pb-0 {
@@ -4522,6 +4571,11 @@ lite-youtube.lyt-activated>.lty-playbtn {
     padding-bottom: 2rem;
   }
 
+  .md\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
   .md\:pb-10 {
     padding-bottom: 2.5rem;
   }
@@ -4568,6 +4622,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .md\:pt-8 {
     padding-top: 2rem;
+  }
+
+  .md\:pt-20 {
+    padding-top: 5rem;
   }
 
   .md\:text-right {
