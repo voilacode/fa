@@ -1,4 +1,5 @@
-document.getElementById('demoForm').addEventListener('submit', async function (event) {
+// Function to handle form submissions
+async function handleFormSubmission(event, formId, detailFields) {
     event.preventDefault();
 
     try {
@@ -17,7 +18,8 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
         const csrfData = await csrfResponse.json();
         const csrfToken = csrfData.csrfToken;
 
-        const formData = new FormData(this);
+        const form = document.getElementById(formId);
+        const formData = new FormData(form);
 
         const requestOptions = {
             method: 'POST',
@@ -30,12 +32,10 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
 
         const response = await fetch('/admin/mail', requestOptions);
 
-        // Check if the response was OK
         if (response.ok) {
             const responseData = await response.json();
 
             document.getElementById('popup').classList.add('hidden');
-
             document.getElementById('successPopup').classList.remove('hidden');
 
         } else {
@@ -48,4 +48,22 @@ document.getElementById('demoForm').addEventListener('submit', async function (e
         document.getElementById('popup').classList.add('hidden');
         document.getElementById('errorPopup').classList.remove('hidden');
     }
+}
+
+// Event listener for demoForm
+document.getElementById('demoForm').addEventListener('submit', function (event) {
+    const detailFields = ['location', 'courses', 'username', 'userphone', 'useremail'];
+    handleFormSubmission(event, 'demoForm', detailFields);
+});
+
+// Event listener for talkForm
+document.getElementById('talkForm').addEventListener('submit', function (event) {
+    const detailFields = ['username', 'userphone', 'useremail', 'message'];
+    handleFormSubmission(event, 'talkForm', detailFields);
+});
+
+// Event listener for requestForm (assuming requestForm exists)
+document.getElementById('requestForm').addEventListener('submit', function (event) {
+    const detailFields = ['username', 'userphone', 'useremail', 'message'];
+    handleFormSubmission(event, 'requestForm', detailFields);
 });

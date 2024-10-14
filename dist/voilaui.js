@@ -80,30 +80,43 @@ function toggleDropdown(id) {
     }
 }
 
-
-
 // modal
-document.addEventListener('click', function (event) {
-    const target = event.target;
+document.addEventListener('DOMContentLoaded', function () {
+    // Open popup
+    document.querySelectorAll('[data-popup]').forEach(button => {
+        button.addEventListener('click', function () {
+            const popupId = button.getAttribute('data-popup');
+            document.getElementById(popupId).classList.remove('hidden'); // Show popup
+        });
+    });
 
-    // Open popup when trigger button is clicked
-    if (target.hasAttribute('data-popup')) {
-        const popupId = target.getAttribute('data-popup');
-        const popup = document.getElementById(popupId);
-        if (popup) {
-            popup.classList.remove('hidden');
-        }
+    // Close popup
+    document.querySelectorAll('[data-popup-close]').forEach(button => {
+        button.addEventListener('click', function () {
+            const popupId = button.getAttribute('data-popup-close');
+            document.getElementById(popupId).classList.add('hidden'); // Hide popup
+        });
+    });
+
+    // Close popup when clicking outside of the popup content
+    document.querySelectorAll('.popup-content').forEach(popupContent => {
+        popupContent.addEventListener('click', function (event) {
+            event.stopPropagation(); // Prevents closing when clicking inside the popup
+        });
+    });
+
+    document.querySelectorAll('.fixed').forEach(popupBackground => {
+        popupBackground.addEventListener('click', function () {
+            popupBackground.classList.add('hidden'); // Hide popup when clicking outside content
+        });
+    });
+});
+
+// Close popup when clicking outside the form
+document.getElementById('popup').addEventListener('click', function (event) {
+    if (event.target === this) {
+        this.classList.add('hidden');
     }
-
-    // Close popup when close button is clicked
-    if (target.hasAttribute('data-popup-close')) {
-        const popupId = target.getAttribute('data-popup-close');
-        const popup = document.getElementById(popupId);
-        if (popup) {
-            popup.classList.add('hidden');
-        }
-    }
-
 });
 
 /** 
@@ -210,11 +223,3 @@ function startAnimationOnScroll() {
 }
   
 window.addEventListener('scroll', startAnimationOnScroll);
-
-// close popup
-document.querySelectorAll('[data-popup-close]').forEach(function(button) {
-    button.addEventListener('click', function() {
-        const popupId = this.getAttribute('data-popup-close');
-        document.getElementById(popupId).classList.add('hidden');
-    });
-});
