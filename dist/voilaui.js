@@ -94,25 +94,23 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-popup-close]').forEach(button => {
         button.addEventListener('click', function () {
             const popupId = button.getAttribute('data-popup-close');
-            document.getElementById(popupId).classList.add('hidden'); // Hide popup
+            document.getElementById(popupId).classList.add('hidden'); 
         });
     });
 
-    // Close popup when clicking outside of the popup content
     document.querySelectorAll('.popup-content').forEach(popupContent => {
         popupContent.addEventListener('click', function (event) {
-            event.stopPropagation(); // Prevents closing when clicking inside the popup
+            event.stopPropagation(); 
         });
     });
 
     document.querySelectorAll('.fixed').forEach(popupBackground => {
         popupBackground.addEventListener('click', function () {
-            popupBackground.classList.add('hidden'); // Hide popup when clicking outside content
+            popupBackground.classList.add('hidden'); 
         });
     });
 });
 
-// Close popup when clicking outside the form
 document.getElementById('popup').addEventListener('click', function (event) {
     if (event.target === this) {
         this.classList.add('hidden');
