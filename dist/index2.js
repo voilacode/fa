@@ -284,3 +284,29 @@ nextBtn.addEventListener('click', () => {
 window.addEventListener('resize', updateCarousel);
 updateCarousel();  // Initialize carousel
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Show Step 0 by default
+    showStep(0);
+});
+
+function showStep(stepIndex) {
+    // Hide all steps
+    document.querySelectorAll('.step').forEach(step => step.classList.add('hidden'));
+
+    // Show the selected step
+    document.getElementById('step' + stepIndex).classList.remove('hidden');
+
+    // Reset all buttons to light blue
+    document.querySelectorAll('.step-button').forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white'); // Remove active styles
+        btn.classList.add('bg-blue-300', 'text-gray-800'); // Set inactive styles
+    });
+
+    // Highlight the clicked button
+    const activeButton = document.getElementById('btn-step' + stepIndex);
+    activeButton.classList.remove('bg-blue-300', 'text-gray-800');
+    activeButton.classList.add('bg-blue-600', 'text-white');
+}
