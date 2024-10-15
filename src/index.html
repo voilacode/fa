@@ -1823,7 +1823,7 @@
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="talk" action="{{ route('mail.send') }}" method="POST">
+            <form id="talk" action="{{ route('talk.send') }}" method="POST">
                 <div class="p-2 card-body">
                     <div class="contact_block">
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1876,7 +1876,7 @@
     <div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="request" action="{{ route('mail.send') }}" method="POST">
+            <form id="request" action="{{ route('request.send') }}" method="POST">
                 <div class="p-2 card-body">
                     <div class="contact_block">
                         <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1939,7 +1939,7 @@
     <div id="popup"
     class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
-            <form id="demoForm" action="{{ route('mail.send') }}" method="POST"
+            <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                     <div class="w-[97%]" role="alert">
