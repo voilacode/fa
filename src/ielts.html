@@ -2475,6 +2475,7 @@
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="talk" action="{{ route('mail.send') }}" method="POST">
+                @csrf
                 <div class="p-2 card-body">
                     <div class="contact_block">
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -2528,6 +2529,7 @@
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="request" action="{{ route('mail.send') }}" method="POST">
+                @csrf
                 <div class="p-2 card-body">
                     <div class="contact_block">
                         <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
