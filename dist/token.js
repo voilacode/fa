@@ -57,13 +57,13 @@ document.getElementById('demoForm').addEventListener('submit', function (event) 
 });
 
 // Event listener for talkForm
-document.getElementById('talkForm').addEventListener('submit', function (event) {
+document.getElementById('talk').addEventListener('submit', function (event) {
     const detailFields = ['username', 'userphone', 'useremail', 'message'];
-    handleFormSubmission(event, 'talkForm', detailFields);
+    handleFormSubmission(event, 'talk', detailFields);
 });
 
 // Event listener for requestForm (assuming requestForm exists)
-document.getElementById('requestForm').addEventListener('submit', function (event) {
+document.getElementById('request').addEventListener('submit', function (event) {
     const detailFields = ['username', 'userphone', 'useremail', 'message'];
-    handleFormSubmission(event, 'requestForm', detailFields);
+    handleFormSubmission(event, 'request', detailFields);
 });
