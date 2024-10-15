@@ -2475,9 +2475,8 @@
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="talk" action="{{ route('talk.send') }}" method="POST">
-                @csrf
-                <div class="p-2 card-body">
-                    <div class="contact_block">
+                <div class="p-2">
+                    <div>
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
                             <div class="w-[97%]" role="alert">
                                 Do enter the country code of your phone number.<br> Ex: <kbd class="bg-black text-white p-1 rounded">+91</kbd> for India,
@@ -2491,25 +2490,25 @@
 
                         <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                             <div class="w-full col-span-1">
-                                <label for="firstNameExample1" class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="username" id="firstNameExample1" placeholder="Full Name"
+                                <label class="block pb-2 text-center input-label">Name</label>
+                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="username" placeholder="Full Name"
                                     required="">
                             </div>
                             <div class="w-full col-span-1">
-                                <label for="lastNameExample1" class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="userphone" id="lastNameExample1" placeholder="Phone Number"
+                                <label class="block pb-2 text-center input-label">Phone</label>
+                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="userphone" placeholder="Phone Number"
                                     required="">
                             </div>
                             <div class="col-span-2 my-2">
-                                <div class="mb-4 form-group">
-                                    <label for="emailAddressExample1" class="block pb-2 text-center input-label">Email address</label>
-                                    <input type="email" class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" id="emailAddressExample1"
+                                <div class="mb-4 ">
+                                    <label class="block pb-2 text-center">Email address</label>
+                                    <input type="email" class="w-full p-2 border border-gray-200 rounded px-4" name="useremail"
                                         placeholder="E-mail ID" required="">
                                 </div>
-                                <div class="form-group">
-                                    <label for="message" class="block pb-2 text-center input-label">Message</label>
-                                    <div class="input-group">
-                                        <textarea class="w-full p-2 border border-gray-200 rounded resize-none px-4" rows="4" name="message" id="message"
+                                <div class="">
+                                    <label class="block pb-2 text-center">Message</label>
+                                    <div>
+                                        <textarea class="w-full p-2 border border-gray-200 rounded resize-none px-4" rows="4" name="message"
                                             placeholder="Type your message here..." required=""></textarea>
                                     </div>
                                 </div>
@@ -2529,53 +2528,49 @@
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="request" action="{{ route('request.send') }}" method="POST">
-                @csrf
-                <div class="p-2 card-body">
-                    <div class="contact_block">
+                <div class="p-2">
+                    <div>
                         <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-            
+
                             <div class="w-[97%]" role="alert">
                                 <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
                             </div>
-            
+
                             <button type="button"
                                 class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
                                 data-popup-close="requestForm">&times;
                             </button>
-            
+
                         </div>
                         <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                             <div class="w-full col-span-1">
-                                <label for="firstNameExample1" class="block pb-2 input-label">Name</label>
+                                <label class="block pb-2">Name</label>
                                 <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                    name="username" id="firstNameExample1" placeholder="Full Name" aria-label="Nataly"
-                                    required="" data-msg="Please enter your name">
+                                    name="username" placeholder="Full Name"
+                                    required="" >
                             </div>
                             <div class="w-full col-span-1">
-                                <label for="lastNameExample1" class="block pb-2 input-label">Phone</label>
+                                <label class="block pb-2">Phone</label>
                                 <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                    name="userphone" id="lastNameExample1" placeholder="Phone Number" aria-label="Gaga"
-                                    required="" data-msg="Please enter phone number">
+                                    name="userphone" placeholder="Phone Number"
+                                    required="" >
                             </div>
                             <div class="col-span-2 my-2">
-                                <div class="mb-4 js-form-message form-group">
-                                    <label for="emailAddressExample1" class="block pb-2 input-label">Email
+                                <div class="mb-4  ">
+                                    <label class="block pb-2">Email
                                         address</label>
                                     <input type="email"
-                                        class="w-full p-2 border border-gray-200 rounded px-4" name="useremail"
-                                        id="emailAddressExample1" placeholder="E-mail ID" required=""
-                                        data-msg="Please enter a valid email address" class="w-100">
+                                        class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
                                 </div>
-                                <div class="js-form-message form-group">
-                                    <label for="message" class="block pb-2 input-label">Which
+                                <div class=" ">
+                                    <label for="message" class="block pb-2">Which
                                         Test(s) do you wish to take?</label>
                                     <div class="input-group">
                                         <textarea
                                             class="w-full p-2 border border-gray-200 rounded resize-none px-4"
                                             rows="4" name="message" id="message"
-                                            placeholder="Type your message here..."
-                                            aria-label="Hi there, I would like to ..." required=""
-                                            data-msg="Please enter a reason."></textarea>
+                                            placeholder="Type your message here..." required=""
+                                            ></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -2585,13 +2580,11 @@
                     </div>
                 </div>
             </form>
-            
         </div>
     </div>
 
     <!-- Modal -->
-    <div id="popup"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+    <div id="popup" class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
@@ -2608,15 +2601,15 @@
                 <h3 class="text-teal-900">Where would you want to attend a demo</h3>
                 <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="radio" name="location" id="Ameerpet" value="Ameerpet">
+                        <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
                         <label class="ml-2" for="Ameerpet">Ameerpet</label>
                     </div>
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="radio" name="location" id="Madhapur" value="Madhapur">
+                        <input class="" type="radio" name="location" id="Madhapur" value="Madhapur">
                         <label class="ml-2" for="Madhapur">Madhapur</label>
                     </div>
                     <div class="flex items-center">
-                        <input class="form-checkbox" type="radio" name="location" id="Online" value="Online">
+                        <input class="" type="radio" name="location" id="Online" value="Online">
                         <label class="ml-2" for="Online">Online</label>
                     </div>
                 </div>
@@ -2625,43 +2618,43 @@
                 <div class="bg-gray-100">
                     <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
                         <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="gre" value="GRE">
+                            <input class="" type="checkbox" name="courses[]" id="gre" value="GRE">
                             <label class="ml-2" for="gre">GRE</label>
                         </div>
                         <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="ielts" value="IELTS">
+                            <input class="" type="checkbox" name="courses[]" id="ielts" value="IELTS">
                             <label class="ml-2" for="ielts">IELTS</label>
                         </div>
                         <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
+                            <input class="" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
                             <label class="ml-2" for="toefl">TOEFL</label>
                         </div>
                         <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="pte" value="PTE">
+                            <input class="" type="checkbox" name="courses[]" id="pte" value="PTE">
                             <label class="ml-2" for="pte">PTE</label>
                         </div>
                     </div>
                     <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
                         <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="oet" value="OET">
+                            <input class="" type="checkbox" name="courses[]" id="oet" value="OET">
                             <label class="ml-2" for="oet">OET</label>
                         </div>
                         <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="sat" value="SAT">
+                            <input class="" type="checkbox" name="courses[]" id="sat" value="SAT">
                             <label class="ml-2" for="sat">SAT</label>
                         </div>
                         <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="others" value="OTHERS">
+                            <input class="" type="checkbox" name="courses[]" id="others" value="OTHERS">
                             <label class="ml-2" for="others">OTHERS</label>
                         </div>
                     </div>
                 </div>
 
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 form-input" placeholder="Name"
+                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Name"
                     name="username" required>
-                <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 form-input" placeholder="Email"
+                <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
                     name="useremail" required>
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 form-input"
+                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
                     placeholder="Phone Number" name="userphone" required>
 
                 <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
