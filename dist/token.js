@@ -8,33 +8,48 @@ document.addEventListener('DOMContentLoaded', function () {
             formElement.addEventListener('submit', async function (event) {
                 event.preventDefault();  // Prevent default form submission
 
-                const formData = new FormData(formElement);
-
                 try {
+                    // Fetch CSRF token from Laravel (this part seems to work as you mentioned)
+                    const csrfResponse = await fetch('/csrf-token', {
+                        method: 'GET',
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (!csrfResponse.ok) {
+                        throw new Error('Failed to fetch CSRF token');
+                    }
+
+                    const csrfData = await csrfResponse.json();
+                    const csrfToken = csrfData.csrfToken;
+
+                    // Append CSRF token to form data
+                    const formData = new FormData(formElement);
+                    formData.append('_token', csrfToken);
+
+                    // Submit form via fetch API
                     const response = await fetch(formElement.action, {
                         method: 'POST',
+                        headers: { 'Accept': 'application/json' },
                         body: formData
                     });
 
                     if (response.ok) {
-                        console.log(`Form '${formId}' submitted successfully.`);
+                        const result = await response.json();
+                        console.log(`Form '${formId}' submitted successfully.`, result);
 
-                        // Ensure the popup exists before trying to hide it
-                        const popupElement = formElement.closest('.fixed');
-                        if (popupElement) {
-                            popupElement.classList.add('hidden');  // Hide popup
-                        }
+                        formElement.reset();  // Clear form after successful submission
 
-                        const successPopup = document.getElementById('successPopup');
-                        if (successPopup) {
-                            successPopup.classList.remove('hidden');  // Show success message
-                        }
+                        // If there are any specific success popups, handle them here
+                        alert('Form submitted successfully!');
+
                     } else {
                         const errorData = await response.json();
                         console.error(`Error submitting form '${formId}':`, errorData);
+                        alert('Error submitting the form. Please try again.');
                     }
                 } catch (error) {
                     console.error(`Submission error for form '${formId}':`, error);
+                    alert('An unexpected error occurred. Please try again later.');
                 }
             });
         }
