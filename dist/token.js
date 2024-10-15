@@ -1,47 +1,40 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const formIds = ['request', 'talk', 'demoForm'];  
+    const formIds = ['request', 'talk', 'demoForm'];  // IDs of the forms
 
     formIds.forEach(formId => {
         const formElement = document.getElementById(formId);
 
         if (formElement) {
             formElement.addEventListener('submit', async function (event) {
-                event.preventDefault();
+                event.preventDefault();  // Prevent default form submission
+
+                const formData = new FormData(formElement);
 
                 try {
-                    // Fetch CSRF token from Laravel
-                    const csrfResponse = await fetch('/csrf-token', {
-                        method: 'GET',
-                        headers: { 'Accept': 'application/json' }
+                    const response = await fetch(formElement.action, {
+                        method: 'POST',
+                        body: formData
                     });
 
-                    if (!csrfResponse.ok) {
-                        throw new Error('Failed to fetch CSRF token');
-                    }
-
-                    const csrfData = await csrfResponse.json();
-                    const csrfToken = csrfData.csrfToken;
-
-                    const formData = new FormData(formElement);
-                    formData.append('_token', csrfToken);
-
-                    const requestOptions = {
-                        method: 'POST',
-                        headers: { 'Accept': 'application/json' },
-                        body: formData
-                    };
-
-                    const response = await fetch(formElement.action, requestOptions);
-
                     if (response.ok) {
-                        formElement.closest('.fixed').classList.add('hidden');  // Hide popup
-                        document.getElementById('successPopup').classList.remove('hidden');  // Show success message
+                        console.log(`Form '${formId}' submitted successfully.`);
+
+                        // Ensure the popup exists before trying to hide it
+                        const popupElement = formElement.closest('.fixed');
+                        if (popupElement) {
+                            popupElement.classList.add('hidden');  // Hide popup
+                        }
+
+                        const successPopup = document.getElementById('successPopup');
+                        if (successPopup) {
+                            successPopup.classList.remove('hidden');  // Show success message
+                        }
                     } else {
                         const errorData = await response.json();
-                        console.error('Form submission error:', errorData);
+                        console.error(`Error submitting form '${formId}':`, errorData);
                     }
                 } catch (error) {
-                    console.error('Error during form submission:', error);
+                    console.error(`Submission error for form '${formId}':`, error);
                 }
             });
         }
