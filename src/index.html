@@ -21,8 +21,17 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <style>
+         .crsl-item {
+                min-width: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+        #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2 {
+            z-index: 1;
+        }
+
         @media (min-width: 768px) and (max-width: 800px) {
 
             .count,
@@ -367,7 +376,6 @@
     <x-homepage.post.index :data="$data" />
 
     <main>
-
         <!--hero-->
         <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:pt-12 lg:pb-8">
             <!--text-->
@@ -692,7 +700,7 @@
                                 <h2 class="my-2 text-xl text-center ">Exclusive Material</h2>
                                 <p class="my-4 text-center">By Cambridge certified authors, <br>
                                     exclusively for First Academy</p>
-                                <button
+                                <button data-popup="material1"
                                     class="flex px-8 py-2 mx-auto my-2 duration-200 ease-in bg-white rounded-full hover:bg-gray-800 hover:text-white group"
                                     aria-label="view">
                                     <span class="my-auto">View Material</span>
@@ -712,7 +720,7 @@
                                 </h2>
                                 <p class="my-4 text-center">Individual, personalised feedback <br> for the work you
                                     submit!</p>
-                                <button
+                                <button data-popup="material2"
                                     class="flex px-8 py-2 mx-auto my-2 duration-200 ease-in bg-white rounded-full hover:bg-gray-800 hover:text-white group"
                                     aria-label="view">
                                     <span class="my-auto">View Feedback</span>
@@ -2012,6 +2020,86 @@
         </div>
     </div>
 
+    <div id="material1"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        <div class="popup-content">
+            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
+                <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
+                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
+                </button>
+                <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
+                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
+                </button>
+                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                </div>
+                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
+                    <span id="slideNum1" class="text-lg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="material2"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        <div class="popup-content">
+            <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
+                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
+                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
+                </button>
+                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
+                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
+                </button>
+                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                </div>
+                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
+                    <span id="slideNum2" class="text-lg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="successPopup"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
         <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
@@ -2026,10 +2114,10 @@
         </div>
     </div>
 
+    <script src="../dist/voilaui.js"></script>
     <script src="../dist/ielts_carousel.js"></script>
     <script src="../dist/lite-yt-embed.js"></script>
     <script src="../dist/token.js"></script>
-    <script src="../dist/voilaui.js"></script>
     <script src="../dist/quiz.js"></script>
 
 </body>

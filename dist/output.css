@@ -1446,6 +1446,10 @@ video {
   flex-shrink: 0;
 }
 
+.flex-shrink {
+  flex-shrink: 1;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -2472,6 +2476,11 @@ video {
 
 .stroke-current {
   stroke: currentColor;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .object-cover {
