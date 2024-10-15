@@ -1,57 +1,65 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const formIds = ['request', 'talk', 'demoForm'];  // IDs of the forms
+// Function to handle form submissions
+async function handleFormSubmit(event, formId, url, popupId) {
+    event.preventDefault();
 
-    formIds.forEach(formId => {
-        const formElement = document.getElementById(formId);
+    try {
+        // Fetch CSRF token from Laravel
+        const csrfResponse = await fetch('/csrf-token', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
 
-        if (formElement) {
-            formElement.addEventListener('submit', async function (event) {
-                event.preventDefault();  // Prevent default form submission
-
-                try {
-                    // Fetch CSRF token from Laravel (this part seems to work as you mentioned)
-                    const csrfResponse = await fetch('/csrf-token', {
-                        method: 'GET',
-                        headers: { 'Accept': 'application/json' }
-                    });
-
-                    if (!csrfResponse.ok) {
-                        throw new Error('Failed to fetch CSRF token');
-                    }
-
-                    const csrfData = await csrfResponse.json();
-                    const csrfToken = csrfData.csrfToken;
-
-                    // Append CSRF token to form data
-                    const formData = new FormData(formElement);
-                    formData.append('_token', csrfToken);
-
-                    // Submit form via fetch API
-                    const response = await fetch(formElement.action, {
-                        method: 'POST',
-                        headers: { 'Accept': 'application/json' },
-                        body: formData
-                    });
-
-                    if (response.ok) {
-                        const result = await response.json();
-                        console.log(`Form '${formId}' submitted successfully.`, result);
-
-                        formElement.reset();  // Clear form after successful submission
-
-                        // If there are any specific success popups, handle them here
-                        alert('Form submitted successfully!');
-
-                    } else {
-                        const errorData = await response.json();
-                        console.error(`Error submitting form '${formId}':`, errorData);
-                        alert('Error submitting the form. Please try again.');
-                    }
-                } catch (error) {
-                    console.error(`Submission error for form '${formId}':`, error);
-                    alert('An unexpected error occurred. Please try again later.');
-                }
-            });
+        if (!csrfResponse.ok) {
+            throw new Error('Failed to fetch CSRF token');
         }
-    });
+
+        const csrfData = await csrfResponse.json();
+        const csrfToken = csrfData.csrfToken;
+
+        const formData = new FormData(document.getElementById(formId));
+
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+                'Accept': 'application/json'
+            },
+            body: formData
+        };
+
+        const response = await fetch(url, requestOptions);
+
+        // Check if the response was OK
+        if (response.ok) {
+            // Hide the form's popup
+            document.getElementById(popupId).classList.add('hidden');
+            // Show the success popup
+            document.getElementById('successPopup').classList.remove('hidden');
+        } else {
+            const errorData = await response.json();
+            console.error('Error in response:', errorData);
+            document.getElementById(popupId).classList.add('hidden');
+            document.getElementById('errorPopup').classList.remove('hidden');
+        }
+
+    } catch (error) {
+        console.error('Caught network error:', error);
+        document.getElementById(popupId).classList.add('hidden');
+        document.getElementById('errorPopup').classList.remove('hidden');
+    }
+}
+
+// Event listeners for each form
+document.getElementById('demoForm').addEventListener('submit', function (event) {
+    handleFormSubmit(event, 'demoForm', '/admin/mail/demo', 'popup');
+});
+
+document.getElementById('talk').addEventListener('submit', function (event) {
+    handleFormSubmit(event, 'talk', '/admin/mail/talk', 'talkForm');
+});
+
+document.getElementById('request').addEventListener('submit', function (event) {
+    handleFormSubmit(event, 'request', '/admin/mail/request', 'requestForm');
 });
