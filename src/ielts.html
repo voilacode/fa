@@ -2146,15 +2146,16 @@
                         <div class="justify-between px-2 sm:px-4 lg:flex md:pt-4">
                             <!--footer logo-->
                             <div class="py-2 lg:w-1/4 md:p-0 d:mb-6">
-                                <div class="sm:flex sm:space-x-4 md:space-x-12 lg:block lg:space-x-0 sm:items-center md:my-8 lg:my-0">
+                                <div
+                                    class="sm:flex sm:space-x-4 md:space-x-12 lg:block lg:space-x-0 sm:items-center md:my-8 lg:my-0">
                                     <img src="../assets/fa_dark_logo.png" width="180px" height="35px" alt="fa logo" />
                                     <br>
                                     <a href="#" class="mt-5 sm:mt-0 lg:mt-5 test-sm">
 
                                         <div class="flex flex-row-2">
                                             <div>
-                                                <svg xmlns="#" viewBox="0 0 20 20"
-                                                    fill="currentColor" class="w-5 h-5 mr-1 text-cyan-600">
+                                                <svg xmlns="#" viewBox="0 0 20 20" fill="currentColor"
+                                                    class="w-5 h-5 mr-1 text-cyan-600">
                                                     <path fill-rule="evenodd"
                                                         d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
                                                         clip-rule="evenodd" />
@@ -2194,7 +2195,7 @@
                             <div
                                 class="hidden grid-cols-2 mt-4 md:grid w-100 lg:w-3/4 gap-x-16 md:gap-4 md:grid-cols-4 place-content-between lg:mt-0">
                                 <div>
-                                    <h5 class="mb-4 text-lg font-semibold ">About</h5>
+                                    <h5 class="mb-4 text-lg font-bold ">About</h5>
                                     <ul class="flex flex-col space-y-2 text-lg ">
                                         <li class="mb-0 text-md"><a href="./team"
                                                 class="text-sm hover:text-emerald-500">Team</a></li>
@@ -2209,7 +2210,7 @@
                                 </div>
 
                                 <div class="mx-2 mb-4 sm:mx-12 md:mx-0">
-                                    <h5 class="mb-4 text-lg font-semibold ">Flagship Courses</h5>
+                                    <h5 class="mb-4 text-lg font-bold ">Flagship Courses</h5>
                                     <div class="grid grid-cols-2 md:gap-x-4">
                                         <ol class="col-span-2 text-lg md:col-span-1">
                                             <li class="mb-0 text-md"><a href="./ielts"
@@ -2232,10 +2233,9 @@
                                 </div>
 
                                 <div>
-                                    <h5 class="mb-4 text-lg font-semibold ">Services</h5>
+                                    <h5 class="mb-4 text-lg font-bold ">Services</h5>
                                     <ul class="flex flex-col space-y-2 text-lg ">
-                                        <li class=" text-md"><a href="./ug"
-                                                class="text-sm hover:text-emerald-500">UG
+                                        <li class=" text-md"><a href="./ug" class="text-sm hover:text-emerald-500">UG
                                                 Admissions</a></li>
                                         <li class="my-2 text-md"><a href="./masters"
                                                 class="text-sm hover:text-emerald-500">Masters</a>
@@ -2246,7 +2246,7 @@
                                 </div>
 
                                 <div class="mx-2 sm:mx-12 md:mx-0">
-                                    <h5 class="mb-4 text-lg font-semibold ">Material</h5>
+                                    <h5 class="mb-4 text-lg font-bold ">Material</h5>
                                     <ul class="flex flex-col space-y-2 text-lg ">
                                         <li class=" text-md"><a href="https://prep.firstacademy.in"
                                                 class="text-sm hover:text-emerald-500">Test Portal</a>
@@ -2257,7 +2257,7 @@
                                         <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
                                                 class="text-sm hover:text-emerald-500"> GRE
                                                 Reading</a></li>
-                                        <li class="my-2 text-md"><a href="https://firstacademy.in/blog"
+                                        <li class="my-2 text-md"><a href="https://{{request()->get('client.domain')}}/"
                                                 class="text-sm hover:text-emerald-500"> Blog</a></li>
 
                                     </ul>
@@ -2275,7 +2275,7 @@
                     <button
                         class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
                         <div> About</div>
-                        <div class="text-xl font-semibold icon">+</div>
+                        <div class="text-xl font-bold icon">+</div>
                     </button>
                     <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
                         <ul class="flex flex-col space-y-1 text-lg ps-8 ">
@@ -2296,7 +2296,7 @@
                     <button
                         class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
                         <div>Flagship Courses</div>
-                        <div class="text-xl font-semibold icon">+</div>
+                        <div class="text-xl font-bold icon">+</div>
                     </button>
                     <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
                         <div class="grid grid-cols-2 md:gap-x-4 ps-8">
@@ -2324,7 +2324,7 @@
                     <button
                         class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
                         <div>Services</div>
-                        <div class="text-xl font-semibold icon">+</div>
+                        <div class="text-xl font-bold icon">+</div>
                     </button>
                     <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
                         <ul class="flex flex-col space-y-1 text-lg ps-8 ">
@@ -2344,20 +2344,19 @@
                     <button
                         class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
                         <div>Material</div>
-                        <div class="text-xl font-semibold icon">+</div>
+                        <div class="text-xl font-bold icon">+</div>
                     </button>
                     <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
                         <ul class="flex flex-col space-y-1 text-lg ps-8 ">
                             <li class=" text-md"><a href="#" class="text-sm hover:text-emerald-500">Test Portal</a>
                             </li>
-                            <li class="my-2 text-md"><a href="./reading"
-                                    class="text-sm hover:text-emerald-500">IELTS Big
+                            <li class="my-2 text-md"><a href="./reading" class="text-sm hover:text-emerald-500">IELTS
+                                    Big
                                     Book</a></li>
                             <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
                                     class="text-sm hover:text-emerald-500"> GRE
                                     Reading</a></li>
-                            <li class="my-2 text-md"><a href="https://firstacademy.in/blog"
-                                    class=""> Blog</a></li>
+                            <li class="my-2 text-md"><a href="./blog" class=""> Blog</a></li>
 
                         </ul>
                     </div>
@@ -2426,7 +2425,8 @@
             <p class="mt-4 mb-2 text-sm text-center ">
                 © 2021 First Academy. All rights reserved.
             </p>
-            <p class="max-w-screen-xl px-4 mx-auto text-sm text-center sm:px-16">When you visit or interact with our sites, services or
+            <p class="max-w-screen-xl px-4 mx-auto text-sm text-center sm:px-16">When you visit or interact with our
+                sites, services or
                 tools, we or our authorised service providers may use cookies for storing information to help provide
                 you with a better, faster and safer experience and for marketing purposes.</p>
         </section>
@@ -2464,7 +2464,6 @@
         </svg>
     </button>
 
-    <!-- Popup  -->
     <div id="talkForm"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
@@ -2579,7 +2578,8 @@
     </div>
 
     <!-- Modal -->
-    <div id="popup" class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+    <div id="popup"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
@@ -2656,7 +2656,101 @@
             </form>
         </div>
     </div>
-   
+
+    <div id="material1"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        <div class="popup-content">
+            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
+                <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
+                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
+                </button>
+                <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
+                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
+                </button>
+                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                    </div>
+                </div>
+                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
+                    <span id="slideNum1" class="text-lg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="material2"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        <div class="popup-content">
+            <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
+                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
+                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
+                </button>
+                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
+                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
+                </button>
+                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                    <div class="crsl-item">
+                        <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                    </div>
+                </div>
+                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
+                    <span id="slideNum2" class="text-lg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="successPopup"
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+        <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+            <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
+                <div class="w-full text-center text-green-800">
+                    <h3 class="text-lg font-bold">Success!</h3>
+                    <p>Your mail has been sent successfully.</p>
+                </div>
+            </div>
+            <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
+                data-popup-close="successPopup">Close</button>
+        </div>
+    </div>
+    
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/ielts_carousel.js"></script>
     <script src="../dist/accordion.js"></script>
