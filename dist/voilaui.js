@@ -21,46 +21,27 @@ function closeOtherDropdowns(currentDropdownId) {
     });
 }
 
-document.getElementById('dropdownToggle').addEventListener('click', function () {
-    var dropdownMenu = document.getElementById('dropdownMenu');
-    closeOtherDropdowns('dropdownMenu');
-    dropdownMenu.classList.toggle('hidden');
-});
-
-document.getElementById('dropdownToggle1').addEventListener('click', function () {
-    var dropdownMenu1 = document.getElementById('dropdownMenu1');
-    closeOtherDropdowns('dropdownMenu1');
-    dropdownMenu1.classList.toggle('hidden');
-});
-
-document.getElementById('dropdownToggle2').addEventListener('click', function () {
-    var dropdownMenu2 = document.getElementById('dropdownMenu2');
-    closeOtherDropdowns('dropdownMenu2');
-    dropdownMenu2.classList.toggle('hidden');
+document.querySelectorAll('[id^="dropdownToggle"]').forEach(toggle => {
+    toggle.addEventListener('click', function (event) {
+        event.stopPropagation(); // Prevent event from bubbling up
+        const dropdownId = this.id.replace('Toggle', 'Menu'); // Replace 'Toggle' with 'Menu'
+        const dropdownMenu = document.getElementById(dropdownId);
+        closeOtherDropdowns(dropdownId);
+        dropdownMenu.classList.toggle('hidden');
+    });
 });
 
 // Close the dropdowns when clicking outside of them
 document.addEventListener('click', function (event) {
-    var dropdownMenu = document.getElementById('dropdownMenu');
-    var dropdownToggle = document.getElementById('dropdownToggle');
-
-    if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-        dropdownMenu.classList.add('hidden');
-    }
-
-    var dropdownMenu1 = document.getElementById('dropdownMenu1');
-    var dropdownToggle1 = document.getElementById('dropdownToggle1');
-
-    if (!dropdownToggle1.contains(event.target) && !dropdownMenu1.contains(event.target)) {
-        dropdownMenu1.classList.add('hidden');
-    }
-
-    var dropdownMenu2 = document.getElementById('dropdownMenu2');
-    var dropdownToggle2 = document.getElementById('dropdownToggle2');
-
-    if (!dropdownToggle2.contains(event.target) && !dropdownMenu2.contains(event.target)) {
-        dropdownMenu2.classList.add('hidden');
-    }
+    const dropdowns = document.querySelectorAll('.dropdown-menu');
+    dropdowns.forEach(dropdown => {
+        if (!dropdown.classList.contains('hidden')) {
+            const toggle = document.getElementById(dropdown.id.replace('menu', 'Toggle'));
+            if (!toggle.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
+            }
+        }
+    });
 });
 
 // appear on hover
@@ -71,8 +52,9 @@ function showDropdown(id) {
 function hideDropdown(id) {
     document.getElementById(id).classList.add("hidden");
 }
+
 function toggleDropdown(id) {
-    var dropdown = document.getElementById(id);
+    const dropdown = document.getElementById(id);
     if (dropdown.classList.contains("hidden")) {
         showDropdown(id);
     } else {
