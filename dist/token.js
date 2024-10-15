@@ -1,5 +1,5 @@
 // Function to handle form submissions
-async function handleFormSubmission(event, formId, detailFields) {
+async function handleFormSubmission(event, formId) {
     event.preventDefault();
 
     try {
@@ -21,49 +21,39 @@ async function handleFormSubmission(event, formId, detailFields) {
         const form = document.getElementById(formId);
         const formData = new FormData(form);
 
+        // Append the CSRF token to the form data
+        formData.append('_token', csrfToken);
+
         const requestOptions = {
             method: 'POST',
             headers: {
-                'X-CSRF-TOKEN': csrfToken,
                 'Accept': 'application/json'
             },
             body: formData
         };
 
-        const response = await fetch('/admin/mail', requestOptions);
+        const response = await fetch(form.action, requestOptions);
 
         if (response.ok) {
-            const responseData = await response.json();
-
-            document.getElementById('popup').classList.add('hidden');
+            // Hide current popup and show success popup
+            document.getElementById(formId).closest('.fixed').classList.add('hidden');
             document.getElementById('successPopup').classList.remove('hidden');
-
         } else {
             const errorData = await response.json();
-            console.error('Error in response:', errorData);
+            console.error('Form submission error:', errorData);
         }
-
     } catch (error) {
-        console.error('Caught network error:', error);
-        document.getElementById('popup').classList.add('hidden');
-        document.getElementById('errorPopup').classList.remove('hidden');
+        console.error('Error during form submission:', error);
     }
 }
 
-// Event listener for demoForm
-document.getElementById('demoForm').addEventListener('submit', function (event) {
-    const detailFields = ['location', 'courses', 'username', 'userphone', 'useremail'];
-    handleFormSubmission(event, 'demoForm', detailFields);
-});
+// Attach form submission events
+document.addEventListener('DOMContentLoaded', function () {
+    const forms = ['talk', 'request', 'demoForm'];
 
-// Event listener for talkForm
-document.getElementById('talk').addEventListener('submit', function (event) {
-    const detailFields = ['username', 'userphone', 'useremail', 'message'];
-    handleFormSubmission(event, 'talk', detailFields);
-});
-
-// Event listener for requestForm (assuming requestForm exists)
-document.getElementById('request').addEventListener('submit', function (event) {
-    const detailFields = ['username', 'userphone', 'useremail', 'message'];
-    handleFormSubmission(event, 'request', detailFields);
+    forms.forEach(formId => {
+        document.getElementById(formId).addEventListener('submit', function (event) {
+            handleFormSubmission(event, formId);
+        });
+    });
 });
