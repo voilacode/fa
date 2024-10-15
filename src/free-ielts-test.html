@@ -307,61 +307,63 @@
             </div>
         </nav>
     </header>
-    <br><br>
 
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
     <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:py-8">
         <!--text-->
-        <div class="items-center py-5 lg:flex lg:justify-between lg:h-full">
+        <div class="items-center py-5 lg:flex justify-between lg:h-full">
          
           <!-- Form Column -->
-          <div class="flex-grow w-full mb-8 mr-3 lg:w-7/12 lg:mb-0">
-            <div class="flex flex-col h-full ml-0 lg:ml-12">
-              <form class="flex flex-col h-full shadow-lg" action="/admin/contact" data-otp="1" novalidate="novalidate">
-                <div class="px-6 py-4 " style="background-color: #68ebca;">
-                  <h2 class="mb-0 text-2xl font-bold">Request for a Free Test</h2>
-                </div>
-                <div class="flex-grow p-6">
-                  <div class="hidden alert_block">
-                    <div class="alert_message"></div>
-                  </div>
-                  <div class="hidden otp_block">
-                    <h5 class="text-lg font-semibold">OTP Verification</h5>
-                    <input type="text" class="w-full px-3 py-2 mt-2 border border-gray-300 rounded" placeholder="Enter the 4 digit OTP sent to your phone">
-                    <small class="text-gray-500">Kindly wait for 5 seconds before retrying.</small>
-                    <div class="hidden px-4 py-2 mt-2 text-green-700 bg-green-100 rounded">Invalid OTP. Kindly refresh the page and retry.</div>
-                    <button type="button" class="px-4 py-2 mt-3 text-white transition duration-300 bg-blue-700 rounded hover:bg-blue-800">Verify</button>
-                    <div class="hidden mt-3 ml-2 spinner-border" role="status">
-                      <span class="sr-only">Loading...</span>
+          <div class="w-full mb-8 mr-3 lg:w-7/12 lg:mb-0">
+            <div class="flex flex-col h-full">
+                <form id="request" action="{{ route('request.send') }}" method="POST">
+                    <div class="p-2">
+                        <div>
+                            <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                                <div class="w-[97%]" role="alert">
+                                    <h1 class="text-2xl font-semibold my-auto">Request For a Free Test</h1> 
+                                </div>    
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                                <div class="w-full col-span-1">
+                                    <label class="block pb-2">Name</label>
+                                    <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                        name="username" placeholder="Full Name"
+                                        required="" >
+                                </div>
+                                <div class="w-full col-span-1">
+                                    <label class="block pb-2">Phone</label>
+                                    <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                        name="userphone" placeholder="Phone Number"
+                                        required="" >
+                                </div>
+                                <div class="col-span-2 my-2">
+                                    <div class="mb-4  ">
+                                        <label class="block pb-2">Email
+                                            address</label>
+                                        <input type="email"
+                                            class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
+                                    </div>
+                                    <div class=" ">
+                                        <label for="message" class="block pb-2">Which
+                                            Test(s) do you wish to take?</label>
+                                        <div class="input-group">
+                                            <textarea
+                                                class="w-full p-2 border border-gray-200 rounded resize-none px-4"
+                                                rows="4" name="message" id="message"
+                                                placeholder="Type your message here..." required=""
+                                                ></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit"
+                                class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
+                        </div>
                     </div>
-                  </div>
-                  <div class="contact_block">
-                    <div class="p-3 mb-4 rounded" style="background-color: #68ebca;">
-                      Do include your country code with the number. Eg: <kbd class="p-1 text-white bg-black rounded-lg">+91</kbd> for India; <kbd class="p-1 text-white bg-black rounded-lg">+1</kbd> for USA.
-                    </div>
-                    <!-- Name and Phone side by side on larger screens -->
-                    <div class="flex flex-wrap mx-2">
-                      <div class="w-full px-2 mb-4 lg:w-1/2">
-                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded" name="name" placeholder="Full name" required>
-                      </div>
-                      <div class="w-full px-2 mb-4 lg:w-1/2">
-                        <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded" name="phone" placeholder="Phone number" required>
-                      </div>
-                      <div class="w-full px-2 mb-4">
-                        <input type="email" class="w-full px-3 py-2 border border-gray-300 rounded" name="email" placeholder="Your email id" required>
-                        <input type="hidden" name="message" value="Request for a free ielts test">
-                        <input type="hidden" name="category" value="ieltstest">
-                      </div>
-                      <div class="w-full px-2">
-                        <textarea class="w-full px-3 py-2 border border-gray-300 rounded" rows="4" name="message" placeholder="Which test(s) do you want to take? Ex: IELTS General; GRE; OET; IELTS Academic" required></textarea>
-                      </div>
-                    </div>
-                    <button type="button" class="w-full px-4 py-2 mt-4 text-white rounded bg-teal-custom hover:bg-green-500">Submit</button>
-                  </div>
-                </div>
-              </form>
+                </form>
               <div class="p-4 mt-4 rounded" style="background-color: #68ebca;">
                 ♥ Thank you for your interest! Details will be sent via e-mail in <kbd class="p-1 text-white bg-black rounded-lg">24hrs</kbd>.
                 <br>If not found, please check your spam folder.<br>
@@ -371,7 +373,7 @@
           </div>
         
           <!-- Testimonial Column -->
-          <div class="flex-grow w-full p-6 py-8 rounded-lg shadow-md lg:h-full lg:w-5/12" style="background-color: #68ebca;">
+          <div class=" w-full p-6 py-8 rounded-lg shadow-md lg:h-full lg:w-4/12" style="background-color: #68ebca;">
             <div class="flex flex-col justify-center h-full">
               <div class="text-center">
                 <img class="mx-auto mb-5" src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_review.png" alt="Illustration" style="width: 12.5rem;">
