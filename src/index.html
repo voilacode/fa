@@ -1938,8 +1938,9 @@
 
     <!-- Modal -->
     <div id="popup"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
-    <form id="demoForm" action="{{ route('mail.send') }}" method="POST"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        <div class="popup-content">
+            <form id="demoForm" action="{{ route('mail.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
         <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
             <div class="w-[97%]" role="alert">
@@ -2011,7 +2012,8 @@
             placeholder="Phone Number" name="userphone" required>
 
         <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
-    </form>
+            </form>
+        </div>
     </div>
 
     <div id="successPopup"

@@ -402,7 +402,7 @@
                 </ul>
                 
                 <div class="flex my-4 space-x-2 sm:space-x-4 lg:me-auto">
-                    <button class="block w-40 px-2 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-full sm:p-3 bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session">Get Started</button>
+                    <button class="block w-40 px-2 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-full sm:p-3 bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session" data-popup="popup">Get Started</button>
 
                     <a href="#" class="block w-40 px-2 py-3 mt-2 font-semibold text-center duration-200 ease-in transform bg-yellow-500 rounded-full sm:p-3 hover:bg-yellow-400 sm:w-60 md:w-40 lg:w-60">Session Plan</a>
                 </div>
@@ -980,7 +980,7 @@
                             <h3 class="mb-2 text-xl font-semibold">Regular Course Duration</h3>
                             <p class="font-semibold text-center text-pink-500 ">Regular Term – 4 weeks</p>
                             <p class="pb-3 mb-5 font-semibold text-center text-pink-500">Short Term – 2 weeks</p>
-                            <a href="" class="p-4 px-8 font-semibold duration-300 ease-in-out bg-teal-600 rounded-lg hover:bg-teal-500">Attend a session</a>
+                            <a href="" class="p-4 px-8 font-semibold duration-300 ease-in-out bg-teal-600 rounded-lg hover:bg-teal-500" data-popup="popup">Attend a session</a>
                         </div>
                     </div>
                     
@@ -2474,7 +2474,7 @@
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form class="js-validate" action="{{ route('mail.send') }}" id="talk" method="POST">
+            <form id="talk" action="{{ route('mail.send') }}" method="POST">
                 <div class="p-2 card-body">
                     <div class="contact_block">
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -2528,7 +2528,7 @@
         class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form action="{{ route('mail.send') }}" id="request" method="POST">
+            <form id="request" action="{{ route('mail.send') }}" method="POST">
                 <div class="p-2 card-body">
                     <div class="contact_block">
                         <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -2589,8 +2589,9 @@
 
     <!-- Modal -->
     <div id="popup"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
-    <form id="demoForm" action="{{ route('mail.send') }}" method="POST"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        <div class="popup-content">
+            <form id="demoForm" action="{{ route('mail.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
         <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
             <div class="w-[97%]" role="alert">
@@ -2662,12 +2663,14 @@
             placeholder="Phone Number" name="userphone" required>
 
         <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
-    </form>
+            </form>
+        </div>
     </div>
    
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/ielts_carousel.js"></script>
     <script src="../dist/accordion.js"></script>
+    <script src="../dist/token.js"></script>
     
 </body>
 
