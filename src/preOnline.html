@@ -306,13 +306,7 @@
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
-    <!--Latest Post-->
-    <div class="flex items-center justify-center mt-5 bg-teal-100">
-        <div class="flex items-center my-1 space-x-2 overflow-hidden text-center">
-            <div class="p-1 px-3 text-xs font-semibold text-white bg-teal-500 rounded-full">Latest Post</div>
-            <div class="text-sm font-semibold md:text-base">Two Questions in One - WT2</div>
-        </div>
-    </div>
+    
 
     <main>
        <!--hero-->
@@ -325,8 +319,8 @@
         <!--text-->
         <div class="grid mx-5 mb-0 lg:grid-cols-2 md:grid-cols-1 lg:m-0 md:gap-10">
             <div class="my-auto">
-                <h1 class="text-2xl font-semibold font-open md:text-5xl text-white">PTE Customised</h1>
-                <h1 class="my-4 text-lg font-semibold md:text-2xl text-teal-100">Online and Personalised Training</h1>
+                <h1 class="text-2xl font-semibold text-white font-open md:text-5xl">PTE Customised</h1>
+                <h1 class="my-4 text-lg font-semibold text-teal-100 md:text-2xl">Online and Personalised Training</h1>
 
                 <p class="my-8 text-lg text-justify text-white">
                     PTE too taxing for you? Living in a different country but want to be trained by our
@@ -335,7 +329,7 @@
                 </p>
 
                 <button
-                    class="px-6 py-3 text-white bg-teal-600 font-open duration-500 ease-in-out rounded hover:bg-teal-500 hover:-translate-y-1 hover:shadow-xl">Get
+                    class="px-6 py-3 text-white duration-500 ease-in-out bg-teal-600 rounded font-open hover:bg-teal-500 hover:-translate-y-1 hover:shadow-xl">Get
                     Started</button>
 
             </div>
@@ -358,7 +352,7 @@
    
         <!--options-->
         <section class="items-center justify-between max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
-            <p class="text-xl font-semibold md:text-3xl font-open text-teal-800">Things you could do</p>
+            <p class="text-xl font-semibold text-teal-800 md:text-3xl font-open">Things you could do</p>
         
             <!--3 blocks-->
             <div class="grid grid-cols-6 my-4 mt-8 md:gap-16">
@@ -366,7 +360,7 @@
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                     <div
                         class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 hover:shadow-2xl md:m-0">
-                        <p class="my-auto text-lg font-semibold font-open text-teal-900">Attend a demo</p>
+                        <p class="my-auto text-lg font-semibold text-teal-900 font-open">Attend a demo</p>
                         <img src="../assets/file_calendar.svg" alt="calendar" width="80px" height="80px">
                     </div>
                 </div>
@@ -375,7 +369,7 @@
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                     <div
                         class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 hover:shadow-2xl md:m-0">
-                        <p class="my-auto text-lg font-semibold font-open text-teal-900">Leave a Message</p>
+                        <p class="my-auto text-lg font-semibold text-teal-900 font-open">Leave a Message</p>
                         <img src="../assets/file_communication.svg" alt="file_communication" width="80px" height="80px">
                     </div>
                 </div>
@@ -385,7 +379,7 @@
                     <a href="./courses.html">
                         <div
                             class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 hover:shadow-2xl md:m-0">
-                            <p class="my-auto text-lg font-semibold font-open text-teal-900">View Courses</p>
+                            <p class="my-auto text-lg font-semibold text-teal-900 font-open">View Courses</p>
                             <img src="../assets/file_calendar.svg" alt="calendar" width="80px" height="80px">
                         </div>
                     </a>
@@ -1204,7 +1198,7 @@
     </footer>
 
     <!--Messages-->
-    <div class="fixed z-10 bottom-0 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
+    <div class="fixed bottom-0 z-10 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
         <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
             stroke="currentColor" class="w-4 h-4 text-white">
@@ -1243,43 +1237,43 @@
                     <div>
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
                             <div class="w-[97%]" role="alert">
-                                Do enter the country code of your phone number.<br> Ex: <kbd class="bg-black text-white p-1 rounded">+91</kbd> for India,
-                                <kbd class="bg-black text-white p-1 rounded">+1</kbd> for the USA.
+                                Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
+                                <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
                             </div>
                             <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
                                 data-popup-close="talkForm">&times;</button>
                         </div>
 
-                        <h1 class="text-center font-semibold my-2">Talk to Us!</h1>
+                        <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
 
                         <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                             <div class="w-full col-span-1">
                                 <label class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="username" placeholder="Full Name"
+                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
                                     required="">
                             </div>
                             <div class="w-full col-span-1">
                                 <label class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="userphone" placeholder="Phone Number"
+                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
                                     required="">
                             </div>
                             <div class="col-span-2 my-2">
                                 <div class="mb-4 ">
                                     <label class="block pb-2 text-center">Email address</label>
-                                    <input type="email" class="w-full p-2 border border-gray-200 rounded px-4" name="useremail"
+                                    <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
                                         placeholder="E-mail ID" required="">
                                 </div>
                                 <div class="">
                                     <label class="block pb-2 text-center">Message</label>
                                     <div>
-                                        <textarea class="w-full p-2 border border-gray-200 rounded resize-none px-4" rows="4" name="message"
+                                        <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
                                             placeholder="Type your message here..." required=""></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <button type="submit" class="block px-6 py-2 mx-auto rounded-lg btn bg-teal-700 text-white hover:bg-teal-custom duration-300">
+                        <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn hover:bg-teal-custom">
                             Submit
                         </button>
                     </div>
@@ -1288,16 +1282,16 @@
         </div>
     </div>
 
-    <div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
+    <div id="requestForm" class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="request" action="{{ route('request.send') }}" method="POST">
                 <div class="p-2">
                     <div>
-                        <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                        <div class="flex items-center justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
 
                             <div class="w-[97%]" role="alert">
-                                <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
+                                <h1 class="my-auto text-2xl font-semibold">Request Free Test</h1> 
                             </div>
 
                             <button type="button"
@@ -1309,29 +1303,29 @@
                         <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                             <div class="w-full col-span-1">
                                 <label class="block pb-2">Name</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
                                     name="username" placeholder="Full Name"
                                     required="" >
                             </div>
                             <div class="w-full col-span-1">
                                 <label class="block pb-2">Phone</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
                                     name="userphone" placeholder="Phone Number"
                                     required="" >
                             </div>
                             <div class="col-span-2 my-2">
-                                <div class="mb-4  ">
+                                <div class="mb-4 ">
                                     <label class="block pb-2">Email
                                         address</label>
                                     <input type="email"
-                                        class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
+                                        class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail" placeholder="E-mail ID" required="" class="w-100">
                                 </div>
-                                <div class=" ">
+                                <div class="">
                                     <label for="message" class="block pb-2">Which
                                         Test(s) do you wish to take?</label>
                                     <div class="input-group">
                                         <textarea
-                                            class="w-full p-2 border border-gray-200 rounded resize-none px-4"
+                                            class="w-full p-2 px-4 border border-gray-200 rounded resize-none"
                                             rows="4" name="message" id="message"
                                             placeholder="Type your message here..." required=""
                                             ></textarea>
@@ -1340,7 +1334,7 @@
                             </div>
                         </div>
                         <button type="submit"
-                            class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
+                            class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn btn-block transition-3d-hover contact_button hover:bg-teal-custom">Submit</button>
                     </div>
                 </div>
             </form>

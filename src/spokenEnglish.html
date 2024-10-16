@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +21,20 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <style>
+        #header{
+            display: block;
+        }
+         .crsl-item {
+                min-width: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+        #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2 {
+            z-index: 1;
+        }
+
         @media (min-width: 768px) and (max-width: 800px) {
 
             .count,
@@ -33,7 +46,7 @@
         .popupQn {
             display: none;
             position: fixed;
-            z-index: 10;
+            z-index: 999;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -48%);
@@ -76,301 +89,302 @@
             }
         }
     </style>
-    <title>English Coaching at First Academy</title>
+    <title>Best IELTS | GRE | TOEFL Coaching | Training in Hyderabad | First Academy</title>
 </head>
- 
-  <body class="font-open">
-    <header class="fixed z-10 w-screen border-b border-gray-200">
-      <nav class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
-          <div class="items-center justify-between max-w-screen-xl px-4 py-2 mx-auto lg:flex sm:px-[60px] ">
-              <div class="flex justify-between">
-                  <div>
-                      <a href="/" class="inline-flex py-2 text-xl font-bold tracking-wider uppercase me-auto">
-                          <img src="https://prep.firstacademy.in/images/logo.png" alt="logo" width="180px">
-                      </a>
-                  </div>
 
-                  <div class="items-center my-auto lg:hidden">
-                      <nav>
-                          <ul>
-                              <li class="flex items-center gap-2">
-                                  <a href="./contactus"
-                                      class="flex items-center px-5 py-2 font-semibold text-white rounded-lg bg-teal-custom group"
-                                      id="chatButton">
-                                      <span class="mr-2 ">Chat</span>
-                                      <svg class="stroke-current" width="10" height="10" stroke-width="2"
-                                          viewBox="0 0 10 10" aria-hidden="true" class="hidden sm:flex">
-                                          <g fill-rule="evenodd">
-                                              <path
-                                                  class="transition duration-200 ease-in-out opacity-0 group-hover:opacity-100"
-                                                  d="M0 5h7"></path>
-                                              <path
-                                                  class="transition duration-200 ease-in-out opacity-100 group-hover:transform group-hover:translate-x-1"
-                                                  d="M1 1l4 4-4 4"></path>
-                                          </g>
-                                      </svg>
-                                  </a>
-                                  <!--menu bar-->
-                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                      stroke-width="1.5" stroke="currentColor" class="w-8 h-8" id="menuIcon"
-                                      onclick="toggleMobileMenu()">
-                                      <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
-                                  </svg>
+<body class="font-open">
+    <header class="fixed z-10 w-screen border-b border-gray-200" id="header">
+        <nav class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
+            <div class="items-center justify-between max-w-screen-xl px-4 py-2 mx-auto lg:flex sm:px-[60px] ">
+                <div class="flex justify-between">
+                    <div>
+                        <a href="/" class="inline-flex py-2 text-xl font-bold tracking-wider uppercase me-auto">
+                            <img src="https://prep.firstacademy.in/images/logo.png" alt="logo" width="180px">
+                        </a>
+                    </div>
 
-                              </li>
-                          </ul>
-                      </nav>
-                  </div>
-              </div>
+                    <div class="items-center my-auto lg:hidden">
+                        <nav>
+                            <ul>
+                                <li class="flex items-center gap-2">
+                                    <a href="./contactus"
+                                        class="flex items-center px-5 py-2 font-semibold text-white rounded-lg bg-teal-custom group"
+                                        id="chatButton">
+                                        <span class="mr-2 ">Chat</span>
+                                        <svg class="stroke-current" width="10" height="10" stroke-width="2"
+                                            viewBox="0 0 10 10" aria-hidden="true" class="hidden sm:flex">
+                                            <g fill-rule="evenodd">
+                                                <path
+                                                    class="transition duration-200 ease-in-out opacity-0 group-hover:opacity-100"
+                                                    d="M0 5h7"></path>
+                                                <path
+                                                    class="transition duration-200 ease-in-out opacity-100 group-hover:transform group-hover:translate-x-1"
+                                                    d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                    <!--menu bar-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-8 h-8" id="menuIcon"
+                                        onclick="toggleMobileMenu()">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+                                    </svg>
 
-              <div class="items-center hidden w-full my-auto mt-2 nav-links lg:inline-flex lg:w-auto lg:mt-0"
-                  id="mainMenu">
-                  <div class="w-full mt-2 lg:inline-flex lg:w-auto lg:mt-0" id="mainMenu">
-                      <ul
-                          class="flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-1 mt-1.5 transition-all duration-300 ease-in-out  text-xl ls-2">
-                          <li>
-                              <a href="/"
-                                  class="flex px-4 py-2 font-medium duration-300 ease-in-out rounded-md text-[16px] hover:text-teal-500">
-                                  Home
-                              </a>
-                          </li>
-                          <li class="relative" onmouseover="showDropdown('dropdownMenu1')"
-                              onmouseout="hideDropdown('dropdownMenu1')" onclick="toggleDropdown('dropdownMenu1')">
-                              <button
-                                  class="flex justify-between items-center w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
-                                  id="dropdownToggle1">
-                                  Courses
-                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                      stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
-                                      <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                  </svg>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
 
-                              </button>
-                              <div class="right-0 hidden w-full p-2 rounded-md lg:absolute dropdown-menu lg:w-[400px] "
-                                  id="dropdownMenu1">
-                                  <div
-                                      class="grid grid-cols-5 transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow md:bg-white lg:translate-x-40 lg:border-none">
-                                      <div class="col-span-2">
-                                          <p
-                                              class="uppercase  tracking-wider text-gray-800 font-medium text-[13px] pt-2 px-6">
-                                              Get started</p>
-                                          <ul class="mt-3 text-[16px]">
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./courses"
-                                                      class="block m-0 font-medium text-gray-800 ">
-                                                      All Courses
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./ielts" class="block m-0 font-medium text-gray-800 ">
-                                                      IELTS
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./gre" class="block m-0 font-medium text-gray-800 ">
-                                                      GRE
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./pte" class="block m-0 font-medium text-gray-800 ">
-                                                      PTE
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./oet" class="block m-0 font-medium text-gray-800 ">
-                                                      OET
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./sat" class="block m-0 font-medium text-gray-800 ">
-                                                      SAT
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                      </div>
-                                      <div class="col-span-3">
-                                          <p
-                                              class="uppercase  tracking-wider text-gray-800 font-medium text-[13px] px-6 mt-2">
-                                              Other Courses</p>
-                                          <ul class="mt-3 text-[16px]">
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./toefl" class="block m-0 font-medium text-gray-800 ">
-                                                      TOEFL
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./det" class="block m-0 font-medium text-gray-800 ">
-                                                      DET
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./ielts-band9-training"
-                                                      class="block m-0 font-medium text-gray-800 ">
-                                                      IELTS Band 9 Training
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./pteonline"
-                                                      class="block m-0 font-medium text-gray-800 ">
-                                                      PTE Personalized
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./custom"
-                                                      class="block m-0 font-medium text-gray-800 ">
-                                                      Corporate Training
-                                                  </a>
-                                              </li>
-                                              <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                  <a href="./spokenenglish"
-                                                      class="block m-0 font-medium text-gray-800 ">
-                                                      English Language Training
-                                                  </a>
-                                              </li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="relative" onmouseover="showDropdown('dropdownMenu')"
-                              onmouseout="hideDropdown('dropdownMenu')" onclick="toggleDropdown('dropdownMenu')">
-                              <button
-                                  class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
-                                  class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
-                                  id="dropdownToggle">
-                                  Material
-                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                      stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
-                                      <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                  </svg>
-                              </button>
-                              <div class="right-0 hidden p-2 lg:absolute dropdown-menu" id="dropdownMenu">
-                                  <div
-                                      class="transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow lg:border-0 md:bg-white lg:translate-x-28">
-                                      <ul class=" text-[15px] lg:w-52">
-                                          <li class="px-4 py-3 m-0 rounded-t-xl hover:bg-teal-100">
-                                              <a href="./reading" class="block m-0 font-medium text-gray-800 ">
-                                                  IELTS Reading
-                                              </a>
-                                          </li>
-                                          <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                              <a href="https://firstacademy.in/grer"
-                                                  class="block m-0 font-medium text-gray-800 ">
-                                                  GRE Solutions
-                                              </a>
-                                          </li>
-                                          <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                              <a href="./downloads" class="block m-0 font-medium text-gray-800 ">
-                                                  Downloads
-                                              </a>
-                                          </li>
-                                          <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                              <a href="https://prep.firstacademy.in"
-                                                  class="block m-0 font-medium text-gray-800 ">
-                                                  Practice Tests
-                                              </a>
-                                          </li>
-                                          <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-teal-100">
-                                              <a href="https://super.firstacademy.in/"
-                                                  class="block m-0 font-medium text-gray-800 ">
-                                                  GRE Login
-                                              </a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </li>
-                          <li>
-                              <a href="https://firstacademy.in/blog"
-                                  class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
-                                  Blog
-                              </a>
-                          </li>
-                          <li>
-                              <a href="./studyabroad"
-                                  class="flex px-4 py-2 font-medium rounded-md hover:text-teal-500 text-[16px] ">
-                                  Study Abroad
-                              </a>
-                          </li>
-                          <li class="relative" onmouseover="showDropdown('dropdownMenu2')"
-                              onmouseout="hideDropdown('dropdownMenu2')" onclick="toggleDropdown('dropdownMenu2')">
-                              <button
-                                  class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
-                                  id="dropdownToggle2">
-                                  About
-                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                      stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
-                                      <path stroke-linecap="round" stroke-linejoin="round"
-                                          d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                  </svg>
-                              </button>
-                              <div class="right-0 hidden p-2 lg:absolute dropdown-menu" id="dropdownMenu2">
-                                  <div
-                                      class="transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow lg:border-0 md:bg-white lg:translate-x-28">
-                                      <ul class="text-[16px] lg:w-48">
-                                          <li class="px-4 py-3 m-0 rounded-t-lg hover:bg-teal-100">
-                                              <a href="./about-us" class="block m-0 font-medium text-gray-800 ">
-                                                  Us
-                                              </a>
-                                          </li>
-                                          <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                              <a href="./team" class="block m-0 font-medium text-gray-800 ">
-                                                  Team
-                                              </a>
-                                          </li>
-                                          <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-teal-100">
-                                              <a href="./contactus" class="block m-0 font-medium text-gray-800 ">
-                                                  Contact
-                                              </a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </li>
+                <div class="items-center hidden w-full my-auto mt-2 nav-links lg:inline-flex lg:w-auto lg:mt-0"
+                    id="mainMenu">
+                    <div class="w-full mt-2 lg:inline-flex lg:w-auto lg:mt-0" id="mainMenu">
+                        <ul
+                            class="flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-1 mt-1.5 transition-all duration-300 ease-in-out  text-xl ls-2">
+                            <li>
+                                <a href="/"
+                                    class="flex px-4 py-2 font-medium duration-300 ease-in-out rounded-md text-[16px] hover:text-teal-500">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="relative" onmouseover="showDropdown('dropdownMenu1')"
+                                onmouseout="hideDropdown('dropdownMenu1')" onclick="toggleDropdown('dropdownMenu1')">
+                                <button
+                                    class="flex justify-between items-center w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
+                                    id="dropdownToggle1">
+                                    Courses
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
 
-                          <li class="items-center hidden gap-2 my-auto lg:flex text-md">
-                              <a href="./contactus"
-                                  class="flex items-center px-5 py-1.5 my-auto mb-1  font-semibold rounded-lg bg-teal-custom text-white group"
-                                  id="chatButton">
-                                  <span class="mr-2 text-[16px] ">Chat</span>
-                                  <svg class="stroke-current" width="10" height="10" stroke-width="2"
-                                      viewBox="0 0 10 10" aria-hidden="true" class="hidden sm:flex">
-                                      <g fill-rule="evenodd">
-                                          <path
-                                              class="transition duration-200 ease-in-out opacity-0 group-hover:opacity-100"
-                                              d="M0 5h7"></path>
-                                          <path
-                                              class="transition duration-200 ease-in-out opacity-100 group-hover:transform group-hover:translate-x-1"
-                                              d="M1 1l4 4-4 4"></path>
-                                      </g>
-                                  </svg>
-                              </a>
+                                </button>
+                                <div class="right-0 hidden w-full p-2 rounded-md lg:absolute dropdown-menu lg:w-[400px] "
+                                    id="dropdownMenu1">
+                                    <div
+                                        class="grid grid-cols-5 transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow md:bg-white lg:translate-x-40 lg:border-none">
+                                        <div class="col-span-2">
+                                            <p
+                                                class="uppercase  tracking-wider text-gray-800 font-medium text-[13px] pt-2 px-6">
+                                                Get started</p>
+                                            <ul class="mt-3 text-[16px]">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./courses"
+                                                        class="block m-0 font-medium text-gray-800 ">
+                                                        All Courses
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./ielts" class="block m-0 font-medium text-gray-800 ">
+                                                        IELTS
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./gre" class="block m-0 font-medium text-gray-800 ">
+                                                        GRE
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./pte" class="block m-0 font-medium text-gray-800 ">
+                                                        PTE
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./oet" class="block m-0 font-medium text-gray-800 ">
+                                                        OET
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./sat" class="block m-0 font-medium text-gray-800 ">
+                                                        SAT
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-span-3">
+                                            <p
+                                                class="uppercase  tracking-wider text-gray-800 font-medium text-[13px] px-6 mt-2">
+                                                Other Courses</p>
+                                            <ul class="mt-3 text-[16px]">
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./toefl" class="block m-0 font-medium text-gray-800 ">
+                                                        TOEFL
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./det" class="block m-0 font-medium text-gray-800 ">
+                                                        DET
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./ielts-band9-training"
+                                                        class="block m-0 font-medium text-gray-800 ">
+                                                        IELTS Band 9 Training
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./pteonline"
+                                                        class="block m-0 font-medium text-gray-800 ">
+                                                        PTE Personalized
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./custom"
+                                                        class="block m-0 font-medium text-gray-800 ">
+                                                        Corporate Training
+                                                    </a>
+                                                </li>
+                                                <li class="px-6 py-3 m-0 hover:bg-teal-100">
+                                                    <a href="./spokenenglish"
+                                                        class="block m-0 font-medium text-gray-800 ">
+                                                        English Language Training
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="relative" onmouseover="showDropdown('dropdownMenu')"
+                                onmouseout="hideDropdown('dropdownMenu')" onclick="toggleDropdown('dropdownMenu')">
+                                <button
+                                    class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
+                                    class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
+                                    id="dropdownToggle">
+                                    Material
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </button>
+                                <div class="right-0 hidden p-2 lg:absolute dropdown-menu" id="dropdownMenu">
+                                    <div
+                                        class="transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow lg:border-0 md:bg-white lg:translate-x-28">
+                                        <ul class=" text-[15px] lg:w-52">
+                                            <li class="px-4 py-3 m-0 rounded-t-xl hover:bg-teal-100">
+                                                <a href="./reading" class="block m-0 font-medium text-gray-800 ">
+                                                    IELTS Reading
+                                                </a>
+                                            </li>
+                                            <li class="px-4 py-3 m-0 hover:bg-teal-100">
+                                                <a href="https://firstacademy.in/grer"
+                                                    class="block m-0 font-medium text-gray-800 ">
+                                                    GRE Solutions
+                                                </a>
+                                            </li>
+                                            <li class="px-4 py-3 m-0 hover:bg-teal-100">
+                                                <a href="./downloads" class="block m-0 font-medium text-gray-800 ">
+                                                    Downloads
+                                                </a>
+                                            </li>
+                                            <li class="px-4 py-3 m-0 hover:bg-teal-100">
+                                                <a href="https://prep.firstacademy.in"
+                                                    class="block m-0 font-medium text-gray-800 ">
+                                                    Practice Tests
+                                                </a>
+                                            </li>
+                                            <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-teal-100">
+                                                <a href="https://super.firstacademy.in/"
+                                                    class="block m-0 font-medium text-gray-800 ">
+                                                    GRE Login
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://firstacademy.in/blog"
+                                    class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./studyabroad"
+                                    class="flex px-4 py-2 font-medium rounded-md hover:text-teal-500 text-[16px] ">
+                                    Study Abroad
+                                </a>
+                            </li>
+                            <li class="relative" onmouseover="showDropdown('dropdownMenu2')"
+                                onmouseout="hideDropdown('dropdownMenu2')" onclick="toggleDropdown('dropdownMenu2')">
+                                <button
+                                    class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
+                                    id="dropdownToggle2">
+                                    About
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </button>
+                                <div class="right-0 hidden p-2 lg:absolute dropdown-menu" id="dropdownMenu2">
+                                    <div
+                                        class="transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow lg:border-0 md:bg-white lg:translate-x-28">
+                                        <ul class="text-[16px] lg:w-48">
+                                            <li class="px-4 py-3 m-0 rounded-t-lg hover:bg-teal-100">
+                                                <a href="./about-us" class="block m-0 font-medium text-gray-800 ">
+                                                    Us
+                                                </a>
+                                            </li>
+                                            <li class="px-4 py-3 m-0 hover:bg-teal-100">
+                                                <a href="./team" class="block m-0 font-medium text-gray-800 ">
+                                                    Team
+                                                </a>
+                                            </li>
+                                            <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-teal-100">
+                                                <a href="./contactus" class="block m-0 font-medium text-gray-800 ">
+                                                    Contact
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
 
-                              <ion-icon name="menu" class="text-3xl lg:hidden"
-                                  onclick="toggleMobileMenu()"></ion-icon>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
+                            <li class="items-center hidden gap-2 my-auto lg:flex text-md">
+                                <a href="./contactus"
+                                    class="flex items-center px-5 py-1.5 my-auto mb-1  font-semibold rounded-lg bg-teal-custom text-white group"
+                                    id="chatButton">
+                                    <span class="mr-2 text-[16px] ">Chat</span>
+                                    <svg class="stroke-current" width="10" height="10" stroke-width="2"
+                                        viewBox="0 0 10 10" aria-hidden="true" class="hidden sm:flex">
+                                        <g fill-rule="evenodd">
+                                            <path
+                                                class="transition duration-200 ease-in-out opacity-0 group-hover:opacity-100"
+                                                d="M0 5h7"></path>
+                                            <path
+                                                class="transition duration-200 ease-in-out opacity-100 group-hover:transform group-hover:translate-x-1"
+                                                d="M1 1l4 4-4 4"></path>
+                                        </g>
+                                    </svg>
+                                </a>
 
-          </div>
-      </nav>
-  </header>
-  <hr>
+                                <ion-icon name="menu" class="text-3xl lg:hidden"
+                                    onclick="toggleMobileMenu()"></ion-icon>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-  <!--Latest Post-->
-  <x-homepage.post.index :data="$data" />
+            </div>
+        </nav>
+    </header>
+    <hr>
 
-  <!--section - 1-->
-    <div class="pb-3 bg-white pb-lg-0">
-      <div class="container space-lg-1 " >
-        <div class="row">
-          <div class="text-center col-12 col-lg-7 text-lg-left d-flex align-items-center justify-content-start" >
-            <div>
-              <h1 class="mb-5 md:mt-4 sm:mt-4">English Language Training</h1>
+    <!--Latest Post-->
+    <x-homepage.post.index :data="$data" />
+
+
+    <!-- hero -->  
+    <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:py-8">
+        <!--text-->
+        <div class="items-center py-5 lg:flex lg:justify-between">
+
+            <div class="">
+                <h1 class="mb-5 md:mt-4 sm:mt-4">English Language Training</h1>
               <p class="w-lg-80">
                 Learn English in the most simple of ways. Learn it like you
                 learn your mother tongue. Observe, listen, absorb, improve. No
@@ -412,193 +426,210 @@
             </div>
             
             </div>
-          </div>
-          <div
-            class="container col-12 col-lg-5 d-flex align-items-center justify-content-end"
-            style="
-              background: url(https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_blob_background.svg);
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: 70%;
-              min-height: 60%;
-            "
-          >
-            <img
-              src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_elt.svg"
-              class="img-fluid"
-            />
-          </div>
+           
+            <div class="container col-12 col-lg-5 d-flex align-items-center justify-content-end" style="background: url(https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_blob_background.svg);
+              background-position: center;background-repeat: no-repeat;background-size: 70%;min-height: 60%;">
+              <img src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_elt.svg" class="img-fluid"/> 
+            </div>
+                   
+
         </div>
-        <p
-          class="p-3 my-5 bg-teal-100 rounded-lg shadow border-right border-dark"
-        >
-          Our sessions make you learn in a natural, progressive manner.We help
-          you get used to the language, and then encourage you to experiment
-          with words and sentences. <br />
-          <span class="text-teal-600 font-weight-bold "
-            >Want to learn English because you want to take an English test like
-            IELTS, PTE, and TOEFL?</span
-          >
-          Our sessions are perfect for you. We focus on all four areas of
-          language – listening, reading, writing, and speaking.
+    </section>
+
+
+<section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:pt-12 lg:pb-8">
+    <!--text-->
+     <div class=" md:flex md:justify-between md:m-0"> 
+       <p class="p-3 bg-teal-100 rounded-lg shadow border-right border-dark">
+         Our sessions make you learn in a natural, progressive manner.We help
+         you get used to the language, and then encourage you to experiment
+         with words and sentences. <br />
+          <span class="text-teal-600 font-weight-bold">
+            Want to learn English because you want to take an English test like
+            IELTS, PTE, and TOEFL?
+          </span>
+           Our sessions are perfect for you. We focus on all four areas of
+           language – listening, reading, writing, and speaking.
         </p>
-      </div>
     </div>
+</section>
 
+    <!-- Our Most Popular Courses -->
     
-    <div class="container space-1">
-      <h2 class="mb-5 text-center font-noto" style="color: danger">
-        Our Most Popular Courses
-      </h2>
-      <div class="mb-3 row">
-        <div class="px-2 mb-3 col-sm-6 col-lg-4 mb-lg-0">
-          <a class="card h-100 transition-3d-hover" href="/gre">
-            <img
-              class="card-img-top"
-              src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_gre.gif"
-              alt="The Best Coaching for GRE"
-            />
-            <div class="card-body">
-              <span class="mb-2 text-xl font-semibold text-teal-600 d-block text-cap"
-                >GRE</span
-              >
-              <h5 class="mb-0">Information about GRE at First Academy</h5>
-            </div>
-          </a>
+    <section class="items-center justify-between max-w-screen-xl px-4 pb-8 mx-auto sm:px-16 ">
+        <p class="text-xl font-semibold text-center md:text-3xl"> Our Most Popular Courses</p>
+
+        <!--3 blocks-->
+        <div class="grid grid-cols-6 my-4 mt-8 md:gap-16">
+            <!--first-->
+            <a href="./gre.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                    <img src="../assets/gre.gif" alt="gre" width="342px" height="245px">
+                    <p class="p-2 text-xl font-semibold text-teal-500">GRE</p>
+                    <p class="px-2 text-lg font-semibold text-gray-700">Information about GRE at First Academy</p>
+                </div>
+            </a>
+
+            <!--second-->
+            <a href="./oet.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                    <img src="../assets/oet.gif" alt="oet" width="342px" height="245px">
+                    <p class="p-2 text-xl font-semibold text-teal-500">OET</p>
+                    <p class="px-2 text-lg font-semibold text-gray-700">See how our OET coaching improves scores</p>
+                </div>
+            </a>
+
+            <!--third-->
+            <a href="./ielts.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                    <img src="../assets/file_ielts.gif" alt="Ielts" width="342px" height="245px">
+                    <p class="p-2 text-xl font-semibold text-teal-500">IELTS</p>
+                    <p class="px-2 text-lg font-semibold text-gray-700">Our most popular course - The FA method</p>
+                </div>
+            </a>
         </div>
 
-        <div class="px-2 mb-3 col-sm-6 col-lg-4 mb-lg-0">
-          <a class="card h-100 transition-3d-hover" href="/oet">
-            <img
-              class="card-img-top"
-              src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_oet.gif"
-              alt="Best Coaching for OET"
-            />
-            <div class="card-body">
-              <span class="mb-2 text-xl font-semibold text-teal-600 d-block text-cap"
-                >OET</span
-              >
-              <h5 class="mb-0">See how our OET coaching improves scores</h5>
-            </div>
-          </a>
-        </div>
+    </section>
 
-        <div class="px-2 mb-3 col-sm-6 col-lg-4 mb-sm-0">
-          <a class="card h-100 transition-3d-hover" href="/ielts">
-            <img
-              class="card-img-top"
-              src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_ielts.gif"
-              alt="8 Band for Immigration"
-            />
-            <div class="card-body">
-              <span class="mb-2 text-xl font-semibold text-teal-600 d-block text-cap"
-                >IELTS</span
-              >
-              <h5 class="mb-0">Our most popular course - the FA method</h5>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-         <!--courses-->
-         <section class="py-5 bg-slate-50">
-          <div class="max-w-screen-xl p-4 mx-auto sm:px-16">
-              <h1 class="text-2xl font-semibold text-center md:text-4xl ">Our Awesome Courses</h1>
-              <div class="grid grid-cols-12 my-2 sm:my-4 sm:gap-8">
-                  <div class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
-                      <img src="https://wcc.ca/wp-content/uploads/2023/04/wcc-blog-How-Long-You-Should-Prepare-For-IELTS.jpg" class="rounded-t-lg" alt="ielts">
-                      
-                      <div class="p-5">
-                          <p class="font-semibold ">8️⃣ Band Course | Online | Classroom</p>
-                          <p class="my-2 text-xl font-semibold text-teal-custom ">IELTS Course</p>
-                          <p class="font-semibold ">Best Sessions | Get 8+ Band | Get PR | Go Anywhere</p>
-                          <br>
-                          <a href="./ielts"
-                              class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
-                              aria-label="view">
-                              <span class="my-auto">Get Full Details</span>
-
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor"
-                                  class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                              </svg>
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
-                      <img src="https://img.freepik.com/free-photo/business-women-signature-document_1388-90.jpg?t=st=1715934368~exp=1715937968~hmac=df12d4591518be91f5a02bb93c3571ae6b12589132d7f53811ad94c0bbb9c01b&w=740"  class="rounded-t-lg" alt="gre">
-                      
-                      <div class="p-5">
-                          <p class="font-semibold ">The 🎯 Course | Online | Classroom</p>
-                          <p class="my-2 text-xl font-semibold text-teal-custom ">GRE</p>
-                          <p class="font-semibold">Targeting a 320+? You are at the right place! </p>
-                          <br>
-                          <a href="./gre"
-                              class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
-                              aria-label="view">
-                              <span class="my-auto">Get Full Details</span>
-
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor"
-                                  class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                              </svg>
-                          </a>
-                      </div>
-                      
-                  </div>
-                  <div class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
-                      <img src="https://img.freepik.com/free-photo/public-examination-preparation-concept_23-2149369833.jpg?t=st=1715935262~exp=1715938862~hmac=377b299a8b70d045abf3ff2650c622be5fb3ca0a9f3b412f6f2a1ff5ed6d340a&w=740"  class="rounded-t-lg" alt="det">
-                      
-                      <div class="p-5">
-                          <p class="font-semibold ">🦉Super Short Term Course</p>
-                          <p class="my-2 text-xl font-semibold text-teal-custom ">DET Course</p>
-                          <p class="font-semibold ">The only DET coaching program in India. Get a 130+</p>
-                          <br>
-                          <a href="./det"
-                              class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
-                              aria-label="view">
-                              <span class="my-auto">Get Full Details</span>
-  
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor"
-                                  class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                              </svg>
-                          </a>
-                      </div>
-                      
-                  </div>
-                  <div class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
-                      <img src="https://res.cloudinary.com/connecttoqadir/image/upload/v1667338538/edifyBlog/s7yqebwsmppok5oevcwx.jpg" class="rounded-t-lg" alt="pte">
-
-                      <div class="p-5">
-                          <p class="font-semibold ">Online | Classroom</p>
-                          <p class="my-2 text-xl font-semibold text-teal-custom ">PTE Course</p>
-                          <p class="font-semibold ">Hello Australia! 79+ in PTE - the best coaching!</p>
-                          <br>
-                          <a href="./pte"
-                              class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
-                              aria-label="view">
-                              <span class="my-auto">Get Full Details</span>
-  
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor"
-                                  class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                              </svg>
-                          </a>
-                      </div>
-                  </div>
-
-                  <div class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
-                    <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/study-notebooks.jpg" class="rounded-t-lg" alt="oet">
+    <!--courses-->
+    <section class="py-4 bg-slate-50">
+        <div class="max-w-screen-xl p-4 mx-auto sm:px-16">
+            <h1 class="text-2xl font-semibold text-center md:text-4xl ">Our Awesome Courses</h1>
+            <div class="grid grid-cols-12 my-2 sm:my-4 sm:gap-8">
+                <div
+                    class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
+                    <img src="https://wcc.ca/wp-content/uploads/2023/04/wcc-blog-How-Long-You-Should-Prepare-For-IELTS.jpg"
+                        class="rounded-t-lg" alt="ielts">
 
                     <div class="p-5">
-                        <p class="font-semibold ">Online | Classroom</p>
-                        <p class="my-2 text-xl font-semibold text-teal-custom ">OET Course</p>
+                        <p class="font-semibold ">The Best IELTS Coaching - Online | Classroom</p>
+                        <p class="my-2 text-xl font-semibold text-teal-custom ">IELTS</p>
+                        <p class="font-semibold ">Best Sessions | Get 8+ Band | Get PR | Go Anywhere</p>
+                        <br>
+                        <a href="./ielts"
+                            class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
+                            aria-label="view">
+                            <span class="my-auto">Get Full Details</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
+                    <img src="https://img.freepik.com/free-photo/business-women-signature-document_1388-90.jpg?t=st=1715934368~exp=1715937968~hmac=df12d4591518be91f5a02bb93c3571ae6b12589132d7f53811ad94c0bbb9c01b&w=740"
+                        class="rounded-t-lg" alt="gre">
+
+                    <div class="p-5">
+                        <p class="font-semibold ">The Best GRE Coaching - Online | Classroom</p>
+                        <p class="my-2 text-xl font-semibold text-teal-custom ">GRE</p>
+                        <p class="font-semibold">Targeting a 320+? You are at the right place! </p>
+                        <br>
+                        <a href="./gre"
+                            class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
+                            aria-label="view">
+                            <span class="my-auto">Get Full Details</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+                <div
+                    class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
+                    <img src="https://img.freepik.com/free-photo/public-examination-preparation-concept_23-2149369833.jpg?t=st=1715935262~exp=1715938862~hmac=377b299a8b70d045abf3ff2650c622be5fb3ca0a9f3b412f6f2a1ff5ed6d340a&w=740"
+                        class="rounded-t-lg" alt="det">
+
+                    <div class="p-5">
+                        <p class="font-semibold ">The Best DET Coaching - Exclusively at First Academy</p>
+                        <p class="my-2 text-xl font-semibold text-teal-custom ">Duolingo Test</p>
+                        <p class="font-semibold ">The only DET coaching program in India. Get a 130+</p>
+                        <br>
+                        <a href="./det"
+                            class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
+                            aria-label="view">
+                            <span class="my-auto">Get Full Details</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+                <div
+                    class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
+                    <img src="https://res.cloudinary.com/connecttoqadir/image/upload/v1667338538/edifyBlog/s7yqebwsmppok5oevcwx.jpg"
+                        class="rounded-t-lg" alt="pte">
+
+                    <div class="p-5">
+                        <p class="font-semibold ">The Best PTE Coaching - Online | Classroom</p>
+                        <p class="my-2 text-xl font-semibold text-teal-custom ">PTE</p>
+                        <p class="font-semibold ">Hello Australia! 79+ in PTE - the best coaching!</p>
+                        <br>
+                        <a href="./pte"
+                            class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
+                            aria-label="view">
+                            <span class="my-auto">Get Full Details</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+                <div
+                    class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
+                    <img src="https://lirp.cdn-website.com/5ffe73d5/dms3rep/multi/opt/William+Potter-960w.jpg"
+                        class="rounded-t-lg" alt="sat">
+
+                    <div class="p-5">
+                        <p class="font-semibold ">The Best SAT Coaching - Online | Classroom</p>
+                        <p class="my-2 text-xl font-semibold text-teal-custom ">SAT</p>
+                        <p class="font-semibold ">Our SAT heroes average a 1500. Why? Attend a session!</p>
+                        <br>
+                        <a href="./sat"
+                            class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
+                            aria-label="view">
+                            <span class="my-auto">Get Full Details</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
+                                class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
+                    <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/study-notebooks.jpg"
+                        class="rounded-t-lg" alt="oet">
+
+                    <div class="p-5">
+                        <p class="font-semibold ">The Best OET Coaching - Online | Classroom</p>
+                        <p class="my-2 text-xl font-semibold text-teal-custom ">OET</p>
                         <p class="font-semibold ">An easy path to B+ in all sections. 100% Results!</p>
                         <br>
                         <a href="./oet"
@@ -606,393 +637,239 @@
                             aria-label="view">
                             <span class="my-auto">Get Full Details</span>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor"
                                 class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
                         </a>
                     </div>
-                    
+
                 </div>
-                  
-                  <div class="col-span-12 my-2 duration-200 ease-in bg-white shadow-lg rounded-2xl sm:col-span-6 lg:col-span-4 sm:my-0">
-                      <img src="https://lirp.cdn-website.com/5ffe73d5/dms3rep/multi/opt/William+Potter-960w.jpg" class="rounded-t-lg" alt="sat">
+            </div>
+        </div>
+    </section>
 
-                      <div class="p-5">
-                          <p class="font-semibold ">Online | Classroom</p>
-                          <p class="my-2 text-xl font-semibold text-teal-custom ">SAT Course</p>
-                          <p class="font-semibold ">Our SAT heroes average a 1500. Why? The best training, of course!</p>
-                          <br>
-                          <a href="./sat"
-                              class="flex font-semibold text-blue-700 duration-200 ease-in hover:text-blue-600 group"
-                              aria-label="view">
-                              <span class="my-auto">Get Full Details</span>
-  
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                  stroke="currentColor"
-                                  class="w-4 h-4 my-auto font-semibold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                              </svg>
-                          </a>
-                      </div>  
-                  </div>
+      
+
+    <section class="max-w-screen-xl px-3 py-4 mx-auto sm:px-16 ">
+        <!--3 blocks-->
+        <div class="grid grid-cols-6 my-4 md:gap-16">
+            <!--first-->
+            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0">
+                    <p class="my-auto font-semibold text-md font-open">Attend a demo</p>
+                    <img src="../assets/file_calendar.svg" alt="calendar" width="80px" height="80px">
+                </div>
+            </div>
+
+            <!--second-->
+            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0">
+                    <p class="my-auto font-semibold text-md font-open">Leave a Message</p>
+                    <img src="../assets/file_communication.svg" alt="file_communication" width="80px" height="80px">
+                </div>
+            </div>
+
+            <!--third-->
+            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0">
+                    <p class="my-auto font-semibold text-md font-open">View Courses</p>
+                    <img src="../assets/file_calendar.svg" alt="calender" width="80px" height="80px">
+                </div>
+            </div>
+
+        </div>
+        <div class="container space-1">
+            <div
+              class="py-0 text-center"
+              style="
+                background: url(/themes/front/svg/components/abstract-shapes-19.svg)
+                  center no-repeat;
+              "
+            >
+              <h2>Our Coaching</h2>
+              <h5>The Best</h5>
+              <div class="mt-3 d-flex justify-content-center">
+                <p class="">
+                  Our trainers the best. With top notch certifications from Cambridge,
+                  they deliver training that is unparalleled. If you have a specific
+                  training need, please do not hesitate to
+                  <span
+                    class="badge transition-3d-hover badge-soft-success "
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#requirement"
+                    >talk to us</span
+                  >.
+                </p>
               </div>
+            </div>
+        </div>      
+    </section>
+
+    <div  class="bg-teal-100">
+        <div class="container py-5 text-center">
+          <div class="d-flex justify-content-center align-items-center">
+            <img
+              src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_confidential-2.svg"
+              class="img-fluid w-50 w-lg-20"
+            />
           </div>
-      </section>
-
-
-    <div class="container space-1">
-      <div class="row">
-        <div class="mb-3 col-md-6 col-lg-4 mb-lg-0">
-          <a
-            class="overflow-hidden shadow card bg-soft-info h-100 transition-3d-hover"
-            data-toggle="modal"
-            data-target="#demo_class"
-            href="#"
-          >
-            <div class="row align-items-center">
-              <div class="col-8 col-md-6">
-                <div class="py-4 pl-4"><h2 class="h4">Attend a Demo</h2></div>
-              </div>
-              <div class="col-4 col-md-6 h-100">
-                <img
-                  class="top-0 right-0 position-absolute w-100 h-100"
-                  src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_calendar.svg"
-                  alt="SVG"
-                />
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a
-            class="overflow-hidden shadow card bg-soft-info h-100 transition-3d-hover"
-            data-toggle="modal"
-            data-target="#general_enquiries"
-            href="#"
-          >
-            <div class="row align-items-center">
-              <div class="col-8 col-md-6">
-                <div class="py-4 pl-4"><h2 class="h4">Leave a Message</h2></div>
-              </div>
-              <div class="col-4 col-md-6 h-100">
-                <img
-                  class="top-0 right-0 position-absolute w-100 h-100"
-                  src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_communication.svg"
-                  alt="SVG"
-                />
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="mb-3 col-md-6 col-lg-4 mb-lg-0">
-          <a
-            class="overflow-hidden shadow card bg-soft-info h-100 transition-3d-hover"
-            href="/courses"
-          >
-            <div class="row align-items-center">
-              <div class="col-8 col-md-6">
-                <div class="py-4 pl-4"><h2 class="h4">View Courses</h2></div>
-              </div>
-              <div class="col-4 col-md-6 h-100">
-                <img
-                  class="top-0 right-0 position-absolute w-100 h-100"
-                  src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_calendar.svg"
-                  alt="SVG"
-                />
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="container space-1">
-      <div
-        class="py-0 text-center"
-        style="
-          background: url(/themes/front/svg/components/abstract-shapes-19.svg)
-            center no-repeat;
-        "
-      >
-        <h2>Our Coaching</h2>
-        <h5>The Best</h5>
-        <div class="mt-3 d-flex justify-content-center">
-          <p class="">
-            Our trainers the best. With top notch certifications from Cambridge,
-            they deliver training that is unparalleled. If you have a specific
-            training need, please do not hesitate to
-            <span
-              class="badge transition-3d-hover badge-soft-success "
-              href="#"
-              data-toggle="modal"
-              data-target="#requirement"
-              >talk to us</span
-            >.
+          <h3 class="mt-3 text-teal-600">Authorised IELTS Registration Centre</h3>
+          <p class="text-dark">
+            First Academy is an authorised registration centre for the IELTS test.
+            This means, you can now register for your IELTS test right with us!
+            There is no need to go to the bank to get a demand draft. There is no
+            additional charge levied on credit cards when you register for the
+            test with us. You could even pay by cash. Best of all, all these at no
+            extra cost. You pay only what you have to.
           </p>
         </div>
       </div>
-    </div>
-    <div  class="bg-teal-100">
-      <div class="container py-5 text-center">
-        <div class="d-flex justify-content-center align-items-center">
-          <img
-            src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_confidential-2.svg"
-            class="img-fluid w-50 w-lg-20"
-          />
-        </div>
-        <h3 class="mt-3 text-teal-600">Authorised IELTS Registration Centre</h3>
-        <p class="text-dark">
-          First Academy is an authorised registration centre for the IELTS test.
-          This means, you can now register for your IELTS test right with us!
-          There is no need to go to the bank to get a demand draft. There is no
-          additional charge levied on credit cards when you register for the
-          test with us. You could even pay by cash. Best of all, all these at no
-          extra cost. You pay only what you have to.
-        </p>
-      </div>
-    </div>
-    <div class="rounded space-2" style="background: #edf2fc">
-      <div class="container px-5 rounded-lg">
-        <h2 class="text-center">Frequently Asked Questions</h2>
-        <div id="basicsAccordion">
-          <div class="my-3 shadow-none card">
-            <div class="card-header card-collapse " id="basicsHeadingOne">
-              <a
-                class="px-3 btn btn-link btn-block d-flex text-dark focus:bg-gray-400 hover:bg-gray-400 justify-content-between card-btn collapsed"
-                href="javascript:;"
-                role="button"
-                data-toggle="collapse"
-                data-target="#basicsCollapseOne"
-                aria-expanded="false"
-                aria-controls="basicsCollapseOne"
-              >
-                How soon can I retake the test?
-                <span class="card-btn-toggle">
-                  <span class="card-btn-toggle-default">+</span>
-                  <span class="card-btn-toggle-active">−</span>
-                </span>
-              </a>
-            </div>
-            <div
-              id="basicsCollapseOne"
-              class="collapse"
-              aria-labelledby="basicsHeadingOne"
-              data-parent="#basicsAccordion"
-            >
-              <div class="px-3 card-body">
-                <p>
-                  No restrictions apply. You can repeat the test whenever, and
-                  how-many-ever-times you want. At any rate, why would you want
-                  to retake the test? Take a mock-test with us, or better still,
-                  attend our stupendously informative sessions! 😀
-                </p>
+    
+   
+    
+    <!-- Frequently Asked Questions -->
+    
+    <section class="pb-2 bg-gray-50">
+      <section class="max-w-screen-xl p-4 mx-auto sm:px-16">
+          <h1 class="my-4 text-2xl font-semibold text-center md:text-4xl ">Frequently Asked Questions
+          </h1>
+
+          <!--first-->
+          <div class="mb-2">
+              <button
+                  class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white ">
+                  <div> How soon can I retake the test?</div>
+                  <div class="text-xl font-bold icon">+</div>
+              </button>
+              <div
+                  class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                  <p class="mb-2 ">
+                    No restrictions apply. You can repeat the test whenever, and
+                    how-many-ever-times you want. At any rate, why would you want
+                    to retake the test? Take a mock-test with us, or better still,
+                    attend our stupendously informative sessions! 😀
+                  </p>
+                  <button
+                      class="px-6 py-3 my-2 text-white duration-200 ease-in-out rounded shadow bg-teal-custom hover:bg-green-500"
+                      aria-label="attend session" data-popup="popup">Attend a Free Session</button>
+
               </div>
-            </div>
           </div>
-          <div class="mb-3 shadow-none card">
-            <div class="card-header card-collapse" id="basicsHeadingTwo">
-              <a
-                class="px-3 btn btn-link btn-block d-flex justify-content-between card-btn collapsed text-dark focus:bg-gray-400 hover:bg-gray-400"
-                href="javascript:;"
-                role="button"
-                data-toggle="collapse"
-                data-target="#basicsCollapseTwo"
-                aria-expanded="false"
-                aria-controls="basicsCollapseTwo"
-              >
-                When will I receive my results?
-                <span class="card-btn-toggle">
-                  <span class="card-btn-toggle-default">+</span>
-                  <span class="card-btn-toggle-active">−</span>
-                </span>
-              </a>
-            </div>
-            <div
-              id="basicsCollapseTwo"
-              class="collapse"
-              aria-labelledby="basicsHeadingTwo"
-              data-parent="#basicsAccordion"
-            >
-              <div class="px-3 card-body">
-                <p>
-                  You will receive your Test Report Form (TRF) in the mail 13
-                  days after your test date. Some test centres also provide SMS
-                  alerts and an Online Results Service. Remember: You receive
-                  only one copy of your TRF. So, keep it safe!
-                </p>
+
+          <!--second-->
+          <div class="mb-2">
+              <button
+                  class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white ">
+                  <div>When will I receive my results?</div>
+                  <div class="text-xl font-bold icon">+</div>
+              </button>
+              <div
+                  class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                  <p class="mb-2 ">You will receive your Test Report Form (TRF) in the mail 13
+                    days after your test date. Some test centres also provide SMS
+                    alerts and an Online Results Service. Remember: You receive
+                    only one copy of your TRF. So, keep it safe!
+                  </p>
+                  <button
+                      class="px-6 py-3 my-2 text-white duration-200 ease-in-out rounded shadow bg-teal-custom hover:bg-green-500"
+                      aria-label="attend session" data-popup="popup">Attend a Free Session</button>
               </div>
-            </div>
           </div>
-          <div class="mb-3 shadow-none card">
-            <div class="card-header card-collapse" id="basicsHeadingThree">
-              <a
-                class="px-3 btn btn-link btn-block d-flex justify-content-between card-btn collapsed text-dark focus:bg-gray-400 hover:bg-gray-400"
-                href="javascript:;"
-                role="button"
-                data-toggle="collapse"
-                data-target="#basicsCollapseThree"
-                aria-expanded="false"
-                aria-controls="basicsCollapseThree"
-              >
-                IELTS Academic or General Training?
-                <span class="card-btn-toggle">
-                  <span class="card-btn-toggle-default">+</span>
-                  <span class="card-btn-toggle-active">−</span>
-                </span>
-              </a>
-            </div>
-            <div
-              id="basicsCollapseThree"
-              class="collapse"
-              aria-labelledby="basicsHeadingThree"
-              data-parent="#basicsAccordion"
-            >
-              <div class="px-3 card-body">
-                <p>
-                  The Academic Module is apt if you are seeking admissions into
-                  undergraduate and postgraduate courses in an English speaking
-                  country or into a university program that is taught in
-                  English.
-                </p>
-                <p>
-                  The General Training Module is designed to test the basic
-                  survival skills in a broad social and educational context. It
-                  is for candidates who are going to English speaking countries
-                  to complete their secondary education, to undertake work
-                  experience or training programmes, or for immigration into
-                  Australia, Canada or New Zealand.
-                </p>
-                <p>
-                  Please note that it is the responsibility of the candidate to
-                  inform the test centre whether they wish to take the Academic
-                  or General Training Modules. Centres are not responsible for
-                  providing this information. It must be noted that it may not
-                  be possible to change module later or on the day of the test.
-                </p>
+
+          <!--third-->
+          <div class="mb-2">
+              <button
+                  class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white ">
+                  <div>IELTS Academic or General Training?</div>
+                  <div class="text-xl font-bold icon">+</div>
+              </button>
+              <div
+                  class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                  <p>
+                    The Academic Module is apt if you are seeking admissions into
+                    undergraduate and postgraduate courses in an English speaking
+                    country or into a university program that is taught in
+                    English.
+                  </p>
+                  <p>
+                    The General Training Module is designed to test the basic
+                    survival skills in a broad social and educational context. It
+                    is for candidates who are going to English speaking countries
+                    to complete their secondary education, to undertake work
+                    experience or training programmes, or for immigration into
+                    Australia, Canada or New Zealand.
+                  </p>
+                  <p>
+                    Please note that it is the responsibility of the candidate to
+                    inform the test centre whether they wish to take the Academic
+                    or General Training Modules. Centres are not responsible for
+                    providing this information. It must be noted that it may not
+                    be possible to change module later or on the day of the test.
+                  </p>
+
               </div>
-            </div>
           </div>
-          <div class="mb-3 shadow-none card">
-            <div class="card-header card-collapse" id="basicsHeadingFour">
-              <a
-                class="px-3 btn btn-link btn-block d-flex justify-content-between card-btn collapsed text-dark focus:bg-gray-400 hover:bg-gray-400"
-                href="javascript:;"
-                role="button"
-                data-toggle="collapse"
-                data-target="#basicsCollapseFour"
-                aria-expanded="false"
-                aria-controls="basicsCollapseFour"
-              >
-                What is the format of the test? and How long will it take?
-                <span class="card-btn-toggle">
-                  <span class="card-btn-toggle-default">+</span>
-                  <span class="card-btn-toggle-active">−</span>
-                </span>
-              </a>
-            </div>
-            <div
-              id="basicsCollapseFour"
-              class="collapse"
-              aria-labelledby="basicsHeadingFour"
-              data-parent="#basicsAccordion"
-            >
-              <div class="px-3 card-body">
-                <p>
-                  IELTS has four parts – Listening (30 minutes), Reading (60
-                  minutes), Writing (60 minutes) and Speaking (11–14 minutes).
-                  The total test time is 2 hours and 45 minutes. The Listening,
-                  Reading and Writing tests are done in one sitting. The
-                  Speaking test may be on the same day or up to seven days
-                  before or after the other tests.
-                </p>
+
+          <!--fourth-->
+          <div class="mb-2">
+              <button
+                  class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white ">
+                  <div>What is the format of the test? and How long will it take?</div>
+                  <div class="text-xl font-bold icon">+</div>
+              </button>
+              <div
+                  class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                  <p class="mb-2 ">IELTS has four parts – Listening (30 minutes), Reading (60
+                    minutes), Writing (60 minutes) and Speaking (11–14 minutes).
+                    The total test time is 2 hours and 45 minutes. The Listening,
+                    Reading and Writing tests are done in one sitting. The
+                    Speaking test may be on the same day or up to seven days
+                    before or after the other tests.
+                  </p>
+                  <a href="./downloads"
+                      class="flex px-6 py-3 my-4 text-white duration-200 ease-in-out rounded shadow bg-teal-custom hover:bg-green-500 w-fit group"
+                      aria-label="free resources">
+                      <span class="my-auto">Free Resources </span>
+
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                      </svg>
+                  </a>
               </div>
-            </div>
           </div>
-          <div class="mb-3 shadow-none card">
-            <div class="card-header card-collapse" id="basicsHeadingFive">
-              <a
-                class="px-3 btn btn-link btn-block d-flex justify-content-between card-btn collapsed text-dark focus:bg-gray-400 hover:bg-gray-400"
-                href="javascript:;"
-                role="button"
-                data-toggle="collapse"
-                data-target="#basicsCollapseFive"
-                aria-expanded="false"
-                aria-controls="basicsCollapseFive"
-              >
-                I am still not sure! What do I do?
-                <span class="card-btn-toggle">
-                  <span class="card-btn-toggle-default">+</span>
-                  <span class="card-btn-toggle-active">−</span>
-                </span>
-              </a>
-            </div>
-            <div
-              id="basicsCollapseFive"
-              class="collapse"
-              aria-labelledby="basicsHeadingFive"
-              data-parent="#basicsAccordion"
-            >
-              <div class="px-3 card-body">
-                <p>
-                  Relax. If you just want to talk to someone about the test,
-                  please free to call us, or visit us. We will always be ready
-                  to assist you! And talking to us is free. If you have a
-                  question about the test, we would love to answer it!
-                </p>
-                <p>Or, you could</p>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-12 col-lg-4">
-                      <div
-                        class="py-2 mt-3 text-center rounded-lg btn text-dark mt-lg-0"
-                        style="
-                          min-width: 14rem;
-                          background-color: hsl(180, 60%, 90%); 
-                          font-weight: lighter;
-                        "
-                        data-toggle="modal"
-                        data-target="#demo_class"
-                      >
-                        Attend a Demo
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                      <div
-                        class="py-2 mt-3 text-center rounded-lg btn mt-lg-0 text-dark"
-                        data-toggle="modal"
-                        data-target="#requirement"
-                        style="
-                          background: #eafafd;
-                          min-width: 14rem;
-                          font-weight: lighter;
-                        "
-                      >
-                        Leave a message
-                      </div>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                      <div
-                        class="py-2 mt-3 text-center rounded-lg btn mt-lg-0 text-dark"
-                        data-toggle="modal"
-                        data-target="#request_free_test"
-                        style="
-                          background-color: hsl(180, 60%, 90%);  
-                          min-width: 14rem;
-                          font-weight: lighter;
-                        "
-                      >
-                        Take a Free Test
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
+          <!--fifth-->
+          <div class="mb-2">
+              <button
+                  class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white ">
+                  <div>I am still not sure! What do I do?</div>
+                  <div class="text-xl font-bold icon">+</div>
+              </button>
+              <div
+                  class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                  <p class="mb-2 ">Relax. If you just want to talk to someone about the test,
+                    please free to call us, or visit us. We will always be ready
+                    to assist you! And talking to us is free. If you have a
+                    question about the test, we would love to answer it!
+                  </p>
+                  <p>Or, you could</p>
+                  <button
+                      class="px-6 py-3 my-2 text-white duration-200 ease-in-out rounded shadow bg-teal-custom hover:bg-green-500"
+                      aria-label="need" data-popup="talkForm">Tell Us What You Need!</button>
               </div>
-            </div>
           </div>
-        </div>
-      </div>
-    </div>
+
+      </section>
+    </section>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
     </style>
@@ -1001,7 +878,7 @@
 
     <!-- footer -->
 
-    <footer class="mb-6 ">
+    <footer class="mb-10">
       <!--attend drives-->
       <div class="p-4 text-white" style="background-color: #363636;">
           <div class="max-w-screen-xl mx-auto sm:px-16 sm:flex">
@@ -1167,7 +1044,7 @@
           </div>
 
           <!--footer accordion  -->
-          <section class="block max-w-screen-xl px-2 py-2 mx-auto mb-4 md:hidden sm:px-16 md:mb-0">
+          <section class="block max-w-screen-xl px-2 py-2 mx-auto md:hidden sm:px-16 md:mb-0">
               <!--first-->
               <div class="mb-2">
                   <button
@@ -1330,1057 +1207,347 @@
       </section>
 
   </footer>
-  <!--Messages-->
-  <div
-      class="fixed bottom-0 flex items-center justify-center w-full py-1 mt-[-20px] space-x-4 bg-teal-custom">
-      <div class="flex items-center px-5 py-1 space-x-2 bg-black rounded">
-          <div>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-                  stroke="currentColor" class="w-4 h-4 text-white">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-              </svg>
-          </div>
-          <div class="text-sm font-bold text-white">Call</div>
+    <!--Messages-->
+    <div class="fixed bottom-0 z-10 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
+      <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+          stroke="currentColor" class="w-4 h-4 text-white">
+          <path stroke-linecap="round" stroke-linejoin="round"
+          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          
+          <span class="text-sm font-bold text-white">Call</span>
+      </a>
 
-      </div>
       <div>
-          <h1 class="hidden mt-0 text-base font-medium text-white font-open md:block">We would love to hear from you!</h1>
-      </div>
-      <div class="flex items-center px-3 py-1 bg-black rounded">
-          <div>
-              <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
-          </div>
-          <div class="text-sm font-bold text-white font-open">WhatsApp</div>
-
+          <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
       </div>
 
+      <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
+          <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
+          <span class="text-sm font-bold text-white">WhatsApp</span>
+      </a>
   </div>
-  <button id="scrollToTop" class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl bottom-[50px] right-10 group-hover:opacity-100" fdprocessedid="ec6p8e">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:w-7 md:h-7">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
-      </svg>
-
-  </button>
   
-  <div id="talk"
-      class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
+  <button id="scrollToTop"
+      class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="w-6 h-6 md:w-7 md:h-7">
+          <path stroke-linecap="round" stroke-linejoin="round"
+              d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+      </svg>
+  </button>
 
-      <div class="p-8 bg-white rounded shadow-md popup-content">
+  <div id="talkForm"
+      class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
-
-          <form class="js-validate" action="#" data-otp="1" novalidate="novalidate">
-
-              <div class="p-2 card-body">
-
-                  <div class="contact_block">
-                      <div class="flex justify-between p-4 mb-0 space-x-4 rounded bg-emerald-200">
-
-                          <div class=" w-[97%]" role="alert">
-                              Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for
-                              India, <kbd>+1</kbd> for the USA.
+      <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+          <form id="talk" action="{{ route('talk.send') }}" method="POST">
+              @csrf
+              <div class="p-2">
+                  <div>
+                      <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                          <div class="w-[97%]" role="alert">
+                              Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
+                              <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
                           </div>
-
-                          <div class="my-auto">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                  data-popup-close="talk">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                              </svg>
-                          </div>
-
+                          <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                              data-popup-close="talkForm">&times;</button>
                       </div>
+
+                      <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
+
                       <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                           <div class="w-full col-span-1">
-                              <label for="firstNameExample1"
-                                  class="block pb-2 font-serif text-center input-label">Name</label>
-                              <input type="text" class="p-2 border border-gray-200 rounded form-control w-100"
-                                  name="name" id="firstNameExample1" placeholder="Full name" aria-label="Nataly"
-                                  required="" data-msg="Please enter your name">
+                              <label class="block pb-2 text-center input-label">Name</label>
+                              <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
+                                  required="">
                           </div>
                           <div class="w-full col-span-1">
-                              <label for="lastNameExample1"
-                                  class="block pb-2 font-serif text-center input-label">Phone</label>
-                              <input type="text" class="p-2 border border-gray-200 rounded form-control w-100"
-                                  name="phone" id="lastNameExample1" placeholder="Phone number" aria-label="Gaga"
-                                  required="" data-msg="Please enter phone number">
+                              <label class="block pb-2 text-center input-label">Phone</label>
+                              <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
+                                  required="">
                           </div>
                           <div class="col-span-2 my-2">
-                              <div class="mb-4 js-form-message form-group">
-                                  <label for="emailAddressExample1"
-                                      class="block pb-2 font-serif text-center input-label">Email address</label>
-                                  <input type="email" class="w-full p-2 border border-gray-200 rounded form-control"
-                                      name="email" id="emailAddressExample1" placeholder="your email id" required=""
-                                      data-msg="Please enter a valid email address" class="w-100">
+                              <div class="mb-4 ">
+                                  <label class="block pb-2 text-center">Email address</label>
+                                  <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
+                                      placeholder="E-mail ID" required="">
                               </div>
-                              <div class="js-form-message form-group">
-                                  <label for="message" class="block pb-2 font-serif text-center input-label">Which
-                                      Test(s) do you wish to
-                                      take?</label>
-                                  <div class="input-group">
-                                      <textarea
-                                          class="w-full p-2 border border-gray-200 rounded resize-none form-control"
-                                          rows="4" name="message" id="message"
-                                          placeholder="Clearly mention the name of test(s). Ex: IELTS General"
-                                          aria-label="Hi there, I would like to ..." required=""
-                                          data-msg="Please enter a reason."></textarea>
+                              <div class="">
+                                  <label class="block pb-2 text-center">Message</label>
+                                  <div>
+                                      <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
+                                          placeholder="Type your message here..." required=""></textarea>
                                   </div>
                               </div>
                           </div>
                       </div>
-                      <button type="button"
-                          class="block p-2 mx-auto rounded btn btn-block transition-3d-hover contact_button"
-                          style="background-color: #059862; color: #fff;">Submit</button>
+
+                      <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn hover:bg-teal-custom">
+                          Submit
+                      </button>
                   </div>
               </div>
           </form>
-
-
       </div>
   </div>
 
-  <script src="../dist/voilaui.js"></script>   
+  <div id="requestForm" class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
 
-    <div
-      id="demo_class"
-      class="modal fade"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalTopCoverTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-close">
-            <button
-              type="button"
-              class="btn btn-icon btn-sm btn-ghost-danger"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 18 18"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="#000"
-                  d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div class="p-0 text-center modal-body">
-            <form
-              class="p-4 mb-0 shadow-lg js-validate card"
-              action="/admin/contact"
-              data-otp="1"
-              novalidate="novalidate"
-            >
-              <div
-                class="m-3 alert alert-soft-primary alert_block"
-                style="display: none"
-              >
-                <div class="alert_message"></div>
-              </div>
-              <div class="m-3 otp_block" style="display: none">
-                <h5>OTP Verification</h5>
-                <input
-                  type="text"
-                  class="form-control otp_input"
-                  placeholder="Enter the 4 digit OTP sent to you phone"
-                  data-otp=""
-                />
-                <small id="emailHelp" class="form-text text-muted"
-                  >Kindly wait for 5secs before retrying.</small
-                >
-                <div
-                  class="mt-2 alert alert-soft-success otp_message"
-                  role="alert"
-                  style="display: none"
-                >
-                  Invalid OTP. Kindly refresh the page and retry.
-                </div>
-                <button type="button" class="mt-3 btn btn-primary otp_button">
-                  Verify
-                </button>
-                <div
-                  class="mt-3 ml-2 spinner-border"
-                  role="status"
-                  style="display: none"
-                >
-                  <span class="sr-only">Loading...</span>
-                </div>
-              </div>
-              <div class="contact_block">
-                <div class="mb-0 alert alert-soft-primary" role="alert">
-                  Do enter the country code of your phone number.<br />
-                  Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the USA.
-                </div>
-                <br />
-                <h3 style="color: #1e3b6f">
-                  Where would you want to attend a demo
-                </h3>
-                <div class="py-3 my-3 rounded-lg bg-soft-primary">
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="settings_location"
-                      id="Ameerpet"
-                      value="ameerpet"
-                    />
-                    <label class="form-check-label" for="Ameerpet"
-                      >Ameerpet</label
-                    >
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="settings_location"
-                      id="Madhapur"
-                      value="madhapur"
-                    />
-                    <label class="form-check-label" for="Madhapur"
-                      >Madhapur</label
-                    >
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="settings_location"
-                      id="Online"
-                      value="online"
-                    />
-                    <label class="form-check-label" for="Online">Online</label>
-                  </div>
-                </div>
-                <h3 style="color: #1e3b6f">
-                  Which session would you like to try?
-                </h3>
-                <div class="py-3 my-3 rounded-lg bg-soft-primary">
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="gre"
-                      id="gre"
-                      name="settings_course[]"
-                    />
-                    <label class="form-check-label" for="gre"> GRE </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="ielts"
-                      id="ielts"
-                      name="settings_course[]"
-                    />
-                    <label class="form-check-label" for="ielts"> IELTS </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="toefl"
-                      id="toefl"
-                      name="settings_course[]"
-                    />
-                    <label class="form-check-label" for="toefl"> TOEFL </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="pte"
-                      id="pte"
-                      name="settings_course[]"
-                    />
-                    <label class="form-check-label" for="pte"> PTE </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="oet"
-                      id="oet"
-                      name="settings_course[]"
-                    />
-                    <label class="form-check-label" for="oet"> OET </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="sat"
-                      id="sat"
-                      name="settings_course[]"
-                    />
-                    <label class="form-check-label" for="sat"> SAT </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value="others"
-                      id="others"
-                      name="settings_course[]"
-                    />
-                    <label class="form-check-label" for="others">
-                      Others
-                    </label>
-                  </div>
-                </div>
-                <input
-                  type="hidden"
-                  class="mt-2 form-control"
-                  placeholder="Name"
-                  name="category"
-                  value="democlass"
-                />
-                <input
-                  type="hidden"
-                  class="mt-2 form-control"
-                  placeholder="Name"
-                  name="settings_request"
-                  value="Demo Class"
-                />
-                <input
-                  type="text"
-                  class="mt-2 form-control"
-                  placeholder="Name"
-                  name="name"
-                />
-                <input
-                  type="email"
-                  class="mt-2 form-control"
-                  placeholder="Email"
-                  name="email"
-                />
-                <input
-                  type="text"
-                  class="mt-2 form-control"
-                  placeholder="Phone Number"
-                  name="phone"
-                />
-                <button
-                  type="button"
-                  class="mt-3 btn btn-block transition-3d-hover contact_button"
-                  style="background-color: #1e3b6f; color: #ffffff"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      id="request_free_test"
-      class="modal fade"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalTopCoverTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-close">
-            <button
-              type="button"
-              class="btn btn-icon btn-sm btn-ghost-success"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 18 18"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="#000"
-                  d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <form
-            class="js-validate"
-            action="/admin/contact"
-            data-otp="1"
-            novalidate="novalidate"
-          >
-            <div class="px-4 py-4 text-center border-0 card-header bg-light">
-              <h2 class="mb-0 h2" style="color: #059862">
-                Request for a Free Test
-              </h2>
-            </div>
-            <div class="p-4 card-body">
-              <div
-                class="alert alert-soft-primary alert_block"
-                style="display: none"
-              >
-                <div class="alert_message"></div>
-              </div>
-              <div class="otp_block" style="display: none">
-                <h5>OTP Verification</h5>
-                <input
-                  type="text"
-                  class="form-control otp_input"
-                  placeholder="Enter the 4 digit OTP sent to you phone"
-                  data-otp=""
-                />
-                <small id="emailHelp" class="form-text text-muted"
-                  >Kindly wait for 5secs before retrying.</small
-                >
-                <div
-                  class="mt-2 alert alert-soft-success otp_message"
-                  role="alert"
-                  style="display: none"
-                >
-                  Invalid OTP. Kindly refresh the page and retry.
-                </div>
-                <button type="button" class="mt-3 btn btn-primary otp_button">
-                  Verify
-                </button>
-                <div
-                  class="mt-3 ml-2 spinner-border"
-                  role="status"
-                  style="display: none"
-                >
-                  <span class="sr-only">Loading...</span>
-                </div>
-              </div>
-              <div class="contact_block">
-                <div class="alert alert-soft-success" role="alert">
-                  Please include the country code with the number. (Eg:
-                  <kbd>+91</kbd> for India; <kbd>+65</kbd> For Singapore).
-                </div>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="js-form-message form-group">
-                      <label for="firstNameExample1" class="input-label"
-                        >Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="name"
-                        id="firstNameExample1"
-                        placeholder="Full name"
-                        aria-label="Nataly"
-                        required=""
-                        data-msg="Please enter your name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="js-form-message form-group">
-                      <label for="lastNameExample1" class="input-label"
-                        >Phone</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="phone"
-                        id="lastNameExample1"
-                        placeholder="Phone number"
-                        aria-label="Gaga"
-                        required=""
-                        data-msg="Please enter phone number"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="js-form-message form-group">
-                      <label for="emailAddressExample1" class="input-label"
-                        >Email address</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        name="email"
-                        id="emailAddressExample1"
-                        placeholder="your email id"
-                        required=""
-                        data-msg="Please enter a valid email address"
-                      />
-                      <input
-                        type="hidden"
-                        class="form-control"
-                        name="message"
-                        value="Request for a free ielts test"
-                      />
-                      <input
-                        type="hidden"
-                        class="form-control"
-                        name="category"
-                        value="ieltstest"
-                      />
-                    </div>
-                    <div class="js-form-message form-group">
-                      <label for="message" class="input-label"
-                        >Which Test(s) do you wish to take?</label
-                      >
-                      <div class="input-group">
-                        <textarea
-                          class="form-control"
-                          rows="4"
-                          name="message"
-                          id="message"
-                          placeholder="Clearly mention the name of test(s). Ex: IELTS General"
-                          aria-label="Hi there, I would like to ..."
-                          required=""
-                          data-msg="Please enter a reason."
-                        ></textarea>
+      <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+          <form id="request" action="{{ route('request.send') }}" method="POST">
+              @csrf
+              <div class="p-2">
+                  <div>
+                      <div class="flex items-center justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+
+                          <div class="w-[97%]" role="alert">
+                              <h1 class="my-auto text-2xl font-semibold">Request Free Test</h1> 
+                          </div>
+
+                          <button type="button"
+                              class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                              data-popup-close="requestForm">&times;
+                          </button>
+
                       </div>
-                    </div>
+                      <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                          <div class="w-full col-span-1">
+                              <label class="block pb-2">Name</label>
+                              <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
+                                  name="username" placeholder="Full Name"
+                                  required="" >
+                          </div>
+                          <div class="w-full col-span-1">
+                              <label class="block pb-2">Phone</label>
+                              <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
+                                  name="userphone" placeholder="Phone Number"
+                                  required="" >
+                          </div>
+                          <div class="col-span-2 my-2">
+                              <div class="mb-4 ">
+                                  <label class="block pb-2">Email
+                                      address</label>
+                                  <input type="email"
+                                      class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail" placeholder="E-mail ID" required="" class="w-100">
+                              </div>
+                              <div class="">
+                                  <label for="message" class="block pb-2">Which
+                                      Test(s) do you wish to take?</label>
+                                  <div class="input-group">
+                                      <textarea
+                                          class="w-full p-2 px-4 border border-gray-200 rounded resize-none"
+                                          rows="4" name="message" id="message"
+                                          placeholder="Type your message here..." required=""
+                                          ></textarea>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <button type="submit"
+                          class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn btn-block transition-3d-hover contact_button hover:bg-teal-custom">Submit</button>
                   </div>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-block transition-3d-hover contact_button"
-                  style="background-color: #059862; color: #fff"
-                >
-                  Submit
-                </button>
               </div>
-            </div>
           </form>
-          <div
-            class="modal fade contact_modal"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    OTP Verification
-                  </h5>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    <span aria-hidden="true">×</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <input
-                    type="text"
-                    class="form-control otp_input"
-                    placeholder="Enter the 4 digit OTP sent to you phone"
-                    data-otp=""
-                  />
-                  <small id="emailHelp" class="form-text text-muted"
-                    >Kindly wait for 5secs before retrying.</small
-                  >
-                  <div
-                    class="mt-2 alert alert-soft-success otp_message"
-                    role="alert"
-                    style="display: none"
-                  >
-                    Invalid OTP. Kindly refresh the page and retry.
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary otp_button">
-                    Verify
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-    <div
-      id="requirement"
-      class="modal fade"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalTopCoverTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-close">
-            <button
-              type="button"
-              class="btn btn-icon btn-sm btn-ghost-success"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 18 18"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill="#000"
-                  d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div class="p-0 text-center modal-body">
-            <form
-              class="p-4 mb-0 shadow-lg js-validate card"
-              id="ge"
-              action="/admin/contact"
-              data-otp="1"
-              novalidate="novalidate"
-            >
-              <div
-                class="m-3 alert alert-soft-success alert_block"
-                style="display: none"
-              >
-                <div class="alert_message"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="popup"
+  class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+      <div class="popup-content">
+          <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
+      class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+      @csrf
+              <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
+                  <div class="w-[97%]" role="alert">
+                      Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
+                      USA.
+                  </div>
+                  <button type="button"
+                      class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                      data-popup-close="popup">&times;</button>
               </div>
-              <div class="m-3 otp_block" style="display: none">
-                <h5>OTP Verification</h5>
-                <input
-                  type="text"
-                  class="form-control otp_input"
-                  placeholder="Enter the 4 digit OTP sent to you phone"
-                  data-otp=""
-                />
-                <small id="emailHelp" class="form-text text-muted"
-                  >Kindly wait for 5secs before retrying.</small
-                >
-                <div
-                  class="mt-2 alert alert-soft-success otp_message"
-                  role="alert"
-                  style="display: none"
-                >
-                  Invalid OTP. Kindly refresh the page and retry.
-                </div>
-                <button type="button" class="mt-3 btn btn-primary otp_button">
-                  Verify
-                </button>
-                <div
-                  class="mt-3 ml-2 spinner-border"
-                  role="status"
-                  style="display: none"
-                >
-                  <span class="sr-only">Loading...</span>
-                </div>
+
+              <h3 class="text-teal-900">Where would you want to attend a demo</h3>
+              <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
+                  <div class="flex items-center">
+                      <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
+                      <label class="ml-2" for="Ameerpet">Ameerpet</label>
+                  </div>
+                  <div class="flex items-center">
+                      <input class="" type="radio" name="location" id="Madhapur" value="Madhapur">
+                      <label class="ml-2" for="Madhapur">Madhapur</label>
+                  </div>
+                  <div class="flex items-center">
+                      <input class="" type="radio" name="location" id="Online" value="Online">
+                      <label class="ml-2" for="Online">Online</label>
+                  </div>
               </div>
-              <div class="contact_block">
-                <div class="mb-0 alert alert-soft-success" role="alert">
-                  Do enter the country code with your phone number.<br />
-                  Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the USA.
-                </div>
-                <h4 class="mt-3 mb-2">Talk to us!</h4>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="js-form-message form-group">
-                      <label for="firstNameExample1" class="input-label"
-                        >Name</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="name"
-                        id="firstNameExample1"
-                        placeholder="Full Name"
-                        aria-label="Nataly"
-                        required=""
-                        data-msg="Please enter your name"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="js-form-message form-group">
-                      <label for="lastNameExample1" class="input-label"
-                        >Phone</label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="phone"
-                        id="lastNameExample1"
-                        placeholder="Phone Number"
-                        aria-label="Gaga"
-                        required=""
-                        data-msg="Please enter phone number"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="js-form-message form-group">
-                      <label for="emailAddressExample1" class="input-label"
-                        >Email address</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        name="email"
-                        id="emailAddressExample1"
-                        placeholder="E-mail ID"
-                        aria-label="alex@pixeel.com"
-                        required=""
-                        data-msg="Please enter a valid email address"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="js-form-message form-group">
-                      <label for="message" class="input-label">Message</label>
-                      <div class="input-group">
-                        <textarea
-                          class="form-control"
-                          rows="4"
-                          name="message"
-                          id="message"
-                          placeholder="Type your message here..."
-                          aria-label="Hi there, I would like to ..."
-                          required=""
-                          data-msg="Please enter a reason."
-                        ></textarea>
+
+              <h3 class="text-teal-900">Which session would you like to try?</h3>
+              <div class="bg-gray-100">
+                  <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
+                      <div class="flex items-center">
+                          <input class="" type="checkbox" name="courses[]" id="gre" value="GRE">
+                          <label class="ml-2" for="gre">GRE</label>
                       </div>
-                    </div>
+                      <div class="flex items-center">
+                          <input class="" type="checkbox" name="courses[]" id="ielts" value="IELTS">
+                          <label class="ml-2" for="ielts">IELTS</label>
+                      </div>
+                      <div class="flex items-center">
+                          <input class="" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
+                          <label class="ml-2" for="toefl">TOEFL</label>
+                      </div>
+                      <div class="flex items-center">
+                          <input class="" type="checkbox" name="courses[]" id="pte" value="PTE">
+                          <label class="ml-2" for="pte">PTE</label>
+                      </div>
                   </div>
-                </div>
-                <input
-                  type="hidden"
-                  class="mt-2 form-control"
-                  placeholder="Name"
-                  name="category"
-                  value="contact"
-                />
-                <input
-                  type="hidden"
-                  class="mt-2 form-control"
-                  placeholder="Name"
-                  name="settings_request"
-                  value="General Enquiry"
-                />
-                <button
-                  type="button"
-                  class="mt-3 btn btn-success btn-sm contact_button"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="sessionplan" aria-hidden="true">
-      <div
-        class="modal-dialog modal-dialog-centered modal-lg"
-        style="max-width: 20rem"
-      >
-        <div class="modal-content">
-          <div class="modal-body">
-            <button
-              type="button"
-              class="p-2 bg-white btn btn-close text-dark btn-transparent"
-              data-dismiss="modal"
-              aria-label="Close"
-              style="
-                font-size: 1.5rem;
-                z-index: 1000;
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-              "
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-            <div class="mx-auto position-relative" style="max-width: 20rem">
-              <div
-                class="js-slick-carousel slick slick-initialized slick-slider"
-                data-hs-slick-carousel-options='{ "prevArrow": "<span class=\"slick-arrow slick-arrow-left slick-arrow-centered-y d-flex align-items-center justify-content-center rounded-circle ml-sm-2 ml-xl-4\"><i class=\"fas fa-arrow-left mb-0 \"></i></span>", "nextArrow": "<span class=\"slick-arrow slick-arrow-right slick-arrow-centered-y d-flex align-items-center justify-content-center rounded-circle mr-sm-2 mr-xl-4\"><i class=\"fas fa-arrow-right mb-0 \"></i></span>", "counterSelector": "#slickCounter", "counterDivider": "/", "counterClassMap": { "current": "slick-counter-current", "total": "slick-counter-total", "divider": "slick-counter-divider" } }'
-              >
-                <span
-                  class="slick-arrow slick-arrow-left slick-arrow-centered-y d-flex align-items-center justify-content-center rounded-circle ml-sm-2 ml-xl-4 slick-disabled"
-                  aria-disabled="true"
-                  style=""
-                  ><svg
-                    class="mb-0 svg-inline--fa fa-arrow-left fa-w-14"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="arrow-left"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    data-fa-i2svg=""
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"
-                    ></path></svg><!-- <i class="mb-0 fas fa-arrow-left "></i> --></span
-                >
-                <div class="slick-list draggable">
-                  <div
-                    class="slick-track"
-                    style="
-                      opacity: 1;
-                      width: 0px;
-                      transform: translate3d(0px, 0px, 0px);
-                    "
-                  >
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide slick-current slick-active"
-                      tabindex="0"
-                      aria-hidden="false"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_1%20the%20best%20ielts%20coaching.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="0"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_2%20free%20material%20for%20ielts.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="1"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_3%20reading%20tests%20for%20ielts.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="2"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_4%20free%20coaching%20for%20ielts.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="3"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_5%208777%20guaranteed%20coaching.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="4"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_6%208%20band%20training%20for%20ielts.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="5"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_7%20best%20online%20coaching%20for%20ielts.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="6"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_8%20777%20for%20ielts%20for%20immigration.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="7"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_9%20band%20coaching%20IELTS.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="8"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
-                    <div
-                      class="js-slide bg-img-hero-center slick-slide"
-                      style="
-                        background-image: url('https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_10%20official%20ielts%20coaching%20centre.png');
-                        width: 0px;
-                        height: auto;
-                      "
-                      data-slick-index="9"
-                      aria-hidden="true"
-                      tabindex="-1"
-                    >
-                      <div class="space-5"></div>
-                    </div>
+                  <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
+                      <div class="flex items-center">
+                          <input class="" type="checkbox" name="courses[]" id="oet" value="OET">
+                          <label class="ml-2" for="oet">OET</label>
+                      </div>
+                      <div class="flex items-center">
+                          <input class="" type="checkbox" name="courses[]" id="sat" value="SAT">
+                          <label class="ml-2" for="sat">SAT</label>
+                      </div>
+                      <div class="flex items-center">
+                          <input class="" type="checkbox" name="courses[]" id="others" value="OTHERS">
+                          <label class="ml-2" for="others">OTHERS</label>
+                      </div>
                   </div>
-                </div>
-                <span
-                  class="slick-arrow slick-arrow-right slick-arrow-centered-y d-flex align-items-center justify-content-center rounded-circle mr-sm-2 mr-xl-4"
-                  style=""
-                  aria-disabled="false"
-                  ><svg
-                    class="mb-0 svg-inline--fa fa-arrow-right fa-w-14"
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fas"
-                    data-icon="arrow-right"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                    data-fa-i2svg=""
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
-                    ></path></svg>
-                    <!-- <i class="mb-0 fas fa-arrow-right "></i> -->
-                    </span>
               </div>
-              <div class="container position-relative">
-                <div id="slickCounter" class="p-3 slick-counter bg-dark">
-                  <span class="slick-counter-current">1</span
-                  ><span class="slick-counter-divider">/</span
-                  ><span class="slick-counter-total">10</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div
-      class="modal fade"
-      id="loginModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="loginModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Login to proceed further...
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="mt-3" action="/user/apilogin" data-login="1">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  name="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                />
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                  name="password"
-                  placeholder="Password"
-                />
-              </div>
-              <button type="button" class="mb-3 btn btn-primary login_button">
-                Login</button
-              ><br />
-              Dont remember the password?
-              <a
-                href="/login_phone?redirect=https://firstacademy.in/spokenenglish"
-                class="my-2"
-                >Login via SMS OTP</a
-              >
-              <hr />
-              Dont remember the password?
-              <a
-                href="https://firstacademy.in/forgot-password"
-                class="pt-5 text-hover-primary"
-                id="kt_login_forgot"
-                >Forgot Password ?</a
-              >
-              <input
-                type="hidden"
-                name="curr_url"
-                value="https://firstacademy.in/spokenenglish"
-              />
-              <div
-                class="mt-4 alert alert-success login_message"
-                style="display: none"
-              ></div>
-            </form>
-          </div>
-        </div>
+              <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Name"
+                  name="username" required>
+              <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
+                  name="useremail" required>
+              <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
+                  placeholder="Phone Number" name="userphone" required>
+
+              <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
+          </form>
       </div>
-    </div>
-    <span id="PING_IFRAME_FORM_DETECTION" style="display: none"></span>
-  </body>
+  </div>
+
+  <div id="material1"
+  class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+      <div class="popup-content">
+          <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
+              <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
+                  <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
+              </button>
+              <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
+                  <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
+              </button>
+              <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                  </div>
+              </div>
+              <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
+                  <span id="slideNum1" class="text-lg"></span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div id="material2"
+  class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+      <div class="popup-content">
+          <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
+              <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
+                  <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
+              </button>
+              <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
+                  <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
+              </button>
+              <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
+                  <div class="crsl-item">
+                      <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                  </div>
+                  <div class="crsl-item">
+                      <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                  </div>
+              </div>
+              <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
+                  <span id="slideNum2" class="text-lg"></span>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div id="successPopup"
+      class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+      <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+          <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
+              <div class="w-full text-center text-green-800">
+                  <h3 class="text-lg font-bold">Request Sent Successfully!</h3>
+                  <p>Our team will reach out to you soon.</p>
+              </div>
+          </div>
+          <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
+              data-popup-close="successPopup">Close</button>
+      </div>
+  </div>
+
+  <div id="errorPopup"
+      class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+      <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+          <div class="flex justify-between p-4 mb-0 bg-red-100 rounded-lg">
+              <div class="w-full text-center text-red-800">
+                  <h3 class="text-lg font-bold">Uh Oh:(</h3>
+                  <p>Some error occured! Please try later.</p>
+              </div>
+          </div>
+          <button type="button" class="block w-full p-4 mt-4 text-white bg-red-600 btn btn-block"
+              data-popup-close="errorPopup">Close</button>
+      </div>
+  </div>
+
+  <script src="../dist/voilaui.js"></script>
+  <script src="../dist/ielts_carousel.js"></script>
+  <script src="../dist/lite-yt-embed.js"></script>
+  <script src="../dist/token.js"></script>
+  <script src="../dist/quiz.js"></script>
+
+</body>
+
 </html>
-
-
