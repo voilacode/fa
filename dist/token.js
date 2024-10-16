@@ -37,8 +37,7 @@ async function handleFormSubmit(event, formId, url, popupId) {
             const responseData = await response.json();
             document.getElementById(popupId).classList.add('hidden');
             document.getElementById('successPopup').classList.remove('hidden');
-            // Optionally, you can display the success message
-            console.log(responseData.message);
+            
         } else {
             const errorData = await response.json();
             console.error('Error in response:', errorData);
@@ -64,13 +63,4 @@ document.getElementById('talk').addEventListener('submit', function (event) {
 
 document.getElementById('request').addEventListener('submit', function (event) {
     handleFormSubmit(event, 'request', '/mail/request', 'requestForm');
-});
-
-// Handle popups - success and error popups handling
-document.getElementById('closeSuccessPopup').addEventListener('click', function () {
-    document.getElementById('successPopup').classList.add('hidden');
-});
-
-document.getElementById('closeErrorPopup').addEventListener('click', function () {
-    document.getElementById('errorPopup').classList.add('hidden');
 });
