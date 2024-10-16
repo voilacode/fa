@@ -1,21 +1,16 @@
-// token.js
 async function handleFormSubmit(event, formId, url, popupId) {
     event.preventDefault();
 
     try {
         // Initialize CSRF cookie on mobile devices
-        await fetch('/sanctum/csrf-cookie', {
-            method: 'GET',
-            credentials: 'same-origin'
-        });
+        await fetch('/sanctum/csrf-cookie');
 
         // Fetch CSRF token
         const csrfResponse = await fetch('/csrf-token', {
             method: 'GET',
             headers: {
                 'Accept': 'application/json'
-            },
-            credentials: 'same-origin'
+            }
         });
 
         if (!csrfResponse.ok) {
@@ -25,27 +20,25 @@ async function handleFormSubmit(event, formId, url, popupId) {
         const csrfData = await csrfResponse.json();
         const csrfToken = csrfData.csrfToken;
 
-        // Fetch the form data
         const formData = new FormData(document.getElementById(formId));
-
-        // Add CSRF token to the form data
-        formData.append('_token', csrfToken);
 
         const requestOptions = {
             method: 'POST',
             headers: {
+                'X-CSRF-TOKEN': csrfToken,
                 'Accept': 'application/json'
             },
-            body: formData,
-            credentials: 'same-origin'
+            body: formData
         };
 
         const response = await fetch(url, requestOptions);
 
         if (response.ok) {
-            // Handle success response
+            const responseData = await response.json();
             document.getElementById(popupId).classList.add('hidden');
             document.getElementById('successPopup').classList.remove('hidden');
+            // Optionally, you can display the success message
+            console.log(responseData.message);
         } else {
             const errorData = await response.json();
             console.error('Error in response:', errorData);
