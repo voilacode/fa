@@ -2,15 +2,16 @@ async function handleFormSubmit(event, formId, url, popupId) {
     event.preventDefault();
 
     try {
-        // Initialize CSRF cookie on mobile devices
-        await fetch('/sanctum/csrf-cookie');
+        // Initialize CSRF cookie on mobile devices and all platforms
+        await fetch('/sanctum/csrf-cookie', { credentials: 'same-origin' });
 
         // Fetch CSRF token
         const csrfResponse = await fetch('/csrf-token', {
             method: 'GET',
             headers: {
                 'Accept': 'application/json'
-            }
+            },
+            credentials: 'same-origin'
         });
 
         if (!csrfResponse.ok) {
@@ -28,7 +29,8 @@ async function handleFormSubmit(event, formId, url, popupId) {
                 'X-CSRF-TOKEN': csrfToken,
                 'Accept': 'application/json'
             },
-            body: formData
+            body: formData,
+            credentials: 'same-origin' // Ensure cookies are sent properly
         };
 
         const response = await fetch(url, requestOptions);
