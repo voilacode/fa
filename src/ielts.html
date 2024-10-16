@@ -2464,197 +2464,200 @@
     </button>
 
     <div id="talkForm"
-        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="talk" action="{{ route('talk.send') }}" method="POST">
-                <div class="p-2">
-                    <div>
-                        <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-                            <div class="w-[97%]" role="alert">
-                                Do enter the country code of your phone number.<br> Ex: <kbd class="bg-black text-white p-1 rounded">+91</kbd> for India,
-                                <kbd class="bg-black text-white p-1 rounded">+1</kbd> for the USA.
+    <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+        <form id="talk" action="{{ route('talk.send') }}" method="POST">
+            @csrf
+            <div class="p-2">
+                <div>
+                    <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                        <div class="w-[97%]" role="alert">
+                            Do enter the country code of your phone number.<br> Ex: <kbd class="bg-black text-white p-1 rounded">+91</kbd> for India,
+                            <kbd class="bg-black text-white p-1 rounded">+1</kbd> for the USA.
+                        </div>
+                        <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                            data-popup-close="talkForm">&times;</button>
+                    </div>
+
+                    <h1 class="text-center font-semibold my-2">Talk to Us!</h1>
+
+                    <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                        <div class="w-full col-span-1">
+                            <label class="block pb-2 text-center input-label">Name</label>
+                            <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="username" placeholder="Full Name"
+                                required="">
+                        </div>
+                        <div class="w-full col-span-1">
+                            <label class="block pb-2 text-center input-label">Phone</label>
+                            <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="userphone" placeholder="Phone Number"
+                                required="">
+                        </div>
+                        <div class="col-span-2 my-2">
+                            <div class="mb-4 ">
+                                <label class="block pb-2 text-center">Email address</label>
+                                <input type="email" class="w-full p-2 border border-gray-200 rounded px-4" name="useremail"
+                                    placeholder="E-mail ID" required="">
                             </div>
-                            <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="talkForm">&times;</button>
+                            <div class="">
+                                <label class="block pb-2 text-center">Message</label>
+                                <div>
+                                    <textarea class="w-full p-2 border border-gray-200 rounded resize-none px-4" rows="4" name="message"
+                                        placeholder="Type your message here..." required=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="block px-6 py-2 mx-auto rounded-lg btn bg-teal-700 text-white hover:bg-teal-custom duration-300">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
+
+    <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+        <form id="request" action="{{ route('request.send') }}" method="POST">
+            @csrf
+            <div class="p-2">
+                <div>
+                    <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+
+                        <div class="w-[97%]" role="alert">
+                            <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
                         </div>
 
-                        <h1 class="text-center font-semibold my-2">Talk to Us!</h1>
-
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="username" placeholder="Full Name"
-                                    required="">
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="userphone" placeholder="Phone Number"
-                                    required="">
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4 ">
-                                    <label class="block pb-2 text-center">Email address</label>
-                                    <input type="email" class="w-full p-2 border border-gray-200 rounded px-4" name="useremail"
-                                        placeholder="E-mail ID" required="">
-                                </div>
-                                <div class="">
-                                    <label class="block pb-2 text-center">Message</label>
-                                    <div>
-                                        <textarea class="w-full p-2 border border-gray-200 rounded resize-none px-4" rows="4" name="message"
-                                            placeholder="Type your message here..." required=""></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="block px-6 py-2 mx-auto rounded-lg btn bg-teal-700 text-white hover:bg-teal-custom duration-300">
-                            Submit
+                        <button type="button"
+                            class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                            data-popup-close="requestForm">&times;
                         </button>
+
                     </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
-
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="request" action="{{ route('request.send') }}" method="POST">
-                <div class="p-2">
-                    <div>
-                        <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-
-                            <div class="w-[97%]" role="alert">
-                                <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
-                            </div>
-
-                            <button type="button"
-                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="requestForm">&times;
-                            </button>
-
+                    <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                        <div class="w-full col-span-1">
+                            <label class="block pb-2">Name</label>
+                            <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                name="username" placeholder="Full Name"
+                                required="" >
                         </div>
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2">Name</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                    name="username" placeholder="Full Name"
-                                    required="" >
+                        <div class="w-full col-span-1">
+                            <label class="block pb-2">Phone</label>
+                            <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                name="userphone" placeholder="Phone Number"
+                                required="" >
+                        </div>
+                        <div class="col-span-2 my-2">
+                            <div class="mb-4  ">
+                                <label class="block pb-2">Email
+                                    address</label>
+                                <input type="email"
+                                    class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
                             </div>
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2">Phone</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                    name="userphone" placeholder="Phone Number"
-                                    required="" >
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4  ">
-                                    <label class="block pb-2">Email
-                                        address</label>
-                                    <input type="email"
-                                        class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
-                                </div>
-                                <div class=" ">
-                                    <label for="message" class="block pb-2">Which
-                                        Test(s) do you wish to take?</label>
-                                    <div class="input-group">
-                                        <textarea
-                                            class="w-full p-2 border border-gray-200 rounded resize-none px-4"
-                                            rows="4" name="message" id="message"
-                                            placeholder="Type your message here..." required=""
-                                            ></textarea>
-                                    </div>
+                            <div class=" ">
+                                <label for="message" class="block pb-2">Which
+                                    Test(s) do you wish to take?</label>
+                                <div class="input-group">
+                                    <textarea
+                                        class="w-full p-2 border border-gray-200 rounded resize-none px-4"
+                                        rows="4" name="message" id="message"
+                                        placeholder="Type your message here..." required=""
+                                        ></textarea>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit"
-                            class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
                     </div>
+                    <button type="submit"
+                        class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
+</div>
 
-    <!-- Modal -->
-    <div id="popup"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
-        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
-                <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
-                    <div class="w-[97%]" role="alert">
-                        Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
-                        USA.
-                    </div>
-                    <button type="button"
-                        class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                        data-popup-close="popup">&times;</button>
+<!-- Modal -->
+<div id="popup"
+class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+    <div class="popup-content">
+        <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
+    class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+    @csrf
+            <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
+                <div class="w-[97%]" role="alert">
+                    Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
+                    USA.
                 </div>
+                <button type="button"
+                    class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                    data-popup-close="popup">&times;</button>
+            </div>
 
-                <h3 class="text-teal-900">Where would you want to attend a demo</h3>
-                <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
-                    <div class="flex items-center">
-                        <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
-                        <label class="ml-2" for="Ameerpet">Ameerpet</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="" type="radio" name="location" id="Madhapur" value="Madhapur">
-                        <label class="ml-2" for="Madhapur">Madhapur</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="" type="radio" name="location" id="Online" value="Online">
-                        <label class="ml-2" for="Online">Online</label>
-                    </div>
+            <h3 class="text-teal-900">Where would you want to attend a demo</h3>
+            <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
+                <div class="flex items-center">
+                    <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
+                    <label class="ml-2" for="Ameerpet">Ameerpet</label>
                 </div>
+                <div class="flex items-center">
+                    <input class="" type="radio" name="location" id="Madhapur" value="Madhapur">
+                    <label class="ml-2" for="Madhapur">Madhapur</label>
+                </div>
+                <div class="flex items-center">
+                    <input class="" type="radio" name="location" id="Online" value="Online">
+                    <label class="ml-2" for="Online">Online</label>
+                </div>
+            </div>
 
-                <h3 class="text-teal-900">Which session would you like to try?</h3>
-                <div class="bg-gray-100">
-                    <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="gre" value="GRE">
-                            <label class="ml-2" for="gre">GRE</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="ielts" value="IELTS">
-                            <label class="ml-2" for="ielts">IELTS</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
-                            <label class="ml-2" for="toefl">TOEFL</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="pte" value="PTE">
-                            <label class="ml-2" for="pte">PTE</label>
-                        </div>
+            <h3 class="text-teal-900">Which session would you like to try?</h3>
+            <div class="bg-gray-100">
+                <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
+                    <div class="flex items-center">
+                        <input class="" type="checkbox" name="courses[]" id="gre" value="GRE">
+                        <label class="ml-2" for="gre">GRE</label>
                     </div>
-                    <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="oet" value="OET">
-                            <label class="ml-2" for="oet">OET</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="sat" value="SAT">
-                            <label class="ml-2" for="sat">SAT</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="others" value="OTHERS">
-                            <label class="ml-2" for="others">OTHERS</label>
-                        </div>
+                    <div class="flex items-center">
+                        <input class="" type="checkbox" name="courses[]" id="ielts" value="IELTS">
+                        <label class="ml-2" for="ielts">IELTS</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
+                        <label class="ml-2" for="toefl">TOEFL</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="" type="checkbox" name="courses[]" id="pte" value="PTE">
+                        <label class="ml-2" for="pte">PTE</label>
                     </div>
                 </div>
+                <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
+                    <div class="flex items-center">
+                        <input class="" type="checkbox" name="courses[]" id="oet" value="OET">
+                        <label class="ml-2" for="oet">OET</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="" type="checkbox" name="courses[]" id="sat" value="SAT">
+                        <label class="ml-2" for="sat">SAT</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="" type="checkbox" name="courses[]" id="others" value="OTHERS">
+                        <label class="ml-2" for="others">OTHERS</label>
+                    </div>
+                </div>
+            </div>
 
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Name"
-                    name="username" required>
-                <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
-                    name="useremail" required>
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
-                    placeholder="Phone Number" name="userphone" required>
+            <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Name"
+                name="username" required>
+            <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
+                name="useremail" required>
+            <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
+                placeholder="Phone Number" name="userphone" required>
 
-                <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
-            </form>
-        </div>
+            <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
+        </form>
     </div>
+</div>
 
     <div id="material"
     class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">

@@ -1835,6 +1835,7 @@
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="talk" action="{{ route('talk.send') }}" method="POST">
+                @csrf
                 <div class="p-2">
                     <div>
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1888,6 +1889,7 @@
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="request" action="{{ route('request.send') }}" method="POST">
+                @csrf
                 <div class="p-2">
                     <div>
                         <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1949,6 +1951,7 @@
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+        @csrf
                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                     <div class="w-[97%]" role="alert">
                         Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
