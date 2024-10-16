@@ -2724,6 +2724,19 @@ class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-ful
                 data-popup-close="successPopup">Close</button>
         </div>
     </div>
+    <div id="errorPopup"
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+        <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+            <div class="flex justify-between p-4 mb-0 bg-red-100 rounded-lg">
+                <div class="w-full text-center text-red-800">
+                    <h3 class="text-lg font-bold">Uh Oh:(</h3>
+                    <p>Some error occured! Please try later.</p>
+                </div>
+            </div>
+            <button type="button" class="block w-full p-4 mt-4 text-white bg-red-600 btn btn-block"
+                data-popup-close="errorPopup">Close</button>
+        </div>
+    </div>
 
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/ielts_carousel.js"></script>
