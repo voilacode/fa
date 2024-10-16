@@ -1,9 +1,11 @@
-// Function to handle form submissions
 async function handleFormSubmit(event, formId, url, popupId) {
     event.preventDefault();
 
     try {
-        // Fetch CSRF token from Laravel
+        // Initialize CSRF cookie on mobile devices
+        await fetch('/sanctum/csrf-cookie');
+
+        // Fetch CSRF token
         const csrfResponse = await fetch('/csrf-token', {
             method: 'GET',
             headers: {
@@ -31,11 +33,8 @@ async function handleFormSubmit(event, formId, url, popupId) {
 
         const response = await fetch(url, requestOptions);
 
-        // Check if the response was OK
         if (response.ok) {
-            // Hide the form's popup
             document.getElementById(popupId).classList.add('hidden');
-            // Show the success popup
             document.getElementById('successPopup').classList.remove('hidden');
         } else {
             const errorData = await response.json();
@@ -50,25 +49,3 @@ async function handleFormSubmit(event, formId, url, popupId) {
         document.getElementById('errorPopup').classList.remove('hidden');
     }
 }
-
-// Event listeners for each form
-document.getElementById('demoForm').addEventListener('submit', function (event) {
-    handleFormSubmit(event, 'demoForm', '/admin/mail/demo', 'popup');
-});
-
-document.getElementById('talk').addEventListener('submit', function (event) {
-    handleFormSubmit(event, 'talk', '/admin/mail/talk', 'talkForm');
-});
-
-document.getElementById('request').addEventListener('submit', function (event) {
-    handleFormSubmit(event, 'request', '/admin/mail/request', 'requestForm');
-});
-
-// Handle popups - success and error popups handling
-document.getElementById('closeSuccessPopup').addEventListener('click', function () {
-    document.getElementById('successPopup').classList.add('hidden');
-});
-
-document.getElementById('closeErrorPopup').addEventListener('click', function () {
-    document.getElementById('errorPopup').classList.add('hidden');
-});
