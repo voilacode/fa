@@ -55,15 +55,15 @@ async function handleFormSubmit(event, formId, url, popupId) {
 
 // Event listeners for each form
 document.getElementById('demoForm').addEventListener('submit', function (event) {
-    handleFormSubmit(event, 'demoForm', '/admin/mail/demo', 'popup');
+    handleFormSubmit(event, 'demoForm', '/mail/demo', 'popup');
 });
 
 document.getElementById('talk').addEventListener('submit', function (event) {
-    handleFormSubmit(event, 'talk', '/admin/mail/talk', 'talkForm');
+    handleFormSubmit(event, 'talk', '/mail/talk', 'talkForm');
 });
 
 document.getElementById('request').addEventListener('submit', function (event) {
-    handleFormSubmit(event, 'request', '/admin/mail/request', 'requestForm');
+    handleFormSubmit(event, 'request', '/mail/request', 'requestForm');
 });
 
 // Handle popups - success and error popups handling
