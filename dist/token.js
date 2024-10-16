@@ -35,9 +35,11 @@ async function handleFormSubmit(event, formId, url, popupId) {
 
         if (response.ok) {
             const responseData = await response.json();
+            console.log('Success response data:', responseData); // Log the response data
+
             document.getElementById(popupId).classList.add('hidden');
             document.getElementById('successPopup').classList.remove('hidden');
-            
+
         } else {
             const errorData = await response.json();
             console.error('Error in response:', errorData);
