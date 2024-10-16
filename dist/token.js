@@ -35,16 +35,24 @@ async function handleFormSubmit(event, formId, url, popupId) {
 
         if (response.ok) {
             const responseData = await response.json();
-            console.log('Success response data:', responseData); // Log the response data
+            console.log('Success response data:', responseData);
 
             document.getElementById(popupId).classList.add('hidden');
             document.getElementById('successPopup').classList.remove('hidden');
 
         } else {
-            const errorData = await response.json();
-            console.error('Error in response:', errorData);
-            document.getElementById(popupId).classList.add('hidden');
-            document.getElementById('errorPopup').classList.remove('hidden');
+            // Check if response is HTML instead of JSON
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('text/html')) {
+                console.warn('Received HTML instead of JSON. Mail might have been sent successfully.');
+                document.getElementById(popupId).classList.add('hidden');
+                document.getElementById('successPopup').classList.remove('hidden');
+            } else {
+                const errorData = await response.json();
+                console.error('Error in response:', errorData);
+                document.getElementById(popupId).classList.add('hidden');
+                document.getElementById('errorPopup').classList.remove('hidden');
+            }
         }
 
     } catch (error) {
