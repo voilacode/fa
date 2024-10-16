@@ -93,12 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.getElementById('popup').addEventListener('click', function (event) {
-    if (event.target === this) {
-        this.classList.add('hidden');
-    }
-});
-
 /** 
  * Accordion script to handle multiple accordions 
  * that have class name accordion 

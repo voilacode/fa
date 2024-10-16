@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Initialize with the first slide
         showSlide(currentIndex);
     }
-
+    initCarousel('carousel', 'pBtn', 'nxtBtn', 'slideNum');
     initCarousel('carousel1', 'pBtn1', 'nxtBtn1', 'slideNum1');
     initCarousel('carousel2', 'pBtn2', 'nxtBtn2', 'slideNum2');
 });

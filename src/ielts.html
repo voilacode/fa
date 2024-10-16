@@ -1,5 +1,6 @@
 <html>
 <meta charset="UTF-8">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="The Best Coaching for OET | The Best Coaching for IELTS | The Best Online Coaching | The Best Coaching Centre in Hyderabad | Online Coaching India | IELTS | OET | PTE | SAT | GRE">
@@ -22,24 +23,62 @@
             display: block;
         }
         .crsl-item {
-                min-width: 100%;
-                transition: transform 0.5s ease-in-out;
-            }
-    
-        #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2 {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }    
+        #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2, #pBtn, #nxtBtn {
             z-index: 1;
         }
-
+        .popupQn {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -48%);
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 95vw;
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            display: none;
+        }
+        .active1 {
+            display: block;
+        }
+        #directionsContainer {
+            white-space: pre-wrap;
+        }
         .progress-bar {
-                height: 4px;
-                background-color: #3498db;
-                width: 0;
+            height: 4px;
+            background-color: #3498db;
+            width: 0;
+        }
+        @media (min-width: 640px) {
+            .popupQn {
+                width: 45vw;
             }
+        }
+        @media (min-width: 641px) and (max-width:1000px) {
+            .popupQn {
+                width: 75vw;
+            }
+        }
     </style>
 </head>
 
 <body class="font-open">
-    <header class="fixed z-10 w-screen border-b border-gray-200" id="header">
+    <header class="fixed z-20 w-screen border-b border-gray-200" id="header">
         <nav class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
             <div class="items-center justify-between max-w-screen-xl px-4 py-2 mx-auto lg:flex sm:px-[60px] ">
                 <div class="flex justify-between">
@@ -319,7 +358,7 @@
         </nav>
     </header>
     <hr>
-
+    
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
@@ -950,7 +989,7 @@
                 </div>
                 <div class="md:w-1/2 lg:w-2/5">
                     <div class="relative">
-                        <figure class="absolute z-30 hidden h-full bottom-10 -right-10 w-44 lg:block">
+                        <figure class="absolute z-0 hidden h-full bottom-10 -right-10 w-44 lg:block">
                             <img class="w-full " src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_dots-2.svg" alt="Image Description">
                         </figure>
                         <div class="relative z-10 p-6 pb-12 text-center rounded-lg " style="background-color: #70ffe4;">
@@ -977,7 +1016,7 @@
                             <h3 class="mb-2 text-xl font-semibold">Regular Course Duration</h3>
                             <p class="font-semibold text-center text-pink-500 ">Regular Term – 4 weeks</p>
                             <p class="pb-3 mb-5 font-semibold text-center text-pink-500">Short Term – 2 weeks</p>
-                            <a href="" class="p-4 px-8 font-semibold duration-300 ease-in-out bg-teal-600 rounded-lg hover:bg-teal-500" data-popup="popup">Attend a session</a>
+                            <button class="p-4 px-8 font-semibold duration-300 ease-in-out bg-teal-600 rounded-lg hover:bg-teal-500" data-popup="popup">Attend a session</button>
                         </div>
                     </div>
                     
@@ -1183,9 +1222,11 @@
             <p class="inline text-sm " style="color: #66ade1;"> Might not work on Jio connections</p>
             </p>
             <div class="flex flex-col gap-6 py-4 lg:flex-row">
+                <!-- first -->
                 <div class="w-full p-4 border-2 rounded-lg rounded-tl-none h-fit">
-                    <a href="https://t.me/firstacademy/405" target="_blank" class="text-xl font-semibold cursor-pointer hover:underline" style="color: #66ade1;">First Academy</a>
-                    <span><svg class="inline float-right" width="30px" height="30px" viewBox="0 0 100 100" version="1.1"
+                    <a href="https://t.me/firstacademy/" target="_blank" class="text-xl font-semibold cursor-pointer hover:underline" style="color: #66ade1;">First Academy</a>
+                    <a href="https://core.telegram.org/widgets" target="_blank">
+                        <svg class="inline float-right" width="30px" height="30px" viewBox="0 0 100 100" version="1.1"
                             xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1200,26 +1241,15 @@
                                     </g>
                                 </g>
                             </g>
-                        </svg></span>
-                    <p class="py-2 font-semibold">The books we requested for our students got here on __________</p>
-                    <p class="text-sm font-semibold text-gray-700">Anonymous Quiz</p>
-                    <ul class="py-3">
-                        <li class="pb-1">
-                            <input class="border-2" type="radio" name="any" id=""><span class="pl-2">authority</span>
-                        </li>
-                        <li class="pb-1">
-                            <input class="border-2" type="radio" name="any" id=""><span class="pl-2">schedule</span>
-                        </li>
-                        <li class="pb-1">
-                            <input class="border-2" type="radio" name="any" id=""><span class="pl-2">condition</span>
-                        </li>
-                        <li class="pb-1">
-                            <input class="border-2" type="radio" name="any" id=""><span class="pl-2">appointment</span>
-                        </li>
-                    </ul>
-                    <p class="font-semibold text-gray-700">189 Answered</p>
+                        </svg>
+                    </a>
+                    
+                    <p class="text-sm font-semibold text-gray-700">Please open Telegram to view this post</p>
+                    
+                    <a href="https://t.me/firstacademy/405" class="bg-white text-sm font-semibold px-8 py-2 rounded-full duration-300 block w-fit text-center mx-auto my-4 text-blue-400 hover:bg-blue-400 hover:text-white py-2 border-2 border-blue-400">VIEW IN TELEGRAM</a>
+                    <p class="font-semibold text-gray-700"></p>
                     <p class="float-right text-sm font-semibold text-gray-700">
-                        <span>2.1k</span>
+                        <span>2.4k</span>
                         <svg class="inline" fill="#949494" width="20px" height="20px" viewBox="-3.5 0 32 32" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" stroke="#949494">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1234,9 +1264,11 @@
                         <a href="https://t.me/firstacademy/405" target="_blank" class="cursor-pointer hover:underline">Aug 19, 2022 at 10:00</a>
                     </p>
                 </div>
+                <!-- second -->
                 <div class="w-full p-4 border-2 rounded-lg rounded-tl-none h-fit">
-                    <a href="https://t.me/firstacademy" target="_blank" class="text-xl font-semibold cursor-pointer hover:underline" style="color: #66ade1;">First Academy</a>
-                    <span><svg class="inline float-right" width="30px" height="30px" viewBox="0 0 100 100" version="1.1"
+                    <a href="https://t.me/firstacademy/" target="_blank" class="text-xl font-semibold cursor-pointer hover:underline" style="color: #66ade1;">First Academy</a>
+                    <a href="https://core.telegram.org/widgets" target="_blank">
+                        <svg class="inline float-right" width="30px" height="30px" viewBox="0 0 100 100" version="1.1"
                             xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1245,49 +1277,21 @@
                                 <g id="Layer_1"></g>
                                 <g id="Layer_2">
                                     <g>
-                                        <path style="fill: #66ade1;"
+                                        <path style="fill: #66ade1;" class="st117"
                                             d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392 s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431 c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691 c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659 C97.307,8.804,88.723,12.142,88.723,12.142z">
                                         </path>
                                     </g>
                                 </g>
                             </g>
-                        </svg></span>
-                    <p class="pb-4 font-semibold">Historic Vs. Historical</p>
-                    <p class="pb-4 ">Historic is a term generally given to an important, momentous or significant event.</p>
-                    <p class="pb-4 ">The term historical is a neutral word simply used to state an object is concerned or
-                        related to history.</p>
-                    <p class="">Example:</p>
-                    <p class="pb-4">
-                        <svg class="inline" width="20px" height="20px" viewBox="0 0 48 48" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <rect x="6" y="6" width="36" height="36" rx="3" fill="#7CB9E8" stroke="#70c2f5"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></rect>
-                                <path d="M21.2261 18L26.0001 13.0166V34" stroke="white" stroke-width="4"
-                                    stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
                         </svg>
-                        Neil Armstrong's walk on the moon was a historic event.
-                    </p>
-                    <p class="pb-4 ">
-                        <svg class="inline" width="20px" height="20px" viewBox="0 0 48 48" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                            <g id="SVGRepo_iconCarrier">
-                                <rect x="6" y="6" width="36" height="36" rx="3" fill="#7CB9E8" stroke="#7CB9E8"
-                                    stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></rect>
-                                <path
-                                    d="M19 19C19 15.8334 21.6667 14 24 14C26.3334 14 29 15.8334 29 19C29 24.7 19 28.9333 19 34H29"
-                                    stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </g>
-                        </svg>
-                        Gone With the Wind is a historical novel.
-                    </p>
+                    </a>
+                    
+                    <p class="text-sm font-semibold text-gray-700">Please open Telegram to view this post</p>
+                    
+                    <a href="https://t.me/firstacademy/384" class="bg-white text-sm font-semibold px-8 py-2 rounded-full duration-300 block w-fit text-center mx-auto my-4 text-blue-400 hover:bg-blue-400 hover:text-white py-2 border-2 border-blue-400">VIEW IN TELEGRAM</a>
+                    <p class="font-semibold text-gray-700"></p>
                     <p class="float-right text-sm font-semibold text-gray-700">
-                        <span>1.2k</span>
+                        <span>1.4k</span>
                         <svg class="inline" fill="#949494" width="20px" height="20px" viewBox="-3.5 0 32 32" version="1.1"
                             xmlns="http://www.w3.org/2000/svg" stroke="#949494">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1299,59 +1303,52 @@
                                 </path>
                             </g>
                         </svg>
-                        <span> edited </span>
-                        <a href="https://t.me/firstacademy/384" target="_blank" class="cursor-pointer hover:underline"> Jul 30, 2022 at 18:08</a>
+                        <a href="https://t.me/firstacademy/405" target="_blank" class="cursor-pointer hover:underline">Jul 30, 2022 at 18:08</a>
                     </p>
                 </div>
-                <div class="w-full border-2 rounded-lg rounded-tl-none ">
-                    <div class="p-4 py-2">
-                        <a href="https://t.me/firstacademy" target="_blank" class="p-4 text-xl font-semibold cursor-pointer hover:underline"  style="color: #66ade1;">First Academy</a>
-                        <span class="p-4"><svg class="inline float-right" width="30px" height="30px" viewBox="0 0 100 100"
-                                version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    
-                                    <g id="Layer_1"></g>
-                                    <g id="Layer_2">
-                                        <g>
-                                            <path style="fill: #66ade1;"
-                                                d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392 s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431 c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691 c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659 C97.307,8.804,88.723,12.142,88.723,12.142z">
-                                            </path>
-                                        </g>
+                <!-- third -->
+                <div class="w-full p-4 border-2 rounded-lg rounded-tl-none h-fit">
+                    <a href="https://t.me/firstacademy/" target="_blank" class="text-xl font-semibold cursor-pointer hover:underline" style="color: #66ade1;">First Academy</a>
+                    <a href="https://core.telegram.org/widgets" target="_blank">
+                        <svg class="inline float-right" width="30px" height="30px" viewBox="0 0 100 100" version="1.1"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g id="Layer_1"></g>
+                                <g id="Layer_2">
+                                    <g>
+                                        <path style="fill: #66ade1;" class="st117"
+                                            d="M88.723,12.142C76.419,17.238,23.661,39.091,9.084,45.047c-9.776,3.815-4.053,7.392-4.053,7.392 s8.345,2.861,15.499,5.007c7.153,2.146,10.968-0.238,10.968-0.238l33.62-22.652c11.922-8.107,9.061-1.431,6.199,1.431 c-6.199,6.2-16.452,15.975-25.036,23.844c-3.815,3.338-1.908,6.199-0.238,7.63c6.199,5.246,23.129,15.976,24.082,16.691 c5.037,3.566,14.945,8.699,16.452-2.146c0,0,5.961-37.435,5.961-37.435c1.908-12.637,3.815-24.321,4.053-27.659 C97.307,8.804,88.723,12.142,88.723,12.142z">
+                                        </path>
                                     </g>
                                 </g>
-                            </svg>
-                        </span>
-                    </div>
-
+                            </g>
+                        </svg>
+                    </a>
                     
-                    <div class="hidden lg:block">
-                        <video src="../assets/FirstAcademy.mp4" controls class="w-full"></video>
-                    </div>
-                    <p class="px-4 py-2">Remember vs. Remind.</p>
-                    <p class="px-4 py-2">Another word pair to start a new month and a new week!</p>
-                    <p class="px-4 py-2">Welcome to August!</p>
-                    <p class="px-4 py-2">Welcome to First Academy!</p>
-                    <p class="flex justify-end p-4 space-x-4 text-sm font-semibold text-gray-700 ms-auto">
-                        
-                        <span>1.2k
-                            <svg class="inline" fill="#949494" class="my-auto" width="20px" height="20px" viewBox="-3.5 0 32 32" version="1.1"
-                                xmlns="http://www.w3.org/2000/svg" stroke="#949494">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <title>view</title>
-                                    <path
-                                        d="M12.406 13.844c1.188 0 2.156 0.969 2.156 2.156s-0.969 2.125-2.156 2.125-2.125-0.938-2.125-2.125 0.938-2.156 2.125-2.156zM12.406 8.531c7.063 0 12.156 6.625 12.156 6.625 0.344 0.438 0.344 1.219 0 1.656 0 0-5.094 6.625-12.156 6.625s-12.156-6.625-12.156-6.625c-0.344-0.438-0.344-1.219 0-1.656 0 0 5.094-6.625 12.156-6.625zM12.406 21.344c2.938 0 5.344-2.406 5.344-5.344s-2.406-5.344-5.344-5.344-5.344 2.406-5.344 5.344 2.406 5.344 5.344 5.344z">
-                                    </path>
-                                </g>
-                            </svg>
-                        </span>
-                        <a href="https://t.me/firstacademy/386" target="_blank" class="cursor-pointer hover:underline"> Aug 1, 2022 at 10:30</a>
+                    <p class="text-sm font-semibold text-gray-700">Please open Telegram to view this post</p>
+                    
+                    <a href="https://t.me/firstacademy/386" class="bg-white text-sm font-semibold px-8 py-2 rounded-full duration-300 block w-fit text-center mx-auto my-4 text-blue-400 hover:bg-blue-400 hover:text-white py-2 border-2 border-blue-400">VIEW IN TELEGRAM</a>
+                    <p class="font-semibold text-gray-700"></p>
+                    <p class="float-right text-sm font-semibold text-gray-700">
+                        <span>1.6k</span>
+                        <svg class="inline" fill="#949494" width="20px" height="20px" viewBox="-3.5 0 32 32" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" stroke="#949494">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>view</title>
+                                <path
+                                    d="M12.406 13.844c1.188 0 2.156 0.969 2.156 2.156s-0.969 2.125-2.156 2.125-2.125-0.938-2.125-2.125 0.938-2.156 2.125-2.156zM12.406 8.531c7.063 0 12.156 6.625 12.156 6.625 0.344 0.438 0.344 1.219 0 1.656 0 0-5.094 6.625-12.156 6.625s-12.156-6.625-12.156-6.625c-0.344-0.438-0.344-1.219 0-1.656 0 0 5.094-6.625 12.156-6.625zM12.406 21.344c2.938 0 5.344-2.406 5.344-5.344s-2.406-5.344-5.344-5.344-5.344 2.406-5.344 5.344 2.406 5.344 5.344 5.344z">
+                                </path>
+                            </g>
+                        </svg>
+                        <a href="https://t.me/firstacademy/405" target="_blank" class="cursor-pointer hover:underline">Aug 1, 2022 at 10:30</a>
                     </p>
                 </div>
+                
             </div>
     </div>
     
@@ -1364,7 +1361,7 @@
                     <p class="font-semibold text-teal-500 md:text-lg">Take a look at our awesome blog!</p>
                 </div>
                 <div class="text-center sm:w-3/12 md:order-3 lg:text-right">
-                    <a class="px-6 py-2 font-semibold text-white bg-teal-500 rounded-lg md:p-4 lg:me-12" href="https://firstacademy.in/blog" target="_blank">See Blog!</a>
+                    <a class="px-6 py-2 font-semibold text-white bg-teal-500 rounded-lg md:p-4 lg:me-12" href="/blog" target="_blank">See Blog!</a>
                 </div>
                 <div class="hidden lg:block md:w-3/12 md:order-1">
                     <img class="absolute w-48 transform -translate-y-1/2 xl:w-60 top-1/2" src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_communication.svg" alt="The Best IELTS Coaching">
@@ -1396,7 +1393,7 @@
                         convenient?</h2>
                     <p class="py-3 pb-5 text-lg">We would love for you to attend a session and see for
                         yourself!</p>
-                    <button
+                    <button data-popup="popup"
                         class="px-5 py-3 font-semibold duration-300 border-2 rounded-lg hover:text-white border-teal-custom text-teal-custom hover-translate-y hover:bg-teal-custom">Attend a Free Session</button>
                 </div>
                 <div class="w-full my-auto">
@@ -1482,16 +1479,16 @@
                             What??</a>
                     </p>
                 </div>
-                <div class="inline my-5 shadow-xl">
+                <div class="inline my-2">
                     <p class="inline">
-                        <a href="#"
+                        <button data-popup="popup"
                              class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;">👩‍🏫
-                            Attend a session</a>
+                            Attend a session</button>
                     </p>
                 </div>
-                <div class="inline my-5 shadow-xl">
+                <div class="inline my-5 ">
                     <p class="inline">
-                        <a href="#"
+                        <a href="https://prep.firstacademy.in/"
                              class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;">🙌
                             More Tests</a>
                     </p>
@@ -1665,7 +1662,7 @@
                         <p class="inline pb-10 mb-5 font-semibold">Read this post on how to help yourself
                             get better!</p>
                         <p class="pt-5">
-                            <a href="https://firstacademy.in/5-ways-to-improve-your-ielts-score" class="font-semibold text-blue-600 duration-700 cursor-pointer hover:text-blue-800">Read Full Post
+                            <a href="/5-ways-to-improve-your-ielts-score" class="font-semibold text-blue-600 duration-700 cursor-pointer hover:text-blue-800">Read Full Post
                                 <svg class="inline-block" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -1700,7 +1697,7 @@
                         <h3 class="my-2 font-semibold uppercase" style="color: #ff685d;">Why Take a Mock?</h3>
                         <p class="inline pb-10 mb-5 font-semibold">Unsure about the right mock? This post will help.</p>
                         <p class="pt-5">
-                            <a href="https://firstacademy.in/7-reasons-to-take-an-ielts-mock-test"
+                            <a href="/7-reasons-to-take-an-ielts-mock-test"
                                 class="font-semibold text-blue-600 duration-700 cursor-pointer hover:text-blue-800">Read Full Post
                                 <svg class="inline-block" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1737,7 +1734,7 @@
                         <p class="inline pb-10 mb-5 text-lg font-semibold">
                             Some easy tips to help you start on an 8 band essay</p>
                         <p class="pt-5">
-                            <a href="https://firstacademy.in/tips-for-writing-an-8-band-essay"
+                            <a href="/tips-for-writing-an-8-band-essay"
                                 class="font-semibold text-blue-600 duration-700 cursor-pointer hover:text-blue-800">Read Full Details
                                 <svg class="inline-block" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1773,7 +1770,7 @@
                         <h3 class="my-2 font-semibold uppercase" style="color: #ff685d;">Cue Card Tips </h3>
                         <p class="inline pb-10 mb-5 font-semibold">This is what most successful scorers do!</p>
                         <p class="pt-5">
-                            <a href="https://firstacademy.in/3-tips-to-answer-any-cue-card-question"
+                            <a href="/3-tips-to-answer-any-cue-card-question"
                                 class="font-semibold text-blue-600 duration-700 cursor-pointer hover:text-blue-800">Get 9 in Speaking
                                 <svg class="inline-block" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1810,7 +1807,7 @@
                         <p class="inline pb-10 mb-5 font-semibold">How to effectively use vocabulary for a great score!
                         </p>
                         <p class="pt-5">
-                            <a href="https://firstacademy.in/writing-sample-with-high-scoring-vocabulary"
+                            <a href="/writing-sample-with-high-scoring-vocabulary"
                                 class="font-semibold text-blue-600 duration-700 cursor-pointer hover:text-blue-800">Read the Essay
                                 <svg class="inline-block" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1836,7 +1833,7 @@
 
                         </p>
                         <p class="pt-5">
-                            <a href="https://firstacademy.in/ielts-writing-task-2-topics-with-9-band-sample-answers"
+                            <a href="/ielts-writing-task-2-topics-with-9-band-sample-answers"
                                 class="font-semibold text-blue-600 duration-700 cursor-pointer hover:text-blue-800">Get Full Details
                                 <svg class="inline-block" width="20px" height="20px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -1956,10 +1953,10 @@
     
                         <p class="mb-5 ">Or you could:</p>
                             
-                        <div class="flex justify-between mb-5">
-                            <button class="px-10 py-3 text-center bg-pink-100 rounded-lg">Attend a Session</button>
-                            <button class="px-10 py-3 text-center bg-blue-100 rounded-lg">Leave a Message</button>
-                            <button class="px-10 py-3 text-center bg-pink-100 rounded-lg">Take a Free Test</button>
+                        <div class="sm:flex justify-center mb-5">
+                            <button class="px-10 py-3 text-center bg-pink-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-pink-200 duration-300" data-popup="popup">Attend a Session</button>
+                            <button class="px-10 py-3 text-center bg-blue-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-blue-200 duration-300" data-popup="talkForm">Leave a Message</button>
+                            <button class="px-10 py-3 text-center bg-pink-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-pink-200 duration-300" data-popup="requestForm">Take a Free Test</button>
                         </div>
                     </div>
                 </div>
@@ -1984,7 +1981,7 @@
                         <p class="mb-5 ">One of the best ways to make a Strength Map is to take full-length tests. Look at each section of IELTS (Reading, Listening, Writing, and Speaking) and make a separate list of areas you are particularly good at.
                         </p>
     
-                        <a href="https://firstacademy.in/url" class="mb-5 font-semibold text-blue-500">Read the remaining on the blog</a>
+                        <a href="/blog" class="mb-5 font-semibold text-blue-500">Read the remaining on the blog</a>
                     </div>
                 </div>
     
@@ -2041,7 +2038,7 @@
                     <div class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b shadow-xl panel transition-height">
                         <h2 class="mb-2 font-semibold">Location
                         </h2>
-                        <p class="mb-5 ">First Academy’s IELTS coaching Centre – Hyderabad is at two locations – and if you consider our excellent online training, we are also available online – accessible to leaners all over the world. Our centres are at <span class="p-1 text-sm font-semibold text-white bg-black rounded-lg ">Ameerpet</span> and <span class="p-1 text-sm font-semibold text-white bg-black rounded-lg ">Madhapur</span>. Both locations are in the heart of students and learning hubs of Hyderabad and are easily accessible by road and public transport (both buses and the metro). They are also conveniently located around some of the most popular eating and meeting places of their respective locations.
+                        <p class="mb-5 ">First Academy’s IELTS coaching Centre – Hyderabad is at two locations – and if you consider our excellent online training, we are also available online – accessible to leaners all over the world. Our centres are at <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x3bcb90c944c0b4c7:0x1e56d5969c8712f0?source=g.page.default" target="_blank" class="p-1 text-sm font-semibold text-white bg-black rounded-lg ">Ameerpet</a> and <a href="https://g.page/admissionelite" class="p-1 text-sm font-semibold text-white bg-black rounded-lg ">Madhapur</a>. Both locations are in the heart of students and learning hubs of Hyderabad and are easily accessible by road and public transport (both buses and the metro). They are also conveniently located around some of the most popular eating and meeting places of their respective locations.
                         </p>
     
                         <h2 class="mb-2 font-semibold">Special Features
@@ -2519,198 +2516,199 @@
             </div>
         </form>
     </div>
-</div>
+    </div>
 
-<div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
+    <div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
 
-    <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-        <form id="request" action="{{ route('request.send') }}" method="POST">
-            @csrf
-            <div class="p-2">
-                <div>
-                    <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+            <form id="request" action="{{ route('request.send') }}" method="POST">
+                @csrf
+                <div class="p-2">
+                    <div>
+                        <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
 
-                        <div class="w-[97%]" role="alert">
-                            <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
-                        </div>
-
-                        <button type="button"
-                            class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                            data-popup-close="requestForm">&times;
-                        </button>
-
-                    </div>
-                    <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                        <div class="w-full col-span-1">
-                            <label class="block pb-2">Name</label>
-                            <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                name="username" placeholder="Full Name"
-                                required="" >
-                        </div>
-                        <div class="w-full col-span-1">
-                            <label class="block pb-2">Phone</label>
-                            <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                name="userphone" placeholder="Phone Number"
-                                required="" >
-                        </div>
-                        <div class="col-span-2 my-2">
-                            <div class="mb-4  ">
-                                <label class="block pb-2">Email
-                                    address</label>
-                                <input type="email"
-                                    class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
+                            <div class="w-[97%]" role="alert">
+                                <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
                             </div>
-                            <div class=" ">
-                                <label for="message" class="block pb-2">Which
-                                    Test(s) do you wish to take?</label>
-                                <div class="input-group">
-                                    <textarea
-                                        class="w-full p-2 border border-gray-200 rounded resize-none px-4"
-                                        rows="4" name="message" id="message"
-                                        placeholder="Type your message here..." required=""
-                                        ></textarea>
+
+                            <button type="button"
+                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                                data-popup-close="requestForm">&times;
+                            </button>
+
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                            <div class="w-full col-span-1">
+                                <label class="block pb-2">Name</label>
+                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                    name="username" placeholder="Full Name"
+                                    required="" >
+                            </div>
+                            <div class="w-full col-span-1">
+                                <label class="block pb-2">Phone</label>
+                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                    name="userphone" placeholder="Phone Number"
+                                    required="" >
+                            </div>
+                            <div class="col-span-2 my-2">
+                                <div class="mb-4  ">
+                                    <label class="block pb-2">Email
+                                        address</label>
+                                    <input type="email"
+                                        class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
+                                </div>
+                                <div class=" ">
+                                    <label for="message" class="block pb-2">Which
+                                        Test(s) do you wish to take?</label>
+                                    <div class="input-group">
+                                        <textarea
+                                            class="w-full p-2 border border-gray-200 rounded resize-none px-4"
+                                            rows="4" name="message" id="message"
+                                            placeholder="Type your message here..." required=""
+                                            ></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <button type="submit"
+                            class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
                     </div>
-                    <button type="submit"
-                        class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 
-<!-- Modal -->
-<div id="popup"
-class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-    <div class="popup-content">
-        <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
-    class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
-    @csrf
-            <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
-                <div class="w-[97%]" role="alert">
-                    Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
-                    USA.
+    <!-- Modal -->
+    <div id="popup"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        <div class="popup-content">
+            <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
+        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+        @csrf
+                <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
+                    <div class="w-[97%]" role="alert">
+                        Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
+                        USA.
+                    </div>
+                    <button type="button"
+                        class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                        data-popup-close="popup">&times;</button>
                 </div>
-                <button type="button"
-                    class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                    data-popup-close="popup">&times;</button>
-            </div>
 
-            <h3 class="text-teal-900">Where would you want to attend a demo</h3>
-            <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
-                <div class="flex items-center">
-                    <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
-                    <label class="ml-2" for="Ameerpet">Ameerpet</label>
+                <h3 class="text-teal-900">Where would you want to attend a demo</h3>
+                <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
+                    <div class="flex items-center">
+                        <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
+                        <label class="ml-2" for="Ameerpet">Ameerpet</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="" type="radio" name="location" id="Madhapur" value="Madhapur">
+                        <label class="ml-2" for="Madhapur">Madhapur</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input class="" type="radio" name="location" id="Online" value="Online">
+                        <label class="ml-2" for="Online">Online</label>
+                    </div>
                 </div>
-                <div class="flex items-center">
-                    <input class="" type="radio" name="location" id="Madhapur" value="Madhapur">
-                    <label class="ml-2" for="Madhapur">Madhapur</label>
-                </div>
-                <div class="flex items-center">
-                    <input class="" type="radio" name="location" id="Online" value="Online">
-                    <label class="ml-2" for="Online">Online</label>
-                </div>
-            </div>
 
-            <h3 class="text-teal-900">Which session would you like to try?</h3>
-            <div class="bg-gray-100">
-                <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
-                    <div class="flex items-center">
-                        <input class="" type="checkbox" name="courses[]" id="gre" value="GRE">
-                        <label class="ml-2" for="gre">GRE</label>
+                <h3 class="text-teal-900">Which session would you like to try?</h3>
+                <div class="bg-gray-100">
+                    <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
+                        <div class="flex items-center">
+                            <input class="" type="checkbox" name="courses[]" id="gre" value="GRE">
+                            <label class="ml-2" for="gre">GRE</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input class="" type="checkbox" name="courses[]" id="ielts" value="IELTS">
+                            <label class="ml-2" for="ielts">IELTS</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input class="" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
+                            <label class="ml-2" for="toefl">TOEFL</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input class="" type="checkbox" name="courses[]" id="pte" value="PTE">
+                            <label class="ml-2" for="pte">PTE</label>
+                        </div>
                     </div>
-                    <div class="flex items-center">
-                        <input class="" type="checkbox" name="courses[]" id="ielts" value="IELTS">
-                        <label class="ml-2" for="ielts">IELTS</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
-                        <label class="ml-2" for="toefl">TOEFL</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="" type="checkbox" name="courses[]" id="pte" value="PTE">
-                        <label class="ml-2" for="pte">PTE</label>
+                    <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
+                        <div class="flex items-center">
+                            <input class="" type="checkbox" name="courses[]" id="oet" value="OET">
+                            <label class="ml-2" for="oet">OET</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input class="" type="checkbox" name="courses[]" id="sat" value="SAT">
+                            <label class="ml-2" for="sat">SAT</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input class="" type="checkbox" name="courses[]" id="others" value="OTHERS">
+                            <label class="ml-2" for="others">OTHERS</label>
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
-                    <div class="flex items-center">
-                        <input class="" type="checkbox" name="courses[]" id="oet" value="OET">
-                        <label class="ml-2" for="oet">OET</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="" type="checkbox" name="courses[]" id="sat" value="SAT">
-                        <label class="ml-2" for="sat">SAT</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="" type="checkbox" name="courses[]" id="others" value="OTHERS">
-                        <label class="ml-2" for="others">OTHERS</label>
-                    </div>
-                </div>
-            </div>
 
-            <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Name"
-                name="username" required>
-            <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
-                name="useremail" required>
-            <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
-                placeholder="Phone Number" name="userphone" required>
+                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Name"
+                    name="username" required>
+                <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
+                    name="useremail" required>
+                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
+                    placeholder="Phone Number" name="userphone" required>
 
-            <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
-        </form>
+                <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
+            </form>
+        </div>
     </div>
-</div>
 
     <div id="material"
     class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
-            <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="material">
-                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_6.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_7.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_8.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_9.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/ielts/file_10.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+            <div class="bg-white h-[520px] rounded">
+                <div class="relative mx-auto overflow-hidden rounded-b carousel w-[350px] h-[500px] py-4" id="carousel">
+                    <button id="pBtn" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-2 focus:outline-none">
+                        <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-700"></ion-icon>
+                    </button>
+                    <button id="nxtBtn" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-3 focus:outline-none">
+                        <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-700"></ion-icon>
+                    </button>
+                    
+                    <!-- Carousel Items -->
+                    <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_1.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_2.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_3.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_4.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_5.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_6.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_7.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_8.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_9.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
+                        <div class="crsl-item">
+                            <img src="../assets/ielts/file_10.png" alt="flower 3" class="w-[340px] h-[500px] object-contain shadow-lg">
+                        </div>
                     </div>
                 </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum2" class="text-lg"></span>
-                </div>
-            </div>
+            </div>            
         </div>
     </div>
-
+    
     <div id="successPopup"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
         <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
@@ -2740,9 +2738,8 @@ class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-ful
 
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/ielts_carousel.js"></script>
-    <script src="../dist/accordion.js"></script>
     <script src="../dist/token.js"></script>
-    
+    <script src="../dist/quiz.js"></script>
 </body>
 
 </html>
