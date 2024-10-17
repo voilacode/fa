@@ -22,27 +22,23 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>Best TOEFL Coaching in Ameerpet | Best TOEFL Coaching in Madhapur | GRE Coaching in Hyderabad | Best TOEFL
         Coaching in Hyderabad | Best TOEFL Online Coaching</title>
+    <style>
+        #header, #message {
+            display: block;
+        }
+        @media (min-width: 1000px) {
+            .parent{
+                grid-template-columns: repeat(10, 1fr);
+            }
+            .left{
+                grid-column: span 7;
+            }
+            .right{
+                grid-column: span 3;
+            }
 
-        <style>
-            @media (min-width: 768px) and (max-width: 800px) {
-                .count,
-                .count-label {
-                    font-size: 1.5rem !important;
-                }
-            }
-            @media (min-width: 1000px) {
-                .parent{
-                    grid-template-columns: repeat(10, 1fr);
-                }
-                .left{
-                    grid-column: span 7;
-                }
-                .right{
-                    grid-column: span 3;
-                }
-    
-            }
-        </style>
+        }
+    </style>
 </head>
 
 <body class="font-open">
@@ -223,7 +219,7 @@
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="https://firstacademy.in/grer"
+                                                <a href="/grer"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Solutions
                                                 </a>
@@ -250,7 +246,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="https://firstacademy.in/blog"
+                                <a href="/blog"
                                     class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                     Blog
                                 </a>
@@ -359,36 +355,36 @@
     </section>
 
     <!--options-->
-    <section class="max-w-screen-xl px-3 py-4 mx-auto sm:px-16 ">
-
-
+    <section class="max-w-screen-xl px-3 py-4 mx-auto sm:px-16 sm:my-6 md:my-10">
         <!--3 blocks-->
-        <div class="grid grid-cols-6 my-4 md:gap-16">
+        <div class="sm:flex flex-wrap sm:space-x-2 justify-between">
             <!--first-->
-            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                <div
-                    class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0">
+            <div class="w-100 sm:w-[30%]">
+                <button data-popup="popup"
+                    class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0 w-full">
                     <p class="my-auto font-semibold text-md font-open">Attend a demo</p>
                     <img src="../assets/file_calendar.svg" alt="calendar" width="80px" height="80px">
-                </div>
+                </button>
             </div>
 
             <!--second-->
-            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                <div
-                    class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0">
+            <div class="w-100 sm:w-[30%]">
+                <button data-popup="talkForm"
+                    class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0 w-full">
                     <p class="my-auto font-semibold text-md font-open">Leave a Message</p>
                     <img src="../assets/file_communication.svg" alt="file_communication" width="80px" height="80px">
-                </div>
+                </button>
             </div>
 
             <!--third-->
-            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                <div
-                    class="flex justify-between px-5 m-2 space-x-3 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0">
-                    <p class="my-auto font-semibold text-md font-open">View Courses</p>
-                    <img src="../assets/file_calendar.svg" alt="calender" width="80px" height="80px">
-                </div>
+            <div class="w-100 sm:w-[30%]">
+                <button
+                    class=" px-5 m-2 duration-200 ease-in-out transform bg-teal-100 rounded shadow-xl hover:-translate-y-2 md:m-0 w-full">
+                    <a href="/courses" class="flex justify-between space-x-3 ">
+                        <p class="my-auto font-semibold text-md font-open">View Courses</p>
+                        <img src="../assets/file_calendar.svg" alt="calender" width="80px" height="80px">
+                    </a>
+            </button>
             </div>
 
         </div>
@@ -399,250 +395,6 @@
         <div class="max-w-screen-xl px-1 py-4 mx-auto sm:px-8 md:px-16">
             <h1 class="py-2 text-2xl font-semibold text-center md:text-4xl ">Try Some Quick Tests</h1>
             <p class="font-semibold tracking-wide text-center">Before you join the best coaching centre!</p>
-
-            <!--pop ups-->
-            <div>
-                <div id="popup1"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup1">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 1 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup2"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 2 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup3"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup3">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 3 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup4"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup4">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 4 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup5"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 5 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup6"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 6 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup7"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup7">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 7 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup8"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup8">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 8 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup9"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup9">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 9 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup10"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 10 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup11"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup11">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 11 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup12"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup12">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 12 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded-lg bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-
-            </div>
 
             <!-- simple test buttons-->
             <div class="flex flex-wrap justify-center mt-6 mb-4 space-x-1 sm:space-x-2 ">
@@ -723,11 +475,18 @@
                             data-popup="popup12">🥂 Better Together!</a>
                     </p>
                 </div>
+                <div class="inline my-2">
+                    <p class="inline">
+                        <button
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                            data-popup="popup">👩‍🏫 Attend a session</button>
+                    </p>
+                </div>
                 <div class="inline my-5 ">
                     <p class="inline">
-                        <a href="#"
+                        <a href="https://prep.firstacademy.in/"
                             class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup11">👩‍🏫 Attend a session</a>
+                            data-popup="popup12">🙌 More Tests</a>
                     </p>
                 </div>
             </div>
@@ -735,7 +494,7 @@
         </div>
     </section>
 
-
+    <!-- faq -->
     <section class="max-w-screen-xl px-3 py-12 mx-auto sm:px-16 ">
         <h1 class="mb-5 text-2xl font-semibold font-open md:text-3xl">Frequently Asked Questions
         </h1>
@@ -752,10 +511,7 @@
                     Scores are released usually within 6 days after the test. You will be able to download a PDF
                     copy of your results in 8 days after the test. You may choose to receive a paper score report
                     during registration. Delivery times vary based on your location.
-
                 </p>
-
-
             </div>
         </div>
 
@@ -825,7 +581,7 @@
                                     <h2 class="pt-2 text-2xl font-semibold md:text-4xl">Custom Training</h2>
                                     <p class="py-2 text-base text-gray-700 md:text-lg">Personalized, Online, and Sectional Training at custom timings are available.</p>
                                     <div class="mt-4">
-                                        <button class="flex items-center px-4 py-2 text-white transition duration-200 ease-in bg-teal-600 rounded hover:bg-green-500">
+                                        <button data-popup="talkForm" class="flex items-center px-4 py-2 text-white transition duration-200 ease-in bg-teal-600 rounded hover:bg-teal-500">
                                             <span class="my-auto">Talk to Us</span>
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-2 font-bold">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -875,7 +631,6 @@
         </div>
     </section>
    
-    
     <footer class="mb-10">
         <!--attend drives-->
         <div class="p-6 text-white" style="background-color: #363636;">
@@ -1020,10 +775,10 @@
                                         <li class="my-2 text-md"><a href="./reading"
                                                 class="text-sm hover:text-emerald-500">IELTS Big
                                                 Book</a></li>
-                                        <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                                        <li class="my-2 text-md"><a href="/grer"
                                                 class="text-sm hover:text-emerald-500"> GRE
                                                 Reading</a></li>
-                                        <li class="my-2 text-md"><a href="https://{{request()->get('client.domain')}}/"
+                                        <li class="my-2 text-md"><a href="/blog"
                                                 class="text-sm hover:text-emerald-500"> Blog</a></li>
 
                                     </ul>
@@ -1119,10 +874,10 @@
                             <li class="my-2 text-md"><a href="./reading" class="text-sm hover:text-emerald-500">IELTS
                                     Big
                                     Book</a></li>
-                            <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                            <li class="my-2 text-md"><a href="/grer"
                                     class="text-sm hover:text-emerald-500"> GRE
                                     Reading</a></li>
-                            <li class="my-2 text-md"><a href="./blog" class=""> Blog</a></li>
+                            <li class="my-2 text-md"><a href="/blog" class=""> Blog</a></li>
 
                         </ul>
                     </div>
@@ -1198,9 +953,19 @@
         </section>
 
     </footer>
+    
+    <button id="scrollToTop"
+        class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:w-7 md:h-7">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+    </button>
 
     <!--Messages-->
-    <div class="fixed z-10 bottom-0 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
+    <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
+        <div class=" flex items-center justify-center" >
         <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
             stroke="currentColor" class="w-4 h-4 text-white">
@@ -1212,29 +977,22 @@
         </a>
 
         <div>
-            <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
+            <h1 class="hidden mx-4 text-white md:block">We would love to hear from you!</h1>
         </div>
 
         <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
             <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
             <span class="text-sm font-bold text-white">WhatsApp</span>
         </a>
+        </div>
     </div>
     
-    <button id="scrollToTop"
-        class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:w-7 md:h-7">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
-    </button>
-
     <div id="talkForm"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="talk" action="{{ route('talk.send') }}" method="POST">
+                @csrf
                 <div class="p-2">
                     <div>
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1288,6 +1046,7 @@
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="request" action="{{ route('request.send') }}" method="POST">
+                @csrf
                 <div class="p-2">
                     <div>
                         <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1349,6 +1108,7 @@
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+        @csrf
                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                     <div class="w-[97%]" role="alert">
                         Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
@@ -1423,93 +1183,13 @@
         </div>
     </div>
 
-    <div id="material1"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
-                <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum1" class="text-lg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="material2"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
-                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum2" class="text-lg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div id="successPopup"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
         <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
             <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
                 <div class="w-full text-center text-green-800">
-                    <h3 class="text-lg font-bold">Success!</h3>
-                    <p>Your mail has been sent successfully.</p>
+                    <h3 class="text-lg font-bold">Request Sent Successfully!</h3>
+                    <p>Our team will reach out to you soon.</p>
                 </div>
             </div>
             <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
@@ -1517,9 +1197,22 @@
         </div>
     </div>
 
+    <div id="errorPopup"
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+        <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+            <div class="flex justify-between p-4 mb-0 bg-red-100 rounded-lg">
+                <div class="w-full text-center text-red-800">
+                    <h3 class="text-lg font-bold">Uh Oh:(</h3>
+                    <p>Some error occured! Please try later.</p>
+                </div>
+            </div>
+            <button type="button" class="block w-full p-4 mt-4 text-white bg-red-600 btn btn-block"
+                data-popup-close="errorPopup">Close</button>
+        </div>
+    </div>
+
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/token.js"></script>
-    <script src="../dist/lite-yt-embed.js"></script>
 
 </body>
 
