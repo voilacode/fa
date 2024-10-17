@@ -3619,6 +3619,11 @@ lite-youtube.lyt-activated>.lty-playbtn {
   color: rgb(161 98 7 / var(--tw-text-opacity));
 }
 
+.hover\:text-gray-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
