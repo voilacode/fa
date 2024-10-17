@@ -305,23 +305,27 @@
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
-
     <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:py-8">
         <!--text-->
         <div class="items-center py-5 lg:flex justify-between lg:h-full">
          
           <!-- Form Column -->
           <div class="w-full mb-8 mr-3 lg:w-7/12 lg:mb-0">
-            <div class="flex flex-col h-full">
+            <div class="flex flex-col h-full shadow-2xl">
                 <form id="request" action="{{ route('request.send') }}" method="POST">
-                    <div class="p-2">
+                    <div class="">
                         <div>
-                            <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                            <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-100 rounded-t-lg text-teal-800">
                                 <div class="w-[97%]" role="alert">
                                     <h1 class="text-2xl font-semibold my-auto">Request For a Free Test</h1> 
                                 </div>    
                             </div>
-                            <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                            <div class="bg-teal-100 rounded p-4 m-4 mx-8">
+                                Do include your country code with the number. <br>
+                                Eg: <span class="bg-black text-sm p-1 rounded text-white">+91</span> for India; <span class="bg-black text-sm p-1 rounded text-white">+1</span> for USA.
+                            </div>
+                            <div class="grid grid-cols-2 gap-4 my-2 mt-4 p-4 px-8">
+                               
                                 <div class="w-full col-span-1">
                                     <label class="block pb-2">Name</label>
                                     <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
@@ -362,21 +366,21 @@
               <div class="p-4 mt-4 rounded" style="background-color: #68ebca;">
                 ♥ Thank you for your interest! Details will be sent via e-mail in <kbd class="p-1 text-white bg-black rounded-lg">24hrs</kbd>.
                 <br>If not found, please check your spam folder.<br>
-                If you want the test sooner, <kbd class="p-1 text-white bg-black rounded-lg"><a href="https://wa.me/+919966666633?text=Hello%20I%20want%20to%20take%20a%20free%20test%20soon!%20Can%20you%20help?">click here</a></kbd>.
+                If you want the test sooner, <kbd class="p-1 text-white bg-black rounded-lg"><a href="https://wa.me/+919966666633">click here</a></kbd>.
               </div>
             </div>
           </div>
         
           <!-- Testimonial Column -->
-          <div class=" w-full p-6 py-8 rounded-lg shadow-md lg:h-full lg:w-4/12" style="background-color: #68ebca;">
+          <div class=" w-full p-6 py-8 rounded-lg shadow-md lg:h-full lg:w-4/12" style="background-color: #86f1d6;">
             <div class="flex flex-col justify-center h-full">
               <div class="text-center">
                 <img class="mx-auto mb-5" src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_review.png" alt="Illustration" style="width: 12.5rem;">
               </div>
               <figure class="mx-auto mb-5 text-center">
                 <blockquote class="mb-4 text-xl italic font-semibold text-gray-700">“ I've joined this Institute for coaching only after a thorough online research. My decision to join was a well-informed one, which I haven't regretted to this day. Each student's progress is carefully monitored and followed up with superb mentoring. The best services are the one-on-one sessions and the prompt evaluation reports...”</blockquote>
-                <figcaption class="text-lg font-medium text-blue-900">
-                  <a href="https://goo.gl/maps/NA8255thms7CFbwY6" class="hover:underline">Yasmeen Hussain</a> 
+                <figcaption class="text-lg font-medium text-blue-600">
+                  <a href="https://goo.gl/maps/NA8255thms7CFbwY6" class="hover:text-blue-800 duration-200">Yasmeen Hussain</a> 
                   <span class="block text-sm text-gray-500">(Original Google Review)</span>
                 </figcaption>
               </figure>

@@ -20,6 +20,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
     <title>Best IELTS | GRE | TOEFL Coaching | Training in Hyderabad | First Academy</title>
+    <style>
+        #header {
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="font-open">
@@ -307,7 +312,6 @@
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
-
     <!--Hero section-->
     <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:py-10">
         <!--text-->
@@ -317,9 +321,9 @@
                 <div class="py-1 text-4xl font-semibold lg:text-6xl font-noto ">
                     <p class="pb-2">Target 330+</p>
                 </div>
-                <div class="py-2 my-2 rounded bg-teal-custom" style="width: 100px;"></div>
-                    <ul>
-                        <li class="flex items-center py-2 text-lg ">
+                <div class="py-2  rounded bg-teal-custom" style="width: 100px;"></div>
+                    <ul class="my-4">
+                        <li class="flex items-center py-1 text-lg ">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" class="mt-1 opacity-70"
                                 viewBox="0 0 448 512">
                                 <path
@@ -328,7 +332,7 @@
                             <p class="mx-2 ">Contextual Vocabulary</p>
                             
                         </li>
-                        <li class="flex items-center py-2 text-lg ">
+                        <li class="flex items-center py-1 text-lg ">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" class="mt-1 opacity-70"
                                 viewBox="0 0 448 512">
                                 <path
@@ -336,7 +340,7 @@
                             </svg>
                             <p class="mx-2 ">Cambridge certified trainers</p>
                         </li>
-                        <li class="flex items-center py-2 text-lg ">
+                        <li class="flex items-center py-1 text-lg ">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" class="mt-1 opacity-70"
                                 viewBox="0 0 448 512">
                                 <path
@@ -344,7 +348,7 @@
                             </svg>
                             <p class="mx-2 ">AWA Special Focus</p>
                         </li>
-                        <li class="flex items-center py-2 text-lg ">
+                        <li class="flex items-center py-1 text-lg ">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1.3em" class="mt-1 opacity-70"
                                 viewBox="0 0 448 512">
                                 <path
@@ -354,10 +358,7 @@
                         </li>
                     </ul>
 
-                    
-                        <button
-                            class="w-1/2 p-3 mx-auto my-4 mt-2 font-semibold text-center text-white duration-300 ease-in-out rounded-lg sm:space-x-4 me-auto bg-teal-custom hover:-translate-y-2 sm:w-60"
-                            aria-label="attend session" data-popup="popup">Attend a Session</button>
+                    <button class="w-1/2 p-3 mx-auto my-4 mt-2 font-semibold text-center text-white duration-300 ease-in-out rounded-lg sm:space-x-4 me-auto bg-teal-custom hover:-translate-y-2 sm:w-60" aria-label="attend session" data-popup="popup">Attend a Session</button>
                 </div>
 
             <div class="mx-auto my-auto lg:ms-auto lg:me-0">
@@ -541,330 +542,91 @@
     <section class="max-w-screen-xl px-4 py-4 m-5 mx-auto rounded sm:px-16" id="move">
         <h1 class="py-2 text-3xl font-semibold text-center md:text-4xl font-noto">Vocabulary Enthusiast?</h1>
         <p class="font-semibold text-center">You will love these tiny tests</p>
-    
-        <!--pop ups-->
-        <div>
-            <div id="popup1" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-                <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                    <div class="flex justify-end">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer" data-popup-close="popup1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </div>
-                    <p>Popup 1 Content
-                        <br>
-                        This is the dummy content for pop up modal boxes
-                    </p>
-                    <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                </div>
+
+        <!-- simple test buttons-->
+        <div class="flex flex-wrap justify-center mt-6 mb-4 space-x-2 sm:space-x-2">
+            <div class="inline my-5">
+                <p class="inline">
+                    <a href="#" class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap" data-popup="popup1">🥏 Does it Fit?</a>
+                </p>
             </div>
-
-                <div id="popup2"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 2 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup3"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup3">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 3 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup4"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup4">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 4 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup5"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup5">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 5 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup6"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 6 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup7"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup7">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 7 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup8"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup8">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 8 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup9"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup9">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 9 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup10"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 10 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup11"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup11">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 11 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
-                <div id="popup12"
-                    class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                    <div class="p-4 bg-white rounded-lg shadow-md popup-content">
-                        <div class="flex justify-end">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                data-popup-close="popup12">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-
-                        </div>
-                        <p>Popup 12 Content
-                            <br>
-                            This is the dummy content for pop up modal boxes
-                        </p>
-                        <button class="w-full p-2 px-6 my-4 mt-8 text-white bg-teal-600 rounded-lg">Submit</button>
-                    </div>
-                </div>
-
+            <div class="inline my-5">
+                <p class="inline">
+                    <a href="#" class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap" data-popup="popup2">🤏 Are you professional?</a>
+                </p>
             </div>
-
-            <!-- simple test buttons-->
-            <div class="flex flex-wrap justify-center mt-6 mb-4 space-x-2 sm:space-x-2">
-                <div class="inline my-5">
-                    <p class="inline">
-                        <a href="#" class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap" data-popup="popup1">🥏 Does it Fit?</a>
-                    </p>
-                </div>
-                <div class="inline my-5">
-                    <p class="inline">
-                        <a href="#" class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap" data-popup="popup2">🤏 Are you professional?</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup3">👻 Which is correct?</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup4">💬Some more words</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                              class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup5"> 👔 Will this work?</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup6">🦸🏼‍♂️ Are you an action man?</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup7">⚔️ Make them agree!</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup8">🖼 Change Them!</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup9">🚁 Get them to the right place</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup10">🥂 Better Together!</a>
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup11">👩&zwj;🏫 Attend a session</a>
-                            
-                    </p>
-                </div>
-                <div class="inline my-5 ">
-                    <p class="inline">
-                        <a href="#"
-                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
-                            data-popup="popup12">🙌 More Tests</a>
-                    </p>
-                </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup3">👻 Which is correct?</a>
+                </p>
             </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup4">💬Some more words</a>
+                </p>
+            </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup5"> 👔 Will this work?</a>
+                </p>
+            </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup6">🦸🏼‍♂️ Are you an action man?</a>
+                </p>
+            </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup7">⚔️ Make them agree!</a>
+                </p>
+            </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup8">🖼 Change Them!</a>
+                </p>
+            </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup9">🚁 Get them to the right place</a>
+                </p>
+            </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup10">🥂 Better Together!</a>
+                </p>
+            </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="#"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup">👩&zwj;🏫 Attend a session</a>
+                        
+                </p>
+            </div>
+            <div class="inline my-5 ">
+                <p class="inline">
+                    <a href="https://prep.firstacademy.in/"
+                        class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap"
+                        data-popup="popup12">🙌 More Tests</a>
+                </p>
+            </div>
+        </div>
 
         </div>
     </section>
@@ -902,8 +664,8 @@
             <p class="text-lg font-semibold text-center text-red-500">Regular Term – 4 weeks</p>
             <p class="pb-3 mb-5 text-lg font-semibold text-center text-red-500">Short Term – 2 weeks
             </p>
-            <a href="#"
-            class="p-4 px-8 font-semibold text-gray-600 duration-300 ease-in-out bg-gray-200 rounded-lg shadow hover:bg-gray-500 hover:text-white">Attend a session</a>
+            <button data-popup="popup"
+            class="p-4 px-8 font-semibold text-gray-600 duration-300 ease-in-out bg-gray-200 rounded-lg shadow hover:bg-gray-500 hover:text-white">Attend a session</button>
         </div>
     </div>
 
@@ -1112,7 +874,7 @@
                         <p>Walk into our office. Call us. Leave a message. Request a call back. We will come up with a plan that fits your time, your style, and your needs.</p>
                     </div>
                     <div class="flex items-end justify-start">
-                        <button data-popup="popup2" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Leave a message</button>
+                        <button data-popup="talkForm" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Leave a message</button>
                     </div>
                 </div>
                 <!-- second -->
@@ -1128,7 +890,7 @@
                         <p>Our top notch training, at your convenience!</p>
                     </div>
                     <div class="flex items-end justify-start">
-                        <button data-popup="popup2" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Attend a demo</button>
+                        <button data-popup="popup" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Attend a demo</button>
                     </div>
                 </div>
                 <!-- third -->
@@ -1144,7 +906,7 @@
                         <p>You can still take the free test and attend a free session. Our sessions are really good and we are not afraid to shout it out to the world!</p>
                     </div>
                     <div class="flex items-end justify-start">
-                        <button data-popup="popup2" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Attend a free test</button>
+                        <button data-popup="requestForm" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Attend a free test</button>
                     </div>
                 </div>
             </div>
@@ -1245,10 +1007,10 @@
                             would
                             love to answer it!
                         </p>
-                        <div class="flex justify-around">
-                            <div><button class="px-3 py-2 bg-pink-100 rounded">Attend a demo</button></div>
-                            <div><button class="px-3 py-2 bg-blue-100 rounded">Leave a message</button></div>
-                            <div><button class="px-3 py-2 bg-pink-100 rounded">Take a free test</button></div>
+                        <div class="sm:flex justify-center mb-5">
+                            <button class="px-10 py-3 text-center bg-pink-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-pink-200 duration-300" data-popup="popup">Attend a Session</button>
+                            <button class="px-10 py-3 text-center bg-blue-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-blue-200 duration-300" data-popup="talkForm">Leave a Message</button>
+                            <button class="px-10 py-3 text-center bg-pink-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-pink-200 duration-300" data-popup="requestForm">Take a Free Test</button>
                         </div>
                     </div>
                 </div>
@@ -1342,7 +1104,7 @@
                             <a href="./masters" target="_blank"
                                 class="inline-flex bg-yellow-200 border border-yellow-500 rounded-full cursor-pointer hover:translate-y-[-2px] transform duration-300 ease-in-out text-sm px-1">getting
                                 admissions</a> or browse through our
-                            <a href="https://firstacademy.in/blog/tag/gre" target="_blank"
+                            <a href="/blog/tag/gre" target="_blank"
                                 class="inline-flex bg-yellow-200 border border-yellow-500 rounded-full cursor-pointer hover:translate-y-[-2px] transform duration-300 ease-in-out text-sm px-1">GRE
                                 blog here!</a>
 
@@ -1366,7 +1128,8 @@
                             Even
                             by that measure, First Academy is absolutely the best place. With hundreds of students
                             giving us
-                            5⭐ Reviews for being the best. But that is not the only measure. There are a lot of other
+                            <a href="https://g.page/firstacad" target="_blank" class="bg-teal-400 rounded-full p-1 text-white px-2 text-sm">5⭐ Reviews</a>
+                             for being the best. But that is not the only measure. There are a lot of other
                             factors you need to take into account. What are they? Read on to find out.
 
                         </p>
@@ -1392,16 +1155,20 @@
                             test. To
                             ensure this does not happen, we at First Academy both create and curate the best of GRE
                             content.
-                            From<span
+                            From
+                            <a href="/gre-sample-questions-critical-reasoning" target="_blank"
                                 class="inline-flex bg-yellow-200 border border-yellow-500 rounded-full cursor-pointer hover:translate-y-[-2px] transform duration-300 ease-in-out text-sm px-1">
-                                GRE Critical Reasoning sample questions</span> to a <span
-                                class="inline-flex bg-yellow-200 border border-yellow-500 rounded-full cursor-pointer hover:translate-y-[-2px] transform duration-300 ease-in-out text-sm px-1">free
-                                GRE mock test</span> test that we encourage all our students to take, we take care of
+                                GRE Critical Reasoning sample questions
+                            </a> to a 
+                            <a href="https://prep.firstacademy.in/test/gre-mini-test" target="_blank"
+                                class="inline-flex bg-yellow-200 border border-yellow-500 rounded-full cursor-pointer hover:translate-y-[-2px] transform duration-300 ease-in-out text-sm px-1">free GRE mock test
+                            </a> test that we encourage all our students to take, we take care of
                             everything.
                         </p>
 
                         <p class="mb-2">
-                            So, what are you waiting for? Attend a free session!
+                            So, what are you waiting for? 
+                            <button data-popup="popup" class="bg-teal-400 rounded-full p-1 text-white px-2 text-sm">Attend a free session!</button>
                         </p>
 
                         <p class="mb-2">
@@ -1538,7 +1305,7 @@
 
 
                         <p class="mb-2">
-                            We invite all prospective test takers to attend a session for free to experience how
+                            We invite all prospective test takers to <a href="https://wa.me/+919866688666" target="_blank" class="bg-teal-400 p-1 px-2 rounded-full text-white text-sm">attend a session for free</a>   to experience how
                             different
                             we are from the others! The session may be attended either online or in class depending on
                             what
@@ -2034,6 +1801,7 @@
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+        @csrf
                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                     <div class="w-[97%]" role="alert">
                         Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
@@ -2108,83 +1876,118 @@
         </div>
     </div>
 
-    <div id="material1"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
-                <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+    <div id="talkForm"
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+
+        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+            <form id="talk" action="{{ route('talk.send') }}" method="POST">
+                @csrf
+                <div class="p-2">
+                    <div>
+                        <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                            <div class="w-[97%]" role="alert">
+                                Do enter the country code of your phone number.<br> Ex: <kbd class="bg-black text-white p-1 rounded">+91</kbd> for India,
+                                <kbd class="bg-black text-white p-1 rounded">+1</kbd> for the USA.
+                            </div>
+                            <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                                data-popup-close="talkForm">&times;</button>
+                        </div>
+
+                        <h1 class="text-center font-semibold my-2">Talk to Us!</h1>
+
+                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                            <div class="w-full col-span-1">
+                                <label class="block pb-2 text-center input-label">Name</label>
+                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="username" placeholder="Full Name"
+                                    required="">
+                            </div>
+                            <div class="w-full col-span-1">
+                                <label class="block pb-2 text-center input-label">Phone</label>
+                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="userphone" placeholder="Phone Number"
+                                    required="">
+                            </div>
+                            <div class="col-span-2 my-2">
+                                <div class="mb-4 ">
+                                    <label class="block pb-2 text-center">Email address</label>
+                                    <input type="email" class="w-full p-2 border border-gray-200 rounded px-4" name="useremail"
+                                        placeholder="E-mail ID" required="">
+                                </div>
+                                <div class="">
+                                    <label class="block pb-2 text-center">Message</label>
+                                    <div>
+                                        <textarea class="w-full p-2 border border-gray-200 rounded resize-none px-4" rows="4" name="message"
+                                            placeholder="Type your message here..." required=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="block px-6 py-2 mx-auto rounded-lg btn bg-teal-700 text-white hover:bg-teal-custom duration-300">
+                            Submit
+                        </button>
                     </div>
                 </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum1" class="text-lg"></span>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
-    <div id="material2"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
-                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+    <div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
+
+        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+            <form id="request" action="{{ route('request.send') }}" method="POST">
+                @csrf
+                <div class="p-2">
+                    <div>
+                        <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+
+                            <div class="w-[97%]" role="alert">
+                                <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
+                            </div>
+
+                            <button type="button"
+                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                                data-popup-close="requestForm">&times;
+                            </button>
+
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                            <div class="w-full col-span-1">
+                                <label class="block pb-2">Name</label>
+                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                    name="username" placeholder="Full Name"
+                                    required="" >
+                            </div>
+                            <div class="w-full col-span-1">
+                                <label class="block pb-2">Phone</label>
+                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
+                                    name="userphone" placeholder="Phone Number"
+                                    required="" >
+                            </div>
+                            <div class="col-span-2 my-2">
+                                <div class="mb-4  ">
+                                    <label class="block pb-2">Email
+                                        address</label>
+                                    <input type="email"
+                                        class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
+                                </div>
+                                <div class=" ">
+                                    <label for="message" class="block pb-2">Which
+                                        Test(s) do you wish to take?</label>
+                                    <div class="input-group">
+                                        <textarea
+                                            class="w-full p-2 border border-gray-200 rounded resize-none px-4"
+                                            rows="4" name="message" id="message"
+                                            placeholder="Type your message here..." required=""
+                                            ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit"
+                            class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
                     </div>
                 </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum2" class="text-lg"></span>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
 
