@@ -26,7 +26,7 @@
         #header, #message{
             display: block;
         }
-         .crsl-item {
+        .crsl-item {
                 min-width: 100%;
                 transition: transform 0.5s ease-in-out;
             }
@@ -509,19 +509,19 @@
                 <div class="mx-auto my-auto">
                     <div class="relative overflow-hidden carousel">
                         <video width="640" height="360"
-                            class="carousel-item w-[400px] md:w-[300px] lg:w-[400px] block mx-auto active" autoplay loop muted playsinline
+                            class="carousel-item w-[400px] md:w-[300px] lg:w-[400px] block mx-auto active" autoplay loop muted playsinline preload="auto"
                             style="border-bottom-left-radius: 50%;">
                             <source src="../assets/videos/1.mp4" type="video/mp4"> <!-- Add mp4 as a fallback -->
                             <source src="../assets/videos/1.webm" type="video/webm">
                         </video>
                         <video width="640" height="360"
-                            class="carousel-item w-[400px] md:w-[300px] lg:w-[400px] block mx-auto" autoplay loop muted playsinline
+                            class="carousel-item w-[400px] md:w-[300px] lg:w-[400px] block mx-auto" autoplay loop muted playsinline preload="auto"
                             style="border-bottom-left-radius: 50%;">
                             <source src="../assets/videos/2.mp4" type="video/mp4">
                             <source src="../assets/videos/2.webm" type="video/webm">
                         </video>
                         <video width="640" height="360"
-                            class="carousel-item w-[400px] md:w-[300px] lg:w-[400px] block mx-auto" autoplay loop muted playsinline
+                            class="carousel-item w-[400px] md:w-[300px] lg:w-[400px] block mx-auto" autoplay loop muted playsinline preload="auto"
                             style="border-bottom-left-radius: 50%;">
                             <source src="../assets/videos/3.mp4" type="video/mp4">
                             <source src="../assets/videos/3.webm" type="video/webm">
@@ -622,10 +622,10 @@
         <section class="pb-4">
 
             <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-16 ">
-                <div class="grid w-full grid-cols-2 mx-auto sm:gap-4 lg:gap-10 sm:w-3/4 md:w-full">
+                <div class="grid w-full grid-cols-2 mx-auto sm:gap-4 lg:gap-10 md:w-3/4 md:w-full">
 
                     <!--first-->
-                    <div class="col-span-2 p-4 my-2 bg-teal-100 rounded-lg md:col-span-1 lg:p-8 pe-0">
+                    <div class="col-span-2 p-4 my-2 bg-teal-100 rounded-lg sm:col-span-1 lg:p-8 pe-0">
                         <div class="flex space-x-4">
                             <div>
                                 <h2 class="my-2 text-xl font-semibold lg:text-3xl ">Attend A Session</h2>
@@ -655,7 +655,7 @@
                     </div>
 
                     <!--second-->
-                    <div class="col-span-2 p-4 my-2 rounded-lg bg-lime-100 md:col-span-1 lg:p-8 pe-0">
+                    <div class="col-span-2 p-4 my-2 rounded-lg bg-lime-100 sm:col-span-1 lg:p-8 pe-0">
                         <div class="flex space-x-4">
                             <div>
                                 <h2 class="my-2 text-xl font-semibold lg:text-3xl ">Go Abroad!</h2>
@@ -664,7 +664,7 @@
                                     you need!
                                 </p>
                                 <a href="./studyabroad"
-                                    class="flex w-48 px-4 py-2 my-2 font-semibold text-center text-white duration-200 ease-in transform bg-yellow-600 rounded-lg md:my-4 group"
+                                    class="flex w-48 px-4 py-2 my-2 font-semibold text-center text-white duration-200 ease-in transform bg-yellow-600 rounded-lg md:my-4 group sm:mt-7 md:mt-4"
                                     aria-label="admission">
                                     <span class="mx-auto my-auto text-center">Admission Advice</span>
 
@@ -700,7 +700,7 @@
 
                     <div class="">
                         <div class="grid grid-cols-2 sm:gap-x-8">
-                            <div class="col-span-2 p-2 rounded-lg md:p-4 md:col-span-1 md:mt-1">
+                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1">
                                 <img src="../assets/file_storytelling2.webp" class="block mx-auto my-2 text-center"
                                     alt="story" width="100px" height="100px">
                                 <h2 class="my-2 text-xl text-center ">Exclusive Material</h2>
@@ -719,7 +719,7 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="col-span-2 p-2 rounded-lg md:p-4 md:col-span-1 md:mt-1">
+                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1">
                                 <img src="../assets/file_interview2.webp" class="block mx-auto my-2 text-center "
                                     alt="interview" width="100px" height="100px">
                                 <h2 class="my-2 text-xl text-center ">Personalised Inputs
@@ -742,7 +742,7 @@
                         </div>
 
                         <div class="grid grid-cols-2 sm:gap-x-8">
-                            <div class="col-span-2 p-2 rounded-lg md:p-4 md:col-span-1 md:mt-1">
+                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1">
                                 <img src="../assets/file_software.webp" class="block mx-auto my-2 text-center "
                                     alt="software" width="100px" height="100px">
                                 <h2 class="my-2 text-xl text-center ">Practice Software</h2>
@@ -760,7 +760,7 @@
                                     </svg>
                                 </a>
                             </div>
-                            <div class="col-span-2 p-2 rounded-lg md:p-4 md:col-span-1 md:mt-1">
+                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1">
                                 <img src="../assets/file_grade.webp" class="block mx-auto my-2 text-center " alt="grade"
                                     width="100px" height="100px">
                                 <h2 class="my-2 text-xl text-center ">Trainer Recommendations
@@ -913,7 +913,6 @@
                                     corrections help in getting a good score in exam. Highly recommended for those who
                                     are targeting higher bands.<br><br>
                                 </p>
-                                <br>
                                 <div class="flex ">
                                     <div class="my-auto">
                                         <img src="../assets/file_sandeeppavuluri.png" width="45px" class="me-2"
@@ -1821,16 +1820,16 @@
             d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
             </svg>
             
-            <span class="text-sm font-bold text-white">Call</span>
+            <span class="text-sm md:text-md font-bold text-white">Call</span>
         </a>
 
         <div>
-            <h1 class="hidden mx-4 text-white md:block">We would love to hear from you!</h1>
+            <h1 class="hidden mx-4 text-white sm:block">We would love to hear from you!</h1>
         </div>
 
         <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
             <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
-            <span class="text-sm font-bold text-white">WhatsApp</span>
+            <span class="text-sm md:text-md font-bold text-white">WhatsApp</span>
         </a>
         </div>
     </div>
@@ -1959,7 +1958,7 @@
     class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
-        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92  sm:w-[600px] max-h-[95vh] overflow-y-auto">
         @csrf
                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                     <div class="w-[97%]" role="alert">
