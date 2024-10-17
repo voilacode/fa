@@ -1277,6 +1277,10 @@ video {
   height: 520px;
 }
 
+.h-64 {
+  height: 16rem;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -1291,6 +1295,10 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[500px\] {
+  min-height: 500px;
 }
 
 .w-0 {
@@ -1524,6 +1532,10 @@ video {
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .grow {
@@ -4242,6 +4254,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .md\:col-span-11 {
     grid-column: span 11 / span 11;
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
   }
 
   .md\:m-0 {
