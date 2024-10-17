@@ -23,7 +23,7 @@
         rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <style>
-        #header{
+        #header, #message{
             display: block;
         }
          .crsl-item {
@@ -1802,8 +1802,9 @@
 
     </footer>
 
-    <!--Messages-->
-    <div class="fixed z-10 bottom-0 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
+<!--Messages-->
+    <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
+        <div class=" flex items-center justify-center" >
         <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
             stroke="currentColor" class="w-4 h-4 text-white">
@@ -1815,13 +1816,14 @@
         </a>
 
         <div>
-            <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
+            <h1 class="hidden mx-4 text-white md:block">We would love to hear from you!</h1>
         </div>
 
         <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
             <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
             <span class="text-sm font-bold text-white">WhatsApp</span>
         </a>
+        </div>
     </div>
     
     <button id="scrollToTop"
