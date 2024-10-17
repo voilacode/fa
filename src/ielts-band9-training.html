@@ -20,7 +20,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
     <title>Best IELTS | GRE | TOEFL Coaching | Training in Hyderabad | First Academy</title>
-   
+   <style>
+    #header, #message {
+        display: block;
+    }
+   </style>
 </head>
 
 <body class="font-open" >
@@ -201,7 +205,7 @@
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="https://firstacademy.in/grer"
+                                                <a href="/grer"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Solutions
                                                 </a>
@@ -228,7 +232,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="https://firstacademy.in/blog"
+                                <a href="/blog"
                                     class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                     Blog
                                 </a>
@@ -308,98 +312,7 @@
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
-    
-    <!--Models-->
-    <div id="popup3"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
-
-    <div class="p-8 bg-white rounded shadow-md popup-content">
-        <div class="flex justify-end">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6 hover:cursor-pointer" data-popup-close="popup3">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </div>
-
-        <form class="js-validate" action="/admin/contact" data-otp="1" novalidate="novalidate">
-            <div class="px-4 py-4 border-0 text-start card-header bg-light">
-                <h2 class="mb-0 text-2xl font-bold text-green-600">Request for a Free Test</h2>
-            </div>
-            <div class="p-4 card-body">
-                <div class="alert alert-soft-primary alert_block" style="display:none">
-                    <div class="alert_message"></div>
-                </div>
-                <div class="otp_block" style="display:none">
-                    <h5>OTP Verification</h5>
-                    <input type="text" class="form-control otp_input"
-                        placeholder="Enter the 4 digit OTP sent to you phone" data-otp="">
-                    <small id="emailHelp" class="form-text text-muted">Kindly wait for 5secs before
-                        retrying.</small>
-                    <div class="mt-2 alert alert-soft-success otp_message" role="alert" style="display:none">
-                        Invalid OTP. Kindly refresh the page and retry. </div>
-                    <button type="button" class="mt-3 btn btn-primary otp_button">Verify</button>
-                    <div class="mt-3 ml-2 spinner-border" role="status" style="display:none">
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                </div>
-                <div class="contact_block">
-                    <div class="p-2 px-4 font-serif text-xl text-teal-500 bg-teal-100 alert alert-soft-success"
-                        role="alert"> Please include the country code with the
-                        number. (Eg: <span class="p-1 text-sm text-white bg-black rounded">+91</span> for India;
-                        <span class="p-1 text-sm text-white bg-black rounded">+65</span> For Singapore).
-                    </div>
-                    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-                        <div class="">
-                            <label for="firstNameExample1" class="block font-serif input-label">Name</label>
-                            <input type="text" class="p-1 border border-gray-200 rounded form-control"
-                                name="name" id="firstNameExample1" placeholder="Full name" aria-label="Nataly"
-                                required="" data-msg="Please enter your name">
-                        </div>
-                        <div class="">
-                            <label for="lastNameExample1" class="block font-serif input-label">Phone</label>
-                            <input type="text" class="p-1 border border-gray-200 rounded form-control"
-                                name="phone" id="lastNameExample1" placeholder="Phone number" aria-label="Gaga"
-                                required="" data-msg="Please enter phone number">
-                        </div>
-                        <div class="col-span-2">
-                            <div class="js-form-message form-group">
-                                <label for="emailAddressExample1" class="font-serif input-label">Email
-                                    address</label>
-                                <input type="email"
-                                    class="w-full p-1 border border-gray-200 rounded form-control" name="email"
-                                    id="emailAddressExample1" placeholder="your email id" required=""
-                                    data-msg="Please enter a valid email address">
-                                <input type="hidden" class="form-control" name="message"
-                                    value="Request for a free ielts test">
-                                <input type="hidden" class="form-control" name="category" value="ieltstest">
-                            </div>
-                            <div class="js-form-message form-group">
-                                <label for="message" class="font-serif input-label ">Which Test(s) do you wish
-                                    to
-                                    take?</label>
-                                <div class="input-group">
-                                    <textarea class="w-full p-1 border border-gray-200 rounded form-control"
-                                        rows="4" name="message" id="message"
-                                        placeholder="Clearly mention the name of test(s). Ex: IELTS General"
-                                        aria-label="Hi there, I would like to ..." required=""
-                                        data-msg="Please enter a reason."></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="p-2 rounded btn btn-block transition-3d-hover contact_button"
-                        style="background-color: #059862; color: #fff;">Submit</button>
-                </div>
-            </div>
-        </form>
-
-
-    </div>
-</div>
-
-
-
-    <!--IELTS Band 9 Training-->
+    <!--IELTS Band 9 Training hero -->
     <div class="text-black md:py-10">
         <section class="max-w-screen-xl grid-cols-5 gap-8 p-4 mx-auto sm:px-16 md:grid">
             <div class="col-span-3">
@@ -410,10 +323,10 @@
                     Or simply want a tailor made session for you without actually having to sit in class? You are
                     looking at the right page!😃</p>
                     <div class="flex my-4">
-                        <button class="block w-40 px-2 py-3 mt-2 mr-2 text-center text-white duration-200 ease-in transform rounded-full font-open sm:p-3 bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session" data-popup="popup">Free Session</button>
+                        <button class="block w-40 px-2 py-3 mt-2 mr-2 text-center text-white duration-200 ease-in transform rounded-full font-open sm:p-3 bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session" data-popup="requestForm">Free Test</button>
 
-                        <a href="#move" class="block w-40 px-2 py-3 mt-2 ml-2 text-center duration-200 ease-in transform bg-yellow-500 rounded-full font-open sm:p-3 hover:bg-yellow-400 sm:w-60 md:w-40 lg:w-60"
-                                aria-label="try test">Free Test</a>
+                        <button data-popup="popup" class="block w-40 px-2 py-3 mt-2 ml-2 text-center duration-200 ease-in transform bg-yellow-500 rounded-full font-open sm:p-3 hover:bg-yellow-400 sm:w-60 md:w-40 lg:w-60"
+                               >Free Session</button>
                     </div>
             </div>
             <div class="col-span-2 mx-auto my-auto sm:block md:block">
@@ -423,33 +336,7 @@
         </section>
     </div>
 
-    <!-- <section class="bg-sky-50">
-        <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16 md:space-x-4">
-            <div class="grid m-2 lg:m-5 lg:grid-cols-3 md:grid-cols-1 lg:m-0 md:sm:gap-2">
-                <div class="my-auto lg:col-span-2">
-                    <h1 class="text-2xl font-bold md:text-4xl">IELTS Band 9 Training</h1>
-                    <p class="py-2 text-xl font-semibold opacity-50">Online and Personalised Training</p>
-                    <p class="p-5  text-[18px] md:mr-24 bg-sky-200">Our flexible session plan not flexible enough for
-                        you? Work at odd hours and do not have time to attend sessions without giving up on your life?
-                        Or simply want a tailor made session for you without actually having to sit in class? You are
-                        looking at the right page!😃</p>
-
-                    <div class="flex my-4 space-x-2 sm:space-x-4 lg:me-auto">
-                        <button class="block w-40 px-2 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-full sm:p-3 lg:mx-auto bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session" data-popup="popup">Free Session</button>
-
-                        <a href="#move" class="block w-40 px-2 py-3 mt-2 font-semibold text-center duration-200 ease-in transform bg-yellow-500 rounded-full sm:p-3 lg:mx-auto hover:bg-yellow-400 sm:w-60 md:w-40 lg:w-60"
-                                aria-label="try test">Free Test</a>
-                    </div>
-                </div>
-                <div class="mx-auto my-auto sm:block md:block">
-                    <img src="../assets/file_studying.svg" alt="studying" width="530px">
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!--What's Awesome-->
-
     <section class="max-w-screen-xl p-4 mx-auto md:py-8 sm:px-16">
         <h1 class="py-2 text-2xl font-semibold text-center md:text-4xl font-open">What's Awesome</h1>
         <div class="grid max-w-screen-xl grid-cols-12 mx-auto my-4 sm:gap-4 md:gap-8">
@@ -466,7 +353,7 @@
                     <p>Walk into our office. Call us. Leave a message. Request a call back. We will come up with a plan that fits your time, your style, and your needs.</p>
                 </div>
                 <div class="flex items-end justify-start">
-                    <button data-popup="popup2" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Leave a message</button>
+                    <button data-popup="talkForm" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Leave a message</button>
                 </div>
             </div>
             <!-- second -->
@@ -482,7 +369,7 @@
                     <p>Our top notch training, at your convenience!</p>
                 </div>
                 <div class="flex items-end justify-start">
-                    <button data-popup="popup2" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Attend a demo</button>
+                    <button data-popup="popup" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Attend a demo</button>
                 </div>
             </div>
             <!-- third -->
@@ -498,7 +385,7 @@
                     <p>You can still take the free test and attend a free session. Our sessions are really good and we are not afraid to shout it out to the world!</p>
                 </div>
                 <div class="flex items-end justify-start">
-                    <button data-popup="popup2" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Attend a free test</button>
+                    <button data-popup="requestForm" class="px-5 py-3 my-3 font-semibold text-white duration-300 ease-in-out bg-gray-600 rounded-lg hover:bg-gray-500">Attend a free test</button>
                 </div>
             </div>
         </div>
@@ -509,15 +396,11 @@
             height="300px">
     </section>
 
-    <!-- <section class="max-w-screen-xl px-4 pt-0 pb-10 mx-auto lg:py-8 sm:px-16">
-        <h1 class="px-2 py-6 text-2xl font-bold text-center text-red-500 bg-red-100">Get trained only in what you want!
-        </h1>
-    </section> -->
+    
     <section class="max-w-screen-xl px-4 m-5 mx-auto rounded sm:px-16">
         <p class="p-5 font-semibold text-center bg-gray-200 border-b-4 border-gray-400 rounded-xl">
-            <span class="font-bold">Get trained only in
-                what you want!</span><a href="../src/gmat-or-gre" target="_blank"
-                class="font-bold text-blue-600 border-b-2 border-red-500"> Read This</a>!
+            <span class="font-semibold md:text-lg text-gray-700">Get trained only in
+                what you want!
         </p>
     </section>
     
@@ -549,14 +432,14 @@
             <h1 class="py-1 text-3xl font-bold">I do not believe you?</h1>
             <h2 class="py-1 text-xl font-open">Good. You should see it for yourself before you believe it.</h2>
             <p class="py-2 text-lg font-open ">Our sessions are the best and we are ready to take that challenge.
-                <span
-                    class="inline-block px-2 text-sm font-bold text-white duration-300 ease-in-out bg-yellow-500 rounded hover:-translate-y-1">Attend
+                <button data-popup="popup"
+                    class="inline-block px-2 text-sm font-semibold text-white duration-300 ease-in-out bg-yellow-500 rounded hover:-translate-y-1">Attend
                     a
-                    session</span> for free
+                    session</button> for free
                 and interact with our trainers and other students. Enroll with us only if you feel these sessions are
-                worth your time! We are absolutely sure you will love them! Or, you could simply take a <br><span
-                    class="inline-block px-2 text-sm font-bold text-white duration-300 ease-in-out bg-yellow-500 rounded hover:-translate-y-1">Free
-                    Test</span> and see how our
+                worth your time! We are absolutely sure you will love them! Or, you could simply take a <button data-popup="requestForm"
+                    class="inline-block px-2 text-sm font-semibold text-white duration-300 ease-in-out bg-yellow-500 rounded hover:-translate-y-1">Free
+                    Test</button> and see how our
                 evaluation is!</p>
 
         </section>
@@ -825,10 +708,10 @@
                             would
                             love to answer it!
                         </p>
-                        <div class="flex justify-around">
-                            <div><button class="px-3 py-2 bg-pink-100 rounded">Attend a demo</button></div>
-                            <div><button class="px-3 py-2 bg-blue-100 rounded">Leave a message</button></div>
-                            <div><button class="px-3 py-2 bg-pink-100 rounded">Take a free test</button></div>
+                        <div class="sm:flex justify-center mb-5">
+                            <button class="px-10 py-3 text-center bg-pink-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-pink-200 duration-300" data-popup="popup">Attend a Session</button>
+                            <button class="px-10 py-3 text-center bg-blue-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-blue-200 duration-300" data-popup="talkForm">Leave a Message</button>
+                            <button class="px-10 py-3 text-center bg-pink-100 rounded-lg block mx-auto sm:inline my-2 md:my-0 sm:mx-2 md:mx-6 hover:bg-pink-200 duration-300" data-popup="requestForm">Take a Free Test</button>
                         </div>
                     </div>
                 </div>
@@ -987,10 +870,10 @@
                                         <li class="my-2 text-md"><a href="./reading"
                                                 class="text-sm hover:text-emerald-500">IELTS Big
                                                 Book</a></li>
-                                        <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                                        <li class="my-2 text-md"><a href="/grer"
                                                 class="text-sm hover:text-emerald-500"> GRE
                                                 Reading</a></li>
-                                        <li class="my-2 text-md"><a href="https://{{request()->get('client.domain')}}/"
+                                        <li class="my-2 text-md"><a href="/blog"
                                                 class="text-sm hover:text-emerald-500"> Blog</a></li>
 
                                     </ul>
@@ -1086,10 +969,10 @@
                             <li class="my-2 text-md"><a href="./reading" class="text-sm hover:text-emerald-500">IELTS
                                     Big
                                     Book</a></li>
-                            <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                            <li class="my-2 text-md"><a href="/grer"
                                     class="text-sm hover:text-emerald-500"> GRE
                                     Reading</a></li>
-                            <li class="my-2 text-md"><a href="./blog" class=""> Blog</a></li>
+                            <li class="my-2 text-md"><a href="/blog" class=""> Blog</a></li>
 
                         </ul>
                     </div>
@@ -1165,9 +1048,19 @@
         </section>
 
     </footer>
+    
+    <button id="scrollToTop"
+        class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:w-7 md:h-7">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+    </button>
 
     <!--Messages-->
-    <div class="fixed z-10 bottom-0 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
+    <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
+        <div class=" flex items-center justify-center" >
         <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
             stroke="currentColor" class="w-4 h-4 text-white">
@@ -1179,29 +1072,22 @@
         </a>
 
         <div>
-            <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
+            <h1 class="hidden mx-4 text-white md:block">We would love to hear from you!</h1>
         </div>
 
         <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
             <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
             <span class="text-sm font-bold text-white">WhatsApp</span>
         </a>
+        </div>
     </div>
-    
-    <button id="scrollToTop"
-        class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:w-7 md:h-7">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
-    </button>
 
     <div id="talkForm"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="talk" action="{{ route('talk.send') }}" method="POST">
+                @csrf
                 <div class="p-2">
                     <div>
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1255,6 +1141,7 @@
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="request" action="{{ route('request.send') }}" method="POST">
+                @csrf
                 <div class="p-2">
                     <div>
                         <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1268,6 +1155,10 @@
                                 data-popup-close="requestForm">&times;
                             </button>
 
+                        </div>
+                        <div class="bg-teal-100 p-4 rounded my-4 text-teal-500">
+                            Please include the country code with the number.
+                            <br> (Eg: <span class="bg-black text-white p-1 rounded">+91</span>  for India; <span class="bg-black text-white p-1 rounded">+65</span> For Singapore).
                         </div>
                         <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                             <div class="w-full col-span-1">
@@ -1316,6 +1207,7 @@
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+        @csrf
                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                     <div class="w-[97%]" role="alert">
                         Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
@@ -1390,103 +1282,36 @@
         </div>
     </div>
 
-    <div id="material1"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
-                <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum1" class="text-lg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="material2"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
-                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum2" class="text-lg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div id="successPopup"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
         <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
             <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
                 <div class="w-full text-center text-green-800">
-                    <h3 class="text-lg font-bold">Success!</h3>
-                    <p>Your mail has been sent successfully.</p>
+                    <h3 class="text-lg font-bold">Request Sent Successfully!</h3>
+                    <p>Our team will reach out to you soon.</p>
                 </div>
             </div>
             <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
                 data-popup-close="successPopup">Close</button>
         </div>
     </div>
+
+    <div id="errorPopup"
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+        <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+            <div class="flex justify-between p-4 mb-0 bg-red-100 rounded-lg">
+                <div class="w-full text-center text-red-800">
+                    <h3 class="text-lg font-bold">Uh Oh:(</h3>
+                    <p>Some error occured! Please try later.</p>
+                </div>
+            </div>
+            <button type="button" class="block w-full p-4 mt-4 text-white bg-red-600 btn btn-block"
+                data-popup-close="errorPopup">Close</button>
+        </div>
+    </div>
     
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/token.js"></script>
-    <script src="../dist/lite-yt-embed.js"></script>
     
 </body>
 </html>
