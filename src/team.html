@@ -21,67 +21,16 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
+    <title>Best IELTS | GRE | TOEFL Coaching | Training in Hyderabad | First Academy</title>
     <style>
-        @media (min-width: 768px) and (max-width: 800px) {
-
-            .count,
-            .count-label {
-                font-size: 1.5rem !important;
-            }
-        }
-
-        .popupQn {
-            display: none;
-            position: fixed;
-            z-index: 10;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -48%);
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 95vw;
-            max-height: 95vh;
-            overflow-y: auto;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 5;
-            display: none;
-        }
-
-        .active1 {
+        #header, #message {
             display: block;
         }
-
-        #directionsContainer {
-            white-space: pre-wrap;
-        }
-
-        @media (min-width: 640px) {
-            .popupQn {
-                width: 45vw;
-            }
-        }
-
-        @media (min-width: 641px) and (max-width:1000px) {
-            .popupQn {
-                width: 75vw;
-            }
-        }
     </style>
-    <title>Best IELTS | GRE | TOEFL Coaching | Training in Hyderabad | First Academy</title>
 </head>
 
 <body class="font-open">
-    <header class="fixed z-10 w-screen border-b border-gray-200">
+    <header class="fixed z-10 w-screen border-b border-gray-200" id="header">
         <nav class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
             <div class="items-center justify-between max-w-screen-xl px-4 py-2 mx-auto lg:flex sm:px-[60px] ">
                 <div class="flex justify-between">
@@ -258,7 +207,7 @@
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="https://firstacademy.in/grer"
+                                                <a href="/grer"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Solutions
                                                 </a>
@@ -285,7 +234,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="https://firstacademy.in/blog"
+                                <a href="/blog"
                                     class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                     Blog
                                 </a>
@@ -360,109 +309,101 @@
             </div>
         </nav>
     </header>
-
     <hr>
 
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
-   
-<!--hero-->
-<section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:pt-12 lg:pb-8">
-    <h1 class="my-4 text-3xl font-bold text-center md:text-4xl">OUR TEAM</h1>
+    <!--hero-->
+    <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:pt-12 lg:pb-8">
+        <h1 class="my-4 text-3xl font-semibold text-center md:text-5xl">Our Team</h1>
 
-    <div class="my-5 md:flex md:justify-between md:m-0">
-        <div class="grid grid-cols-6 sm:gap-8">
-            <!--first-->
-            <div class="col-span-6 my-2 duration-300 ease-in-out transform md:col-span-3 lg:col-span-2 hover:-translate-y-1">
-                <div class="flex flex-col p-4 pb-8 bg-teal-100 rounded shadow-xl h-full min-h-[500px] text-black">
-                    <img src="../assets/file_sahithy-min.jpg" alt="Sahithy" class="block object-cover h-64 mx-auto mb-4 rounded">
-                    <p class="py-2 text-xl font-semibold">Sahithy</p>
-                    <p class="flex-grow text-justify">
-                        Our raison d’être. There would be no First Academy without her. She is the soul of the organisation
-                        and beyond any doubt the hardest working member of the team. She is our IELTS trainer. Our reviews
-                        say enough about her, but there is always more that can be said, but for that, we would have to
-                        invent words!
-                    </p>
+        <div class="my-5 md:flex md:justify-between md:m-0">
+            <div class="grid grid-cols-6 sm:gap-8">
+                <!--first-->
+                <div class="col-span-6 my-2 duration-300 ease-in-out transform sm:col-span-3 lg:col-span-2 ">
+                    <div class="flex flex-col p-4 pb-8 border-l-4 border-teal-600 rounded-lg shadow-xl h-full min-h-[500px] text-black">
+                        <img src="../assets/file_sahithy-min.jpg" alt="Sahithy" class="block object-cover h-64 mx-auto mb-4 rounded">
+                        <p class="py-2 text-xl font-semibold">Sahithy</p>
+                        <p class="flex-grow text-justify">
+                            Our raison d’être. There would be no First Academy without her. She is the soul of the organisation
+                            and beyond any doubt the hardest working member of the team. She is our IELTS trainer. Our reviews
+                            say enough about her, but there is always more that can be said, but for that, we would have to
+                            invent words!
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!--second-->
-            <div class="col-span-6 my-2 duration-300 ease-in-out transform md:col-span-3 lg:col-span-2 hover:-translate-y-1">
-                <div class="flex flex-col p-4 pb-8 bg-teal-100 rounded shadow-xl h-full min-h-[500px] text-black">
-                    <img src="../assets/file_teju-min.jpg" alt="Teju" class="block object-cover h-64 mx-auto mb-4 rounded">
-                    <p class="py-2 text-xl font-semibold">Teju</p>
-                    <p class="flex-grow text-justify">
-                        Our answer to Murphy’s law is Teju – the miracle maker. When the whole world turns to God in distress, 
-                        we turn to Teju. What in all companies is achieved by a lot of teams working very hard, is achieved 
-                        in First Academy very casually by Teju. He is our marketing team, our designing team, technology team, 
-                        content developing team, web support and much more. The Multi-talented, humorous, charming, social-media-avoiding Teju.
-                    </p>
+                <!--second-->
+                <div class="col-span-6 my-2 duration-300 ease-in-out transform sm:col-span-3 lg:col-span-2 ">
+                    <div class="flex flex-col p-4 pb-8 border-l-4 border-rose-600 rounded-lg shadow-xl h-full min-h-[500px] text-black">
+                        <img src="../assets/file_teju-min.jpg" alt="Teju" class="block object-cover h-64 mx-auto mb-4 rounded">
+                        <p class="py-2 text-xl font-semibold">Teju</p>
+                        <p class="flex-grow text-justify">
+                            Our answer to Murphy’s law is Teju – the miracle maker. When the whole world turns to God in distress, 
+                            we turn to Teju. What in all companies is achieved by a lot of teams working very hard, is achieved 
+                            in First Academy very casually by Teju. He is our marketing team, our designing team, technology team, 
+                            content developing team, web support and much more. The Multi-talented, humorous, charming, social-media-avoiding Teju.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!--third-->
-            <div class="col-span-6 my-2 duration-300 ease-in-out transform md:col-span-3 lg:col-span-2 hover:-translate-y-1">
-                <div class="flex flex-col p-4 pb-8 bg-teal-100 rounded shadow-xl h-full min-h-[500px] text-black">
-                    <img src="../assets/file_bharathi-min.jpg" alt="Bharathi" class="block object-cover h-64 mx-auto mb-4 rounded">
-                    <p class="py-2 text-xl font-semibold">Bharathi</p>
-                    <p class="flex-grow text-justify">
-                        The resident polyglot who can switch between Marathi, Tamil, Telugu, Hindi, and heaven-know-what-else, 
-                        she is the kindest, sweetest, and in many instances the most hilariously, gullible person one would 
-                        have the good fortune of ever coming across. A firm believer in being blind to the bad side of everyone, 
-                        she is loved by all, and for good reason!
-                    </p>
+                <!--third-->
+                <div class="col-span-6 my-2 duration-300 ease-in-out transform sm:col-span-3 lg:col-span-2 ">
+                    <div class="flex flex-col p-4 pb-8 border-l-4 border-yellow-600 rounded-lg shadow-xl h-full min-h-[500px] text-black">
+                        <img src="../assets/file_bharathi-min.jpg" alt="Bharathi" class="block object-cover h-64 mx-auto mb-4 rounded">
+                        <p class="py-2 text-xl font-semibold">Bharathi</p>
+                        <p class="flex-grow text-justify">
+                            The resident polyglot who can switch between Marathi, Tamil, Telugu, Hindi, and heaven-know-what-else, 
+                            she is the kindest, sweetest, and in many instances the most hilariously, gullible person one would 
+                            have the good fortune of ever coming across. A firm believer in being blind to the bad side of everyone, 
+                            she is loved by all, and for good reason!
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!--fourth-->
-            <div class="col-span-6 my-2 duration-300 ease-in-out transform md:col-span-3 lg:col-span-2 hover:-translate-y-1">
-                <div class="flex flex-col p-4 pb-8 bg-teal-100 rounded shadow-xl h-full min-h-[500px] text-black">
-                    <img src="../assets/file_bhanu-min1.jpg" alt="Bhanu" class="block object-cover h-64 mx-auto mb-4 rounded" >
-                    <p class="py-2 text-xl font-semibold">Bhanu</p>
-                    <p class="flex-grow text-justify">
-                        Being on time and frequently bringing awesome food to office are two of the many things we love about Bhanu. 
-                        Pleasant, professional, email-juggling, and Friday-fasting; the workplace wouldn’t be the same without her. 
-                        Do we love her, or the food she makes? None of us wants to hazard answering that!
-                    </p>
+                <!--fourth-->
+                <div class="col-span-6 my-2 duration-300 ease-in-out transform sm:col-span-3 lg:col-span-2 ">
+                    <div class="flex flex-col p-4 pb-8 border-l-4 border-rose-600 rounded-lg shadow-xl h-full min-h-[500px] text-black">
+                        <img src="../assets/file_bhanu-min1.jpg" alt="Bhanu" class="block object-cover h-64 mx-auto mb-4 rounded" >
+                        <p class="py-2 text-xl font-semibold">Bhanu</p>
+                        <p class="flex-grow text-justify">
+                            Being on time and frequently bringing awesome food to office are two of the many things we love about Bhanu. 
+                            Pleasant, professional, email-juggling, and Friday-fasting; the workplace wouldn’t be the same without her. 
+                            Do we love her, or the food she makes? None of us wants to hazard answering that!
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!--fifth-->
-            <div class="col-span-6 my-2 duration-300 ease-in-out transform md:col-span-3 lg:col-span-2 hover:-translate-y-1">
-                <div class="flex flex-col p-4 pb-8 bg-teal-100 rounded shadow-xl h-full min-h-[500px] text-black">
-                    <img src="../assets/file_divya-min.jpg" alt="Divya" class="block object-cover h-64 mx-auto mb-4 rounded">
-                    <p class="py-2 text-xl font-semibold">Divya</p>
-                    <p class="flex-grow text-justify">
-                        Divya is the girl who cares. About our students, about staff, and about getting work done, and sometimes 
-                        getting worked-up too! The ‘kid’ in the workplace; she is – the subject of most jokes, lover of dogs, adorer 
-                        of pups, and a devotee of the chrome mode in the iPhone. If someone were to be voted the most approachable, 
-                        it would be her, hands down.
-                    </p>
+                <!--fifth-->
+                <div class="col-span-6 my-2 duration-300 ease-in-out transform sm:col-span-3 lg:col-span-2 ">
+                    <div class="flex flex-col p-4 pb-8 border-l-4 border-yellow-600 rounded-lg shadow-xl h-full min-h-[500px] text-black">
+                        <img src="../assets/file_divya-min.jpg" alt="Divya" class="block object-cover h-64 mx-auto mb-4 rounded">
+                        <p class="py-2 text-xl font-semibold">Divya</p>
+                        <p class="flex-grow text-justify">
+                            Divya is the girl who cares. About our students, about staff, and about getting work done, and sometimes 
+                            getting worked-up too! The ‘kid’ in the workplace; she is – the subject of most jokes, lover of dogs, adorer 
+                            of pups, and a devotee of the chrome mode in the iPhone. If someone were to be voted the most approachable, 
+                            it would be her, hands down.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!--sixth-->
-            <div class="col-span-6 my-2 duration-300 ease-in-out transform md:col-span-3 lg:col-span-2 hover:-translate-y-1">
-                <div class="flex flex-col p-4 pb-8 bg-teal-100 rounded shadow-xl h-full min-h-[500px] text-black">
-                    <img src="../assets/file_ram-sir-min.jpg" alt="Ram" class="block object-cover h-64 mx-auto mb-4 rounded">
-                    <p class="py-2 text-xl font-semibold">Ram</p>
-                    <p class="flex-grow text-justify">
-                        The oil to First Academy’s machine. With the possible exception of handling the sessions, there is little that 
-                        Ram doesn’t know or can’t do. Dedicated, devoted, absolutely trustworthy and easily the most loved and the most 
-                        depended-upon member of our family. Truly, రాముడు చాలా మంచి బాలుడు. बेमिसाल राम्!. قابل اعتبار.
-                    </p>
+                <!--sixth-->
+                <div class="col-span-6 my-2 duration-300 ease-in-out transform sm:col-span-3 lg:col-span-2 ">
+                    <div class="flex flex-col p-4 pb-8 border-l-4 border-teal-600 rounded-lg shadow-xl h-full min-h-[500px] text-black">
+                        <img src="../assets/file_ram-sir-min.jpg" alt="Ram" class="block object-cover h-64 mx-auto mb-4 rounded">
+                        <p class="py-2 text-xl font-semibold">Ram</p>
+                        <p class="flex-grow text-justify">
+                            The oil to First Academy’s machine. With the possible exception of handling the sessions, there is little that 
+                            Ram doesn’t know or can’t do. Dedicated, devoted, absolutely trustworthy and easily the most loved and the most 
+                            depended-upon member of our family. Truly, రాముడు చాలా మంచి బాలుడు. बेमिसाल राम्!. قابل اعتبار.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-       
-           
-       
-
-
+    </section>
 
     <footer class="mb-10">
         <!--attend drives-->
@@ -608,10 +549,10 @@
                                         <li class="my-2 text-md"><a href="./reading"
                                                 class="text-sm hover:text-emerald-500">IELTS Big
                                                 Book</a></li>
-                                        <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                                        <li class="my-2 text-md"><a href="/grer"
                                                 class="text-sm hover:text-emerald-500"> GRE
                                                 Reading</a></li>
-                                        <li class="my-2 text-md"><a href="https://{{request()->get('client.domain')}}/"
+                                        <li class="my-2 text-md"><a href="/blog"
                                                 class="text-sm hover:text-emerald-500"> Blog</a></li>
 
                                     </ul>
@@ -707,10 +648,10 @@
                             <li class="my-2 text-md"><a href="./reading" class="text-sm hover:text-emerald-500">IELTS
                                     Big
                                     Book</a></li>
-                            <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                            <li class="my-2 text-md"><a href="/grer"
                                     class="text-sm hover:text-emerald-500"> GRE
                                     Reading</a></li>
-                            <li class="my-2 text-md"><a href="./blog" class=""> Blog</a></li>
+                            <li class="my-2 text-md"><a href="/blog" class=""> Blog</a></li>
 
                         </ul>
                     </div>
@@ -787,8 +728,18 @@
 
     </footer>
 
+    <button id="scrollToTop"
+        class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:w-7 md:h-7">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+    </button>
+
     <!--Messages-->
-    <div class="fixed bottom-0 z-10 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
+    <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
+        <div class=" flex items-center justify-center" >
         <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
             stroke="currentColor" class="w-4 h-4 text-white">
@@ -800,239 +751,17 @@
         </a>
 
         <div>
-            <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
+            <h1 class="hidden mx-4 text-white md:block">We would love to hear from you!</h1>
         </div>
 
         <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
             <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
             <span class="text-sm font-bold text-white">WhatsApp</span>
         </a>
-    </div>
-    
-    <button id="scrollToTop"
-        class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:w-7 md:h-7">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-        </svg>
-    </button>
-
-    <div id="talkForm"
-        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
-
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="talk" action="{{ route('mail.send') }}" method="POST">
-                <div class="p-2 card-body">
-                    <div class="contact_block">
-                        <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-                            <div class="w-[97%]" role="alert">
-                                Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
-                                <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
-                            </div>
-                            <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="talkForm">&times;</button>
-                        </div>
-
-                        <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
-
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label for="firstNameExample1" class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" id="firstNameExample1" placeholder="Full Name"
-                                    required="">
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label for="lastNameExample1" class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" id="lastNameExample1" placeholder="Phone Number"
-                                    required="">
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4 form-group">
-                                    <label for="emailAddressExample1" class="block pb-2 text-center input-label">Email address</label>
-                                    <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail" id="emailAddressExample1"
-                                        placeholder="E-mail ID" required="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message" class="block pb-2 text-center input-label">Message</label>
-                                    <div class="input-group">
-                                        <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message" id="message"
-                                            placeholder="Type your message here..." required=""></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn hover:bg-teal-custom">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
 
-    <div id="requestForm" class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
-
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="request" action="{{ route('mail.send') }}" method="POST">
-                <div class="p-2 card-body">
-                    <div class="contact_block">
-                        <div class="flex items-center justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-
-                            <div class="w-[97%]" role="alert">
-                                <h1 class="my-auto text-2xl font-semibold">Request Free Test</h1> 
-                            </div>
-
-                            <button type="button"
-                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="requestForm">&times;
-                            </button>
-
-                        </div>
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label for="firstNameExample1" class="block pb-2 input-label">Name</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
-                                    name="username" id="firstNameExample1" placeholder="Full Name" aria-label="Nataly"
-                                    required="" data-msg="Please enter your name">
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label for="lastNameExample1" class="block pb-2 input-label">Phone</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
-                                    name="userphone" id="lastNameExample1" placeholder="Phone Number" aria-label="Gaga"
-                                    required="" data-msg="Please enter phone number">
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4 js-form-message form-group">
-                                    <label for="emailAddressExample1" class="block pb-2 input-label">Email
-                                        address</label>
-                                    <input type="email"
-                                        class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
-                                        id="emailAddressExample1" placeholder="E-mail ID" required=""
-                                        data-msg="Please enter a valid email address" class="w-100">
-                                </div>
-                                <div class="js-form-message form-group">
-                                    <label for="message" class="block pb-2 input-label">Which
-                                        Test(s) do you wish to take?</label>
-                                    <div class="input-group">
-                                        <textarea
-                                            class="w-full p-2 px-4 border border-gray-200 rounded resize-none"
-                                            rows="4" name="message" id="message"
-                                            placeholder="Type your message here..."
-                                            aria-label="Hi there, I would like to ..." required=""
-                                            data-msg="Please enter a reason."></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit"
-                            class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn btn-block transition-3d-hover contact_button hover:bg-teal-custom">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="popup"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <form id="demoForm" action="{{ route('mail.send') }}" method="POST"
-        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
-                <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
-                    <div class="w-[97%]" role="alert">
-                        Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
-                        USA.
-                    </div>
-                    <button type="button"
-                        class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                        data-popup-close="popup">&times;</button>
-                </div>
-
-                <h3 class="text-teal-900">Where would you want to attend a demo</h3>
-                <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
-                    <div class="flex items-center">
-                        <input class="form-checkbox" type="radio" name="location" id="Ameerpet" value="Ameerpet">
-                        <label class="ml-2" for="Ameerpet">Ameerpet</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="form-checkbox" type="radio" name="location" id="Madhapur" value="Madhapur">
-                        <label class="ml-2" for="Madhapur">Madhapur</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="form-checkbox" type="radio" name="location" id="Online" value="Online">
-                        <label class="ml-2" for="Online">Online</label>
-                    </div>
-                </div>
-
-                <h3 class="text-teal-900">Which session would you like to try?</h3>
-                <div class="bg-gray-100">
-                    <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
-                        <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="gre" value="GRE">
-                            <label class="ml-2" for="gre">GRE</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="ielts" value="IELTS">
-                            <label class="ml-2" for="ielts">IELTS</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
-                            <label class="ml-2" for="toefl">TOEFL</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="pte" value="PTE">
-                            <label class="ml-2" for="pte">PTE</label>
-                        </div>
-                    </div>
-                    <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
-                        <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="oet" value="OET">
-                            <label class="ml-2" for="oet">OET</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="sat" value="SAT">
-                            <label class="ml-2" for="sat">SAT</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="form-checkbox" type="checkbox" name="courses[]" id="others" value="OTHERS">
-                            <label class="ml-2" for="others">OTHERS</label>
-                        </div>
-                    </div>
-                </div>
-
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 form-input" placeholder="Name"
-                    name="username" required>
-                <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 form-input" placeholder="Email"
-                    name="useremail" required>
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 form-input"
-                    placeholder="Phone Number" name="userphone" required>
-
-                <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="successPopup"
-        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
-        <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
-            <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
-                <div class="w-full text-center text-green-800">
-                    <h3 class="text-lg font-bold">Success!</h3>
-                    <p>Your mail has been sent successfully.</p>
-                </div>
-            </div>
-            <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
-                data-popup-close="successPopup">Close</button>
-        </div>
-    </div>
-
-    <script src="../dist/ielts_carousel.js"></script>
-    <script src="../dist/lite-yt-embed.js"></script>
-    <script src="../dist/token.js"></script>
     <script src="../dist/voilaui.js"></script>
-    <script src="../dist/quiz.js"></script>
 
 </body>
 
