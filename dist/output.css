@@ -1127,6 +1127,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.ms-5 {
+  margin-inline-start: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -5235,6 +5239,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .lg\:gap-24 {
     gap: 6rem;
+  }
+
+  .lg\:gap-5 {
+    gap: 1.25rem;
   }
 
   .lg\:gap-x-16 {

@@ -22,6 +22,20 @@
       rel="stylesheet"
     />
     <title>Top Masters program</title>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        #header, #message {
+            display: block;
+        }
+        .crsl-item {
+                min-width: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+        #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2 {
+            z-index: 1;
+        }
+    </style>
   </head>
 
   <body class="font-open">
@@ -202,7 +216,7 @@
                                               </a>
                                           </li>
                                           <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                              <a href="https://firstacademy.in/grer"
+                                              <a href="/grer"
                                                   class="block m-0 font-medium text-gray-800 ">
                                                   GRE Solutions
                                               </a>
@@ -229,7 +243,7 @@
                               </div>
                           </li>
                           <li>
-                              <a href="https://firstacademy.in/blog"
+                              <a href="/blog"
                                   class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                   Blog
                               </a>
@@ -308,7 +322,6 @@
 
   <!--Latest Post-->
   <x-homepage.post.index :data="$data" />
-
   
   <!-- hero -->
   <div class="bg-white">
@@ -423,12 +436,12 @@
         </ul>
 
         <div class="flex items-center justify-start gap-5 mt-2 mb-4 lg:gap-10">
-            <button
-                    class="py-3 font-semibold text-center text-black bg-purple-400 rounded-lg hover:bg-purple-500 hover-translate-y w-60">Get
-                    a call back</button>
-            <button
-                    class="py-3 font-semibold text-center text-black bg-orange-400 rounded-lg hover:bg-orange-500 hover-translate-y w-60">What
-                    we do</button>
+            <a href="https://wa.me/+919866688666" target="_blank"
+                        class="py-3 font-semibold text-center text-black bg-teal-400 rounded-lg hover:bg-teal-500 hover-translate-y w-60">Get
+                        a call back</a>
+                <a href="#form-fill"
+                        class="py-3 font-semibold text-center text-black rounded-lg bg-lime-400 hover:bg-lime-500 hover-translate-y w-60">What
+                        we do</a>
             </div>  
 
        </div>
@@ -438,7 +451,7 @@
         </p>
        
     </div>
-</div>
+    </div>
 
     <!--Next move section-->
     <section class="bg-teal-100">
@@ -510,7 +523,7 @@
                     Cambridge certified prep-experts with over a decade of
                     experience in test-prep training.
                   </p>
-                  <button
+                  <button data-popup="popup"
                     class="p-3 px-5 font-semibold text-white duration-300 bg-gray-900 rounded-lg hover:shadow-xl lg:mt-10"
                   >
                     Free Session
@@ -522,7 +535,7 @@
                   <p class="mb-3 text-lg font-open">
                     In-depth assessment and feedback for ehnanced performance.
                   </p>
-                  <button
+                  <button data-popup="request"
                     class="p-3 px-5 font-semibold text-white duration-300 bg-gray-900 rounded-lg hover:shadow-xl lg:mt-16"
                   >
                     Free Test
@@ -535,7 +548,7 @@
                     Access to exclusive, world-class, industry leading material
                     designed to help you perform.
                   </p>
-                  <button
+                  <button data-popup="material1"
                     class="p-3 px-5 font-semibold text-white duration-300 bg-gray-900 rounded-lg hover:shadow-xl lg:mt-2"
                   >
                     View Material
@@ -599,11 +612,11 @@
       <div
         class="items-center justify-between max-w-screen-xl p-4 mx-auto sm:px-16"
       >
-        <div class="justify-between lg:grid lg:grid-flow-col">
+        <div class="justify-between lg:grid lg:grid-flow-col lg:gap-5">
           <div class="flex-none hidden rounded-lg lg:w-80 sm:block">
             <img class="h-full rounded-lg" src="../assets/ug15.jpg" alt="" />
           </div>
-          <div class="h-max">
+          <div class="h-max ms-5">
             <div class="grid md:mt-10">
               <div
                 class="my-2 text-3xl font-bold text-gray-700 font-noto md:text-5xl lg:text-right"
@@ -637,11 +650,11 @@
                 </div>
               </div>
               <center>
-                <button
-                  class="w-11/12 py-5 mb-10 text-2xl font-bold text-teal-500 duration-500 bg-blue-100 rounded-lg bg-opacity-10 hover:bg-teal-500 hover:text-white"
+                <a href="https://wa.me/+919866688666" target="_blank"
+                  class="block w-11/12 py-5 mb-10 text-2xl font-bold text-teal-500 duration-500 bg-teal-200 rounded-lg bg-opacity-10 hover:bg-teal-500 hover:text-white"
                 >
                   Speak to our counselors
-                </button>
+              </a>
               </center>
             </div>
           </div>
@@ -854,6 +867,7 @@
           </div>
       </div>
   </div>
+ 
   <footer class="mb-10">
     <!--attend drives-->
     <div class="p-6 text-white" style="background-color: #363636;">
@@ -998,10 +1012,10 @@
                                     <li class="my-2 text-md"><a href="./reading"
                                             class="text-sm hover:text-emerald-500">IELTS Big
                                             Book</a></li>
-                                    <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                                    <li class="my-2 text-md"><a href="/grer"
                                             class="text-sm hover:text-emerald-500"> GRE
                                             Reading</a></li>
-                                    <li class="my-2 text-md"><a href="https://{{request()->get('client.domain')}}/"
+                                    <li class="my-2 text-md"><a href="/blog"
                                             class="text-sm hover:text-emerald-500"> Blog</a></li>
 
                                 </ul>
@@ -1097,10 +1111,10 @@
                         <li class="my-2 text-md"><a href="./reading" class="text-sm hover:text-emerald-500">IELTS
                                 Big
                                 Book</a></li>
-                        <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                        <li class="my-2 text-md"><a href="/grer"
                                 class="text-sm hover:text-emerald-500"> GRE
                                 Reading</a></li>
-                        <li class="my-2 text-md"><a href="./blog" class=""> Blog</a></li>
+                        <li class="my-2 text-md"><a href="/blog" class=""> Blog</a></li>
 
                     </ul>
                 </div>
@@ -1177,28 +1191,6 @@
 
 </footer>
 
-<!--Messages-->
-<div class="fixed z-10 bottom-0 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
-    <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-        stroke="currentColor" class="w-4 h-4 text-white">
-        <path stroke-linecap="round" stroke-linejoin="round"
-        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-        </svg>
-        
-        <span class="text-sm font-bold text-white">Call</span>
-    </a>
-
-    <div>
-        <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
-    </div>
-
-    <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
-        <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
-        <span class="text-sm font-bold text-white">WhatsApp</span>
-    </a>
-</div>
-
 <button id="scrollToTop"
     class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -1208,11 +1200,36 @@
     </svg>
 </button>
 
+<!--Messages-->
+<div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
+    <div class=" flex items-center justify-center" >
+    <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+        stroke="currentColor" class="w-4 h-4 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round"
+        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        </svg>
+        
+        <span class="text-sm md:text-md font-bold text-white">Call</span>
+    </a>
+
+    <div>
+        <h1 class="hidden mx-4 text-white sm:block">We would love to hear from you!</h1>
+    </div>
+
+    <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
+        <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
+        <span class="text-sm md:text-md font-bold text-white">WhatsApp</span>
+    </a>
+    </div>
+</div>
+
 <div id="talkForm"
     class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
     <div class="p-8 bg-white rounded-lg shadow-md popup-content">
         <form id="talk" action="{{ route('talk.send') }}" method="POST">
+            @csrf
             <div class="p-2">
                 <div>
                     <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1266,6 +1283,7 @@
 
     <div class="p-8 bg-white rounded-lg shadow-md popup-content">
         <form id="request" action="{{ route('request.send') }}" method="POST">
+            @csrf
             <div class="p-2">
                 <div>
                     <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
@@ -1279,6 +1297,10 @@
                             data-popup-close="requestForm">&times;
                         </button>
 
+                    </div>
+                    <div class="bg-teal-100 p-4 rounded my-4 text-teal-500">
+                        Please include the country code with the number.
+                        <br> (Eg: <span class="bg-black text-white p-1 rounded">+91</span>  for India; <span class="bg-black text-white p-1 rounded">+65</span> For Singapore).
                     </div>
                     <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                         <div class="w-full col-span-1">
@@ -1326,7 +1348,8 @@
 class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
     <div class="popup-content">
         <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
-    class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+    class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92  sm:w-[600px] max-h-[95vh] overflow-y-auto">
+    @csrf
             <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                 <div class="w-[97%]" role="alert">
                     Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
@@ -1398,6 +1421,34 @@ class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-ful
 
             <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
         </form>
+    </div>
+</div>
+
+<div id="successPopup"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+    <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+        <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
+            <div class="w-full text-center text-green-800">
+                <h3 class="text-lg font-bold">Request Sent Successfully!</h3>
+                <p>Our team will reach out to you soon.</p>
+            </div>
+        </div>
+        <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
+            data-popup-close="successPopup">Close</button>
+    </div>
+</div>
+
+<div id="errorPopup"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+    <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+        <div class="flex justify-between p-4 mb-0 bg-red-100 rounded-lg">
+            <div class="w-full text-center text-red-800">
+                <h3 class="text-lg font-bold">Uh Oh:(</h3>
+                <p>Some error occured! Please try later.</p>
+            </div>
+        </div>
+        <button type="button" class="block w-full p-4 mt-4 text-white bg-red-600 btn btn-block"
+            data-popup-close="errorPopup">Close</button>
     </div>
 </div>
 
@@ -1481,21 +1532,8 @@ class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-ful
     </div>
 </div>
 
-<div id="successPopup"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
-    <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
-        <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
-            <div class="w-full text-center text-green-800">
-                <h3 class="text-lg font-bold">Success!</h3>
-                <p>Your mail has been sent successfully.</p>
-            </div>
-        </div>
-        <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
-            data-popup-close="successPopup">Close</button>
-    </div>
-</div>
-
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/token.js"></script>
+    <script src="../dist/ielts_carousel.js"></script>
   </body>
 </html>
