@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="First Academy is the one of the Best PTE Personalised coaching institute. PTE Personalised coaching.">
+        content="The Best Coaching for OET | The Best Coaching for IELTS | The Best Online Coaching | The Best Coaching Centre in Hyderabad | Online Coaching India | IELTS | OET | PTE | SAT | GRE">
     <meta property="og:title" content="First Academy - The Best There Is">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.firstacademy.in/">
     <meta property="og:description"
-        content="First Academy is the one of the Best PTE Personalised coaching institute. PTE Personalised coaching.">
+        content="The Best Coaching for OET | The Best Coaching for IELTS | The Best Online Coaching | The Best Coaching Centre in Hyderabad | Online Coaching India | IELTS | OET | PTE | SAT | GRE">
+    <meta property="og:image" content="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_FirstAcademy.png">
     <link rel="shortcut icon" href="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_FA.svg">
     <link href="../dist/output.css" rel="stylesheet">
+    <link href="../dist/lite-yt-embed.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Playfair+Display&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Afacad&family=League+Spartan:wght@900&family=Playfair+Display&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        #header, #message{
+            display: block;
+        }
+    </style>
     <title>Best IELTS | GRE | TOEFL Coaching | Training in Hyderabad | First Academy</title>
 </head>
 
-<body>
+<body class="font-open">
     <header class="fixed z-10 w-screen border-b border-gray-200" id="header">
         <nav class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
             <div class="items-center justify-between max-w-screen-xl px-4 py-2 mx-auto lg:flex sm:px-[60px] ">
@@ -201,7 +208,7 @@
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="https://firstacademy.in/grer"
+                                                <a href="/grer"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Solutions
                                                 </a>
@@ -228,7 +235,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="https://firstacademy.in/blog"
+                                <a href="/blog"
                                     class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                     Blog
                                 </a>
@@ -308,22 +315,18 @@
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
-
     <div>
         <!-- Heading -->
-        <div class="py-3 text-center bg-red-50">
-            <h1 class="mb-6 text-4xl font-semibold text-red-500 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Our
-                Courses</h1>
+        <div class="py-12 text-center bg-teal-50"> 
+            <h1 class="mb-2 text-4xl font-semibold text-teal-500 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Our Courses</h1> 
         </div>
+        
     </div>
 
     <!-- Separation between Sections  -->
     <div class="my-8"></div>
 
-
     <section class="max-w-screen-xl p-4 mx-auto sm:px-16">
-
-
         <!-- Section 1: Courses 1-3 (SAT, GRE, IELTS) -->
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3">
             <!-- Course 1: SAT -->
@@ -331,15 +334,24 @@
                 <div class="w-full bg-center bg-cover h-52" style="background-image: url('../assets/file_SAT.svg');">
                 </div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">SAT</h3>
-                    <p class="font-serif text-gray-900">Our SAT students get ridiculously high scores, without sweating
+                    <h3 class="mb-2  text-lg font-semibold">SAT</h3>
+                    <p class=" text-gray-900">Our SAT students get ridiculously high scores, without sweating
                         it out. Why? Attend a session of the best SAT coaching to experience the magic!</p>
                     <br>
-                    <div class="mt-4">
+                    <div class="mt-4 flex justify-between">
                         <button class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                            <span class="my-auto">Read More</span>
+                         <a href="./sat"><span class="my-auto">Read More</span></a>   
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -353,15 +365,24 @@
                 <div class="w-full bg-center bg-cover h-52" style="background-image: url('../assets/file_GRE.svg');">
                 </div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">GRE</h3>
-                    <p class="font-serif text-gray-900">Why is ours the best GRE coaching? We help you avoid learning
+                    <h3 class="mb-2  text-lg font-semibold">GRE</h3>
+                    <p class=" text-gray-900">Why is ours the best GRE coaching? We help you avoid learning
                         vocabulary! Surprised? Attend a session and prepare to be amazed!</p>
                     <br>
-                    <div class="mt-4">
+                    <div class="mt-4 flex justify-between">
                         <button class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                            <span class="my-auto">Read More</span>
+                           <a href="./gre"><span class="my-auto">Read More</span></a>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -375,15 +396,24 @@
                 <div class="w-full bg-center bg-cover h-52" style="background-image: url('../assets/file_IELTS.svg');">
                 </div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">IELTS</h3>
-                    <p class="font-serif text-gray-900">If using English is not a challenge, you might not need
+                    <h3 class="mb-2  text-lg font-semibold">IELTS</h3>
+                    <p class=" text-gray-900">If using English is not a challenge, you might not need
                         training. Read more to know how our best coaching for IELTS can help you decide!</p>
                     <br>
-                    <div class="mt-4">
+                    <div class="mt-4 flex justify-between">
                         <button class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                            <span class="my-auto">Read More</span>
+                           <a href="./ielts"> <span class="my-auto">Read More</span></a>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -399,28 +429,34 @@
         <div class="my-8"></div>
 
         <!-- Section 2: Course 4 (OET) with a blue background -->
-        <div class="p-5 text-justify bg-blue-100 shadow-md lg:flex lg:h-96 xl:h-96">
+        <div class="p-5 text-justify bg-blue-100 shadow-md lg:flex items-center">
             <!-- Image on the left for lg and xl screens -->
-            <div class="flex items-center justify-center pr-6 lg:w-1/3 xl:w-1/3 lg:h-full xl:h-full lg:order-1 xl:order-1">
-                <!-- Use an img tag to display the image -->
-                <img src="../assets/file_OET.svg" alt="OET Image" class="object-cover w-full h-full rounded-lg">
+            <div class="text-center lg:text-start">
+                <img src="../assets/file_OET.svg" alt="OET Image" width="330px" class="block mx-auto lg:inline">
             </div>
-            <!-- Content on the right for lg and xl screens -->
-            <div class="mt-4 lg:w-2/3 xl:w-2/3 lg:order-2 xl:order-2 lg:mt-0 xl:mt-0 lg:ml-6 xl:ml-6">
-                <!-- Added margin classes -->
-                <h3 class="mb-2 ml-4 font-serif text-lg font-semibold">OET</h3>
-                <p class="font-serif text-gray-900 lg:mb-4 xl:mb-4 lg:ml-4 xl:ml-4">
+            <div class="lg:w-2/3 lg:order-2 xl:order-2 lg:mt-0 lg:ml-6">
+                <h3 class="mb-2 md:ml-4 text-lg font-semibold">OET</h3>
+                <p class=" text-gray-900 lg:mb-4 lg:ml-4">
                     OET is the newest and the most specialised kid on the block. It is an English test aimed squarely at
                     the medical professional. It is gaining wide acceptance and fast. If you are a medical professional
                     and want to work in an English speaking country, the chances are, you are required to take the OET
                     test.
                 </p>
         
-                <div class="mt-4">
+                <div class="mt-4 lg:ml-4">
                     <button class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                        <span class="my-auto">Read More</span>
+                       <a href="./oet"><span class="my-auto">Read More</span></a> 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                            stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+
+                    <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                        Free Session
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
@@ -441,16 +477,25 @@
                 <div class="w-full bg-center bg-cover h-52" style="background-image: url('../assets/file_PTE.svg');">
                 </div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">PTE</h3>
-                    <p class="font-serif text-gray-900">Understanding the pattern and purpose of questions makes all the
+                    <h3 class="mb-2  text-lg font-semibold">PTE</h3>
+                    <p class=" text-gray-900">Understanding the pattern and purpose of questions makes all the
                         difference in PTE. Our sessions help you do just this. No more reattempts!</p>
                     <br>
-                    <div class="mt-4">
+                    <div class="mt-4 flex justify-between">
                         <button
                             class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                            <span class="my-auto">Read More</span>
+                           <a href="./pte"><span class="my-auto">Read More</span></a> 
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -465,16 +510,25 @@
                 <div class="w-full bg-center bg-cover h-52"
                     style="background-image: url('../assets/file_ieltsonline.svg');"></div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">IELTS Personalised and Online Training</h3>
-                    <p class="font-serif text-gray-900">Training that is customized to suit your needs. IELTS like you
+                    <h3 class="mb-2  text-lg font-semibold">IELTS Personalised and Online Training</h3>
+                    <p class=" text-gray-900">Training that is customized to suit your needs. IELTS like you
                         want it. Online, Classroom, or one-to-one!</p>
                     <br>
-                    <div class="mt-4">
+                    <div class="mt-4 flex justify-between">
                         <button
                             class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                            <span class="my-auto">Read More</span>
+                           <a href="./ielts-band9-training"> <span class="my-auto">Read More</span></a>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -489,16 +543,25 @@
                 <div class="w-full bg-center bg-cover h-52"
                     style="background-image: url('../assets/file_pteonline.svg');"></div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">PTE Personalised and Online Training</h3>
-                    <p class="font-serif text-gray-900">Fully personalized training. Whether it is online or one-to-one
+                    <h3 class="mb-2  text-lg font-semibold">PTE Personalised and Online Training</h3>
+                    <p class=" text-gray-900">Fully personalized training. Whether it is online or one-to-one
                         training. Your preparation done your way.</p>
                     <br>
-                    <div class="mt-4">
-                        <button
-                            class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
+                    <div class="mt-4 flex justify-between">
+                        <a href="/pteonline"
+                            class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white w-fit">
                             <span class="my-auto">Read More</span>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </a>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -513,16 +576,25 @@
                 <div class="w-full bg-center bg-cover h-52" style="background-image: url('../assets/file_toefl.svg');">
                 </div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">TOEFL</h3>
-                    <p class="font-serif text-gray-900">The best coaching for TOEFL. Small batch sizes, convenient
+                    <h3 class="mb-2  text-lg font-semibold">TOEFL</h3>
+                    <p class=" text-gray-900">The best coaching for TOEFL. Small batch sizes, convenient
                         timings, and excellent trainers make our TOEFL sessions top-notch.</p>
                     <br>
-                    <div class="mt-4">
+                    <div class="mt-4 flex justify-between">
                         <button
                             class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                            <span class="my-auto">Read More</span>
+                            <a href="./toefl"><span class="my-auto">Read More</span></a>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -534,19 +606,28 @@
 
             <!-- Course 9: Corporate Training -->
             <div class="p-5 text-justify bg-white shadow-md">
-                <div class="w-full h-56 bg-center bg-cover" style="background-image: url('../assets/file_custom.svg');">
+                <div class="w-full bg-center bg-cover h-52" style="background-image: url('../assets/file_custom.svg');">
                 </div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">Corporate Training</h3>
-                    <p class="font-serif text-gray-900">Looking for personalized training or online coaching for any
+                    <h3 class="mb-2  text-lg font-semibold">Corporate Training</h3>
+                    <p class=" text-gray-900">Looking for personalized training or online coaching for any
                         English exam or looking for Corporate training for your employees?</p>
-                    <br>
-                    <div class="mt-4">
+                    <br><br>
+                    <div class="mt-4 flex justify-between">
                         <button
                             class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                            <span class="my-auto">Read More</span>
+                            <a href="./custom"><span class="my-auto">Read More</span></a>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -561,16 +642,25 @@
                 <div class="w-full bg-center bg-cover h-52"
                     style="background-image: url('../assets/file_spokenenglish.svg');"></div>
                 <div class="mt-4">
-                    <h3 class="mb-2 font-serif text-lg font-semibold">Language Training</h3>
-                    <p class="font-serif text-gray-900">English really made easy. Attend a session. Small batches,
+                    <h3 class="mb-2  text-lg font-semibold">Language Training</h3>
+                    <p class=" text-gray-900">English really made easy. Attend a session. Small batches,
                         comfortable atmosphere, stress-free session. Enjoy learning!</p>
-                    <br>
-                    <div class="mt-4">
+                    <br><br>
+                    <div class="mt-4 flex justify-between">
                         <button
                             class="flex items-center px-4 py-2 duration-200 ease-in bg-gray-100 rounded hover:bg-black hover:text-white">
-                            <span class="my-auto">Read More</span>
+                           <a href="./custom"><span class="my-auto">Read More</span></a> 
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-2">
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        <button class="text-blue-600 duration-200 font-semibold hover:text-blue-800 flex items-center" data-popup="popup">
+                            Free Session
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-4 h-4 my-auto font-bold ms-1">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                             </svg>
@@ -732,10 +822,10 @@
                                         <li class="my-2 text-md"><a href="./reading"
                                                 class="text-sm hover:text-emerald-500">IELTS Big
                                                 Book</a></li>
-                                        <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                                        <li class="my-2 text-md"><a href="/grer"
                                                 class="text-sm hover:text-emerald-500"> GRE
                                                 Reading</a></li>
-                                        <li class="my-2 text-md"><a href="https://{{request()->get('client.domain')}}/"
+                                        <li class="my-2 text-md"><a href="/blog"
                                                 class="text-sm hover:text-emerald-500"> Blog</a></li>
 
                                     </ul>
@@ -831,10 +921,10 @@
                             <li class="my-2 text-md"><a href="./reading" class="text-sm hover:text-emerald-500">IELTS
                                     Big
                                     Book</a></li>
-                            <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
+                            <li class="my-2 text-md"><a href="/grer"
                                     class="text-sm hover:text-emerald-500"> GRE
                                     Reading</a></li>
-                            <li class="my-2 text-md"><a href="./blog" class=""> Blog</a></li>
+                            <li class="my-2 text-md"><a href="/blog" class=""> Blog</a></li>
 
                         </ul>
                     </div>
@@ -911,8 +1001,9 @@
 
     </footer>
 
-    <!--Messages-->
-    <div class="fixed z-10 bottom-0 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
+     <!--Messages-->
+     <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
+        <div class=" flex items-center justify-center" >
         <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
             stroke="currentColor" class="w-4 h-4 text-white">
@@ -924,15 +1015,16 @@
         </a>
 
         <div>
-            <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
+            <h1 class="hidden mx-4 text-white md:block">We would love to hear from you!</h1>
         </div>
 
         <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
             <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
             <span class="text-sm font-bold text-white">WhatsApp</span>
         </a>
+        </div>
     </div>
-    
+
     <button id="scrollToTop"
         class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -942,125 +1034,13 @@
         </svg>
     </button>
 
-    <div id="talkForm"
-        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
-
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="talk" action="{{ route('talk.send') }}" method="POST">
-                <div class="p-2">
-                    <div>
-                        <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-                            <div class="w-[97%]" role="alert">
-                                Do enter the country code of your phone number.<br> Ex: <kbd class="bg-black text-white p-1 rounded">+91</kbd> for India,
-                                <kbd class="bg-black text-white p-1 rounded">+1</kbd> for the USA.
-                            </div>
-                            <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="talkForm">&times;</button>
-                        </div>
-
-                        <h1 class="text-center font-semibold my-2">Talk to Us!</h1>
-
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="username" placeholder="Full Name"
-                                    required="">
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="userphone" placeholder="Phone Number"
-                                    required="">
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4 ">
-                                    <label class="block pb-2 text-center">Email address</label>
-                                    <input type="email" class="w-full p-2 border border-gray-200 rounded px-4" name="useremail"
-                                        placeholder="E-mail ID" required="">
-                                </div>
-                                <div class="">
-                                    <label class="block pb-2 text-center">Message</label>
-                                    <div>
-                                        <textarea class="w-full p-2 border border-gray-200 rounded resize-none px-4" rows="4" name="message"
-                                            placeholder="Type your message here..." required=""></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="block px-6 py-2 mx-auto rounded-lg btn bg-teal-700 text-white hover:bg-teal-custom duration-300">
-                            Submit
-                        </button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
-
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="request" action="{{ route('request.send') }}" method="POST">
-                <div class="p-2">
-                    <div>
-                        <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-
-                            <div class="w-[97%]" role="alert">
-                                <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
-                            </div>
-
-                            <button type="button"
-                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="requestForm">&times;
-                            </button>
-
-                        </div>
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2">Name</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                    name="username" placeholder="Full Name"
-                                    required="" >
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2">Phone</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                    name="userphone" placeholder="Phone Number"
-                                    required="" >
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4  ">
-                                    <label class="block pb-2">Email
-                                        address</label>
-                                    <input type="email"
-                                        class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
-                                </div>
-                                <div class=" ">
-                                    <label for="message" class="block pb-2">Which
-                                        Test(s) do you wish to take?</label>
-                                    <div class="input-group">
-                                        <textarea
-                                            class="w-full p-2 border border-gray-200 rounded resize-none px-4"
-                                            rows="4" name="message" id="message"
-                                            placeholder="Type your message here..." required=""
-                                            ></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit"
-                            class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
     <!-- Modal -->
     <div id="popup"
     class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+        @csrf
                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                     <div class="w-[97%]" role="alert">
                         Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
@@ -1132,86 +1112,6 @@
 
                 <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
             </form>
-        </div>
-    </div>
-
-    <div id="material1"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
-                <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum1" class="text-lg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="material2"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
-                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum2" class="text-lg"></span>
-                </div>
-            </div>
         </div>
     </div>
 

@@ -23,73 +23,11 @@
         rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <style>
-        #header{
+        #header, #message{
             display: block;
-        }
-         .crsl-item {
-                min-width: 100%;
-                transition: transform 0.5s ease-in-out;
-            }
-    
-        #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2 {
-            z-index: 1;
-        }
-
-        @media (min-width: 768px) and (max-width: 800px) {
-
-            .count,
-            .count-label {
-                font-size: 1.5rem !important;
-            }
-        }
-
-        .popupQn {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -48%);
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            width: 95vw;
-            max-height: 95vh;
-            overflow-y: auto;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 5;
-            display: none;
-        }
-
-        .active1 {
-            display: block;
-        }
-
-        #directionsContainer {
-            white-space: pre-wrap;
-        }
-
-        @media (min-width: 640px) {
-            .popupQn {
-                width: 45vw;
-            }
-        }
-
-        @media (min-width: 641px) and (max-width:1000px) {
-            .popupQn {
-                width: 75vw;
-            }
         }
     </style>
-    <title>Best IELTS | GRE | TOEFL Coaching | Training in Hyderabad | First Academy</title>
+    <title>English Coaching at First Academy</title>
 </head>
 
 <body class="font-open">
@@ -270,7 +208,7 @@
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="https://firstacademy.in/grer"
+                                                <a href="/grer"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Solutions
                                                 </a>
@@ -297,7 +235,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="https://firstacademy.in/blog"
+                                <a href="/blog"
                                     class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                     Blog
                                 </a>
@@ -377,20 +315,19 @@
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
-
     <!-- hero -->  
     <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:py-8">
         <!--text-->
         <div class="items-center py-5 lg:flex lg:justify-between">
 
             <div class="">
-                <h1 class="mb-5 md:mt-4 sm:mt-4">English Language Training</h1>
+                <h1 class="mb-5 text-4xl font-bold md:mt-4 sm:mt-4">English Language Training</h1>
               <p class="w-lg-80">
                 Learn English in the most simple of ways. Learn it like you
                 learn your mother tongue. Observe, listen, absorb, improve. No
                 long, and boring grammar sessions. Just plain language.
               </p>
-              <p class="p-3 text-white rounded-lg bg-teal-custom border-left border-dark w-lg-50">
+              <p class="p-3 px-6 my-4 text-white rounded-lg w-fit bg-teal-custom border-left border-dark w-lg-50">
                 Grammar is boring.
                 <span class="font-semibold text-danger">We agree!</span>
               </p>
@@ -415,14 +352,15 @@
                   Learn English. Not boring grammar!
                 </h3>
               </div>
-              <div class="flex my-0 space-x-0 sm:space-x-4 lg:mx-auto">
+              <div class="flex my-2 space-x-2 sm:space-x-4 lg:me-auto">
+                
+                <a href="#" class="block w-40 px-2 py-3 mt-2 font-semibold text-center duration-200 ease-in transform bg-yellow-500 rounded-full text-dark sm:p-3 hover:bg-yellow-400 sm:w-60 md:w-40 lg:w-60" target="#demo_class" aria-label="try test">
+                    Demo Class
+                </a>
                 <button class="block w-40 px-2 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-full sm:p-3 lg:me-0 bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session" data-popup="popup" fdprocessedid="3xk6g9">
                     FREE Test
                 </button>
             
-                <a href="#" class="text-dark block w-40 px-2 py-3 mt-2 font-semibold text-center duration-200 ease-in transform bg-yellow-500 rounded-full sm:p-3 lg:ml-[-20px] hover:bg-yellow-400 sm:w-60 md:w-40 lg:w-60" target="#demo_class" aria-label="try test">
-                    Demo Class
-                </a>
             </div>
             
             </div>
@@ -462,7 +400,7 @@
         <!--3 blocks-->
         <div class="grid grid-cols-6 my-4 mt-8 md:gap-16">
             <!--first-->
-            <a href="./gre.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+            <a href="./gre" class="col-span-6 sm:col-span-3 lg:col-span-2">
                 <div
                     class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
                     <img src="../assets/gre.gif" alt="gre" width="342px" height="245px">
@@ -472,7 +410,7 @@
             </a>
 
             <!--second-->
-            <a href="./oet.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+            <a href="./oet" class="col-span-6 sm:col-span-3 lg:col-span-2">
                 <div
                     class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
                     <img src="../assets/oet.gif" alt="oet" width="342px" height="245px">
@@ -482,7 +420,7 @@
             </a>
 
             <!--third-->
-            <a href="./ielts.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+            <a href="./ielts" class="col-span-6 sm:col-span-3 lg:col-span-2">
                 <div
                     class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
                     <img src="../assets/file_ielts.gif" alt="Ielts" width="342px" height="245px">
@@ -713,15 +651,13 @@
     </section>
 
     <div  class="bg-teal-100">
-        <div class="container py-5 text-center">
-          <div class="d-flex justify-content-center align-items-center">
+        <div class="max-w-screen-xl p-4 mx-auto text-center sm:px-16 sm:py-8">
             <img
               src="https://piofx.s3.ap-south-1.amazonaws.com/themes/53/file_confidential-2.svg"
-              class="img-fluid w-50 w-lg-20"
+              class=" w-[190px] block mx-auto"
             />
-          </div>
-          <h3 class="mt-3 text-teal-600">Authorised IELTS Registration Centre</h3>
-          <p class="text-dark">
+          <h3 class="my-2 mt-3 text-2xl font-semibold text-teal-600">Authorised IELTS Registration Centre</h3>
+          <p class="block mx-auto text-center text-dark">
             First Academy is an authorised registration centre for the IELTS test.
             This means, you can now register for your IELTS test right with us!
             There is no need to go to the bank to get a demand draft. There is no
@@ -731,11 +667,8 @@
           </p>
         </div>
       </div>
-    
-   
-    
-    <!-- Frequently Asked Questions -->
-    
+
+    <!-- Frequently Asked Questions --> 
     <section class="pb-2 bg-gray-50">
       <section class="max-w-screen-xl p-4 mx-auto sm:px-16">
           <h1 class="my-4 text-2xl font-semibold text-center md:text-4xl ">Frequently Asked Questions
@@ -756,10 +689,6 @@
                     to retake the test? Take a mock-test with us, or better still,
                     attend our stupendously informative sessions! 😀
                   </p>
-                  <button
-                      class="px-6 py-3 my-2 text-white duration-200 ease-in-out rounded shadow bg-teal-custom hover:bg-green-500"
-                      aria-label="attend session" data-popup="popup">Attend a Free Session</button>
-
               </div>
           </div>
 
@@ -777,9 +706,6 @@
                     alerts and an Online Results Service. Remember: You receive
                     only one copy of your TRF. So, keep it safe!
                   </p>
-                  <button
-                      class="px-6 py-3 my-2 text-white duration-200 ease-in-out rounded shadow bg-teal-custom hover:bg-green-500"
-                      aria-label="attend session" data-popup="popup">Attend a Free Session</button>
               </div>
           </div>
 
@@ -833,17 +759,6 @@
                     Speaking test may be on the same day or up to seven days
                     before or after the other tests.
                   </p>
-                  <a href="./downloads"
-                      class="flex px-6 py-3 my-4 text-white duration-200 ease-in-out rounded shadow bg-teal-custom hover:bg-green-500 w-fit group"
-                      aria-label="free resources">
-                      <span class="my-auto">Free Resources </span>
-
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                          stroke="currentColor"
-                          class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                      </svg>
-                  </a>
               </div>
           </div>
 
@@ -862,9 +777,11 @@
                     question about the test, we would love to answer it!
                   </p>
                   <p>Or, you could</p>
-                  <button
-                      class="px-6 py-3 my-2 text-white duration-200 ease-in-out rounded shadow bg-teal-custom hover:bg-green-500"
-                      aria-label="need" data-popup="talkForm">Tell Us What You Need!</button>
+                  <div class="justify-center mb-5 sm:flex">
+                    <button class="block px-10 py-3 mx-auto my-2 text-center duration-300 bg-pink-100 rounded-lg sm:inline md:my-0 sm:mx-2 md:mx-6 hover:bg-pink-200" data-popup="popup">Attend a Session</button>
+                    <button class="block px-10 py-3 mx-auto my-2 text-center duration-300 bg-blue-100 rounded-lg sm:inline md:my-0 sm:mx-2 md:mx-6 hover:bg-blue-200" data-popup="talkForm">Leave a Message</button>
+                    <button class="block px-10 py-3 mx-auto my-2 text-center duration-300 bg-pink-100 rounded-lg sm:inline md:my-0 sm:mx-2 md:mx-6 hover:bg-pink-200" data-popup="requestForm">Take a Free Test</button>
+                </div>
               </div>
           </div>
 
@@ -877,357 +794,352 @@
 
 
     <!-- footer -->
-
     <footer class="mb-10">
-      <!--attend drives-->
-      <div class="p-4 text-white" style="background-color: #363636;">
-          <div class="max-w-screen-xl mx-auto sm:px-16 sm:flex">
+        <!--attend drives-->
+        <div class="p-6 text-white" style="background-color: #363636;">
+            <div class="max-w-screen-xl mx-auto sm:px-16 sm:flex">
 
-              <div class="col-span-2 my-auto sm:col-span-1 sm-text-center">
-                  <h1 class="pb-2 text-2xl font-semibold text-white font-open md:text-4xl ">Take a free test!</h1>
-                  <p class="tracking-wide ">Try an evaluated test or attend a free session. Or do both!</p>
-              </div>
+                <div class="col-span-2 my-auto sm:col-span-1 sm-text-center">
+                    <h1 class="pb-4 text-2xl font-semibold md:text-4xl ">Take a free test!</h1>
+                    <p class="tracking-wide ">Try an evaluated test or attend a free session. Or do both!</p>
+                </div>
 
-              <div class="justify-center col-span-2 my-0 ml-auto text-center sm:col-span-1 btn">
-                  <button
-                      class="px-16 py-3 mx-2 mb-2 font-semibold text-teal-600 duration-200 ease-in transform bg-white rounded-full hover:-translate-y-2"
-                      aria-label="try">
-                      <a href="./free-ielts-test" class="text-teal-600">Try Now</a>
-                  </button>
-                  <button
-                      class="px-12 py-3 mx-2 my-2 font-semibold text-teal-600 duration-200 ease-in transform bg-white rounded-full hover:-translate-y-2"
-                      aria-label="view">
-                      <a href="./courses" class="text-teal-600">View Courses</a>
-                  </button>
+                <div class="justify-center col-span-2 my-4 ml-auto text-center sm:col-span-1 btn">
+                    <button
+                        class="px-16 py-4 mx-2 mb-2 font-semibold text-teal-600 duration-200 ease-in transform bg-white rounded-full hover:-translate-y-2"
+                        aria-label="try">
+                        <a href="./free-ielts-test">Try Now</a>
+                    </button>
+                    <button
+                        class="px-12 py-4 mx-2 my-2 font-semibold text-teal-600 duration-200 ease-in transform bg-white rounded-full hover:-translate-y-2"
+                        aria-label="view">
+                        <a href="./courses">View Courses</a>
+                    </button>
 
-              </div>
+                </div>
 
-          </div>
+            </div>
 
-      </div>
+        </div>
 
-      <!-- Bootstrap CSS -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <!--footer links-->
+        <section class="border-t border-gray-200" style="background-color: #2c2c2c; color: #fdfdfd;">
+            <div class="p-4 sm:px-0">
+                <div class="max-w-screen-xl mx-auto sm:px-[60px]">
+                    <div class="space-y-6">
+                        <div class="justify-between px-2 sm:px-4 lg:flex md:pt-4">
+                            <!--footer logo-->
+                            <div class="py-2 lg:w-1/4 md:p-0 d:mb-6">
+                                <div
+                                    class="sm:flex sm:space-x-4 md:space-x-12 lg:block lg:space-x-0 sm:items-center md:my-8 lg:my-0">
+                                    <img src="../assets/fa_dark_logo.png" width="180px" height="35px" alt="fa logo" />
+                                    <br>
+                                    <a href="#" class="mt-5 sm:mt-0 lg:mt-5 test-sm">
 
+                                        <div class="flex flex-row-2">
+                                            <div>
+                                                <svg xmlns="#" viewBox="0 0 20 20" fill="currentColor"
+                                                    class="w-5 h-5 mr-1 text-cyan-600">
+                                                    <path fill-rule="evenodd"
+                                                        d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
 
-      <!--footer links-->
-      <section class="border-t border-gray-200" style="background-color: #2c2c2c; color: #fdfdfd;">
-          <div class="p-4 sm:px-0">
-              <div class="max-w-screen-xl mx-auto sm:px-[60px]">
-                  <div class="space-y-6">
-                      <div class="justify-between px-0 sm:px-4 lg:flex md:pt-4">
-                          <!--footer logo-->
-                          <div class="py-2 lg:w-1/4 md:p-0 d:mb-6">
-                              <div class="sm:flex sm:space-x-4 md:space-x-12 lg:block lg:space-x-0 sm:items-center md:my-8 lg:my-0">
-                                  <img src="../assets/fa_dark_logo.png" width="180px" height="35px" alt="fa logo" />
-                                  <br>
-                                  <a href="#" class="mt-5 sm:mt-0 lg:mt-5 test-sm">
+                                            </div>
+                                            <div>
+                                                <p class="text-sm ">Ameerpet | Madhapur
+                                                    <br>
+                                                    Hyderabad, Telangana
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
 
-                                      <div class="flex flex-row-2">
-                                          <div>
-                                              <svg xmlns="#" viewBox="0 0 20 20"
-                                                  fill="currentColor" class="w-5 h-5 mr-1 text-cyan-600">
-                                                  <path fill-rule="evenodd"
-                                                      d="M9.69 18.933l.003.001C9.89 19.02 10 19 10 19s.11.02.308-.066l.002-.001.006-.003.018-.008a5.741 5.741 0 00.281-.14c.186-.096.446-.24.757-.433.62-.384 1.445-.966 2.274-1.765C15.302 14.988 17 12.493 17 9A7 7 0 103 9c0 3.492 1.698 5.988 3.355 7.584a13.731 13.731 0 002.273 1.765 11.842 11.842 0 00.976.544l.062.029.018.008.006.003zM10 11.25a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
-                                                      clip-rule="evenodd" />
-                                              </svg>
+                                    <div class="flex mt-3 sm:mt-0 lg:mt-3 test-sm">
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                fill="currentColor" class="w-6 h-4 text-cyan-600">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
 
-                                          </div>
-                                          <div>
-                                              <p class="text-sm text-white ">Ameerpet | Madhapur
-                                                  <br>
-                                                  Hyderabad, Telangana
-                                              </p>
-                                          </div>
-                                      </div>
-                                  </a>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm ">
+                                                +91 98 666 88 666
+                                                <br>
+                                                +91 99 666 666 33
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                  <div class="flex mt-3 sm:mt-0 lg:mt-3 test-sm">
-                                      <div>
-                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                                              fill="currentColor" class="w-6 h-4 text-cyan-600">
-                                              <path fill-rule="evenodd"
-                                                  d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
-                                                  clip-rule="evenodd" />
-                                          </svg>
+                            <!--links-->
+                            <div
+                                class="hidden grid-cols-2 mt-4 md:grid w-100 lg:w-3/4 gap-x-16 md:gap-4 md:grid-cols-4 place-content-between lg:mt-0">
+                                <div>
+                                    <h5 class="mb-4 text-lg font-bold ">About</h5>
+                                    <ul class="flex flex-col space-y-2 text-lg ">
+                                        <li class="mb-0 text-md"><a href="./team"
+                                                class="text-sm hover:text-emerald-500">Team</a></li>
+                                        <li class="mb-0 text-md"><a href="./reviews"
+                                                class="text-sm hover:text-emerald-500">Reviews</a></li>
+                                        <li class="mb-0 text-md"><a href="./about-us"
+                                                class="text-sm hover:text-emerald-500"> About Us</a></li>
+                                        <li class="mb-0 text-md"><a href="./contactus"
+                                                class="text-sm hover:text-emerald-500">
+                                                Contact Us </a></li>
+                                    </ul>
+                                </div>
 
-                                      </div>
-                                      <div>
-                                          <p class="text-sm ">
-                                              +91 98 666 88 666
-                                              <br>
-                                              +91 99 666 666 33
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                                <div class="mx-2 mb-4 sm:mx-12 md:mx-0">
+                                    <h5 class="mb-4 text-lg font-bold ">Flagship Courses</h5>
+                                    <div class="grid grid-cols-2 md:gap-x-4">
+                                        <ol class="col-span-2 text-lg md:col-span-1">
+                                            <li class="mb-0 text-md"><a href="./ielts"
+                                                    class="text-sm hover:text-emerald-500">IELTS</a></li>
+                                            <li class="my-1.5 text-md"><a href="./gre"
+                                                    class="text-sm hover:text-emerald-500">GRE</a></li>
+                                            <li class="my-1.5 text-md"><a href="./pte"
+                                                    class="text-sm hover:text-emerald-500"> PTE</a></li>
+                                            <li class="my-1.5 text-md"><a href="./oet"
+                                                    class="text-sm hover:text-emerald-500"> OET</a></li>
+                                        </ol>
+                                        <ol class="col-span-2 text-lg md:col-span-1">
+                                            <li class="mb-0 text-md"><a href="./sat"
+                                                    class="text-sm hover:text-emerald-500"> SAT</a></li>
+                                            <li class="mt-1.5 text-md"><a href="./det"
+                                                    class="text-sm hover:text-emerald-500"> DET</a></li>
+                                        </ol>
 
-                          <!--links-->
-                          <div class="hidden grid-cols-2 mt-2 md:grid w-100 lg:w-3/4 gap-x-16 md:gap-4 md:grid-cols-4 place-content-between lg:mt-0">
-                              <div>
-                                  <h5 class="mb-4 text-lg font-semibold text-white ">About</h5>
-                                  <ul class="flex flex-col space-y-2 text-lg ">
-                                      <li class="mb-0 text-md"><a href="./team"
-                                              class="text-sm text-white hover:text-emerald-500 ">Team</a></li>
-                                      <li class="mb-0 text-md"><a href="./reviews"
-                                              class="text-sm text-white hover:text-emerald-500 ">Reviews</a></li>
-                                      <li class="mb-0 text-md"><a href="./about-us"
-                                              class="text-sm text-white hover:text-emerald-500 "> About Us</a></li>
-                                      <li class="mb-0 text-md"><a href="./contactus"
-                                              class="text-sm text-white hover:text-emerald-500 ">
-                                              Contact Us </a></li>
-                                  </ul>
-                              </div>
+                                    </div>
+                                </div>
 
-                              <div class="mx-2 mb-4 sm:mx-12 md:mx-0">
-                                  <h5 class="mb-4 text-lg font-semibold text-white ">Flagship Courses</h5>
-                                  <div class="grid grid-cols-2 md:gap-x-4">
-                                      <ol class="col-span-2 text-lg md:col-span-1">
-                                          <li class="mb-0 text-md"><a href="./ielts"
-                                                  class="text-sm text-white hover:text-emerald-500">IELTS</a></li>
-                                          <li class="my-1.5 text-md"><a href="./gre"
-                                                  class="text-sm text-white hover:text-emerald-500">GRE</a></li>
-                                          <li class="my-1.5 text-md"><a href="./pte"
-                                                  class="text-sm text-white hover:text-emerald-500"> PTE</a></li>
-                                          <li class="my-1.5 text-md"><a href="./oet"
-                                                  class="text-sm text-white hover:text-emerald-500"> OET</a></li>
-                                      </ol>
-                                      <ol class="col-span-2 text-lg md:col-span-1">
-                                          <li class="mb-0 text-md"><a href="./sat"
-                                                  class="text-sm text-white hover:text-emerald-500"> SAT</a></li>
-                                          <li class="mt-1.5 text-md"><a href="./det"
-                                                  class="text-sm text-white hover:text-emerald-500"> DET</a></li>
-                                      </ol>
+                                <div>
+                                    <h5 class="mb-4 text-lg font-bold ">Services</h5>
+                                    <ul class="flex flex-col space-y-2 text-lg ">
+                                        <li class=" text-md"><a href="./ug" class="text-sm hover:text-emerald-500">UG
+                                                Admissions</a></li>
+                                        <li class="my-2 text-md"><a href="./masters"
+                                                class="text-sm hover:text-emerald-500">Masters</a>
+                                        </li>
+                                        <li class="my-2 text-md"><a href="./downloads"
+                                                class="text-sm hover:text-emerald-500"> Downloads</a></li>
+                                    </ul>
+                                </div>
 
-                                  </div>
-                              </div>
+                                <div class="mx-2 sm:mx-12 md:mx-0">
+                                    <h5 class="mb-4 text-lg font-bold ">Material</h5>
+                                    <ul class="flex flex-col space-y-2 text-lg ">
+                                        <li class=" text-md"><a href="https://prep.firstacademy.in"
+                                                class="text-sm hover:text-emerald-500">Test Portal</a>
+                                        </li>
+                                        <li class="my-2 text-md"><a href="./reading"
+                                                class="text-sm hover:text-emerald-500">IELTS Big
+                                                Book</a></li>
+                                        <li class="my-2 text-md"><a href="/grer"
+                                                class="text-sm hover:text-emerald-500"> GRE
+                                                Reading</a></li>
+                                        <li class="my-2 text-md"><a href="/blog"
+                                                class="text-sm hover:text-emerald-500"> Blog</a></li>
 
-                              <div>
-                                  <h5 class="mb-4 text-lg font-semibold text-white ">Services</h5>
-                                  <ul class="flex flex-col space-y-2 text-lg ">
-                                      <li class=" text-md"><a href="./ug"
-                                              class="text-sm text-white hover:text-emerald-500">UG
-                                              Admissions</a></li>
-                                      <li class="my-2 text-md"><a href="./masters"
-                                              class="text-sm text-white hover:text-emerald-500">Masters</a>
-                                      </li>
-                                      <li class="my-2 text-md"><a href="./downloads"
-                                              class="text-sm text-white hover:text-emerald-500"> Downloads</a></li>
-                                  </ul>
-                              </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                              <div class="mx-2 sm:mx-12 md:mx-0 ">
-                                  <h5 class="mb-4 text-lg font-semibold text-white ">Material</h5>
-                                  <ul class="flex flex-col space-y-2 text-lg ">
-                                      <li class=" text-md"><a href="https://prep.firstacademy.in"
-                                              class="text-sm text-white hover:text-emerald-500">Test Portal</a>
-                                      </li>
-                                      <li class="my-2 text-md"><a href="./reading"
-                                              class="text-sm text-white hover:text-emerald-500">IELTS Big
-                                              Book</a></li>
-                                      <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
-                                              class="text-sm text-white hover:text-emerald-500"> GRE
-                                              Reading</a></li>
-                                      <li class="my-2 text-md"><a href="https://firstacademy.in/blog"
-                                              class="text-sm text-white hover:text-emerald-500"> Blog</a></li>
+            <!--footer accordion  -->
+            <section class="block max-w-screen-xl px-2 py-2 mx-auto mb-4 md:hidden sm:px-16 md:mb-0">
+                <!--first-->
+                <div class="mb-2">
+                    <button
+                        class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
+                        <div> About</div>
+                        <div class="text-xl font-bold icon">+</div>
+                    </button>
+                    <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
+                        <ul class="flex flex-col space-y-1 text-lg ps-8 ">
+                            <li class="text-md"><a href="./team" class="text-sm hover:text-emerald-500">Team</a>
+                            </li>
+                            <li class="my-2 text-md"><a href="./reviews"
+                                    class="text-sm hover:text-emerald-500">Reviews</a></li>
+                            <li class="my-2 text-md"><a href="./about-us" class="text-sm hover:text-emerald-500">
+                                    About Us</a></li>
+                            <li class="my-2 text-md"><a href="./contactus" class="text-sm hover:text-emerald-500">
+                                    Contact Us </a></li>
+                        </ul>
+                    </div>
+                </div>
 
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+                <!--second-->
+                <div class="mb-2">
+                    <button
+                        class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
+                        <div>Flagship Courses</div>
+                        <div class="text-xl font-bold icon">+</div>
+                    </button>
+                    <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
+                        <div class="grid grid-cols-2 md:gap-x-4 ps-8">
+                            <ol class="col-span-2 text-lg md:col-span-1">
+                                <li class="mb-0 text-md"><a href="./ielts"
+                                        class="text-sm hover:text-emerald-500">IELTS</a></li>
+                                <li class="my-1.5 text-md"><a href="./gre"
+                                        class="text-sm hover:text-emerald-500">GRE</a></li>
+                                <li class="my-1.5 text-md"><a href="./pte" class="text-sm hover:text-emerald-500">
+                                        PTE</a></li>
+                                <li class="my-1.5 text-md"><a href="./oet" class="text-sm hover:text-emerald-500">
+                                        OET</a></li>
+                                <li class="mb-0 text-md"><a href="./sat" class="text-sm hover:text-emerald-500">
+                                        SAT</a></li>
+                                <li class="mt-1.5 text-md"><a href="./det" class="text-sm hover:text-emerald-500">
+                                        DET</a></li>
+                            </ol>
 
-          <!--footer accordion  -->
-          <section class="block max-w-screen-xl px-2 py-2 mx-auto md:hidden sm:px-16 md:mb-0">
-              <!--first-->
-              <div class="mb-2">
-                  <button
-                      class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
-                      <div> About</div>
-                      <div class="text-xl font-bold icon">+</div>
-                  </button>
-                  <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
-                      <ul class="flex flex-col space-y-1 text-lg ps-8 ">
-                          <li class="text-md"><a href="./team" class="text-sm hover:text-emerald-500">Team</a>
-                          </li>
-                          <li class="my-2 text-md"><a href="./reviews"
-                                  class="text-sm hover:text-emerald-500">Reviews</a></li>
-                          <li class="my-2 text-md"><a href="./about-us" class="text-sm hover:text-emerald-500">
-                                  About Us</a></li>
-                          <li class="my-2 text-md"><a href="./contactus" class="text-sm hover:text-emerald-500">
-                                  Contact Us </a></li>
-                      </ul>
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
 
-              <!--second-->
-              <div class="mb-2">
-                  <button
-                      class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
-                      <div>Flagship Courses</div>
-                      <div class="text-xl font-bold icon">+</div>
-                  </button>
-                  <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
-                      <div class="grid grid-cols-2 md:gap-x-4 ps-8">
-                          <ol class="col-span-2 text-lg md:col-span-1">
-                              <li class="mb-0 text-md"><a href="./ielts"
-                                      class="text-sm hover:text-emerald-500">IELTS</a></li>
-                              <li class="my-1.5 text-md"><a href="./gre"
-                                      class="text-sm hover:text-emerald-500">GRE</a></li>
-                              <li class="my-1.5 text-md"><a href="./pte" class="text-sm hover:text-emerald-500">
-                                      PTE</a></li>
-                              <li class="my-1.5 text-md"><a href="./oet" class="text-sm hover:text-emerald-500">
-                                      OET</a></li>
-                              <li class="mb-0 text-md"><a href="./sat" class="text-sm hover:text-emerald-500">
-                                      SAT</a></li>
-                              <li class="mt-1.5 text-md"><a href="./det" class="text-sm hover:text-emerald-500">
-                                      DET</a></li>
-                          </ol>
+                <!--third-->
+                <div class="mb-2">
+                    <button
+                        class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
+                        <div>Services</div>
+                        <div class="text-xl font-bold icon">+</div>
+                    </button>
+                    <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
+                        <ul class="flex flex-col space-y-1 text-lg ps-8 ">
+                            <li class=" text-md"><a href="./ug" class="text-sm hover:text-emerald-500">UG
+                                    Admissions</a></li>
+                            <li class="my-2 text-md"><a href="./masters"
+                                    class="text-sm hover:text-emerald-500">Masters</a>
+                            </li>
+                            <li class="my-2 text-md"><a href="./downloads" class="text-sm hover:text-emerald-500">
+                                    Downloads</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-                      </div>
-                  </div>
-              </div>
+                <!--fourth-->
+                <div class="mb-2">
+                    <button
+                        class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
+                        <div>Material</div>
+                        <div class="text-xl font-bold icon">+</div>
+                    </button>
+                    <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
+                        <ul class="flex flex-col space-y-1 text-lg ps-8 ">
+                            <li class=" text-md"><a href="#" class="text-sm hover:text-emerald-500">Test Portal</a>
+                            </li>
+                            <li class="my-2 text-md"><a href="./reading" class="text-sm hover:text-emerald-500">IELTS
+                                    Big
+                                    Book</a></li>
+                            <li class="my-2 text-md"><a href="/grer"
+                                    class="text-sm hover:text-emerald-500"> GRE
+                                    Reading</a></li>
+                            <li class="my-2 text-md"><a href="/blog" class=""> Blog</a></li>
 
-              <!--third-->
-              <div class="mb-2">
-                  <button
-                      class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
-                      <div>Services</div>
-                      <div class="text-xl font-bold icon">+</div>
-                  </button>
-                  <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
-                      <ul class="flex flex-col space-y-1 text-lg ps-8 ">
-                          <li class=" text-md"><a href="./ug" class="text-sm hover:text-emerald-500">UG
-                                  Admissions</a></li>
-                          <li class="my-2 text-md"><a href="./masters"
-                                  class="text-sm hover:text-emerald-500">Masters</a>
-                          </li>
-                          <li class="my-2 text-md"><a href="./downloads" class="text-sm hover:text-emerald-500">
-                                  Downloads</a></li>
-                      </ul>
-                  </div>
-              </div>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-              <!--fourth-->
-              <div class="mb-2">
-                  <button
-                      class="flex justify-between w-full px-5 font-semibold text-left duration-300 ease-in-out rounded-t outline-none cursor-pointer accordion ">
-                      <div>Material</div>
-                      <div class="text-xl font-bold icon">+</div>
-                  </button>
-                  <div class="hidden p-1 overflow-hidden duration-300 ease-in-out panel transition-height">
-                      <ul class="flex flex-col space-y-1 text-lg ps-8 ">
-                          <li class=" text-md"><a href="#" class="text-sm hover:text-emerald-500">Test Portal</a>
-                          </li>
-                          <li class="my-2 text-md"><a href="./reading"
-                                  class="text-sm hover:text-emerald-500">IELTS Big
-                                  Book</a></li>
-                          <li class="my-2 text-md"><a href="https://firstacademy.in/grer"
-                                  class="text-sm hover:text-emerald-500"> GRE
-                                  Reading</a></li>
-                          <li class="my-2 text-md"><a href="https://firstacademy.in/blog"
-                                  class=""> Blog</a></li>
+            <div class="max-w-screen-xl px-4 mx-auto sm:px-16 md:mb-0">
+                <hr>
+            </div>
+            <!--links and policy-->
+            <div class="justify-center max-w-screen-xl px-4 mx-auto mt-4 lg:justify-between lg:flex sm:px-16">
+                <div
+                    class="flex flex-wrap justify-center col-span-6 pb-4 my-2 my-auto space-x-4 lg:pb-0 place-content-start sm:gap-4 lg:justify-start">
+                    <div class="col-span-2 text-start">
+                        <a href="./policy" class="text-sm duration-200 ease-in hover:text-gray-300">Privacy &
+                            Policy</a>
+                    </div>
+                    <div class="col-span-2">
+                        <a href="./terms" class="text-sm duration-200 ease-in hover:text-gray-300">Terms &
+                            Services</a>
+                    </div>
+                </div>
 
-                      </ul>
-                  </div>
-              </div>
-          </section>
+                <div
+                    class="flex flex-wrap justify-center col-span-6 my-2 my-auto space-x-4 lg:space-x-2 place-content-end sm:gap-4 lg:justify-end">
+                    <a href="https://www.facebook.com/firstacademy.in/" target="_blank" aria-label="facebook"
+                        class="duration-200 ease-in-out hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/firstacademy.in/" target="_blank" aria-label="instagram"
+                        class="duration-200 ease-in-out ms-2 hover:scale-105">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="https://t.me/firstacademy" target="_blank" aria-label="Telegram"
+                        class="duration-200 ease-in-out ms-2 hover:scale-105">
+                        <svg style="color: white" xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="currentColor"
+                            class="bi bi-telegram" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
+                                fill="white"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/c/FirstacademyIn/featured" target="_blank" aria-label="youtube"
+                        class="duration-200 ease-in-out ms-2 hover:scale-105">
+                        <svg style="color: white" xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="currentColor"
+                            class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path
+                                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+                                fill="white"></path>
+                        </svg>
+                    </a>
+                </div>
 
-          <div class="max-w-screen-xl px-4 mx-auto bg-white sm:px-16 md:mb-0">
-              <hr>
-          </div>
-          <!--links and policy-->
-          <div class="justify-center max-w-screen-xl px-4 mx-auto mt-0 lg:justify-between lg:flex sm:px-16">
-              <div
-                  class="flex flex-wrap justify-center col-span-6 pb-4 my-auto space-x-4 lg:pb-0 place-content-start sm:gap-4 lg:justify-start">
-                  <div class="col-span-2 text-start">
-                      <a href="./policy" class="text-sm text-white duration-200 ease-in hover:text-gray-300">Privacy &
-                          Policy</a>
-                  </div>
-                  <div class="col-span-2">
-                      <a href="./terms" class="text-sm text-white duration-200 ease-in hover:text-gray-300">Terms &
-                          Services</a>
-                  </div>
-              </div>
+            </div>
 
-              <div
-                  class="flex flex-wrap justify-center col-span-6 my-2 my-auto space-x-4 lg:space-x-2 place-content-end sm:gap-4 lg:justify-end">
-                  <a href="https://www.facebook.com/firstacademy.in/" target="_blank" aria-label="facebook"
-                      class="duration-200 ease-in-out hover:scale-105">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512">
-                          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                          <path
-                              d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
-                              fill="white" />
-                      </svg>
-                  </a>
-                  <a href="https://www.instagram.com/firstacademy.in/" target="_blank" aria-label="instagram"
-                      class="duration-200 ease-in-out ms-2 hover:scale-105">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
-                          <path
-                              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                              fill="white" />
-                      </svg>
-                  </a>
-                  <a href="https://t.me/firstacademy" target="_blank" aria-label="Telegram"
-                      class="duration-200 ease-in-out ms-2 hover:scale-105">
-                      <svg style="color: white" xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="currentColor"
-                          class="bi bi-telegram" viewBox="0 0 16 16">
-                          <path
-                              d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
-                              fill="white"></path>
-                      </svg>
-                  </a>
-                  <a href="https://www.youtube.com/c/FirstacademyIn/featured" target="_blank" aria-label="youtube"
-                      class="duration-200 ease-in-out ms-2 hover:scale-105">
-                      <svg style="color: white" xmlns="http://www.w3.org/2000/svg" height="1.5em" fill="currentColor"
-                          class="bi bi-youtube" viewBox="0 0 16 16">
-                          <path
-                              d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
-                              fill="white"></path>
-                      </svg>
-                  </a>
-              </div>
+            <!--info-->
+            <p class="mt-4 mb-2 text-sm text-center ">
+                © 2021 First Academy. All rights reserved.
+            </p>
+            <p class="max-w-screen-xl px-4 mx-auto text-sm text-center sm:px-16">When you visit or interact with our
+                sites, services or
+                tools, we or our authorised service providers may use cookies for storing information to help provide
+                you with a better, faster and safer experience and for marketing purposes.</p>
+        </section>
 
-          </div>
+    </footer>
 
-          <!--info-->
-          <p class="mt-0 mb-2 text-sm text-center ">
-              © 2021 First Academy. All rights reserved.
-          </p>
-          <p class="max-w-screen-xl px-4 mx-auto mb-6 text-sm text-center sm:px-16">When you visit or interact with our sites, services or
-              tools, we or our authorised service providers may use cookies for storing information to help provide
-              you with a better, <br> faster and safer experience and for marketing purposes.</p>
-      </section>
-
-  </footer>
     <!--Messages-->
-    <div class="fixed bottom-0 z-10 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
-      <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-          stroke="currentColor" class="w-4 h-4 text-white">
-          <path stroke-linecap="round" stroke-linejoin="round"
-          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-          </svg>
-          
-          <span class="text-sm font-bold text-white">Call</span>
-      </a>
+    <div id="message" class="fixed bottom-0 z-10 w-full py-1 space-x-8 bg-teal-custom">
+        <div class="flex items-center justify-center " >
+        <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+            stroke="currentColor" class="w-4 h-4 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+            
+            <span class="text-sm font-bold text-white">Call</span>
+        </a>
 
-      <div>
-          <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
-      </div>
+        <div>
+            <h1 class="hidden mx-4 text-white md:block">We would love to hear from you!</h1>
+        </div>
 
-      <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
-          <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
-          <span class="text-sm font-bold text-white">WhatsApp</span>
-      </a>
-  </div>
+        <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
+            <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
+            <span class="text-sm font-bold text-white">WhatsApp</span>
+        </a>
+        </div>
+    </div>
   
   <button id="scrollToTop"
       class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">

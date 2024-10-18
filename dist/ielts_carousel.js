@@ -32,6 +32,11 @@ showSlide(currentSlide);
 
 setInterval(nextSlide, slideInterval);
 
+document.querySelectorAll('video').forEach((video) => {
+    video.setAttribute('playsinline', 'true');
+  });
+  
+
 // material carousel
 document.addEventListener('DOMContentLoaded', function () {
     function initCarousel(carouselId, prevBtnId, nextBtnId, slideNumberId) {
@@ -72,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Initialize with the first slide
         showSlide(currentIndex);
     }
-    initCarousel('carousel', 'pBtn', 'nxtBtn', 'slideNum');
+
     initCarousel('carousel1', 'pBtn1', 'nxtBtn1', 'slideNum1');
     initCarousel('carousel2', 'pBtn2', 'nxtBtn2', 'slideNum2');
 });
