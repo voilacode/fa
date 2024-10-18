@@ -319,7 +319,7 @@
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 
-    <main class="max-w-screen-xl mt-12 px-4 py-2 mx-auto sm:px-[60px]">
+    <main class="max-w-screen-xl px-4 py-2 mx-auto sm:px-[60px]">
         <div class="flex flex-col lg:flex-row mt-16  space-y-12 lg:space-y-0 lg:space-x-16">
           <div class="w-full lg:w-1/2">
             <h1 class="font-noto text-5xl mb-6">Meet Us</h1>
@@ -334,8 +334,8 @@
               allowfullscreen="">
             </iframe>
       
-            <div class="flex flex-col md:flex-row">
-              <div class="w-full md:w-1/2 mb-12 md:mb-0">
+            <div class="sm:flex">
+              <div class="w-full sm:w-1/2 mb-12 sm:mb-0">
                 <h3 class="font-noto text-2xl mb-4">Ameerpet</h3>
                 <div class="flex items-start mb-4">
                   <svg class="mt-1 mr-2 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="20">
@@ -356,7 +356,7 @@
                   <p class="font-open">info@firstacademy.in</p>
                 </div>
               </div>
-              <div class="w-full md:w-1/2">
+              <div class="w-full sm:w-1/2">
                 <h3 class="font-noto text-2xl mb-4">Madhapur</h3>
                 <div class="flex items-start mb-4">
                   <svg class="mt-1 mr-2 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40">
@@ -381,92 +381,64 @@
           </div>
       
           <div class="col-12 col-lg-6">
-            <div class="ml-lg-5">
-              <form class="js-validate card shadow-lg mb-4 p-6 rounded-lg" action="/admin/contact" data-otp="1" novalidate>
-                <div class="card-header border-0 bg-light text-left py-4">
-                  <h1 class="mb-2 font-noto text-teal-800 text-4xl p-6 font-semibold">Leave a Message</h1>
-                </div>
-                <div class="card-body p-4">
-                  <div class="alert alert-soft-primary alert_block hidden">
-                    <div class="alert_message"></div>
-                  </div>
-                  
-                  <!-- OTP Block -->
-                  <div class="otp_block hidden">
-                    <h5 class="text-lg font-medium">OTP Verification</h5>
-                    <input type="text" class="form-control border rounded-md p-2 w-full mt-2 otp_input" placeholder="Enter the 4 digit OTP sent to your phone" data-otp="" />
-                    <small class="form-text text-muted">Kindly wait for 5 secs before retrying.</small>
-                    <div class="alert alert-soft-success otp_message mt-2 hidden" role="alert">
-                      Invalid OTP. Kindly refresh the page and retry.
+            <div class="p-8 rounded-lg shadow-2xl mb-8 lg:mb-0">
+             
+                <form id="talk" action="{{ route('talk.send') }}" method="POST">
+                    @csrf
+                    <div class="p-2">
+                        <div>
+                            <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                                <div class="w-[97%]" role="alert">
+                                    Do enter the country code of your phone number.<br> Ex: <kbd class="bg-black text-white p-1 rounded">+91</kbd> for India,
+                                    <kbd class="bg-black text-white p-1 rounded">+1</kbd> for the USA.
+                                </div>
+                                <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                                    data-popup-close="talkForm">&times;</button>
+                            </div>
+    
+                            <h1 class="text-center font-semibold my-2">Talk to Us!</h1>
+    
+                            <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                                <div class="w-full col-span-1">
+                                    <label class="block pb-2 text-center input-label">Name</label>
+                                    <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="username" placeholder="Full Name"
+                                        required="">
+                                </div>
+                                <div class="w-full col-span-1">
+                                    <label class="block pb-2 text-center input-label">Phone</label>
+                                    <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4" name="userphone" placeholder="Phone Number"
+                                        required="">
+                                </div>
+                                <div class="col-span-2 my-2">
+                                    <div class="mb-4 ">
+                                        <label class="block pb-2 text-center">Email address</label>
+                                        <input type="email" class="w-full p-2 border border-gray-200 rounded px-4" name="useremail"
+                                            placeholder="E-mail ID" required="">
+                                    </div>
+                                    <div class="">
+                                        <label class="block pb-2 text-center">Message</label>
+                                        <div>
+                                            <textarea class="w-full p-2 border border-gray-200 rounded resize-none px-4" rows="4" name="message"
+                                                placeholder="Type your message here..." required=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <button type="submit" class="block px-6 py-2 mx-auto rounded-lg btn bg-teal-700 text-white hover:bg-teal-custom duration-300">
+                                Submit
+                            </button>
+                        </div>
                     </div>
-                    <button type="button" class="btn btn-primary otp_button mt-3 bg-teal-600 text-white px-4 py-2 rounded-md">Verify</button>
-                    <div class="spinner-border ml-2 mt-3 hidden" role="status">
-                      <span class="sr-only">Loading...</span>
-                    </div>
-                  </div>
-                  
-                  <!-- Contact Block -->
-                  <div class="contact_block">
-                    <div class="alert alert-soft-success text-left text-teal-800 bg-teal-100 p-4 rounded-lg" role="alert">
-                      Do include country code with your phone <br> number. Eg: <kbd class="text-white bg-black p-1 rounded">+91</kbd> for India and <kbd class="text-white bg-black p-1 rounded">+1</kbd> for the US.
-                    </div>
-                    <div class="grid grid-cols-1 pt-4 gap-4 sm:grid-cols-2">
-                      <div class="form-group">
-                        <input type="text" class="form-control  border-teal-300 rounded-md p-3 w-full" name="name" id="firstNameExample1" placeholder="Your Full Name" aria-label="Nataly" required data-msg="Please enter your name" />
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class="form-control border rounded-md p-3 w-full" name="phone" id="lastNameExample1" placeholder="Phone Number" aria-label="Gaga" required data-msg="Please enter phone number" />
-                      </div>
-                      <div class="form-group col-span-6">
-                        <input type="email" class="form-control border hover:border-teal-300 rounded-md p-3 w-full" name="email" id="emailAddressExample1" placeholder="E-mail ID" aria-label="alex@pixeel.com" required data-msg="Please enter a valid email address" />
-                      </div>
-                      <div class="form-group col-span-6">
-                        <textarea class="form-control border rounded-md p-3 w-full" rows="4" name="message" id="message" placeholder="Type your message here..." aria-label="Hi there, I would like to ..." required data-msg="Please enter a reason."></textarea>
-                      </div>
-                    </div>
-                    <button type="button" class="btn btn-block transition-3d-hover contact_button mt-4 w-full bg-teal-600 text-white px-4 py-4 rounded-md p-4">
-                      Submit
-                    </button>
-                  </div>
-                </div>
-              </form>
-          
-              <!-- Modal for OTP Verification -->
-              <div class="modal fade contact_modal hidden" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">OTP Verification</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <input type="text" class="form-control border rounded-md p-2 w-full otp_input" placeholder="Enter the 4 digit OTP sent to your phone" data-otp="" />
-                      <small class="form-text text-muted">Kindly wait for 5 secs before retrying.</small>
-                      <div class="alert alert-soft-success otp_message mt-2 hidden" role="alert">
-                        Invalid OTP. Kindly refresh the page and retry.
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary otp_button bg-teal-600 text-white px-4 py-2 rounded-md">Verify</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          
+                </form>
+
               <div class="text-center">
                 <p class="small text-gray-600">We will get back to you soon!</p>
               </div>
             </div>
           </div>
-          
-
-
         </div>
       </main>
-      
-      
 
     <footer class="mb-10">
         <!--attend drives-->
@@ -879,231 +851,6 @@
         </div>
     </div>
 
-    <div id="requestForm" class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50 z-50">
-
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
-            <form id="request" action="{{ route('request.send') }}" method="POST">
-                @csrf
-                <div class="p-2">
-                    <div>
-                        <div class="flex justify-between items-center p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-
-                            <div class="w-[97%]" role="alert">
-                                <h1 class="text-2xl font-semibold my-auto">Request Free Test</h1> 
-                            </div>
-
-                            <button type="button"
-                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="requestForm">&times;
-                            </button>
-
-                        </div>
-                        <div class="bg-teal-100 p-4 rounded my-4 text-teal-500">
-                            Please include the country code with the number.
-                            <br> (Eg: <span class="bg-black text-white p-1 rounded">+91</span>  for India; <span class="bg-black text-white p-1 rounded">+65</span> For Singapore).
-                        </div>
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2">Name</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                    name="username" placeholder="Full Name"
-                                    required="" >
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2">Phone</label>
-                                <input type="text" class="p-2 border border-gray-200 rounded w-100 px-4"
-                                    name="userphone" placeholder="Phone Number"
-                                    required="" >
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4  ">
-                                    <label class="block pb-2">Email
-                                        address</label>
-                                    <input type="email"
-                                        class="w-full p-2 border border-gray-200 rounded px-4" name="useremail" placeholder="E-mail ID" required="" class="w-100">
-                                </div>
-                                <div class=" ">
-                                    <label for="message" class="block pb-2">Which
-                                        Test(s) do you wish to take?</label>
-                                    <div class="input-group">
-                                        <textarea
-                                            class="w-full p-2 border border-gray-200 rounded resize-none px-4"
-                                            rows="4" name="message" id="message"
-                                            placeholder="Type your message here..." required=""
-                                            ></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit"
-                            class="block px-6 py-2 mx-auto rounded-lg btn btn-block transition-3d-hover contact_button bg-teal-700 text-white hover:bg-teal-custom duration-300">Submit</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="popup"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
-        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
-        @csrf
-                <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
-                    <div class="w-[97%]" role="alert">
-                        Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
-                        USA.
-                    </div>
-                    <button type="button"
-                        class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                        data-popup-close="popup">&times;</button>
-                </div>
-
-                <h3 class="text-teal-900">Where would you want to attend a demo</h3>
-                <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
-                    <div class="flex items-center">
-                        <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
-                        <label class="ml-2" for="Ameerpet">Ameerpet</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="" type="radio" name="location" id="Madhapur" value="Madhapur">
-                        <label class="ml-2" for="Madhapur">Madhapur</label>
-                    </div>
-                    <div class="flex items-center">
-                        <input class="" type="radio" name="location" id="Online" value="Online">
-                        <label class="ml-2" for="Online">Online</label>
-                    </div>
-                </div>
-
-                <h3 class="text-teal-900">Which session would you like to try?</h3>
-                <div class="bg-gray-100">
-                    <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="gre" value="GRE">
-                            <label class="ml-2" for="gre">GRE</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="ielts" value="IELTS">
-                            <label class="ml-2" for="ielts">IELTS</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
-                            <label class="ml-2" for="toefl">TOEFL</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="pte" value="PTE">
-                            <label class="ml-2" for="pte">PTE</label>
-                        </div>
-                    </div>
-                    <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="oet" value="OET">
-                            <label class="ml-2" for="oet">OET</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="sat" value="SAT">
-                            <label class="ml-2" for="sat">SAT</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input class="" type="checkbox" name="courses[]" id="others" value="OTHERS">
-                            <label class="ml-2" for="others">OTHERS</label>
-                        </div>
-                    </div>
-                </div>
-
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Name"
-                    name="username" required>
-                <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
-                    name="useremail" required>
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
-                    placeholder="Phone Number" name="userphone" required>
-
-                <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <div id="material1"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
-                <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
-                    </div>
-                </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum1" class="text-lg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="material2"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
-        <div class="popup-content">
-            <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
-                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
-                    <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
-                    <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
-                </button>
-                <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                    <div class="crsl-item">
-                        <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
-                    </div>
-                </div>
-                <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
-                    <span id="slideNum2" class="text-lg"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div id="successPopup"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
         <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
@@ -1133,10 +880,7 @@
     </div>
 
     <script src="../dist/voilaui.js"></script>
-    <script src="../dist/ielts_carousel.js"></script>
-    <script src="../dist/lite-yt-embed.js"></script>
     <script src="../dist/token.js"></script>
-    <script src="../dist/quiz.js"></script>
 
 </body>
 

@@ -3847,6 +3847,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
     margin-top: 1.75rem;
   }
 
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -3929,6 +3933,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .sm\:w-\[600px\] {
     width: 600px;
+  }
+
+  .sm\:w-1\/2 {
+    width: 50%;
   }
 
   .sm\:-translate-y-40 {
