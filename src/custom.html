@@ -21,15 +21,20 @@
         href="https://fonts.googleapis.com/css2?family=Afacad&family=League+Spartan:wght@900&family=Playfair+Display&display=swap"
         rel="stylesheet">
     <title>Corporate Training by First Academy</title>
+    <style>
+        #header, #message{
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="bg-white">
-    <header class="fixed z-20 w-screen border-b border-gray-200" id="header">
+    <header class="fixed z-10 w-screen border-b border-gray-200" id="header">
         <nav class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
             <div class="items-center justify-between max-w-screen-xl px-4 py-2 mx-auto lg:flex sm:px-[60px] ">
                 <div class="flex justify-between">
                     <div>
-                        <a href="/" class="inline-flex py-2 text-xl font-semibold tracking-wider uppercase me-auto">
+                        <a href="/" class="inline-flex py-2 text-xl font-bold tracking-wider uppercase me-auto">
                             <img src="https://prep.firstacademy.in/images/logo.png" alt="logo" width="180px">
                         </a>
                     </div>
@@ -201,7 +206,7 @@
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="https://firstacademy.in/grer"
+                                                <a href="/grer"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Solutions
                                                 </a>
@@ -228,7 +233,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="https://firstacademy.in/blog"
+                                <a href="/blog"
                                     class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                     Blog
                                 </a>
@@ -322,28 +327,30 @@
 
 <section class="max-w-screen-xl px-4 py-10 mx-auto sm:px-16">
     <div class="flex flex-col justify-center max-w-screen-xl mx-auto">
-        <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-8">
+        <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-6">
             <!-- First card with teal theme -->
-            <div class="bg-teal-400 rounded-lg flex flex-col items-center md:flex-row">
-                <div class="my-4 mx-6 md:w-2/3">
-                    <p class="font-open' text-xl tracking-normal lg:text-lg">Customised courses? </p>
-                    <p class="font-open text-xl tracking-normal lg:text-lg">Yes!</p>
-                    <button class="px-8 py-4 mt-8 font-sans text-md font-semibold text-black text-center transition-transform duration-300 ease-in-out transform bg-white rounded-lg hover:-translate-y-2 hover:shadow-md" data-popup="popup">View Course</button>
+            <div class="bg-teal-400 rounded-lg flex flex-row items-center justify-between md:flex-row md:justify-between">
+                <div class="my-5 mx-6 md:w-2/3 text-center md:text-left">
+                    <p class="font-open text-lg tracking-normal lg:text-xl">Customised courses?</p>
+                    <p class="font-open text-lg tracking-normal lg:text-xl">Yes!</p>
+                    <button class="px-6 py-2 mt-6 font-sans text-lg font-semibold text-black text-center transition-transform duration-300 ease-in-out transform bg-white rounded-lg hover:-translate-y-2 hover:shadow-md" data-popup="popup">View Course</button>
                 </div>
-                <img src="../assets/1.11.png" alt="hi" class="w-full md:w-1/3 h-auto">
+                <img src="../assets/1.11.png" alt="Customised Courses" class="w-1/3 h-auto mx-auto md:mx-0">
             </div>
 
             <!-- Second card with a lighter teal shade -->
-            <div class="bg-teal-200 rounded-lg flex flex-col items-center md:flex-row">
-                <div class="my-4 mx-6 md:w-2/3">
-                    <p class="font-open text-xl tracking-normal lg:text-lg">Want a customised exam? We can make one!</p>
-                    <button class="px-8 py-4 mt-8 font-sans text-md font-semibold text-black text-center transition-transform duration-300 ease-in-out transform bg-white rounded-lg hover:-translate-y-2 hover:shadow-md" data-popup="popup">Talk to us</button>
+            <div class="bg-teal-200 rounded-lg flex flex-row items-center justify-between md:flex-row md:justify-between">
+                <div class="my-5 mx-6 md:w-2/3 text-center md:text-left">
+                    <p class="font-open text-2xl tracking-normal lg:text-xl">Want a customised exam? We can make one!</p>
+                    <button class="px-6 py-2 mt-6 font-sans text-lg font-semibold text-black text-center transition-transform duration-300 ease-in-out transform bg-white rounded-lg hover:-translate-y-2 hover:shadow-md" data-popup="popup">Talk to us</button>
                 </div>
-                <img src="../assets/1.22.png" alt="hi" class="w-full md:w-1/3 h-auto">
+                <img src="../assets/1.22.png" alt="Customised Exam" class="w-1/3 h-auto mx-auto md:mx-0">
             </div>
         </div>
     </div>
 </section>
+
+
 
     
     
@@ -395,40 +402,10 @@
         </div>
     </div>
 </section>
-<section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16 bg-white">
-    <div class="container">
-        <div class="bg-pink-100 rounded-lg p-8 py-20">
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-                <!-- Setting Standards Card -->
-                <div class="flex flex-col items-center">
-                    <div class="mb-4">
-                        <img class="w-16 h-16" src="../assets/icon-45.svg" alt="Setting Standards Icon">
-                    </div>
-                    <h3 class="text-3xl font-bold text-black">Setting Standards</h3> <!-- Increased text size and boldness -->
-                    <p class="mt-2 text-center text-gray-800 text-lg">Designing courses to match your requirements.</p> <!-- Increased paragraph text size -->
-                </div>
 
-                <!-- Thorough Planning Card -->
-                <div class="flex flex-col items-center">
-                    <div class="mb-4">
-                        <img class="w-16 h-16" src="../assets/icon-29.svg" alt="Thorough Planning Icon">
-                    </div>
-                    <h3 class="text-3xl font-bold text-black">Thorough Planning</h3> <!-- Increased text size and boldness -->
-                    <p class="mt-2 text-center text-gray-800 text-lg">We understand the desired outcomes and the audience before we commit to a plan.</p> <!-- Increased paragraph text size -->
-                </div>
 
-                <!-- Clear Budgeting Card -->
-                <div class="flex flex-col items-center">
-                    <div class="mb-4">
-                        <img class="w-16 h-16" src="../assets/icon-31.svg" alt="Clear Budgeting Icon">
-                    </div>
-                    <h3 class="text-3xl font-bold text-black">Clear Budgeting</h3> <!-- Increased text size and boldness -->
-                    <p class="mt-2 text-center text-gray-800 text-lg">Clear communications of costs, session plans, and deliverables for hassle-free progress.</p> <!-- Increased paragraph text size -->
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+
 
 
 
@@ -439,43 +416,37 @@
    <section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
     <div class="container space-y-4">
         <div class="grid grid-cols-1 gap-4 font-open text-black md:grid-cols-2 lg:grid-cols-2">
-            <!-- Learn a Word Card -->
-            <div class="col-span-1 md:col-span-1 lg:col-span-1">
-                <article class="flex flex-col justify-between h-full p-4 bg-white rounded-lg shadow-md">
-                    <div class="flex flex-col-reverse md:flex-row">
-                        <div class="p-4">
-                            <h3 class="text-2xl font-semibold text-gray-800">A Phrase</h3>
-                            <h4 class="mt-2 font-open text-emerald-600">Dulce et Decorum est.</h4>
-                            <div class="mt-4">
-                                <p class="text-gray-600 font-open">Latin for, it is nice and fitting.</p>
-                            </div>
-                        </div>
-                        <div class="mt-auto md:ml-auto">
-                            <img class="w-24 mx-auto" src="../assets/support-man.svg" alt="Image Description">
-                        </div>
+            <!-- First Card: Learn a Word / A Phrase -->
+            <div class="col-span-1">
+                <article class="flex justify-between h-full p-6 bg-white rounded-lg shadow-lg items-center">
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-semibold text-gray-800">A Phrase</h3>
+                        <h4 class="mt-2 font-open text-emerald-600">Dulce et Decorum est.</h4>
+                        <p class="mt-4 text-gray-600 font-open">Latin for, it is nice and fitting.</p>
+                    </div>
+                    <div class="flex-shrink-0 ml-4">
+                        <img class="w-24" src="../assets/support-man.svg" alt="Support Illustration">
                     </div>
                 </article>
             </div>
-            <!-- Slick Carousel Card -->
-            <div class="col-span-1 md:col-span-1 lg:col-span-1">
-                <div class="h-full border rounded-lg border-gray-200 bg-blue-50">
-                    <!-- Sample Carousel Item -->
-                    <div class="p-4 rounded-lg">
-                        <div class="text-center space-y-2">
-                            <h4 class="text-3xl text-orange-600 font-bold">PTE: 90</h4>
-                            <p class="text-gray-700">L: 90 | R: 89 | W: 81 | S: 90</p>
-                            <h6 class="mt-4 font-semibold text-gray-800">
-                                Dr. Manohar<br>
-                                <small class="text-gray-500">August 2019</small>
-                            </h6>
-                        </div>
+
+            <!-- Second Card: PTE Information -->
+            <div class="col-span-1">
+                <article class="h-full border rounded-lg border-gray-200 bg-blue-50 p-6 shadow-lg">
+                    <div class="text-center space-y-2">
+                        <h4 class="text-3xl text-orange-600 font-bold">PTE: 90</h4>
+                        <p class="text-gray-700">L: 90 | R: 89 | W: 81 | S: 90</p>
+                        <h6 class="mt-4 font-semibold text-gray-800">
+                            Dr. Manohar<br>
+                            <small class="text-gray-500">August 2019</small>
+                        </h6>
                     </div>
-                    <!-- Add more carousel items as needed -->
-                </div>
+                </article>
             </div>
         </div>
     </div>
 </section>
+
 
 
   <!--links-->
@@ -549,32 +520,29 @@
     <p class="text-xl font-semibold text-teal-800 md:text-3xl">Our Other Popular Courses</p>
 
     <!--3 blocks-->
-    <div class="grid grid-cols-6 my-4 mt-8 md:gap-16">
+    <div class="grid grid-cols-1 gap-4 my-4 mt-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
         <!--first-->
-        <a href="./gre.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
-            <div
-                class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
-                <img src="../assets/gre.gif" alt="gre" width="342px" height="245px">
+        <a href="./gre.html" class="col-span-1">
+            <div class="pb-8 m-2 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                <img class="w-full h-auto" src="../assets/gre.gif" alt="gre">
                 <p class="p-2 text-xl font-semibold text-teal-500">GRE</p>
                 <p class="px-2 text-lg font-semibold text-gray-700">Information about GRE at First Academy</p>
             </div>
         </a>
 
         <!--second-->
-        <a href="./oet.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
-            <div
-                class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
-                <img src="../assets/oet.gif" alt="oet" width="342px" height="245px">
+        <a href="./oet.html" class="col-span-1">
+            <div class="pb-8 m-2 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                <img class="w-full h-auto" src="../assets/oet.gif" alt="oet">
                 <p class="p-2 text-xl font-semibold text-teal-500">OET</p>
                 <p class="px-2 text-lg font-semibold text-gray-700">See how our OET coaching improves scores</p>
             </div>
         </a>
 
         <!--third-->
-        <a href="./ielts.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
-            <div
-                class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
-                <img src="../assets/file_ielts.gif" alt="Ielts" width="342px" height="245px">
+        <a href="./ielts.html" class="col-span-1">
+            <div class="pb-8 m-2 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                <img class="w-full h-auto" src="../assets/file_ielts.gif" alt="Ielts">
                 <p class="p-2 text-xl font-semibold text-teal-500">IELTS</p>
                 <p class="px-2 text-lg font-semibold text-gray-700">Our most popular course - The FA method</p>
             </div>
@@ -582,6 +550,7 @@
     </div>
 
 </section>
+
 
  <!--Faq-->
  <section class="pb-2 bg-gray-50">
@@ -970,8 +939,10 @@
 
 </footer>
 
-<!--Messages-->
-<div class="fixed z-10 bottom-0 flex items-center justify-center w-full py-1 space-x-2 bg-teal-custom">
+
+ <!--Messages-->
+ <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
+    <div class=" flex items-center justify-center" >
     <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
         stroke="currentColor" class="w-4 h-4 text-white">
@@ -979,17 +950,18 @@
         d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
         </svg>
         
-        <span class="text-sm font-semibold text-white">Call</span>
+        <span class="text-sm md:text-md font-bold text-white">Call</span>
     </a>
 
     <div>
-        <h1 class="hidden text-white md:block">We would love to hear from you!</h1>
+        <h1 class="hidden mx-4 text-white sm:block">We would love to hear from you!</h1>
     </div>
 
     <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
         <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
-        <span class="text-sm font-semibold text-white">WhatsApp</span>
+        <span class="text-sm md:text-md font-bold text-white">WhatsApp</span>
     </a>
+    </div>
 </div>
 
 <button id="scrollToTop"
