@@ -481,7 +481,8 @@
             <div class="col-span-2 bg-white">
                 
                 <!--form-->
-                <form action="" class="px-2 py-4 shadow-2xl md:px-12 ">
+                <form action="{{ route('abroad.send') }}" method="POST" class="px-2 py-4 shadow-2xl md:px-12 ">
+                    @csrf
                     <h1 class="text-2xl mt-4 font-bold md:text-4xl font-noto">Help Us Help You!</h1>
                     <p class="py-2 font-semibold">Top-class Tailor made suggesstions</p>
                     <p class="py-2 opacity-75">Choosing a university is not an easy task.
@@ -501,122 +502,121 @@
                     <div class="gap-2 my-2 md:grid-cols-2 md:grid">
                         <div class="mb-2 md:mr-4">
                             <label for="Name" class="text-lg font-noto">Name</label><br>
-                            <input type="text" id="Name" name="Name"
+                            <input type="text" id="Name" name="userame"
                                 class="w-full px-2 py-3 bg-white border-2 border-blue-300 opacity-60"
                                 placeholder="Full name">
                         </div>
                         <div>
                             <label for="Phone" class="mb-2 text-lg font-noto">Phone</label><br>
-                            <input type="tel" id="Phone" name="Phone"
+                            <input type="tel" id="Phone" name="userphone"
                                 class="w-full px-2 py-3 bg-white border-2 border-blue-300 opacity-60"
                                 placeholder="Phone Number">
                         </div>
                     </div>
                     <label for="Email address" class="text-lg font-noto">Email address</label><br>
-                    <input type="text" name="Email address" id="Email address"
+                    <input type="text" name="useremail" id="Email address"
                         class="w-full px-2 py-3 my-2 bg-white border-2 border-blue-300 opacity-60"
                         placeholder="Double check on entering!">
                     <label for="Date of Birth" class="text-lg font-noto">Date of Birth</label><br>
-                    <input type="text" name="Date of Birth" id="Date of Birth"
+                    <input type="text" name="dob" id="Date of Birth"
                         class="w-full px-2 py-3 bg-white border-2 border-blue-300 opacity-60"
                         placeholder="25/Dec/1900">
 
                     <div class="py-2">
                         <label for="Education" class="text-lg font-noto">Education</label><br>
-                        <input type="radio" name="Education" value="10th Standard" id="10th Standard">
+                        <input type="radio" name="education" value="10th Standard" id="10th Standard">
                         <label for="10th Standard" class="mr-2 font-semibold opacity-70">10th Standard</label>
-                        <input type="radio" name="Education" value="12th Standard" id="12th Standard">
+                        <input type="radio" name="education" value="12th Standard" id="12th Standard">
                         <label for="12th Standard" class="mr-2 font-semibold opacity-70">12th Standard</label>
-                        <input type="radio" name="Education" value="Bachelor's" id="Bachelor's">
+                        <input type="radio" name="education" value="Bachelor's" id="Bachelor's">
                         <label for="Bachelor's" class="mr-2 font-semibold opacity-70">Bachelor's</label>
-                        <input type="radio" name="Education" value="Master's" id="Master's">
+                        <input type="radio" name="education" value="Master's" id="Master's">
                         <label for="Master's" class="mr-2 font-semibold opacity-70">Master's</label>
-                        <input type="radio" name="Education" value="Other" id="Other">
+                        <input type="radio" name="education" value="Other" id="Other">
                         <label for="Other" class="mr-2 font-semibold opacity-70">Other</label><br>
                     </div>
                     
                     <div class="py-2">
                         <label for="Status of Degree" class="pt-10 font-semibold font-noto">Status of Degree</label><br>
-                        <input type="radio" name="Status of Degree" value="Completed" id="Completed">
+                        <input type="radio" name="status_of_degree" value="Completed" id="Completed">
                         <label for="Completed" class="mr-2 font-semibold opacity-70">Completed</label>
-                        <input type="radio" name="Status of Degree" value="Pursuing" id="Pursuing">
+                        <input type="radio" name="status_of_degree" value="Pursuing" id="Pursuing">
                         <label for="Pursuing" class="mr-2 font-semibold opacity-70">Pursuing</label>
-                        <input type="radio" name="Status of Degree" value="Discontinued" id="Discontinued">
+                        <input type="radio" name="status_of_degree" value="Discontinued" id="Discontinued">
                         <label for="Discontinued" class="mr-2 font-semibold opacity-70">Discontinued</label><br>
     
                     </div>
                                         
                     <label for="Work Experience" class="mr-2 font-semibold font-noto">Work Experience</label><br>
-                    <textarea name="Work Experience" id="Work Experience" cols="90" rows="3"
+                    <textarea name="experience" id="Work Experience" cols="90" rows="3"
                         class="w-2/3 mb-2 border-2 md:w-full"></textarea><br>
 
                     <div class="py-2">
                         <label for="Tests Taken" class="font-semibold font-noto">Tests Taken</label><br>
                         <div class="flex">
                             <div class="mr-2">
-                                <input type="checkbox" id="IELTS" name="Tests Taken" value="IELTS">
+                                <input type="checkbox" id="IELTS" name="tests[]" value="IELTS">
                                 <label for="IELTS" class="text-lg">IELTS</label>
                             </div>
                             <div class="mx-2">
-                                <input type="checkbox" id="GRE" name="Tests Taken" value="GRE">
+                                <input type="checkbox" id="GRE" name="tests[]" value="GRE">
                                 <label for="GRE" class="text-lg">GRE</label>
                             </div>
                             <div class="mx-2">
-                                <input type="checkbox" id="PTE" name="Tests Taken" value="PTE">
+                                <input type="checkbox" id="PTE" name="tests[]" value="PTE">
                                 <label for="PTE" class="text-lg">PTE</label>
                             </div>
                             <div class="mx-2">
-                                <input type="checkbox" id="Other Tests" name="Tests Taken" value="Other Tests">
+                                <input type="checkbox" id="Other Tests" name="tests[]" value="Other Tests">
                                 <label for="Other Tests" class="text-lg">Other Tests</label>
                             </div>
                         </div>
                     </div>
                     
-                    <label for="Work Experience" class="mr-2 font-semibold font-noto">Test Scores</label><br>
-                    <textarea name="Work Experience" id="Work Experience" cols="90" rows="3"
+                    <label class="mr-2 font-semibold font-noto">Test Scores</label><br>
+                    <textarea name="test_scores" cols="90" rows="3"
                         class="w-2/3 p-2 mb-2 border-2 md:w-full"
                         placeholder="Enter all your test scores here"></textarea><br>
 
                     <div class="py-2">
                         <label for="Bachelor's" class="py-4 font-semibold font-noto">Which Program are you applying to?</label><br>
 
-                        <input type="radio" name="Which Program are you applying to?" value="Bachelor's" id="Bachelor's">
+                        <input type="radio" name="program" value="Bachelor's" id="Bachelor's">
                         <label for="Bachelor's" class="mr-2 font-semibold opacity-70">Bachelor's</label>
-                        <input type="radio" name="Which Program are you applying to?" value="Master's" id="Master's">
+                        <input type="radio" name="program" value="Master's" id="Master's">
                         <label for="Master's" class="mr-2 font-semibold opacity-70">Master's</label>
-                        <input type="radio" name="Which Program are you applying to?" value="Diploma" id="Diploma">
+                        <input type="radio" name="program" value="Diploma" id="Diploma">
                         <label for="Diploma" class="mr-2 font-semibold opacity-70">Diploma</label>
-                        <input type="radio" name="Which Program are you applying to?" value="Other" id="Other">
+                        <input type="radio" name="program" value="Other" id="Other">
                         <label for="Other" class="mr-2 font-semibold opacity-70">Other</label><br>
                     </div>
                    
                     <label for="Specialization" class="font-semibold font-noto">Specialization</label><br>
-                    <input type="text" name="Specialization" id="Specialization"
+                    <input type="text" name="specialization" id="Specialization"
                         placeholder="Your Prefered Specialization"
                         class="w-full px-2 py-3 mb-4 bg-white border-2 border-blue-300 opacity-60"><br>
-
 
                     <div class="py-2">
                         <label for="Country Preference" class="font-semibold font-noto">Country Preference</label>
                         <div class="grid-cols-3 md:grid">
                             <div>
                                 <label for="Preference 1">Preference 1</label><br>
-                                <input type="text" id="Preference 1" placeholder="Country #1" class="p-3 border-2">
+                                <input type="text" name="country1" id="Preference 1" placeholder="Country #1" class="p-3 border-2">
                             </div>
                             <div>
                                 <label for="Preference 2">Preference 2</label><br>
-                                <input type="text" id="Preference 2" placeholder="Country #2" class="p-3 border-2">
+                                <input type="text" name="country2" id="Preference 2" placeholder="Country #2" class="p-3 border-2">
                             </div>
                             <div>
                                 <label for="Preference 3">Preference 3</label><br>
-                                <input type="text" id="Preference 3" placeholder="Country #3" class="p-3 border-2"><br>
+                                <input type="text" name="country3" id="Preference 3" placeholder="Country #3" class="p-3 border-2"><br>
                             </div>
                         </div>
                     </div>
                     
                     <div class="py-2">
                         <label for="Additional Information" class="font-semibold font-noto">Additional Information</label><br>
-                        <input type="text" name="Additional Information" id="Additional Information"
+                        <input type="text" name="additional" id="Additional Information"
                             class="w-full px-2 py-3 my-2 bg-white border-2 border-blue-300 opacity-60"
                             placeholder="Scholorships,Internships,Awards and any other relavant information"><br>
                     </div>
