@@ -20,12 +20,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Best OET Coaching in Hyderabad | Best OET Coaching in Ameerpet, Madhapur | OET Online Coaching | Best OET Coaching in Hyderabad</title>
     <style>
-        @media (min-width: 768px) and (max-width: 800px) {
-            .text {
-                font-size: 2.5rem!important;
-            }
-        }
-    </style>
+        #header, #message{
+             display: block;
+         }
+         .crsl-item {
+             min-width: 100%;
+             transition: transform 0.5s ease-in-out;
+         }    
+         #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2, #pBtn, #nxtBtn {
+             z-index: 1;
+         }
+         .popupQn {
+             display: none;
+             position: fixed;
+             z-index: 999;
+             left: 50%;
+             top: 50%;
+             transform: translate(-50%, -48%);
+             background-color: white;
+             border: 1px solid #ccc;
+             border-radius: 8px;
+             width: 95vw;
+             max-height: 95vh;
+             overflow-y: auto;
+         }
+         .overlay {
+             position: fixed;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             background: rgba(0, 0, 0, 0.5);
+             z-index: 5;
+             display: none;
+         }
+         .active1 {
+             display: block;
+         }
+         #directionsContainer {
+             white-space: pre-wrap;
+         }
+         .progress-bar {
+             height: 4px;
+             background-color: #3498db;
+             width: 0;
+         }
+         @media (min-width: 640px) {
+             .popupQn {
+                 width: 45vw;
+             }
+         }
+         @media (min-width: 641px) and (max-width:1000px) {
+             .popupQn {
+                 width: 75vw;
+             }
+         }
+     </style>
 </head>
 
 <body class="font-open">
@@ -379,7 +429,7 @@
                 <p class="font-semibold text-center" style="color: #66ade1;">You will love these tiny tests</p>
     
                 <!--pop ups-->
-                <div>
+                <!-- <div>
                     <div id="popup1"
                         class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
     
@@ -620,96 +670,86 @@
                         </div>
                     </div>
     
-                </div>
+                </div> -->
     
                 <!-- simple test buttons-->
                 <div class="flex flex-wrap justify-center mt-6 mb-4 space-x-2 sm:space-x-2 ">
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn1"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup1">🤷&zwj;♂️ Do you know these?</a>
-                        </p>
+                                data-popup="popup1">🤷&zwj;♂️ Do you know these?</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn2"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup2">🤏 Are you professional?</a>
-                        </p>
+                                data-popup="popup2">🤏 Are you professional?</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn3"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup3">🤏🤏 Professional too?</a>
-                        </p>
+                                data-popup="popup3">🤏🤏 Professional too?</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn4"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup4">👁 Anatomy 101</a>
-                        </p>
+                                data-popup="popup4">👁 Anatomy 101</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn5"
                                   class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup5"> 👔 Will this work?</a>
-                        </p>
+                                data-popup="popup5"> 👔 Will this work?</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn6"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup6">🦚 Are you an action man?</a>
-                        </p>
+                                data-popup="popup6">🦚 Are you an action man?</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn7"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup7">⚔️ Make them agree!</a>
-                        </p>
+                                data-popup="popup7">⚔️ Make them agree!</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn8"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup8">🖼 Change Them!</a>
-                        </p>
+                                data-popup="popup8">🖼 Change Them!</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn9"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup9">🚁 Get them to the right place</a>
-                        </p>
+                                data-popup="popup9">🚁 Get them to the right place</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button id="openPopupQn10"
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup10">🥂 Better Together!</a>
-                        </p>
+                                data-popup="popup10">🥂 Better Together!</button>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
                                 data-popup="popup11">👩&zwj;🏫 Attend a session</a>
-                                
-                        </p>
                     </div>
                     <div class="inline my-5 ">
-                        <p class="inline">
-                            <a href="#"
+                            <button
                                 class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
                                 data-popup="popup12">🙌 More Tests</a>
-                        </p>
                     </div>
                 </div>
+
+                <div id="overlay" class="overlay"></div>
+
+
+            <div id="popupQn" class="p-6 rounded shadow-lg popupQn">
+                <div class="flex items-center justify-between px-2 py-5 bg-teal-200">
+                    <div id="directionsContainer" class="px-4 text-xl font-bold bg-teal-200 sm:text-2xl pb-0"></div>
+                    <button id="closePopupQn" class="p-2 ml-2 font-bold rounded">X</button>
+                </div>
+                <div id="answersContainer"
+                    class="grid grid-cols-1 px-5 m-auto pb-4 bg-teal-200 sm:grid-cols-1 md:grid-cols-3"></div>
+                <div id="questionsContainer" class=" p-4"></div>
+                <button id="submitQuiz" class="px-6 py-2 block mx-auto font-semibold text-white bg-teal-500 rounded">Submit</button>
+                <div id="scoreDisplay" class="mt-4 font-bold"></div>
+            </div>
     
         </div>
     </section>
@@ -2115,6 +2155,7 @@
     </div>
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/token.js"></script>
+    <script src="../dist/oetQuizz.js"></script>
 
 </body>
 
