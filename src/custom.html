@@ -306,9 +306,11 @@
     <hr>
         <!--Latest Post-->
  <x-homepage.post.index :data="$data" />
+ 
+ 
  <div class="bg-teal-50"> <!-- Light teal background -->
  <section class="max-w-screen-xl px-4 mx-auto pt-16 sm:px-16">
-     <div class="py-6 font-sans text-5xl sm:text-9xl font-semibold tracking-wider text-center text-teal-800 md:text-5xl lg:text-6xl">
+     <div class="py-6 font-sans text-5xl sm:text-9xl font-bold  text-center text-teal-800 md:text-5xl lg:text-6xl">
          Corporate Training
      </div>
      <div class="flex items-center justify-center px-8">
@@ -358,38 +360,38 @@
         <div class="flex flex-wrap justify-center gap-4 py-6 lg:py-10 lg:px-8">
             <!-- Links with updated background colors, hover effects, and badge styling -->
             <a href=""
-                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
+                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Word Use Test
             </a>
             <a href=""
-                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
+                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Word Context Test
             </a>
             <a href=""
-                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
+                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Word Form Test
             </a>
             <a href=""
-                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
+                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Sentence Variety Test
             </a>
             <a href=""
-                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
+                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Word Test on Excuse
             </a>
             <a href=""
-                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
+                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Tenses and Sentence
             </a>
 
             <!-- Adding badges with a contrasting color -->
             <a href=""
-                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
+                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Could | Should | Ought - Paraphrasing
                 <span class="px-2 py-1 ml-2 text-base text-white bg-teal-500 rounded-lg">pro</span>
             </a>
             <a href=""
-                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
+                class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Four Letter Words Test
                 <span class="px-2 py-1 ml-2 text-base text-white bg-teal-500 rounded-lg">pro</span>
             </a>
@@ -397,17 +399,56 @@
     </div>
 </section>
 
+<section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16 bg-white">
+    <div class="container">
+        <div class="bg-pink-100 rounded-lg p-20">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Setting Standards Card -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <img class="w-16 h-16" src="../assets/icon-45.svg" alt="Setting Standards Icon">
+                    </div>
+                    <h3 class="text-3xl font-bold text-black">Setting Standards</h3> <!-- Increased text size and boldness -->
+                    <p class="mt-2 text-center text-gray-800 text-lg">Designing courses to match your requirements.</p> <!-- Increased paragraph text size -->
+                </div>
+
+                <!-- Thorough Planning Card -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <img class="w-16 h-16" src="../assets/icon-29.svg" alt="Thorough Planning Icon">
+                    </div>
+                    <h3 class="text-3xl font-bold text-black">Thorough Planning</h3> <!-- Increased text size and boldness -->
+                    <p class="mt-2 text-center text-gray-800 text-lg">We understand the desired outcomes and the audience before we commit to a plan.</p> <!-- Increased paragraph text size -->
+                </div>
+
+                <!-- Clear Budgeting Card -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <img class="w-16 h-16" src="../assets/icon-31.svg" alt="Clear Budgeting Icon">
+                    </div>
+                    <h3 class="text-3xl font-bold text-black">Clear Budgeting</h3> <!-- Increased text size and boldness -->
+                    <p class="mt-2 text-center text-gray-800 text-lg">Clear communications of costs, session plans, and deliverables for hassle-free progress.</p> <!-- Increased paragraph text size -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
    <!-- Introspect Section -->
-<section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
+   <section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
     <div class="container space-y-4">
         <div class="grid grid-cols-1 gap-4 font-open text-black md:grid-cols-2 lg:grid-cols-2">
             <!-- Learn a Word Card -->
             <div class="col-span-1 md:col-span-1 lg:col-span-1">
-                <article class="flex flex-col justify-between h-full p-4 bg-gray-50 rounded-lg shadow-md transition-transform duration-300 hover:shadow-lg hover:scale-105">
+                <article class="flex flex-col justify-between h-full p-4 bg-white rounded-lg shadow-md">
                     <div class="flex flex-col-reverse md:flex-row">
                         <div class="p-4">
-                            <h3 class="text-2xl font-semibold  ">A Phrase</h3>
-                            <h4 class="mt-2 font-open  text-emerald-400">Dulce et Decorum est.</h4>
+                            <h3 class="text-2xl font-semibold text-gray-800">A Phrase</h3>
+                            <h4 class="mt-2 font-open text-emerald-600">Dulce et Decorum est.</h4>
                             <div class="mt-4">
                                 <p class="text-gray-600 font-open">Latin for, it is nice and fitting.</p>
                             </div>
@@ -419,14 +460,14 @@
                 </article>
             </div>
             <!-- Slick Carousel Card -->
-            <div class="col-span-1 md:col-span-1 lg:col-span-1 bg-gray-100">
-                <div class="h-full border rounded-lg border-gray-200 js-slick-carousel slick">
+            <div class="col-span-1 md:col-span-1 lg:col-span-1">
+                <div class="h-full border rounded-lg border-gray-200 bg-blue-50">
                     <!-- Sample Carousel Item -->
-                    <div class="p-4 rounded-lg js-slide">
+                    <div class="p-4 rounded-lg">
                         <div class="text-center space-y-2">
-                            <h4 class="text-3xl text-teal-900 font-bold">PTE: 90</h4>
+                            <h4 class="text-3xl text-orange-600 font-bold">PTE: 90</h4>
                             <p class="text-gray-700">L: 90 | R: 89 | W: 81 | S: 90</p>
-                            <h6 class="mt-4 font-semibold">
+                            <h6 class="mt-4 font-semibold text-gray-800">
                                 Dr. Manohar<br>
                                 <small class="text-gray-500">August 2019</small>
                             </h6>
@@ -438,6 +479,7 @@
         </div>
     </div>
 </section>
+
 
   <!--links-->
   <section class="items-center justify-between max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
@@ -545,21 +587,21 @@
 </section>
 
  <!--Faq-->
- <section class="bg-teal-100">
-    <section class="max-w-screen-xl p-4 pb-8 mx-auto sm:px-16">
-        <h1 class="pb-4 mt-4 text-2xl font-semibold text-center text-teal-800 md:text-3xl">Frequently Asked Questions
+ <section class="pb-2 bg-gray-50">
+    <section class="max-w-screen-xl p-4 mx-auto sm:px-16">
+        <h1 class="my-4 text-2xl font-semibold text-center md:text-4xl">Frequently Asked Questions
         </h1>
 
         <!--first-->
         <div class="mb-2">
             <button
-                class="flex justify-between w-full p-5 py-3 text-left text-gray-700 duration-300 ease-in-out rounded-t outline-none cursor-pointer bg-gray-50 accordion hover:bg-teal-400 focus:bg-teal-400 focus:text-white hover:text-white hover:border-white focus:border-white">
-                <div>Can you create an English test at different levels ?</div>
-                <div class="text-xl font-semibold icon">+</div>
+                class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white">
+                <div>Can you create an English test at different levels?</div>
+                <div class="text-xl font-bold icon">+</div>
             </button>
-            <div class="hidden p-5 overflow-hidden bg-white border border-gray-200 rounded-b shadow-xl panel">
-                <p class="mb-2 text-gray-500 ">
-                    Yes we can. We specialise in creating tests that assess a candidate's proficiency in English. We also create tests that are tailored to filter candidate of a particular proficiency level to ensure you get the perfect fit.
+            <div class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                <p class="mb-2 text-gray-500">
+                    Yes, we can. We specialize in creating tests that assess a candidate's proficiency in English. We also create tests tailored to filter candidates of a particular proficiency level to ensure you get the perfect fit.
                 </p>
             </div>
         </div>
@@ -567,13 +609,13 @@
         <!--second-->
         <div class="mb-2">
             <button
-                class="flex justify-between w-full p-5 py-3 text-left text-gray-700 duration-300 ease-in-out rounded-t outline-none cursor-pointer bg-gray-50 accordion hover:bg-teal-400 focus:bg-teal-400 focus:text-white hover:text-white hover:border-white focus:border-white">
-                <div>We want our workforce to be familiar with words in a particular domain,can you do that ?</div>
-                <div class="text-xl font-semibold icon">+</div>
+                class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white">
+                <div>We want our workforce to be familiar with words in a particular domain, can you do that?</div>
+                <div class="text-xl font-bold icon">+</div>
             </button>
-            <div class="hidden p-5 overflow-hidden bg-white border border-gray-200 rounded-b shadow-xl panel">
-                <p class="mb-2 text-gray-500 ">
-                    Yes! Depending on the the industry, we can tailor courses that will make your workforce proficient in the most commonly used vocabulary in that domain. From healthcare to law, we have created courses for different industries.
+            <div class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                <p class="mb-2 text-gray-500">
+                    Yes! Depending on the industry, we can tailor courses that will make your workforce proficient in the most commonly used vocabulary in that domain. From healthcare to law, we have created courses for different industries.
                 </p>
             </div>
         </div>
@@ -581,33 +623,33 @@
         <!--third-->
         <div class="mb-2">
             <button
-                class="flex justify-between w-full p-5 py-3 text-left text-gray-700 duration-300 ease-in-out rounded-t outline-none cursor-pointer bg-gray-50 accordion hover:bg-teal-400 focus:bg-teal-400 focus:text-white hover:text-white hover:border-white focus:border-white">
-                <div>Do we have any platfrom only for tests ?</div>
-                <div class="text-xl font-semibold icon">+</div>
+                class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white">
+                <div>Do we have any platform only for tests?</div>
+                <div class="text-xl font-bold icon">+</div>
             </button>
-            <div class="hidden p-5 overflow-hidden bg-white border border-gray-200 rounded-b shadow-xl panel">
-                <p class="mb-2 text-gray-500 ">
+            <div class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                <p class="mb-2 text-gray-500">
                     Absolutely. If you just want a battery of tests, we could plan a series of tests or you could use your own questions to create tests on our platform. We could whitelabel our platform for you!
                 </p>
-
             </div>
         </div>
 
         <!--fourth-->
         <div class="mb-2">
             <button
-                class="flex justify-between w-full p-5 py-3 text-left text-gray-700 duration-300 ease-in-out rounded-t outline-none cursor-pointer bg-gray-50 accordion hover:bg-teal-400 focus:bg-teal-400 focus:text-white hover:text-white hover:border-white focus:border-white">
-                <div>Can we have a course of a particular duration ?</div>
-                <div class="text-xl font-semibold icon">+</div>
+                class="flex justify-between w-full px-5 py-3 font-semibold text-left text-gray-700 duration-300 ease-in-out border-b-2 border-gray-200 rounded-t outline-none cursor-pointer accordion hover:bg-gray-400 focus:bg-gray-400 focus:text-white hover:text-white hover:border-white focus:border-white">
+                <div>Can we have a course of a particular duration?</div>
+                <div class="text-xl font-bold icon">+</div>
             </button>
-            <div class="hidden p-5 overflow-hidden bg-white border border-gray-200 rounded-b shadow-xl panel">
-                <p class="mb-2 text-gray-500 ">
-                    Before we start of creating a custom course, we take into account all possible variables. From budgeting time to budgeting costs, everything can be tailored to your requirements.
+            <div class="hidden p-1 p-5 overflow-hidden duration-300 ease-in-out bg-white border border-gray-200 rounded-b panel transition-height">
+                <p class="mb-2 text-gray-500">
+                    Before we start creating a custom course, we take into account all possible variables. From budgeting time to budgeting costs, everything can be tailored to your requirements.
                 </p>
             </div>
         </div>
     </section>
 </section>
+
 <footer class="mb-10">
     <!--attend drives-->
     <div class="p-6 text-white" style="background-color: #363636;">
