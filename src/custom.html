@@ -23,8 +23,75 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <title>Corporate Training by First Academy</title>
     <style>
-       #header, #message{
+        #header,
+        #message {
             display: block;
+        }
+
+        .crsl-item {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #pBtn1,
+        #nxtBtn1,
+        #pBtn2,
+        #nxtBtn2,
+        #pBtn,
+        #nxtBtn {
+            z-index: 1;
+        }
+
+        .popupQn {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -48%);
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 95vw;
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            display: none;
+        }
+
+        .active1 {
+            display: block;
+        }
+
+        #directionsContainer {
+            white-space: pre-wrap;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background-color: #3498db;
+            width: 0;
+        }
+
+        @media (min-width: 640px) {
+            .popupQn {
+                width: 45vw;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width:1000px) {
+            .popupQn {
+                width: 75vw;
+            }
         }
     </style>
 </head>
@@ -389,81 +456,99 @@
 
         <div class="flex flex-wrap justify-center gap-4 py-6 lg:py-10 lg:px-8">
             <!-- Links with updated background colors, hover effects, and badge styling -->
-            <a href=""
+            <button id="openPopupQn1"
                 class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Word Use Test
             </a>
-            <a href=""
+            <button id="openPopupQn2"
                 class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Word Context Test
             </a>
-            <a href=""
+            <button id="openPopupQn3"
                 class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Word Form Test
             </a>
-            <a href=""
+            <button id="openPopupQn4"
                 class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Sentence Variety Test
             </a>
-            <a href=""
+            <button id="openPopupQn5"
                 class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Word Test on Excuse
             </a>
-            <a href=""
+            <button id="openPopupQn6"
                 class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Tenses and Sentence
             </a>
 
             <!-- Adding badges with a contrasting color -->
-            <a href=""
+            <button id="openPopupQn7"
                 class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Could | Should | Ought - Paraphrasing
                 <span class="px-2 py-1 ml-2 text-base text-white bg-teal-500 rounded-lg">pro</span>
             </a>
-            <a href=""
+            <button id="openPopupQn8"
                 class="px-6 py-3 text-base font-semibold text-center transition-transform ease-out transform duration-300 rounded-lg lg:text-lg bg-teal-200 hover:bg-teal-600 hover:text-white hover:-translate-y-1 shadow-md">
                 Four Letter Words Test
                 <span class="px-2 py-1 ml-2 text-base text-white bg-teal-500 rounded-lg">pro</span>
             </a>
         </div>
+
+        <div id="overlay" class="overlay"></div>
+
+
+            <div id="popupQn" class="p-6 rounded shadow-lg popupQn">
+                <div class="flex items-center justify-between px-2 py-5 bg-teal-200">
+                    <div id="directionsContainer" class="px-4 text-xl font-bold bg-teal-200 sm:text-2xl pb-0"></div>
+                    <button id="closePopupQn" class="p-2 ml-2 font-bold rounded">X</button>
+                </div>
+                <div id="answersContainer"
+                    class="grid grid-cols-1 px-5 m-auto pb-4 bg-teal-200 sm:grid-cols-1 md:grid-cols-3"></div>
+                <div id="questionsContainer" class=" p-4"></div>
+                <button id="submitQuiz" class="px-6 py-2 block mx-auto font-semibold text-white bg-teal-500 rounded">Submit</button>
+                <div id="scoreDisplay" class="mt-4 font-bold"></div>
+            </div>
     </div>
-    </section>
-    <section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16 bg-white">
-        
-            <div class="bg-pink-100 rounded-lg p-10 md:p-16 lg:p-20">
-                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-                    <!-- Setting Standards Card -->
-                    <div class="flex flex-col items-center text-center">
-                        <div class="mb-4">
-                            <img class="w-12 h-12 sm:w-16 sm:h-16" src="../assets/icon-45.svg" alt="Setting Standards Icon">
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-bold text-black">Setting Standards</h3> <!-- Responsive text size -->
-                        <p class="mt-2 text-gray-800 text-base sm:text-lg">Designing courses to match your requirements.</p> <!-- Responsive paragraph text size -->
+</section>
+<section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16 bg-white">
+    <div class="container">
+        <div class="bg-pink-100 rounded-lg p-8 py-20">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Setting Standards Card -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <img class="w-16 h-16" src="../assets/icon-45.svg" alt="Setting Standards Icon">
                     </div>
-    
-                    <!-- Thorough Planning Card -->
-                    <div class="flex flex-col items-center text-center">
-                        <div class="mb-4">
-                            <img class="w-12 h-12 sm:w-16 sm:h-16" src="../assets/icon-29.svg" alt="Thorough Planning Icon">
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-bold text-black">Thorough Planning</h3> <!-- Responsive text size -->
-                        <p class="mt-2 text-gray-800 text-base sm:text-lg">We understand the desired outcomes and the audience before we commit to a plan.</p> <!-- Responsive paragraph text size -->
+                    <h3 class="text-3xl font-bold text-black">Setting Standards</h3> <!-- Increased text size and boldness -->
+                    <p class="mt-2 text-center text-gray-800 text-lg">Designing courses to match your requirements.</p> <!-- Increased paragraph text size -->
+                </div>
+
+                <!-- Thorough Planning Card -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <img class="w-16 h-16" src="../assets/icon-29.svg" alt="Thorough Planning Icon">
                     </div>
-    
-                    <!-- Clear Budgeting Card -->
-                    <div class="flex flex-col items-center text-center">
-                        <div class="mb-4">
-                            <img class="w-12 h-12 sm:w-16 sm:h-16" src="../assets/icon-31.svg" alt="Clear Budgeting Icon">
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl font-bold text-black">Clear Budgeting</h3> <!-- Responsive text size -->
-                        <p class="mt-2 text-gray-800 text-base sm:text-lg">Clear communications of costs, session plans, and deliverables for hassle-free progress.</p> <!-- Responsive paragraph text size -->
+                    <h3 class="text-3xl font-bold text-black">Thorough Planning</h3> <!-- Increased text size and boldness -->
+                    <p class="mt-2 text-center text-gray-800 text-lg">We understand the desired outcomes and the audience before we commit to a plan.</p> <!-- Increased paragraph text size -->
+                </div>
+
+                <!-- Clear Budgeting Card -->
+                <div class="flex flex-col items-center">
+                    <div class="mb-4">
+                        <img class="w-16 h-16" src="../assets/icon-31.svg" alt="Clear Budgeting Icon">
                     </div>
+                    <h3 class="text-3xl font-bold text-black">Clear Budgeting</h3> <!-- Increased text size and boldness -->
+                    <p class="mt-2 text-center text-gray-800 text-lg">Clear communications of costs, session plans, and deliverables for hassle-free progress.</p> <!-- Increased paragraph text size -->
                 </div>
             </div>
-      
-    </section>
-    
-    
+        </div>
+    </div>
+</section>
+
+
+
+
+
 
     <!-- Introspect Section -->
     <section class="max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
@@ -1298,6 +1383,7 @@ class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-ful
 </div>
 
     <script src="../dist/voilaui.js"></script>
+    <script src="../dist/satQuizz.js"></script>
 
 
 </body>

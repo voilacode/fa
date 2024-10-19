@@ -108,65 +108,52 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
 
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
-    const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwdd029/vcgtwdd029_questionbank.json';
-    const quiz1Directions = 'Section I\nUse the right Verbs';
+    const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw85b75/vcgtw85b75_questionbank.json';
+    const quiz1Directions = 'Instructions\nIn this selection you must choose the word or phrase which best completes each sentence.';
     fetchAndLoadQuiz(quiz1Url, quiz1Directions);
 });
 
 openPopupQnButton2.addEventListener('click', () => {
-    const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw75d57/vcgtw75d57_questionbank.json';
-    const quiz2Directions = 'Section I\nFill in the blanks in the sentences below using the correct form of the words in the box.';
+    const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwfd632/vcgtwfd632_questionbank.json';
+    const quiz2Directions = 'Instructions\nRead the text below and choose ONE word that best fits the context. An example has been done for you.';
     fetchAndLoadQuiz(quiz2Url, quiz2Directions);
 });
 
-
 openPopupQnButton3.addEventListener('click', () => {
-    const quiz3Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw1bd73/vcgtw1bd73_questionbank.json';
-    const quiz3Directions = 'Section I\nChoose the right word';
+    const quiz3Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw70a65/vcgtw70a65_questionbank.json';
+    const quiz3Directions = 'Time Management\nFor the 10 questions that follow, choose the right form of the word in bold. An example has been done for you.';
     fetchAndLoadQuiz(quiz3Url, quiz3Directions);
 });
 
 openPopupQnButton4.addEventListener('click', () => {
-    const quiz4Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw73a50/vcgtw73a50_questionbank.json';
-    const quiz4Directions = 'Section I\nFill in the blanks with a suitable Verb.';
+    const quiz4Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwa0fe5/vcgtwa0fe5_questionbank.json';
+    const quiz4Directions = 'Instructions\nUsing the word after the colon, complete the second sentence so that it has a similar meaning to the first sentence.';
     fetchAndLoadQuiz(quiz4Url, quiz4Directions);
 });
 
 openPopupQnButton5.addEventListener('click', () => {
-    const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw15beb/vcgtw15beb_questionbank.json';
-    const quiz5Directions = 'Section I\nFill in the blanks with a suitable noun.';
+    const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwcd98e/vcgtwcd98e_questionbank.json';
+    const quiz5Directions = 'Excuse and Verbs\nUse the correct form of these verbs in the sentences below:';
     fetchAndLoadQuiz(quiz5Url, quiz5Directions);
 });
 
 
-openPopupQnButton6.addEventListener('click', () => {
-    const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwae527/vcgtwae527_questionbank.json';
-    const quiz6Directions = 'Section I\nComplete the sentences below with the correct form of one of the verbs in the box.';
-    fetchAndLoadQuiz(quiz6Url, quiz6Directions);
-});
+// openPopupQnButton6.addEventListener('click', () => {
+//     const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwae527/vcgtwae527_questionbank.json';
+//     const quiz6Directions = 'To or For?\nI am coming to you? OR I am coming for you?';
+//     fetchAndLoadQuiz(quiz6Url, quiz6Directions);
+// });
 
 openPopupQnButton7.addEventListener('click', () => {
-    const quiz7Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwf8a6f/vcgtwf8a6f_questionbank.json';
-    const quiz7Directions = 'Section I\nSubject Verb agreement';
+    const quiz7Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw3df52/vcgtw3df52_questionbank.json';
+    const quiz7Directions = 'Instructions\nRewrite the sentences, using MAY, COULD, OUGHT TO or SHOULD (including the word not, where appropriate). The meaning should remain the same.';
     fetchAndLoadQuiz(quiz7Url, quiz7Directions);
 });
 
 openPopupQnButton8.addEventListener('click', () => {
-    const quiz8Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwd8737/vcgtwd8737_questionbank.json';
-    const quiz8Directions = 'Section I\nChange the word from its Noun form to Verb form.';
+    const quiz8Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw0c733/vcgtw0c733_questionbank.json';
+    const quiz8Directions = 'Words formed with AL_ _, CA_ _, CH_ _\nI know that I am intelligent, because I know that I know nothing. -Socrates';
     fetchAndLoadQuiz(quiz8Url, quiz8Directions);
-});
-
-// openPopupQnButton9.addEventListener('click', () => {
-//     const quiz9Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwaa201/vcgtwaa201_questionbank.json';
-//     const quiz9Directions = 'Section I\nCorrect the verbs and/or helping verbs without changing the tense.';
-//     fetchAndLoadQuiz(quiz9Url, quiz9Directions);
-// });
-
-openPopupQnButton10.addEventListener('click', () => {
-    const quiz10Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwe075b/vcgtwe075b_questionbank.json';
-    const quiz10Directions = 'Section I\nChoose the correct phrasal verb.';
-    fetchAndLoadQuiz(quiz10Url, quiz10Directions);
 });
 
 

@@ -109,50 +109,50 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
     const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwe52a9/vcgtwe52a9_questionbank.json';
-    const quiz1Directions = 'Convert these sentences into the right Passive form. An example has been done for you.';
+    const quiz1Directions = 'DYKTW?\nDo You Know These Words?';
     fetchAndLoadQuiz(quiz1Url, quiz1Directions);
 });
 
 openPopupQnButton2.addEventListener('click', () => {
     const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwcf0da/vcgtwcf0da_questionbank.json';
-    const quiz2Directions = 'Can you change?\nUse the right form of the verb in the blanks provided';
+    const quiz2Directions = '👩‍⚕️ 👩‍🏫 👩‍🚀\nDo you know what are they called?';
     fetchAndLoadQuiz(quiz2Url, quiz2Directions);
 });
 
 openPopupQnButton3.addEventListener('click', () => {
     const quiz3Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw5ecc3/vcgtw5ecc3_questionbank.json';
-    const quiz3Directions = 'What is your position on this?\nUse the correct preposition in the sentences below.';
+    const quiz3Directions = 'Name These Professions';
     fetchAndLoadQuiz(quiz3Url, quiz3Directions);
 });
 
 openPopupQnButton4.addEventListener('click', () => {
     const quiz4Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwc1fc2/vcgtwc1fc2_questionbank.json';
-    const quiz4Directions = '...ing or not ?\nA littel something to do with tenses! 😉';
+    const quiz4Directions = '💪 Know Your Anatomy\nChoose the correct answer.';
     fetchAndLoadQuiz(quiz4Url, quiz4Directions);
 });
 
 openPopupQnButton5.addEventListener('click', () => {
     const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw2f995/vcgtw2f995_questionbank.json';
-    const quiz5Directions = 'To ♾ and Beyond!\nUse the right form of the words in the brackets.';
+    const quiz5Directions = '🚬 The Other Drugs\nUse the right form of the word.';
     fetchAndLoadQuiz(quiz5Url, quiz5Directions);
 });
 
 
 openPopupQnButton6.addEventListener('click', () => {
     const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw441f1/vcgtw441f1_questionbank.json';
-    const quiz6Directions = 'To or For?\nI am coming to you? OR I am coming for you?';
+    const quiz6Directions = 'How Perfect is the Present?\nFill in the blanks so that the sentences are in the correct `Present Perfect` form.';
     fetchAndLoadQuiz(quiz6Url, quiz6Directions);
 });
 
 openPopupQnButton7.addEventListener('click', () => {
     const quiz7Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwba5e4/vcgtwba5e4_questionbank.json';
-    const quiz7Directions = 'Do-Be-Do-Be-Do!\nDo you know the right `be`, `do` and `have` forms?';
+    const quiz7Directions = 'Section I\nUse the right form of these phrasal verbs.';
     fetchAndLoadQuiz(quiz7Url, quiz7Directions);
 });
 
 openPopupQnButton8.addEventListener('click', () => {
     const quiz8Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwaa012/vcgtwaa012_questionbank.json';
-    const quiz8Directions = 'How is your form?\nFill both blanks with the correct form of the word given.  An example has been done for you.';
+    const quiz8Directions = 'Section I\nChange the word from its Noun form to Verb form.';
     fetchAndLoadQuiz(quiz8Url, quiz8Directions);
 });
 
@@ -164,7 +164,7 @@ openPopupQnButton8.addEventListener('click', () => {
 
 openPopupQnButton10.addEventListener('click', () => {
     const quiz10Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw16d5c/vcgtw16d5c_questionbank.json';
-    const quiz10Directions = 'Section I\nChange the word that could change the tone of the sentence';
+    const quiz10Directions = 'Section I\nChoose the correct phrasal verb.';
     fetchAndLoadQuiz(quiz10Url, quiz10Directions);
 });
 

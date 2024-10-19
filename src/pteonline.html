@@ -21,11 +21,79 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <title>Best PTE Personalised Coaching in Hyderabad | Best PTE Personalised Coaching in Ameerpet, Madhapur | PTE Online Coaching | PTE Personalised Coaching in Hyderabad</title>    
+    <title>Best PTE Personalised Coaching in Hyderabad | Best PTE Personalised Coaching in Ameerpet, Madhapur | PTE
+        Online Coaching | PTE Personalised Coaching in Hyderabad</title>
+
     <style>
-        #header, #message{
+        #header,
+        #message {
             display: block;
+        }
+
+        .crsl-item {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #pBtn1,
+        #nxtBtn1,
+        #pBtn2,
+        #nxtBtn2,
+        #pBtn,
+        #nxtBtn {
+            z-index: 1;
+        }
+
+        .popupQn {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -48%);
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 95vw;
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            display: none;
+        }
+
+        .active1 {
+            display: block;
+        }
+
+        #directionsContainer {
+            white-space: pre-wrap;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background-color: #3498db;
+            width: 0;
+        }
+
+        @media (min-width: 640px) {
+            .popupQn {
+                width: 45vw;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width:1000px) {
+            .popupQn {
+                width: 75vw;
+            }
         }
     </style>
 </head>
@@ -109,8 +177,7 @@
                                                 Get started</p>
                                             <ul class="mt-3 text-[16px]">
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./courses"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./courses" class="block m-0 font-medium text-gray-800 ">
                                                         All Courses
                                                     </a>
                                                 </li>
@@ -163,14 +230,12 @@
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./pteonline"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./pteonline" class="block m-0 font-medium text-gray-800 ">
                                                         PTE Personalized
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./custom"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./custom" class="block m-0 font-medium text-gray-800 ">
                                                         Corporate Training
                                                     </a>
                                                 </li>
@@ -314,127 +379,125 @@
 
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
- 
 
- 
-    
-    
+
 
     <main>
-       <!--hero-->
-<!--hero-->
-<section
-    style="background: url('../assets/file_wave2.svg') no-repeat; background-position: bottom; background-color: #38b2ac;">
-    
+        <!--hero-->
+        <section
+            style="background: url('../assets/file_wave2.svg') no-repeat; background-position: bottom; background-color: #38b2ac;">
+            <div class="items-center justify-between max-w-screen-xl px-1 py-5 mx-auto sm:px-16 sm:flex">
 
-    <div class="items-center justify-between max-w-screen-xl px-1 py-5 mx-auto sm:px-16 sm:flex">
+                <!--text-->
+                <div class="grid mx-5 mb-0 lg:grid-cols-2 md:grid-cols-1 lg:m-0 md:gap-10">
+                    <div class="my-auto">
+                        <h1 class="text-2xl font-semibold text-white font-open md:text-5xl">PTE Customised</h1>
+                        <h1 class="my-4 text-lg font-semibold text-teal-100 md:text-2xl">Online and Personalised
+                            Training</h1>
 
-        <!--text-->
-        <div class="grid mx-5 mb-0 lg:grid-cols-2 md:grid-cols-1 lg:m-0 md:gap-10">
-            <div class="my-auto">
-                <h1 class="text-2xl font-semibold text-white font-open md:text-5xl">PTE Customised</h1>
-                <h1 class="my-4 text-lg font-semibold text-teal-100 md:text-2xl">Online and Personalised Training</h1>
-
-                <p class="my-8 text-lg text-justify text-white">
-                    PTE too taxing for you? Living in a different country but want to be trained by our
-                    excellent trainers? Work at odd hours and do not have time to attend sessions without giving
-                    up on your life.
-                </p>
-
-                <button data-popup="popup"
-                    class="px-6 py-3 text-white duration-500 ease-in-out bg-teal-600 rounded font-open hover:bg-teal-500 hover:-translate-y-1 hover:shadow-xl">Get Started</button>
-
-            </div>
-
-            <!-- Adjusted image block to be visible on all screen sizes -->
-            <div class="mx-auto my-auto ml-auto block">
-                <img src="../assets/hero.png" alt="hero" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg" style="max-height: 500px;">
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<section style="background-color: #ffdf98;">
-    <section class="items-center justify-between max-w-screen-xl px-4 pb-8 mx-auto sm:px-16">
-        <!--3 blocks-->
-        <div class="grid grid-cols-6 md:gap-16">
-            <!--first-->
-            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                <div class="flex p-4 space-x-3 rounded">
-                    <img src="../assets/file_schedule.svg" alt="schedule" width="50px" height="50px">
-                    <p class="my-auto text-xl font-semibold text-teal-800 font-open">Our sessions, Your timings</p>
-                </div>
-            </div>
-
-            <!--second-->
-            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                <div class="flex p-4 space-x-3 rounded">
-                    <img src="../assets/file_plan.svg" alt="plan" width="50px" height="50px">
-                    <p class="my-auto text-xl font-semibold text-teal-800 font-open">Your pace, Our plan</p>
-                </div>
-            </div>
-
-            <!--third-->
-            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                <div class="flex p-4 space-x-3 rounded">
-                    <img src="../assets/file_target.svg" alt="target" width="50px" height="50px">
-                    <p class="my-auto text-xl font-semibold text-teal-800 font-open">Exactly what you want</p>
-                </div>
-            </div>
-        </div>
-
-        <!--2 cards-->
-        <div class="grid grid-cols-2 py-4 md:gap-16 gap-4">
-            <!-- First Card -->
-            <div class="col-span-2 p-4 my-2 text-white duration-200 ease-in-out bg-teal-600 rounded shadow hover:shadow-2xl md:col-span-1 sm:p-8 pe-0">
-                <div class="flex sm:flex-row space-x-0 sm:space-x-4">
-                    <div class="my-auto w-full sm:w-auto">
-                        <p class="font-open">
-                            We plan to fit your time, your style, and your needs.
+                        <p class="my-8 text-lg text-justify text-white">
+                            PTE too taxing for you? Living in a different country but want to be trained by our
+                            excellent trainers? Work at odd hours and do not have time to attend sessions without giving
+                            up on your life.
                         </p>
-                        <h2 class="my-2 text-xl font-semibold sm:text-3xl font-open">Learn at your Convenience!</h2>
-                    </div>
-        
-                    <div class="mt-auto sm:block w-full sm:w-auto flex justify-center sm:justify-start">
-                        <img src="../assets/img15.png" alt="vector 1" class="h-full w-full sm:w-auto" style="max-width: 205px; max-height: 153px;">
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Second Card -->
-            <div class="col-span-2 p-4 my-2 text-white duration-200 ease-in-out bg-teal-700 rounded shadow hover:shadow-2xl md:col-span-1 sm:p-8 pe-0">
-                <div class="flex sm:flex-row space-x-0 sm:space-x-4">
-                    <div class="my-auto w-full sm:w-auto">
-                        <p class="font-open">
-                            All our students unhesitantly recommend us!
-                        </p>
-                        <h2 class="my-2 text-xl font-semibold sm:text-3xl font-open">PTE made easy</h2>
-                    </div>
-        
-                    <div class="mt-auto sm:block w-full sm:w-auto flex justify-center sm:justify-start">
-                        <img src="../assets/img12.png" alt="vector 1" class="h-full w-full sm:w-auto" style="max-width: 205px; max-height: 153px;">
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        </div>
-    </section>
-</section>
 
-     
-        
-       
-        
-   
+                        <button
+                            class="px-6 py-3 text-white duration-500 ease-in-out bg-teal-600 rounded font-open hover:bg-teal-500 hover:-translate-y-1 hover:shadow-xl">Get
+                            Started</button>
+
+                    </div>
+
+                    <div class="hidden mx-auto my-auto ml-auto sm:block">
+                        <img src="../assets/hero.png" alt="hero" width="500px" height="500px">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section style="background-color: #ffdf98;">
+            <section class="items-center justify-between max-w-screen-xl px-4 pb-8 mx-auto sm:px-16">
+                <!--3 blocks-->
+                <div class="grid grid-cols-6 md:gap-16">
+                    <!--first-->
+                    <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                        <div class="flex p-4 space-x-3 rounded">
+                            <img src="../assets/file_schedule.svg" alt="schedule" width="50px" height="50px">
+                            <p class="my-auto text-xl font-semibold text-teal-800 font-open">Our sessions, Your timings
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--second-->
+                    <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                        <div class="flex p-4 space-x-3 rounded">
+                            <img src="../assets/file_plan.svg" alt="plan" width="50px" height="50px">
+                            <p class="my-auto text-xl font-semibold text-teal-800 font-open">Your pace, Our plan</p>
+                        </div>
+                    </div>
+
+                    <!--third-->
+                    <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                        <div class="flex p-4 space-x-3 rounded">
+                            <img src="../assets/file_target.svg" alt="target" width="50px" height="50px">
+                            <p class="my-auto text-xl font-semibold text-teal-800 font-open">Exactly what you want</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--2 cards-->
+                <div class="grid grid-cols-2 py-4 md:gap-16">
+                    <!--first card-->
+                    <div
+                        class="col-span-2 p-4 my-2 text-white duration-200 ease-in-out bg-teal-600 rounded shadow hover:shadow-2xl md:col-span-1 sm:p-8 pe-0">
+                        <div class="flex space-x-4">
+                            <div class="my-auto">
+                                <p class="font-open">
+                                    We plan to fit your time, your style, and your needs.
+                                </p>
+                                <h2 class="my-2 text-xl font-semibold sm:text-3xl font-open">Learn at your Convenience!
+                                </h2>
+                            </div>
+
+                            <div class="hidden mt-auto sm:block">
+                                <img src="../assets/img15.png" alt="vector 1" class="h-full" width="205px"
+                                    height="153px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--second card-->
+                    <div
+                        class="col-span-2 p-4 my-2 text-white duration-200 ease-in-out bg-teal-700 rounded shadow hover:shadow-2xl md:col-span-1 sm:p-8 pe-0">
+                        <div class="flex space-x-4">
+                            <div class="my-auto">
+                                <p class="font-open">
+                                    All our students unhesitantly recommend us!
+                                </p>
+                                <h2 class="my-2 text-xl font-semibold sm:text-3xl font-open">PTE made easy</h2>
+                            </div>
+
+                            <div class="hidden mt-auto sm:block">
+                                <img src="../assets/img12.png" alt="vector 1" class="h-full" width="205px"
+                                    height="153px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+
+
+
+
         <!--options-->
         <section class="items-center justify-between max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
             <p class="text-xl font-semibold text-teal-800 md:text-3xl font-open">Things you could do</p>
-        
+
             <!--3 blocks-->
             <div class="grid grid-cols-6 my-4 mt-8 md:gap-16">
                 <!--first-->
@@ -445,7 +508,7 @@
                         <img src="../assets/file_calendar.svg" alt="calendar" width="80px" height="80px">
                     </div>
                 </div>
-        
+
                 <!--second-->
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                     <div data-popup="talkForm"
@@ -454,7 +517,7 @@
                         <img src="../assets/file_communication.svg" alt="file_communication" width="80px" height="80px">
                     </div>
                 </div>
-        
+
                 <!--third-->
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
                     <a href="./courses.html">
@@ -467,471 +530,200 @@
                 </div>
             </div>
         </section>
-        
+
 
         <!--random blocks-->
         <section class="bg-teal-100">
 
             <div class="items-center justify-between max-w-screen-xl px-4 py-8 mx-auto sm:px-16 ">
                 <p class="text-xl font-semibold text-center md:text-4xl text-teal-800">Ready for PTE?</p>
-                <p class="py-2 text-lg font-semibold text-center text-teal-700">Check your skills with these 5-question tests!</p>
+                <p class="py-2 text-lg font-semibold text-center text-teal-700">Check your skills with these 5-question
+                    tests!</p>
 
-                <!--pop ups-->
-                <div>
-                    <div id="popup1"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup1">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 1 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                
+                <!-- simple test buttons-->
+                <div class="flex flex-wrap justify-center mt-6 space-x-2 ">
+                    <!-- First Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn1"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup1">🥏 Does it Fit?</button>
                     </div>
 
-                    <div id="popup2"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 2 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Second Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn2"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup2">🐲 This is not going easy!</button>
                     </div>
 
-                    <div id="popup3"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup3">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 3 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Third Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn3"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup3">👻 Which is correct?</button>
                     </div>
 
-                    <div id="popup4"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 4 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Fourth Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn4"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup4">💬 Some more words</button>
                     </div>
 
-                    <div id="popup5"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 5 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Fifth Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn5"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup5">👔 Will this work?</button>
                     </div>
 
-                    <div id="popup6"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 6 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Sixth Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn6"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup6">🦸🏼‍♂️ Are you an action man?</button>
                     </div>
 
-                    <div id="popup7"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup7">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 7 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Seventh Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn7"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup7">⚔️ Make them agree!</button>
                     </div>
 
-                    <div id="popup8"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 8 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Eighth Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn8"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup8">🖼 Change Them!</button>
                     </div>
 
-                    <div id="popup9"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup9">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 9 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Ninth Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn9"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup9">🚁 Get them to the right place</button>
                     </div>
 
-                    <div id="popup10"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup10">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 10 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Tenth Button -->
+                    <div class="inline my-5">
+                        <button id="openPopupQn10"
+                            class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                            data-popup="popup11">🥂 Better Together!</button>
                     </div>
 
-                    <div id="popup11"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup11">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 11 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Twelfth Button -->
+                    <div class="inline my-5">
+                        <p class="inline">
+                            <button
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                                data-popup="popup12">👩‍🏫 Attend a session</button>
+                        </p>
                     </div>
 
-                    <div id="popup12"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup12">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 12 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
+                    <!-- Thirteenth Button -->
+                    <div class="inline my-5">
+                        <p class="inline">
+                            <button
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
+                                data-popup="popup13">🙌 More Tests</button>
+                        </p>
                     </div>
-
-
-                    <div id="popup13"
-                        class="fixed top-0 left-0 flex items-center justify-center hidden w-full h-full bg-black bg-opacity-50">
-
-                        <div class="p-4 bg-white rounded shadow-md popup-content">
-                            <div class="flex justify-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer"
-                                    data-popup-close="popup13">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-
-                            </div>
-                            <p>Popup 13 Content
-                                <br>
-                                This is the dummy content for pop up modal boxes
-                            </p>
-                            <button class="w-full p-2 px-6 my-4 mt-8 text-white rounded bg-emerald-600">Submit</button>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- simple test buttons-->
-               <!-- simple test buttons -->
-<div class="flex flex-wrap justify-center mt-6 space-x-2 ">
-    <!-- First Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup1">🥏 Does it Fit?</button>
-        </p>
-    </div>
+                <div id="overlay" class="overlay"></div>
 
-    <!-- Second Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup2">🐲 This is not going easy!</button>
-        </p>
-    </div>
 
-    <!-- Third Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup3">👻 Which is correct?</button>
-        </p>
-    </div>
-
-    <!-- Fourth Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup4">💬 Some more words</button>
-        </p>
-    </div>
-
-    <!-- Fifth Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup5">👔 Will this work?</button>
-        </p>
-    </div>
-
-    <!-- Sixth Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup6">🦸🏼‍♂️ Are you an action man?</button>
-        </p>
-    </div>
-
-    <!-- Seventh Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup7">⚔️ Make them agree!</button>
-        </p>
-    </div>
-
-    <!-- Eighth Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup8">🖼 Change Them!</button>
-        </p>
-    </div>
-
-    <!-- Ninth Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup9">🚁 Get them to the right place</button>
-        </p>
-    </div>
-
-    <!-- Tenth Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup10">What's your position?</button>
-        </p>
-    </div>
-
-    <!-- Eleventh Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup11">🥂 Better Together!</button>
-        </p>
-    </div>
-
-    <!-- Twelfth Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button 
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup">👩‍🏫 Attend a session</button>
-        </p>
-    </div>
-    
-
-    <!-- Thirteenth Button -->
-    <div class="inline my-5">
-        <p class="inline">
-            <button
-                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-teal-600 shadow-xl rounded-xl hover:bg-teal-700 px-7 text-wrap"
-                data-popup="popup13">🙌 More Tests</button>
-        </p>
-    </div>
-</div>
+            <div id="popupQn" class="p-6 rounded shadow-lg popupQn">
+                <div class="flex items-center justify-between px-2 py-5 bg-teal-200">
+                    <div id="directionsContainer" class="px-4 text-xl font-bold bg-teal-200 sm:text-2xl pb-0"></div>
+                    <button id="closePopupQn" class="p-2 ml-2 font-bold rounded">X</button>
+                </div>
+                <div id="answersContainer"
+                    class="grid grid-cols-1 px-5 m-auto pb-4 bg-teal-200 sm:grid-cols-1 md:grid-cols-2"></div>
+                <div id="questionsContainer" class=" p-4"></div>
+                <button id="submitQuiz" class="px-6 py-2 block mx-auto font-semibold text-white bg-teal-500 rounded">Submit</button>
+                <div id="scoreDisplay" class="mt-4 font-bold"></div>
+            </div>
 
         </section>
 
         <!--links-->
         <section class="items-center justify-between max-w-screen-xl px-4 py-8 mx-auto sm:px-16">
             <p class="text-xl font-semibold md:text-3xl text-teal-800">Links you might like</p>
-        
+
             <!--3 blocks-->
             <div class="grid grid-cols-6 my-4 mt-8 md:gap-8">
-        
+
                 <!--first-->
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                    <a href="./downloads" class="flex px-5 py-4 m-2 space-x-3 duration-200 ease-in-out border-2 border-gray-200 rounded-md shadow-xl md:m-0 hover:border-teal-400">
+                    <a href="./downloads"
+                        class="flex px-5 py-4 m-2 space-x-3 duration-200 ease-in-out border-2 border-gray-200 rounded-md shadow-xl md:m-0 hover:border-teal-400">
                         <img src="../assets/icon-43.svg" class="mx-2 my-auto" alt="cloud" width="30px" height="30px">
                         <div>
                             <div class="flex">
                                 <p class="flex my-auto text-lg font-semibold">Free Downloads</p>
-                                <img src="../assets/star.svg" alt="star" class="mx-2 my-auto" width="15px" height="15px">
+                                <img src="../assets/star.svg" alt="star" class="mx-2 my-auto" width="15px"
+                                    height="15px">
                             </div>
                             <p class="text-sm text-gray-400">Classroom Essentials</p>
                         </div>
                     </a>
                 </div>
-        
+
                 <!--second-->
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                    <a href="./courses" class="flex px-5 py-4 m-2 space-x-3 duration-200 ease-in-out border-2 border-gray-200 rounded-md shadow-xl md:m-0 hover:border-teal-400">
+                    <a href="./courses"
+                        class="flex px-5 py-4 m-2 space-x-3 duration-200 ease-in-out border-2 border-gray-200 rounded-md shadow-xl md:m-0 hover:border-teal-400">
                         <img src="../assets/icon-18.svg" class="mx-2 my-auto" alt="cloud" width="30px" height="30px">
                         <div>
                             <div class="flex">
                                 <p class="flex my-auto text-lg font-semibold">Our Courses</p>
-                                <img src="../assets/star.svg" alt="star" class="mx-2 my-auto" width="15px" height="15px">
+                                <img src="../assets/star.svg" alt="star" class="mx-2 my-auto" width="15px"
+                                    height="15px">
                             </div>
                             <p class="text-sm text-gray-400">Training Programs</p>
                         </div>
                     </a>
                 </div>
-        
+
                 <!--third-->
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                    <a href="/blog" class="flex px-5 py-4 m-2 space-x-3 duration-200 ease-in-out border-2 border-gray-200 rounded-md shadow-xl md:m-0 hover:border-teal-400">
+                    <a href="/blog"
+                        class="flex px-5 py-4 m-2 space-x-3 duration-200 ease-in-out border-2 border-gray-200 rounded-md shadow-xl md:m-0 hover:border-teal-400">
                         <img src="../assets/icon-2.svg" class="mx-2 my-auto" alt="cloud" width="30px" height="30px">
                         <div>
                             <div class="flex">
                                 <p class="flex my-auto text-lg font-semibold">Blog</p>
-                                <img src="../assets/star.svg" alt="star" class="mx-2 my-auto" width="15px" height="15px">
+                                <img src="../assets/star.svg" alt="star" class="mx-2 my-auto" width="15px"
+                                    height="15px">
                             </div>
                             <p class="text-sm text-gray-400">Latest Updates</p>
                         </div>
                     </a>
                 </div>
-        
+
                 <!--fourth-->
                 <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                    <a href="./team" class="flex px-5 py-4 m-2 space-x-3 duration-200 ease-in-out border-2 border-gray-200 rounded-md shadow-xl md:m-0 hover:border-teal-400">
+                    <a href="./team"
+                        class="flex px-5 py-4 m-2 space-x-3 duration-200 ease-in-out border-2 border-gray-200 rounded-md shadow-xl md:m-0 hover:border-teal-400">
                         <img src="../assets/icon-7.svg" class="mx-2 my-auto" alt="cloud" width="30px" height="30px">
                         <div>
                             <div class="flex">
                                 <p class="flex my-auto text-lg font-semibold">The Team</p>
-                                <img src="../assets/star.svg" alt="star" class="mx-2 my-auto" width="15px" height="15px">
+                                <img src="../assets/star.svg" alt="star" class="mx-2 my-auto" width="15px"
+                                    height="15px">
                             </div>
                             <p class="text-sm text-gray-400">We The People</p>
                         </div>
                     </a>
                 </div>
-        
+
             </div>
         </section>
-        
-        
+
+
         <!--courses-->
         <section class="items-center justify-between max-w-screen-xl px-4 pb-8 mx-auto sm:px-16 ">
             <p class="text-xl font-semibold md:text-3xl text-teal-800">Our Other Popular Courses</p>
@@ -1300,12 +1092,12 @@
         <div class=" flex items-center justify-center" >
         <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-            stroke="currentColor" class="w-4 h-4 text-white">
-            <path stroke-linecap="round" stroke-linejoin="round"
-            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                stroke="currentColor" class="w-4 h-4 text-white">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
             </svg>
-            
-            <span class="text-sm md:text-md font-bold text-white">Call</span>
+
+            <span class="text-sm font-semibold text-white">Call</span>
         </a>
 
         <div>
@@ -1318,7 +1110,7 @@
         </a>
         </div>
     </div>
-    
+
     <button id="scrollToTop"
         class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -1337,10 +1129,12 @@
                     <div>
                         <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
                             <div class="w-[97%]" role="alert">
-                                Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
+                                Do enter the country code of your phone number.<br> Ex: <kbd
+                                    class="p-1 text-white bg-black rounded">+91</kbd> for India,
                                 <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
                             </div>
-                            <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                            <button type="button"
+                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
                                 data-popup-close="talkForm">&times;</button>
                         </div>
 
@@ -1349,31 +1143,33 @@
                         <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                             <div class="w-full col-span-1">
                                 <label class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
-                                    required="">
+                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username"
+                                    placeholder="Full Name" required="">
                             </div>
                             <div class="w-full col-span-1">
                                 <label class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
-                                    required="">
+                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
+                                    name="userphone" placeholder="Phone Number" required="">
                             </div>
                             <div class="col-span-2 my-2">
                                 <div class="mb-4 ">
                                     <label class="block pb-2 text-center">Email address</label>
-                                    <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
-                                        placeholder="E-mail ID" required="">
+                                    <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded"
+                                        name="useremail" placeholder="E-mail ID" required="">
                                 </div>
                                 <div class="">
                                     <label class="block pb-2 text-center">Message</label>
                                     <div>
-                                        <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
-                                            placeholder="Type your message here..." required=""></textarea>
+                                        <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none"
+                                            rows="4" name="message" placeholder="Type your message here..."
+                                            required=""></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn hover:bg-teal-custom">
+                        <button type="submit"
+                            class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn hover:bg-teal-custom">
                             Submit
                         </button>
                     </div>
@@ -1382,7 +1178,8 @@
         </div>
     </div>
 
-    <div id="requestForm" class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
+    <div id="requestForm"
+        class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
 
         <div class="p-8 bg-white rounded-lg shadow-md popup-content">
             <form id="request" action="{{ route('request.send') }}" method="POST">
@@ -1391,7 +1188,7 @@
                         <div class="flex items-center justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
 
                             <div class="w-[97%]" role="alert">
-                                <h1 class="my-auto text-2xl font-semibold">Request Free Test</h1> 
+                                <h1 class="my-auto text-2xl font-semibold">Request Free Test</h1>
                             </div>
 
                             <button type="button"
@@ -1403,32 +1200,28 @@
                         <div class="grid grid-cols-2 gap-4 my-2 mt-4">
                             <div class="w-full col-span-1">
                                 <label class="block pb-2">Name</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
-                                    name="username" placeholder="Full Name"
-                                    required="" >
+                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username"
+                                    placeholder="Full Name" required="">
                             </div>
                             <div class="w-full col-span-1">
                                 <label class="block pb-2">Phone</label>
                                 <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100"
-                                    name="userphone" placeholder="Phone Number"
-                                    required="" >
+                                    name="userphone" placeholder="Phone Number" required="">
                             </div>
                             <div class="col-span-2 my-2">
                                 <div class="mb-4 ">
                                     <label class="block pb-2">Email
                                         address</label>
-                                    <input type="email"
-                                        class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail" placeholder="E-mail ID" required="" class="w-100">
+                                    <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded"
+                                        name="useremail" placeholder="E-mail ID" required="" class="w-100">
                                 </div>
                                 <div class="">
                                     <label for="message" class="block pb-2">Which
                                         Test(s) do you wish to take?</label>
                                     <div class="input-group">
-                                        <textarea
-                                            class="w-full p-2 px-4 border border-gray-200 rounded resize-none"
-                                            rows="4" name="message" id="message"
-                                            placeholder="Type your message here..." required=""
-                                            ></textarea>
+                                        <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none"
+                                            rows="4" name="message" id="message" placeholder="Type your message here..."
+                                            required=""></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -1443,13 +1236,14 @@
 
     <!-- Modal -->
     <div id="popup"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
-        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+                class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
                     <div class="w-[97%]" role="alert">
-                        Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
+                        Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd>
+                        for the
                         USA.
                     </div>
                     <button type="button"
@@ -1513,8 +1307,8 @@
                     name="username" required>
                 <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
                     name="useremail" required>
-                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
-                    placeholder="Phone Number" name="userphone" required>
+                <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Phone Number"
+                    name="userphone" required>
 
                 <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
             </form>
@@ -1522,42 +1316,54 @@
     </div>
 
     <div id="material1"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
-            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8" id="carousel1">
-                <button id="pBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
+            <div class="relative w-[340px] h-[480px] mx-auto overflow-hidden rounded-b carousel py-4 lg:mt-8"
+                id="carousel1">
+                <button id="pBtn1"
+                    class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
                     <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
                 </button>
-                <button id="nxtBtn1" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
+                <button id="nxtBtn1"
+                    class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
                     <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
                 </button>
                 <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner">
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-1.png" alt="flower 1"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-2.png" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-2.png"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-3.png" alt="flower 3"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-4.png" alt="flower 3"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-5.png" alt="flower 3"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-6.png" alt="flower 3"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-7.png" alt="flower 3"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-8.png" alt="flower 3"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3" class="object-contain w-full h-full shadow-lg">
+                        <img src="../assets/slides/file_ielts-book-9.png" alt="flower 3"
+                            class="object-contain w-full h-full shadow-lg">
                     </div>
                 </div>
                 <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
@@ -1568,30 +1374,37 @@
     </div>
 
     <div id="material2"
-    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
             <div class="relative mx-auto overflow-hidden rounded-b carousel w-[340px] h-[480px] py-4" id="carousel2">
-                <button id="pBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
+                <button id="pBtn2"
+                    class="absolute p-2 my-auto text-white rounded-full top-1/2 left-4 focus:outline-none">
                     <ion-icon name="arrow-dropleft-circle" class="text-4xl text-slate-200"></ion-icon>
                 </button>
-                <button id="nxtBtn2" class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
+                <button id="nxtBtn2"
+                    class="absolute p-2 my-auto text-white rounded-full top-1/2 right-4 focus:outline-none">
                     <ion-icon name="arrow-dropright-circle" class="text-4xl text-slate-200"></ion-icon>
                 </button>
                 <div class="relative flex mx-auto duration-500 ease-in-out crsl-inner ">
                     <div class="crsl-item">
-                        <img src="../assets/slides2/f1.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                        <img src="../assets/slides2/f1.png" alt="flower 3"
+                            class="object-center w-full h-auto shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides2/f2.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                        <img src="../assets/slides2/f2.png" alt="flower 3"
+                            class="object-center w-full h-auto shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides2/f3.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                        <img src="../assets/slides2/f3.png" alt="flower 3"
+                            class="object-center w-full h-auto shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides2/f5.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                        <img src="../assets/slides2/f5.png" alt="flower 3"
+                            class="object-center w-full h-auto shadow-lg">
                     </div>
                     <div class="crsl-item">
-                        <img src="../assets/slides2/f4.png" alt="flower 3" class="object-center w-full h-auto shadow-lg">
+                        <img src="../assets/slides2/f4.png" alt="flower 3"
+                            class="object-center w-full h-auto shadow-lg">
                     </div>
                 </div>
                 <div class="absolute px-3 py-1 text-gray-500 top-[85%] right-4">
@@ -1616,7 +1429,8 @@
     </div>
 
     <script src="../dist/voilaui.js"></script>
-   
+    <script src="../dist/toeflQuizz.js"></script>
+
 </body>
 
 </html>

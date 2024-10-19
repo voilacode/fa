@@ -21,8 +21,75 @@
         rel="stylesheet">
     <title>Best SAT Coaching in Hyderabad | Best SAT Coaching in Ameerpet | Best SAT Coaching in Madhapur | SAT Online Coaching | SAT Coaching in Hyderabad</title>
     <style>
-        #header, #message {
+        #header,
+        #message {
             display: block;
+        }
+
+        .crsl-item {
+            min-width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #pBtn1,
+        #nxtBtn1,
+        #pBtn2,
+        #nxtBtn2,
+        #pBtn,
+        #nxtBtn {
+            z-index: 1;
+        }
+
+        .popupQn {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -48%);
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 95vw;
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            display: none;
+        }
+
+        .active1 {
+            display: block;
+        }
+
+        #directionsContainer {
+            white-space: pre-wrap;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background-color: #3498db;
+            width: 0;
+        }
+
+        @media (min-width: 640px) {
+            .popupQn {
+                width: 45vw;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width:1000px) {
+            .popupQn {
+                width: 75vw;
+            }
         }
     </style>
 </head>
@@ -425,49 +492,65 @@
                 our approach towards vocabulary in our SAT Coaching</p>
 
             <div class="flex flex-wrap justify-center gap-4 py-2 lg:py-10 lg:px-4">
-                <a href=""
+                <button id="openPopupQn1"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
-                    data-popup="popup1">
+                    >
                     Word Use
-                </a>
-                <a href=""
+                </button>
+                <button id="openPopupQn2"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
-                    data-popup="popup2">
+                    >
                     Context test
-                </a>
-                <a href=""
+                </button>
+                <button id="openPopupQn3"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
-                    data-popup="popup3">
+                    >
                     Word Forms
-                </a> <a href=""
+                </button> <button id="openPopupQn4"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
-                    data-popup="popup4">
+                    >
                     Sentence Variety
-                </a> <a href=""
+                </button> <button id="openPopupQn5"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
-                    data-popup="popup5">
+                    >
                     Excuse Me?
-                </a>
-                </a> <a href=""
+                </button>
+                </button> <button id="openPopupQn6"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
-                    data-popup="popup6">
+                    >
                     Tense?
-                </a>
-                </a> <a href=""
+                </button>
+                </button> <button id="openPopupQn7"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
-                    data-popup="popup7">
+                    >
                     ParaPhrase<span class="px-2 py-1 ml-2 text-base text-white bg-green-500 rounded-lg">pro</span>
-                </a>
-                </a> <a href=""
+                </button>
+                </button> <button id="openPopupQn8"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
-                    data-popup="popup8">
+                    >
                     4-Letter Words
-                </a>
-                </a> <a href="#moreinfo"
+                </button>
+                </button> 
+                <a href="#moreinfo"
                     class="p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-teal-500 hover:bg-cyan-100 bg-cyan-500 px-7 text-wrap"
                     data-popup="popup9">
                     Common Questions<span class="px-2 py-1 ml-2 text-base text-white bg-green-500 rounded-lg">🤔</span>
                 </a>
+            </div>
+
+            <div id="overlay" class="overlay"></div>
+
+
+            <div id="popupQn" class="p-6 rounded shadow-lg popupQn">
+                <div class="flex items-center justify-between px-2 py-5 bg-teal-200">
+                    <div id="directionsContainer" class="px-4 text-xl font-bold bg-teal-200 sm:text-2xl pb-0"></div>
+                    <button id="closePopupQn" class="p-2 ml-2 font-bold rounded">X</button>
+                </div>
+                <div id="answersContainer"
+                    class="grid grid-cols-1 px-5 m-auto pb-4 bg-teal-200 sm:grid-cols-1 md:grid-cols-3"></div>
+                <div id="questionsContainer" class=" p-4"></div>
+                <button id="submitQuiz" class="px-6 py-2 block mx-auto font-semibold text-white bg-teal-500 rounded">Submit</button>
+                <div id="scoreDisplay" class="mt-4 font-bold"></div>
             </div>
         </div>
     </section>
@@ -1417,5 +1500,6 @@
 
     <script src="../dist/voilaui.js"></script>
     <script src="../dist/token.js"></script>
+    <script src="../dist/satQuizz.js"></script>
 </body>
 </html>
