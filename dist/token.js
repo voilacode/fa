@@ -55,10 +55,10 @@ async function handleFormSubmit(event, formId, url, popupId) {
 }
 
 async function handleForm(event, formId, url) {
-    event.preventDefault();  // Prevent default form submission behavior
+    event.preventDefault();  // Ensure the form submission is prevented
 
     try {
-        // Initialize CSRF cookie on mobile devices
+        // Initialize CSRF cookie for mobile devices
         await fetch('/sanctum/csrf-cookie');
 
         // Fetch CSRF token
@@ -79,6 +79,7 @@ async function handleForm(event, formId, url) {
         // Collect form data
         const formData = new FormData(document.getElementById(formId));
 
+        // Set up the request options
         const requestOptions = {
             method: 'POST',
             headers: {
@@ -88,27 +89,28 @@ async function handleForm(event, formId, url) {
             body: formData
         };
 
-        // Submit the form data via AJAX without leaving the page
+        // Submit the form using fetch
         const response = await fetch(url, requestOptions);
 
-        // Handle the response
+        // Check if response is OK
         if (response.ok) {
             const responseData = await response.json();
-            console.log('Success response data:', responseData);
-            
+            console.log('Success:', responseData);
+
             // Show the success popup
             document.getElementById('successPopup').classList.remove('hidden');
         } else {
             const errorData = await response.json();
-            console.error('Error in response:', errorData);
-            
+            console.error('Error:', errorData);
+
             // Show the error popup
             document.getElementById('errorPopup').classList.remove('hidden');
         }
 
     } catch (error) {
-        console.error('Caught network error:', error);
+        console.error('Caught error:', error);
 
+        // Show the error popup in case of failure
         document.getElementById('errorPopup').classList.remove('hidden');
     }
 }
