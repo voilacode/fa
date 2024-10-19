@@ -68,5 +68,5 @@ document.getElementById('request').addEventListener('submit', function (event) {
 });
 
 document.getElementById('studyabroad').addEventListener('submit', function (event) {
-    handleFormSubmit(event, 'studyabroad', '/mail/studyabroad', 'study');
+    handleFormSubmit(event, 'studyabroad', '/mail/studyabroad', 'requestForm');
 });
