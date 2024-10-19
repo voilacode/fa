@@ -66,3 +66,7 @@ document.getElementById('talk').addEventListener('submit', function (event) {
 document.getElementById('request').addEventListener('submit', function (event) {
     handleFormSubmit(event, 'request', '/mail/request', 'requestForm');
 });
+
+document.getElementById('studyabroad').addEventListener('submit', function (event) {
+    handleFormSubmit(event, 'request', '/mail/studyabroad', 'requestForm');
+});
