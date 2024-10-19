@@ -314,7 +314,7 @@
     <div class="bg-white">
         <div class="items-center justify-between max-w-screen-xl gap-20 px-4 py-4 mx-auto lg:flex sm:px-16">
            <div class="">
-            <p class="py-3 text-4xl font-extrabold sm:text-5xl font-noto ">The 'No-Doubt' <br> Admissions Program
+            <p class="py-3 text-4xl font-extrabold sm:text-5xl  ">The 'No-Doubt' <br> Admissions Program
             </p>
                 <ul class="my-4">
                     <li class="flex text-lg font-semibold text-gray-500">
@@ -445,7 +445,7 @@
                 <img src="../assets/kruparao" alt="girl" class="py-5 px-5 lg:h-[250px] lg:w-[250px] rounded-full hidden md:block object-cover">
             </div>
             <div class="order-1 p-5 md:order-3">
-                <h1 class="text-5xl font-semibold text-center text-blue-600 md:text-start font-noto">200000+</h1>
+                <h1 class="text-5xl font-semibold text-center text-blue-600 md:text-start ">200000+</h1>
                 <p class="text-xl text-center md:text-start my-2">Happy students</p>
                 <p class="text-center md:text-start">Most awarded Coaching Centre</p>
                 
@@ -480,9 +480,9 @@
             <!-- form block -->
             <div class="col-span-2 bg-white" id="study"> 
                 <!--form-->
-                <form id="studyabroad" action="{{ route('studyabroad.send') }}" method="POST" class="px-2 py-4 shadow-2xl md:px-12 ">
+                <form id="studyabroad" action="{{ route('studyabroad.send') }}" method="POST" class=" p-4 shadow-2xl sm:px-12 ">
                     @csrf
-                    <h1 class="text-2xl mt-4 font-bold md:text-4xl font-noto">Help Us Help You!</h1>
+                    <h1 class="text-2xl mt-4 font-bold md:text-4xl ">Help Us Help You!</h1>
                     <p class="py-2 font-semibold">Top-class Tailor made suggesstions</p>
                     <p class="py-2 opacity-75">Choosing a university is not an easy task.
                         Several factors need to be taken in account. Cost, economic stability and, prevailing market
@@ -493,66 +493,70 @@
                     will contact you before coming up with a list of universities. If you have any questions, you are
                     always welcome to call us!</p>
 
-                <p class="p-4 my-3 text-gray-400 rounded bg-gray-50 font-noto">Please include the
+                <p class="p-4 my-3 text-gray-400 rounded bg-gray-50 ">Please include the
                     country code with your phone number. (Eg: <span
                         class="p-1 text-sm text-white bg-black rounded">+91</span> for India; <span
                         class="p-1 text-sm text-white bg-black rounded">+1</span> for the USA).</p>
 
                     <div class="gap-2 my-2 md:grid-cols-2 md:grid">
                         <div class="mb-2 md:mr-4">
-                            <label for="Name" class="text-lg font-noto">Name</label><br>
+                            <label for="Name" class="text-lg font-semibold">Name</label><br>
                             <input type="text" id="Name" name="username"
-                                class="w-full px-2 py-3 bg-white border-2 border-blue-300 opacity-60"
+                                class="w-full px-2 my-2 py-3 bg-white border-2 border-blue-300 opacity-60"
                                 placeholder="Full name">
                         </div>
                         <div>
-                            <label for="Phone" class="mb-2 text-lg font-noto">Phone</label><br>
+                            <label for="Phone" class="mb-2 text-lg font-semibold">Phone</label><br>
                             <input type="tel" id="Phone" name="userphone"
-                                class="w-full px-2 py-3 bg-white border-2 border-blue-300 opacity-60"
+                                class="w-full px-2 my-2 py-3 bg-white border-2 border-blue-300 opacity-60"
                                 placeholder="Phone Number">
                         </div>
                     </div>
-                    <label for="Email address" class="text-lg font-noto">Email address</label><br>
+                    <label for="Email address" class="text-lg font-semibold">Email address</label><br>
                     <input type="text" name="useremail" id="Email address"
                         class="w-full px-2 py-3 my-2 bg-white border-2 border-blue-300 opacity-60"
                         placeholder="Double check on entering!">
-                    <label for="Date of Birth" class="text-lg font-noto">Date of Birth</label><br>
+                    <label for="Date of Birth" class="text-lg font-semibold">Date of Birth</label><br>
                     <input type="text" name="dob" id="Date of Birth"
-                        class="w-full px-2 py-3 bg-white border-2 border-blue-300 opacity-60"
+                        class="w-full px-2 py-3 my-2 bg-white border-2 border-blue-300 opacity-60"
                         placeholder="25/Dec/1900">
 
                     <div class="py-2">
-                        <label for="Education" class="text-lg font-noto">Education</label><br>
-                        <input type="radio" name="education" value="10th Standard" id="10th Standard">
-                        <label for="10th Standard" class="mr-2 font-semibold opacity-70">10th Standard</label>
-                        <input type="radio" name="education" value="12th Standard" id="12th Standard">
-                        <label for="12th Standard" class="mr-2 font-semibold opacity-70">12th Standard</label>
-                        <input type="radio" name="education" value="Bachelor's" id="Bachelor's">
-                        <label for="Bachelor's" class="mr-2 font-semibold opacity-70">Bachelor's</label>
-                        <input type="radio" name="education" value="Master's" id="Master's">
-                        <label for="Master's" class="mr-2 font-semibold opacity-70">Master's</label>
-                        <input type="radio" name="education" value="Other" id="Other">
-                        <label for="Other" class="mr-2 font-semibold opacity-70">Other</label><br>
+                        <label for="Education" class="text-lg font-semibold">Education</label>
+                        <div class="my-2">
+                            <input type="radio" name="education" value="10th Standard" id="10th Standard">
+                            <label for="10th Standard" class="mr-2 font-semibold opacity-70">10th Standard</label>
+                            <input type="radio" name="education" value="12th Standard" id="12th Standard">
+                            <label for="12th Standard" class="mr-2 font-semibold opacity-70">12th Standard</label>
+                            <input type="radio" name="education" value="Bachelor's" id="Bachelor's">
+                            <label for="Bachelor's" class="mr-2 font-semibold opacity-70">Bachelor's</label>
+                            <input type="radio" name="education" value="Master's" id="Master's">
+                            <label for="Master's" class="mr-2 font-semibold opacity-70">Master's</label>
+                            <input type="radio" name="education" value="Other" id="Other">
+                            <label for="Other" class="mr-2 font-semibold opacity-70">Other</label>
+                        </div>
                     </div>
                     
                     <div class="py-2">
-                        <label for="Status of Degree" class="pt-10 font-semibold font-noto">Status of Degree</label><br>
-                        <input type="radio" name="status_of_degree" value="Completed" id="Completed">
-                        <label for="Completed" class="mr-2 font-semibold opacity-70">Completed</label>
-                        <input type="radio" name="status_of_degree" value="Pursuing" id="Pursuing">
-                        <label for="Pursuing" class="mr-2 font-semibold opacity-70">Pursuing</label>
-                        <input type="radio" name="status_of_degree" value="Discontinued" id="Discontinued">
-                        <label for="Discontinued" class="mr-2 font-semibold opacity-70">Discontinued</label><br>
+                        <label for="Status of Degree" class="pt-10 font-semibold ">Status of Degree</label>
+                        <div class="my-2">
+                            <input type="radio" name="status_of_degree" value="Completed" id="Completed">
+                            <label for="Completed" class="mr-2 font-semibold opacity-70">Completed</label>
+                            <input type="radio" name="status_of_degree" value="Pursuing" id="Pursuing">
+                            <label for="Pursuing" class="mr-2 font-semibold opacity-70">Pursuing</label>
+                            <input type="radio" name="status_of_degree" value="Discontinued" id="Discontinued">
+                            <label for="Discontinued" class="mr-2 font-semibold opacity-70">Discontinued</label>
+                        </div>
     
                     </div>
                                         
-                    <label for="Work Experience" class="mr-2 font-semibold font-noto">Work Experience</label><br>
+                    <label for="Work Experience" class="mr-2 font-semibold ">Work Experience</label><br>
                     <textarea name="experience" id="Work Experience" cols="90" rows="3"
-                        class="w-2/3 mb-2 border-2 md:w-full"></textarea><br>
+                        class="my-2 border-2 w-full px-2 py-3"></textarea><br>
 
                     <div class="py-2">
-                        <label for="Tests Taken" class="font-semibold font-noto">Tests Taken</label><br>
-                        <div class="flex">
+                        <label for="Tests Taken" class="font-semibold ">Tests Taken</label><br>
+                        <div class="flex mt-1">
                             <div class="mr-2">
                                 <input type="checkbox" id="IELTS" name="tests[]" value="IELTS">
                                 <label for="IELTS" class="text-lg">IELTS</label>
@@ -572,41 +576,43 @@
                         </div>
                     </div>
                     
-                    <label class="mr-2 font-semibold font-noto">Test Scores</label><br>
+                    <label class="mr-2 font-semibold ">Test Scores</label><br>
                     <textarea name="test_scores" cols="90" rows="3"
-                        class="w-2/3 p-2 mb-2 border-2 md:w-full"
+                        class="p-2 my-2 border-2 w-full"
                         placeholder="Enter all your test scores here"></textarea><br>
 
                     <div class="py-2">
-                        <label for="Bachelor's" class="py-4 font-semibold font-noto">Which Program are you applying to?</label><br>
-
-                        <input type="radio" name="program" value="Bachelor's" id="Bachelor's">
-                        <label for="Bachelor's" class="mr-2 font-semibold opacity-70">Bachelor's</label>
-                        <input type="radio" name="program" value="Master's" id="Master's">
-                        <label for="Master's" class="mr-2 font-semibold opacity-70">Master's</label>
-                        <input type="radio" name="program" value="Diploma" id="Diploma">
-                        <label for="Diploma" class="mr-2 font-semibold opacity-70">Diploma</label>
-                        <input type="radio" name="program" value="Other" id="Other">
-                        <label for="Other" class="mr-2 font-semibold opacity-70">Other</label><br>
+                        <label for="Bachelor's" class="py-4 font-semibold">Which Program are you applying to?</label>
+                        <div class="my-2">
+                            <input type="radio" name="program" value="Bachelor's" id="Bachelor's">
+                            <label for="Bachelor's" class="mr-2 font-semibold opacity-70">Bachelor's</label>
+                            <input type="radio" name="program" value="Master's" id="Master's">
+                            <label for="Master's" class="mr-2 font-semibold opacity-70">Master's</label>
+                            <input type="radio" name="program" value="Diploma" id="Diploma">
+                            <label for="Diploma" class="mr-2 font-semibold opacity-70">Diploma</label>
+                            <input type="radio" name="program" value="Other" id="Other">
+                            <label for="Other" class="mr-2 font-semibold opacity-70">Other</label>
+                        </div>
+                        
                     </div>
                    
-                    <label for="Specialization" class="font-semibold font-noto">Specialization</label><br>
+                    <label for="Specialization" class="font-semibold">Specialization</label><br>
                     <input type="text" name="specialization" id="Specialization"
                         placeholder="Your Prefered Specialization"
-                        class="w-full px-2 py-3 mb-4 bg-white border-2 border-blue-300 opacity-60"><br>
+                        class="w-full px-2 py-3 mb-4 mt-2 bg-white border-2 border-blue-300 opacity-60"><br>
 
                     <div class="py-2">
-                        <label for="Country Preference" class="font-semibold font-noto">Country Preference</label>
-                        <div class="grid-cols-3 md:grid">
-                            <div>
+                        <label for="Country Preference" class="font-semibold ">Country Preference</label>
+                        <div class="sm:flex justify-between flex-wrap">
+                            <div class="my-2">
                                 <label for="Preference 1">Preference 1</label><br>
                                 <input type="text" name="country1" id="Preference 1" placeholder="Country #1" class="p-3 border-2">
                             </div>
-                            <div>
+                            <div class="my-2">
                                 <label for="Preference 2">Preference 2</label><br>
                                 <input type="text" name="country2" id="Preference 2" placeholder="Country #2" class="p-3 border-2">
                             </div>
-                            <div>
+                            <div class="my-2">
                                 <label for="Preference 3">Preference 3</label><br>
                                 <input type="text" name="country3" id="Preference 3" placeholder="Country #3" class="p-3 border-2"><br>
                             </div>
@@ -614,16 +620,16 @@
                     </div>
                     
                     <div class="py-2">
-                        <label for="Additional Information" class="font-semibold font-noto">Additional Information</label><br>
+                        <label for="Additional Information" class="font-semibold ">Additional Information</label><br>
                         <input type="text" name="additional" id="Additional Information"
                             class="w-full px-2 py-3 my-2 bg-white border-2 border-blue-300 opacity-60"
-                            placeholder="Scholorships,Internships,Awards and any other relavant information"><br>
+                            placeholder="Scholarships, Internships, Awards and any other relevant information"><br>
                     </div>
                     
                     <button type="submit" class="w-full px-2 py-3 mb-2 font-bold text-white duration-300 ease-in-out transform bg-teal-500 rounded hover:-translate-y-1 hover:cursor-pointer">Submit</button>
                 </form>
                 
-                <div class="my-2 mb-6 text-sm text-center font-noto">
+                <div class="my-2 mb-6 text-sm text-center ">
                     <p class="">Thank you for your interest ♥</p>
                     <p class="">We will get in touch with you soon!</p>
                 </div>
@@ -640,7 +646,7 @@
                     patient. I got great help from her during college applications, gathering documents for i20 and also
                     during Visa preparation.”
                 </p>
-                <p class="text-lg font-bold text-center text-blue-600 font-noto"><a
+                <p class="text-lg font-bold text-center text-blue-600 "><a
                         href="https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s107243963656108244871!2s0x0:0x1e56d5969c8712f0?hl=en-IN&shorturl=1">__
                         Ayanala Sanjeeth</a></p>
                 <p class="text-xl font-semibold text-center opacity-40">(Original Google Review)</p>
@@ -1027,16 +1033,30 @@
     </div>
 
     <div id="successPopup"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+    <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
+        <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
+            <div class="w-full text-center text-green-800">
+                <h3 class="text-lg font-bold">Request Sent Successfully!</h3>
+                <p>Our team will reach out to you soon.</p>
+            </div>
+        </div>
+        <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
+            data-popup-close="successPopup">Close</button>
+    </div>
+    </div>
+
+    <div id="errorPopup"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
         <div class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[400px] max-h-[95vh] overflow-y-auto">
-            <div class="flex justify-between p-4 mb-0 bg-green-100 rounded-lg">
-                <div class="w-full text-center text-green-800">
-                    <h3 class="text-lg font-bold">Success!</h3>
-                    <p>Your mail has been sent successfully.</p>
+            <div class="flex justify-between p-4 mb-0 bg-red-100 rounded-lg">
+                <div class="w-full text-center text-red-800">
+                    <h3 class="text-lg font-bold">Uh Oh:(</h3>
+                    <p>Some error occured! Please try later.</p>
                 </div>
             </div>
-            <button type="button" class="block w-full p-4 mt-4 text-white bg-green-600 btn btn-block"
-                data-popup-close="successPopup">Close</button>
+            <button type="button" class="block w-full p-4 mt-4 text-white bg-red-600 btn btn-block"
+                data-popup-close="errorPopup">Close</button>
         </div>
     </div>
 

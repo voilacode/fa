@@ -55,7 +55,7 @@ async function handleFormSubmit(event, formId, url, popupId) {
 }
 
 async function handleForm(event, formId, url) {
-    event.preventDefault();
+    event.preventDefault();  // Prevent default form submission behavior
 
     try {
         // Initialize CSRF cookie on mobile devices
@@ -76,6 +76,7 @@ async function handleForm(event, formId, url) {
         const csrfData = await csrfResponse.json();
         const csrfToken = csrfData.csrfToken;
 
+        // Collect form data
         const formData = new FormData(document.getElementById(formId));
 
         const requestOptions = {
@@ -87,22 +88,27 @@ async function handleForm(event, formId, url) {
             body: formData
         };
 
+        // Submit the form data via AJAX without leaving the page
         const response = await fetch(url, requestOptions);
 
+        // Handle the response
         if (response.ok) {
             const responseData = await response.json();
-            console.log('Success response data:', responseData); // Log the response data
-
+            console.log('Success response data:', responseData);
+            
+            // Show the success popup
             document.getElementById('successPopup').classList.remove('hidden');
-
         } else {
             const errorData = await response.json();
             console.error('Error in response:', errorData);
-            document.getElementById('successPopup').classList.remove('hidden');
+            
+            // Show the error popup
+            document.getElementById('errorPopup').classList.remove('hidden');
         }
 
     } catch (error) {
         console.error('Caught network error:', error);
+
         document.getElementById('errorPopup').classList.remove('hidden');
     }
 }
