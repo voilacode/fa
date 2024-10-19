@@ -54,6 +54,59 @@ async function handleFormSubmit(event, formId, url, popupId) {
     }
 }
 
+async function handleForm(event, formId, url) {
+    event.preventDefault();
+
+    try {
+        // Initialize CSRF cookie on mobile devices
+        await fetch('/sanctum/csrf-cookie');
+
+        // Fetch CSRF token
+        const csrfResponse = await fetch('/csrf-token', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (!csrfResponse.ok) {
+            throw new Error('Failed to fetch CSRF token');
+        }
+
+        const csrfData = await csrfResponse.json();
+        const csrfToken = csrfData.csrfToken;
+
+        const formData = new FormData(document.getElementById(formId));
+
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': csrfToken,
+                'Accept': 'application/json'
+            },
+            body: formData
+        };
+
+        const response = await fetch(url, requestOptions);
+
+        if (response.ok) {
+            const responseData = await response.json();
+            console.log('Success response data:', responseData); // Log the response data
+
+            document.getElementById('successPopup').classList.remove('hidden');
+
+        } else {
+            const errorData = await response.json();
+            console.error('Error in response:', errorData);
+            document.getElementById('successPopup').classList.remove('hidden');
+        }
+
+    } catch (error) {
+        console.error('Caught network error:', error);
+        document.getElementById('errorPopup').classList.remove('hidden');
+    }
+}
+
 // Event listeners for each form
 document.getElementById('demoForm').addEventListener('submit', function (event) {
     handleFormSubmit(event, 'demoForm', '/mail/demo', 'popup');
@@ -68,5 +121,5 @@ document.getElementById('request').addEventListener('submit', function (event) {
 });
 
 document.getElementById('studyabroad').addEventListener('submit', function (event) {
-    handleFormSubmit(event, 'studyabroad', '/mail/studyabroad', 'requestForm');
+    handleForm(event, 'studyabroad', '/mail/studyabroad');
 });
