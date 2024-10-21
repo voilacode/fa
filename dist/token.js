@@ -99,15 +99,12 @@ async function handleForm(event, formId, url) {
 
             // Show the success popup without hiding the form
             document.getElementById('successPopup').classList.remove('hidden');
-            document.getElementById('successPopup').innerText = 'Email sent successfully! We will get in touch soon.';
-
         } else {
             const errorData = await response.json();
             console.error('Error:', errorData);
 
             // Show the error popup
             document.getElementById('errorPopup').classList.remove('hidden');
-            document.getElementById('errorPopup').innerText = 'There was an error submitting your request. Please try again later.';
         }
 
     } catch (error) {
@@ -115,14 +112,8 @@ async function handleForm(event, formId, url) {
 
         // Show the error popup in case of failure
         document.getElementById('errorPopup').classList.remove('hidden');
-        document.getElementById('errorPopup').innerText = 'An unexpected error occurred. Please try again later.';
     }
 }
-
-// Attach event listener to the form
-document.getElementById('studyabroad').addEventListener('submit', function (event) {
-    handleForm(event, 'studyabroad', '/mail/studyabroad');
-});
 
 // Event listeners for each form
 document.getElementById('demoForm').addEventListener('submit', function (event) {
