@@ -325,6 +325,86 @@
 <!--hero-->
 <section
     style="background: url('../assets/file_wave2.svg') no-repeat; background-position: bottom; background-color: #38b2ac;">
+     <!-- Modal -->
+     <div id="popup"
+     class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
+         <div class="popup-content">
+             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
+         class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92 sm:w-3/5 lg:w-[600px] max-h-[95vh] overflow-y-auto">
+         @csrf
+                 <div class="flex justify-between p-4 mb-0 bg-gray-100 rounded-lg">
+                     <div class="w-[97%]" role="alert">
+                         Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
+                         USA.
+                     </div>
+                     <button type="button"
+                         class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                         data-popup-close="popup">&times;</button>
+                 </div>
+ 
+                 <h3 class="text-teal-900">Where would you want to attend a demo</h3>
+                 <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
+                     <div class="flex items-center">
+                         <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
+                         <label class="ml-2" for="Ameerpet">Ameerpet</label>
+                     </div>
+                     <div class="flex items-center">
+                         <input class="" type="radio" name="location" id="Madhapur" value="Madhapur">
+                         <label class="ml-2" for="Madhapur">Madhapur</label>
+                     </div>
+                     <div class="flex items-center">
+                         <input class="" type="radio" name="location" id="Online" value="Online">
+                         <label class="ml-2" for="Online">Online</label>
+                     </div>
+                 </div>
+ 
+                 <h3 class="text-teal-900">Which session would you like to try?</h3>
+                 <div class="bg-gray-100">
+                     <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
+                         <div class="flex items-center">
+                             <input class="" type="checkbox" name="courses[]" id="gre" value="GRE">
+                             <label class="ml-2" for="gre">GRE</label>
+                         </div>
+                         <div class="flex items-center">
+                             <input class="" type="checkbox" name="courses[]" id="ielts" value="IELTS">
+                             <label class="ml-2" for="ielts">IELTS</label>
+                         </div>
+                         <div class="flex items-center">
+                             <input class="" type="checkbox" name="courses[]" id="toefl" value="TOEFL">
+                             <label class="ml-2" for="toefl">TOEFL</label>
+                         </div>
+                         <div class="flex items-center">
+                             <input class="" type="checkbox" name="courses[]" id="pte" value="PTE">
+                             <label class="ml-2" for="pte">PTE</label>
+                         </div>
+                     </div>
+                     <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
+                         <div class="flex items-center">
+                             <input class="" type="checkbox" name="courses[]" id="oet" value="OET">
+                             <label class="ml-2" for="oet">OET</label>
+                         </div>
+                         <div class="flex items-center">
+                             <input class="" type="checkbox" name="courses[]" id="sat" value="SAT">
+                             <label class="ml-2" for="sat">SAT</label>
+                         </div>
+                         <div class="flex items-center">
+                             <input class="" type="checkbox" name="courses[]" id="others" value="OTHERS">
+                             <label class="ml-2" for="others">OTHERS</label>
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Name"
+                     name="username" required>
+                 <input type="email" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 " placeholder="Email"
+                     name="useremail" required>
+                 <input type="text" class="block w-full px-4 py-2 mt-2 focus:ring-blue-400 "
+                     placeholder="Phone Number" name="userphone" required>
+ 
+                 <button type="submit" class="block w-full p-4 mt-3 text-white bg-cyan-600 btn btn-block">Submit</button>
+             </form>
+         </div>
+     </div>
 
     <div class="items-center justify-between max-w-screen-xl px-1 py-5 mx-auto sm:px-16 sm:flex">
 
@@ -340,9 +420,8 @@
                     up on your life.
                 </p>
 
-                <button
-                    class="px-6 py-3 text-white duration-500 ease-in-out bg-teal-600 rounded font-open hover:bg-teal-500 hover:-translate-y-1 hover:shadow-xl">Get
-                    Started</button>
+                <button data-popup="popup"
+                    class="px-6 py-3 text-white duration-500 ease-in-out bg-teal-600 rounded font-open hover:bg-teal-500 hover:-translate-y-1 hover:shadow-xl">Get Started</button>
 
             </div>
 
@@ -851,6 +930,7 @@
                 data-popup="popup12">👩‍🏫 Attend a session</button>
         </p>
     </div>
+    
 
     <!-- Thirteenth Button -->
     <div class="inline my-5">

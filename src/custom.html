@@ -313,16 +313,7 @@
         <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
  
-    <div class="bg-teal-50"> <!-- Light teal background -->
-    <section class="max-w-screen-xl px-4 mx-auto pt-16 sm:px-16">
-        <div class="py-6 font-sans text-5xl sm:text-9xl font-bold  text-center text-teal-800 md:text-5xl lg:text-6xl">
-            Corporate Training
-        </div>
-        <div class="flex items-center justify-center px-8">
-            <img src="../assets/chair.svg" alt="hero image" width="900px" height="900px">
-        </div>
-    </section>
-    </div>
+    
         
     <div class="bg-teal-50"> <!-- Light teal background -->
         <section class="max-w-screen-xl px-4 mx-auto pt-16 sm:px-16">
@@ -555,32 +546,35 @@
 
     <!--courses-->
     <section class="items-center justify-between max-w-screen-xl px-4 pb-8 mx-auto sm:px-16 ">
-        <p class="text-xl font-semibold text-teal-800 md:text-3xl">Our Other Popular Courses</p>
+        <p class="text-xl font-semibold md:text-3xl text-teal-800">Our Other Popular Courses</p>
 
         <!--3 blocks-->
-        <div class="grid grid-cols-1 gap-4 my-4 mt-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-16">
+        <div class="grid grid-cols-6 my-4 mt-8 md:gap-16">
             <!--first-->
-            <a href="./gre.html" class="col-span-1">
-                <div class="pb-8 m-2 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
-                    <img class="w-full h-auto" src="../assets/gre.gif" alt="gre">
+            <a href="./gre.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                    <img src="../assets/gre.gif" alt="gre" width="342px" height="245px">
                     <p class="p-2 text-xl font-semibold text-teal-500">GRE</p>
                     <p class="px-2 text-lg font-semibold text-gray-700">Information about GRE at First Academy</p>
                 </div>
             </a>
 
             <!--second-->
-            <a href="./oet.html" class="col-span-1">
-                <div class="pb-8 m-2 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
-                    <img class="w-full h-auto" src="../assets/oet.gif" alt="oet">
+            <a href="./oet.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                    <img src="../assets/oet.gif" alt="oet" width="342px" height="245px">
                     <p class="p-2 text-xl font-semibold text-teal-500">OET</p>
                     <p class="px-2 text-lg font-semibold text-gray-700">See how our OET coaching improves scores</p>
                 </div>
             </a>
 
             <!--third-->
-            <a href="./ielts.html" class="col-span-1">
-                <div class="pb-8 m-2 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
-                    <img class="w-full h-auto" src="../assets/file_ielts.gif" alt="Ielts">
+            <a href="./ielts.html" class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <div
+                    class="pb-8 m-2 space-x-3 duration-300 ease-in-out transform rounded shadow-xl hover:-translate-y-1 md:m-0">
+                    <img src="../assets/file_ielts.gif" alt="Ielts" width="342px" height="245px">
                     <p class="p-2 text-xl font-semibold text-teal-500">IELTS</p>
                     <p class="px-2 text-lg font-semibold text-gray-700">Our most popular course - The FA method</p>
                 </div>
