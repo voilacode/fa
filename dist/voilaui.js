@@ -152,48 +152,9 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Scroll to top on button click
 document.getElementById('scrollToTop').addEventListener('click', function () {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 });
-
-// count block
-function animateNumber(id, finalValue, duration) {
-    let startTime = null;
-    const element = document.getElementById(id);
-    const startValue = parseInt(element.textContent);
-    
-    function updateNumber(timestamp) {
-      if (!startTime) startTime = timestamp;
-      const progress = timestamp - startTime;
-      const percentage = Math.min(progress / duration, 1);
-      const currentValue = Math.floor(startValue + (finalValue - startValue) * percentage);
-      element.textContent = currentValue.toLocaleString();
-      
-      if (percentage < 1) {
-        requestAnimationFrame(updateNumber);
-      }
-    }
-    
-    requestAnimationFrame(updateNumber);
-  }
-  
-function startAnimationOnScroll() {
-    const numbersSection = document.getElementById('numbers-section');
-    const sectionTop = numbersSection.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-    const triggerOffset = 100; // Adjust this value if needed to trigger the animation earlier or later
-  
-    if (sectionTop - triggerOffset <= windowHeight) {
-      animateNumber('successStories', 62000, 2000);
-      animateNumber('yearsOfService', 23, 2000);
-      animateNumber('scholarships', 785, 2000);
-      animateNumber('uniAdmits', 300000, 2000);
-      window.removeEventListener('scroll', startAnimationOnScroll); // Remove the event listener once triggered
-    }
-}
-  
-window.addEventListener('scroll', startAnimationOnScroll);
