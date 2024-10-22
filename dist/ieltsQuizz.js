@@ -109,7 +109,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
     const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw8bf07/vcgtw8bf07_questionbank.json';
-    const quiz1Directions = 'Convert these sentences into the right Passive form. An example has been done for you.';
+    const quiz1Directions = 'How active are you?\nConvert these sentences into the right Passive form. An example has been done for you.';
     fetchAndLoadQuiz(quiz1Url, quiz1Directions);
 });
 
