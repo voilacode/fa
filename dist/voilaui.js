@@ -152,13 +152,13 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// Scroll to top on button click
 document.getElementById('scrollToTop').addEventListener('click', function () {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 });
-
 
 // count block
 function animateNumber(id, finalValue, duration) {
