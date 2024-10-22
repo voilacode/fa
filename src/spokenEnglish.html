@@ -26,6 +26,68 @@
         #header, #message{
             display: block;
         }
+        .crsl-item {
+                min-width: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+        #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2 {
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) and (max-width: 800px) {
+
+            .count,
+            .count-label {
+                font-size: 1.5rem !important;
+            }
+        }
+
+        .popupQn {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -48%);
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 95vw;
+            max-height: 95vh;
+            overflow-y: auto;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            display: none;
+        }
+
+        .active1 {
+            display: block;
+        }
+
+        #directionsContainer {
+            white-space: pre-wrap;
+        }
+
+        @media (min-width: 640px) {
+            .popupQn {
+                width: 45vw;
+            }
+        }
+
+        @media (min-width: 641px) and (max-width:1000px) {
+            .popupQn {
+                width: 75vw;
+            }
+        }
     </style>
     <title>English Coaching at First Academy</title>
 </head>
@@ -351,9 +413,24 @@
               </div>
               <div class="flex my-2 space-x-2 sm:space-x-4 lg:me-auto">
                 
-                <a href="#" class="block w-40 px-2 py-3 mt-2 font-semibold text-center duration-200 ease-in transform bg-yellow-500 rounded-full text-dark sm:p-3 hover:bg-yellow-400 sm:w-60 md:w-40 lg:w-60" aria-label="try test">
+                <button id="openPopupQn1" class="block w-40 px-2 py-3 mt-2 font-semibold text-center duration-200 ease-in transform bg-yellow-500 rounded-full text-dark sm:p-3 hover:bg-yellow-400 sm:w-60 md:w-40 lg:w-60" aria-label="try test">
                     Free Test
-                </a>
+                </button>
+                <div id="overlay" class="overlay"></div>
+
+
+                <div id="popupQn" class="p-6 rounded shadow-lg popupQn">
+                    <div class="flex items-center justify-between px-2 py-5 bg-teal-200">
+                        <div id="directionsContainer" class="px-4 text-xl font-bold bg-teal-200 sm:text-2xl pb-0"></div>
+                        <button id="closePopupQn" class="p-2 ml-2 font-bold rounded">X</button>
+                    </div>
+
+                    <div id="answersContainer"
+                        class="grid grid-cols-1 px-5 m-auto pb-4 bg-teal-200 sm:grid-cols-1 md:grid-cols-3"></div>
+                    <div id="questionsContainer" class=" p-4"></div>
+                    <button id="submitQuiz" class="px-6 py-2 block mx-auto font-semibold text-white bg-teal-500 rounded">Submit</button>
+                    <div id="scoreDisplay" class="mt-4 font-bold"></div>
+                </div>
                 <button class="block w-40 px-2 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-full sm:p-3 lg:me-0 bg-teal-custom hover:bg-green-500 sm:w-60 md:w-40 lg:w-60" aria-label="attend session" data-popup="popup" fdprocessedid="3xk6g9">
                     Demo Class
                 </button>
@@ -1361,6 +1438,7 @@
 
   <script src="../dist/voilaui.js"></script>
   <script src="../dist/token.js"></script>
+  <script src="../dist/spokenEnglishQuizz.js"></script>
 
 </body>
 
