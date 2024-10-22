@@ -154,14 +154,13 @@
                                     Home
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu1')"
-                                onmouseout="hideDropdown('dropdownMenu1')" onclick="toggleDropdown('dropdownMenu1')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu1')">
                                 <button
                                     class="flex justify-between items-center w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle1">
                                     Courses
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -177,7 +176,8 @@
                                                 Get started</p>
                                             <ul class="mt-3 text-[16px]">
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./courses" class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./courses"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         All Courses
                                                     </a>
                                                 </li>
@@ -230,12 +230,14 @@
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./pteonline" class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./pteonline"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         PTE Personalized
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./custom" class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./custom"
+                                                        class="block m-0 font-medium text-gray-800 ">
                                                         Corporate Training
                                                     </a>
                                                 </li>
@@ -250,15 +252,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu')"
-                                onmouseout="hideDropdown('dropdownMenu')" onclick="toggleDropdown('dropdownMenu')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle">
                                     Material
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -311,14 +312,13 @@
                                     Study Abroad
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu2')"
-                                onmouseout="hideDropdown('dropdownMenu2')" onclick="toggleDropdown('dropdownMenu2')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu2')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle2">
                                     About
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -376,11 +376,8 @@
         </nav>
     </header>
     <hr>
-
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
-
-
 
     <main>
         <!--hero-->
@@ -1087,30 +1084,30 @@
 
     </footer>
 
-     <!--Messages-->
-     <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
-        <div class=" flex items-center justify-center" >
-        <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-                stroke="currentColor" class="w-4 h-4 text-white">
+    <!--Messages-->
+    <div id="message" class="fixed z-10 bottom-0 w-full py-2 space-x-8 bg-teal-custom">
+        <div class=" flex items-center justify-center space-x-2" >
+            <a href="tel:+919866688666" class="flex items-center px-4 py-2 bg-black rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                stroke="currentColor" class="text-white m-1" width="16px" height="16px">
                 <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-            </svg>
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                
+                <span class="text-sm md:text-md font-semibold text-white">Call</span>
+            </a>
 
-            <span class="text-sm font-semibold text-white">Call</span>
-        </a>
+            <span class="hidden mx-4 text-white sm:block">
+                We would love to hear from you!
+            </span>
 
-        <div>
-            <h1 class="hidden mx-4 text-white sm:block">We would love to hear from you!</h1>
-        </div>
-
-        <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
-            <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
-            <span class="text-sm md:text-md font-bold text-white">WhatsApp</span>
-        </a>
+            <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-2 bg-black rounded-lg">
+                <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp" class="me-1">
+                <span class="text-sm md:text-md font-semibold text-white">WhatsApp</span>
+            </a>
         </div>
     </div>
-
+    
     <button id="scrollToTop"
         class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"

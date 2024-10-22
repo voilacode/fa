@@ -26,6 +26,11 @@
         #header, #message{
             display: block;
         }
+        @media (min-width: 1020px) and (max-width: 1050px) {
+            .down{
+                display: none;
+            }
+        }
         .crsl-item {
                 min-width: 100%;
                 transition: transform 0.5s ease-in-out;
@@ -148,14 +153,13 @@
                                     Home
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu1')"
-                                onmouseout="hideDropdown('dropdownMenu1')" onclick="toggleDropdown('dropdownMenu1')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu1')">
                                 <button
                                     class="flex justify-between items-center w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle1">
                                     Courses
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -247,15 +251,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu')"
-                                onmouseout="hideDropdown('dropdownMenu')" onclick="toggleDropdown('dropdownMenu')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle">
                                     Material
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -308,14 +311,13 @@
                                     Study Abroad
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu2')"
-                                onmouseout="hideDropdown('dropdownMenu2')" onclick="toggleDropdown('dropdownMenu2')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu2')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle2">
                                     About
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -1184,85 +1186,85 @@
                 <h1 class="py-2 text-2xl font-semibold text-center md:text-4xl">Try Some Quick Tests</h1>
                 <p class="font-semibold tracking-wide text-center">Before you join the best coaching centre!</p>
                 <div class="flex flex-wrap justify-center mt-6 mb-4 space-x-1 sm:space-x-2">
-                    <div class="inline my-5">
+                    <div class="inline my-2 md:my-5">
                         <button id="openPopupQn1"
                             class="w-full p-3 font-semibold text-white bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap px-6">Some
                             Sample words</button>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn2"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Do
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Do
                                 you know the difference?</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn3"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Right
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Right
                                 or Wrong?</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn4"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Whose
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Whose
                                 Line?</button>
                         </p>
                     </div>
                     
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn5"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Are
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Are
                                 you in form?</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn6"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Mine
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Mine
                                 or 🐭?</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn7"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Don't
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Don't
                                 Get Tense!🥶</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn8"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">But
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">But
                                 what?</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn9"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">🔎
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">🔎
                                 Where are you?</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button id="openPopupQn10"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">What's
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">What's
                                 your position?</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
                             <button data-popup="popup"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">👩‍🏫
+                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">👩‍🏫
                                 Attend a session</button>
                         </p>
                     </div>
-                    <div class="inline my-5 ">
+                    <div class="inline my-2 md:my-5 ">
                         <p class="inline">
-                            <button class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 shadow-xl rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">
+                            <button class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">
                                 <a href="https://prep.firstacademy.in/"> 🙌 More Tests</a>
                             </button>
                         </p>
@@ -1807,7 +1809,7 @@
     </footer>
     
     <button id="scrollToTop"
-        class="fixed z-10 px-3 py-4 rounded-lg text-white transition-opacity duration-300 ease-in-out bg-teal-custom shadow-2xl opacity-0 bottom-[50px] right-10 group-hover:opacity-100">
+        class="fixed z-50 px-3 py-4 rounded-lg text-white duration-300 ease-in-out bg-yellow-600 shadow-2xl bottom-[30px] right-10 hover:bg-yellow-500">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-6 h-6 md:w-7 md:h-7">
             <path stroke-linecap="round" stroke-linejoin="round"
@@ -1816,26 +1818,26 @@
     </button>
 
     <!--Messages-->
-    <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
-        <div class=" flex items-center justify-center" >
-        <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-            stroke="currentColor" class="w-4 h-4 text-white">
-            <path stroke-linecap="round" stroke-linejoin="round"
-            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-            </svg>
-            
-            <span class="text-sm md:text-md font-bold text-white">Call</span>
-        </a>
+    <div id="message" class="fixed z-10 bottom-0 w-full py-2 space-x-8 bg-teal-custom">
+        <div class=" flex items-center justify-center space-x-2" >
+            <a href="tel:+919866688666" class="flex items-center px-4 py-2 bg-black rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                stroke="currentColor" class="text-white m-1" width="16px" height="16px">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                
+                <span class="text-sm md:text-md font-semibold text-white">Call</span>
+            </a>
 
-        <div>
-            <h1 class="hidden mx-4 text-white sm:block">We would love to hear from you!</h1>
-        </div>
+            <span class="hidden mx-4 text-white sm:block">
+                We would love to hear from you!
+            </span>
 
-        <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
-            <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
-            <span class="text-sm md:text-md font-bold text-white">WhatsApp</span>
-        </a>
+            <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-2 bg-black rounded-lg">
+                <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp" class="me-1">
+                <span class="text-sm md:text-md font-semibold text-white">WhatsApp</span>
+            </a>
         </div>
     </div>
 
@@ -2148,7 +2150,8 @@
     </div>
 
     <script src="../dist/voilaui.js"></script>
-    <script src="../dist/ielts_carousel.js"></script>
+    <script src="../dist/material_carousel.js"></script>
+    <script src="../dist/home_carousel.js"></script>
     <script src="../dist/lite-yt-embed.js"></script>
     <script src="../dist/token.js"></script>
     <script src="../dist/quiz.js"></script>

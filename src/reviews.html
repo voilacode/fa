@@ -18,7 +18,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Afacad&family=League+Spartan:wght@900&family=Playfair+Display&display=swap" rel="stylesheet">
@@ -86,14 +85,13 @@
                                     Home
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu1')"
-                                onmouseout="hideDropdown('dropdownMenu1')" onclick="toggleDropdown('dropdownMenu1')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu1')">
                                 <button
                                     class="flex justify-between items-center w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle1">
                                     Courses
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -185,15 +183,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu')"
-                                onmouseout="hideDropdown('dropdownMenu')" onclick="toggleDropdown('dropdownMenu')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle">
                                     Material
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -246,14 +243,13 @@
                                     Study Abroad
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu2')"
-                                onmouseout="hideDropdown('dropdownMenu2')" onclick="toggleDropdown('dropdownMenu2')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu2')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle2">
                                     About
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -310,7 +306,7 @@
             </div>
         </nav>
     </header>
-    <br><br>
+    <hr>
     
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
@@ -361,7 +357,7 @@
                 <!-- card 1 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_meghana.jpg" alt="Meghana Chowdary" width="200px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_meghana.jpg" alt="Meghana Chowdary" width="270px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold  ">Meghana Chowdary</h1>
@@ -373,7 +369,7 @@
                 <!-- card 2 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_ali.jpg" alt="Syed Mujahid Akbar Ali" width="200px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_ali.jpg" alt="Syed Mujahid Akbar Ali" width="270px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold ">Syed Mujahid Akbar Ali</h1>
@@ -385,19 +381,19 @@
                 <!-- card 3 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_Himantej.png" alt="Himantej Reddy" width="320px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_Himantej.png" alt="Himantej Reddy" width="270px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold ">Himantej Reddy</h1>
                         <p class="p-1 my-1 italic text-sm text-white rounded bg-emerald-400 w-fit">Got his USA Visa in a Month</p>
-                        <p class="my-2  ">Awesome experience! Great mentors! Highly recommended for those who are planning to do their masters in the USA, Australia, and Canada! Coaching on GRE and IELTS was awesome. Cheers to the whole team (Sahithy Mam and Teju Sir).</p>
+                        <p class="my-2">Awesome experience! Great mentors! Highly recommended for those who are planning to do their masters in the USA, Australia, and Canada! Coaching on GRE and IELTS was awesome. Cheers to the whole team (Sahithy Mam and Teju Sir).</p>
                     </div>
                 </div>
     
                 <!-- card 4 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_Divyareddy.png" alt="Divya Reddy" width="100px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_Divyareddy.png" alt="Divya Reddy" width="165px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold ">Divya Reddy</h1>
@@ -409,7 +405,7 @@
                 <!-- card 5 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_janardhan.jpg" alt="Janardhan Alluri" width="200px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_janardhan.jpg" alt="Janardhan Alluri" width="140px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold ">Janardhan Alluri</h1>
@@ -421,7 +417,7 @@
                 <!-- card 6 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_vineel.jpg" alt="Vineel Vardhan" width="200px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_vineel.jpg" alt="Vineel Vardhan" width="120px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold">Vineel Vardhan</h1>
@@ -433,7 +429,7 @@
                 <!-- card 7 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_siddartha.jpg" alt="Siddartha Mettupalle" width="200px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_siddartha.jpg" alt="Siddartha Mettupalle" width="130px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold ">Siddartha Mettupalle</h1>
@@ -445,7 +441,7 @@
                 <!-- card 8 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_ram.jpg" alt="Ram Kandittu" width="200px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_ram.jpg" alt="Ram Kandittu" width="135px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold ">Ram Kandittu</h1>
@@ -457,7 +453,7 @@
                 <!-- card 9 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_manisha.png" alt="Priya Sharma" width="200px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_manisha.png" alt="Priya Sharma" width="135px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold ">Manisha Pasupunoori</h1>
@@ -469,7 +465,7 @@
                 <!-- card 10 -->
                 <div class="flex space-x-4 bg-white shadow-lg rounded-lg p-4">
                     <div>
-                        <img src="../assets/file_narendra.png" alt="Nikhil Rao" width="200px" class="mt-1 rounded-full" />
+                        <img src="../assets/file_narendra.png" alt="Nikhil Rao" width="135px" class="mt-1 rounded-full" />
                     </div>
                     <div>
                         <h1 class="m-0 text-lg font-semibold ">Makkapati Narendra</h1>
@@ -916,7 +912,6 @@
     </div>
 
     <script src="../dist/voilaui.js"></script>
-    <script src="../dist/lite-yt-embed.js"></script>
 
 </body>
 

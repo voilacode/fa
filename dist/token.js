@@ -115,19 +115,27 @@ async function handleForm(event, formId, url) {
     }
 }
 
+// Function to safely attach event listeners
+function addFormListener(formId, handler) {
+    const formElement = document.getElementById(formId);
+    if (formElement) {
+        formElement.addEventListener('submit', handler);
+    }
+}
+
 // Event listeners for each form
-document.getElementById('demoForm').addEventListener('submit', function (event) {
+addFormListener('demoForm', function (event) {
     handleFormSubmit(event, 'demoForm', '/mail/demo', 'popup');
 });
 
-document.getElementById('talk').addEventListener('submit', function (event) {
+addFormListener('talk', function (event) {
     handleFormSubmit(event, 'talk', '/mail/talk', 'talkForm');
 });
 
-document.getElementById('request').addEventListener('submit', function (event) {
+addFormListener('request', function (event) {
     handleFormSubmit(event, 'request', '/mail/request', 'requestForm');
 });
 
-document.getElementById('studyabroad').addEventListener('submit', function (event) {
+addFormListener('studyabroad', function (event) {
     handleForm(event, 'studyabroad', '/mail/studyabroad');
 });

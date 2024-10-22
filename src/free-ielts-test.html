@@ -18,6 +18,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Free Fully Evaluated Test</title>
+    <style>
+        #header, #message {
+            display: block;
+        }
+    </style>
 </head>
 
 <body class="font-open">
@@ -76,14 +81,13 @@
                                     Home
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu1')"
-                                onmouseout="hideDropdown('dropdownMenu1')" onclick="toggleDropdown('dropdownMenu1')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu1')">
                                 <button
                                     class="flex justify-between items-center w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle1">
                                     Courses
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -175,15 +179,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu')"
-                                onmouseout="hideDropdown('dropdownMenu')" onclick="toggleDropdown('dropdownMenu')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle">
                                     Material
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -198,7 +201,7 @@
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="https://firstacademy.in/grer"
+                                                <a href="/grer"
                                                     class="block m-0 font-medium text-gray-800 ">
                                                     GRE Solutions
                                                 </a>
@@ -225,7 +228,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="https://firstacademy.in/blog"
+                                <a href="/blog"
                                     class="flex px-4 py-2 font-medium rounded-md text-[16px]   hover:text-teal-500">
                                     Blog
                                 </a>
@@ -236,14 +239,13 @@
                                     Study Abroad
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu2')"
-                                onmouseout="hideDropdown('dropdownMenu2')" onclick="toggleDropdown('dropdownMenu2')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu2')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle2">
                                     About
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                     </svg>
@@ -301,7 +303,6 @@
         </nav>
     </header>
     <hr>
-
     <!--Latest Post-->
     <x-homepage.post.index :data="$data" />
 

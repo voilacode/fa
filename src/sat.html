@@ -96,13 +96,11 @@
 
 <body class="font-open">
     <header class="fixed z-10 w-screen border-b border-gray-200" id="header">
-        <nav
-            class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
+        <nav class="text-sm transition-all duration-500 ease-in-out bg-white bg-no-repeat">
             <div class="items-center justify-between max-w-screen-xl px-4 py-2 mx-auto lg:flex sm:px-[60px] ">
                 <div class="flex justify-between">
                     <div>
-                        <a href="/"
-                            class="inline-flex py-2 text-xl font-bold tracking-wider uppercase me-auto">
+                        <a href="/" class="inline-flex py-2 text-xl font-bold tracking-wider uppercase me-auto">
                             <img src="https://prep.firstacademy.in/images/logo.png" alt="logo" width="180px">
                         </a>
                     </div>
@@ -112,7 +110,7 @@
                             <ul>
                                 <li class="flex items-center gap-2">
                                     <a href="./contactus"
-                                        class="flex items-center px-5 py-2 font-semibold bg-teal-600 rounded-lg group"
+                                        class="flex items-center px-5 py-2 font-semibold text-white rounded-lg bg-teal-custom group"
                                         id="chatButton">
                                         <span class="mr-2 ">Chat</span>
                                         <svg class="stroke-current" width="10" height="10" stroke-width="2"
@@ -147,21 +145,22 @@
                         <ul
                             class="flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-1 mt-1.5 transition-all duration-300 ease-in-out  text-xl ls-2">
                             <li>
-                                <a href="./index"
-                                    class="flex px-4 py-2 font-medium duration-300 ease-in-out rounded-md text-[16px]  hover:text-teal-500">
+                                <a href="/"
+                                    class="flex px-4 py-2 font-medium duration-300 ease-in-out rounded-md text-[16px] hover:text-teal-500">
                                     Home
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu1')"
-                                onmouseout="hideDropdown('dropdownMenu1')" onclick="toggleDropdown('dropdownMenu1')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu1')">
                                 <button
                                     class="flex justify-between items-center w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle1">
                                     Courses
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                      </svg>
-                                      
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+
                                 </button>
                                 <div class="right-0 hidden w-full p-2 rounded-md lg:absolute dropdown-menu lg:w-[400px] "
                                     id="dropdownMenu1">
@@ -179,50 +178,44 @@
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./ielts"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./ielts" class="block m-0 font-medium text-gray-800 ">
                                                         IELTS
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./gre"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./gre" class="block m-0 font-medium text-gray-800 ">
                                                         GRE
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./pte"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./pte" class="block m-0 font-medium text-gray-800 ">
                                                         PTE
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./oet"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./oet" class="block m-0 font-medium text-gray-800 ">
                                                         OET
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./sat"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./sat" class="block m-0 font-medium text-gray-800 ">
                                                         SAT
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-span-3">
-                                            <p class="uppercase  tracking-wider text-gray-800 font-medium text-[13px] px-6 mt-2">
+                                            <p
+                                                class="uppercase  tracking-wider text-gray-800 font-medium text-[13px] px-6 mt-2">
                                                 Other Courses</p>
                                             <ul class="mt-3 text-[16px]">
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./toefl"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./toefl" class="block m-0 font-medium text-gray-800 ">
                                                         TOEFL
                                                     </a>
                                                 </li>
                                                 <li class="px-6 py-3 m-0 hover:bg-teal-100">
-                                                    <a href="./det"
-                                                        class="block m-0 font-medium text-gray-800 ">
+                                                    <a href="./det" class="block m-0 font-medium text-gray-800 ">
                                                         DET
                                                     </a>
                                                 </li>
@@ -255,24 +248,24 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu')"
-                                onmouseout="hideDropdown('dropdownMenu')" onclick="toggleDropdown('dropdownMenu')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle">
                                     Material
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                      </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
                                 </button>
                                 <div class="right-0 hidden p-2 lg:absolute dropdown-menu" id="dropdownMenu">
                                     <div
                                         class="transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow lg:border-0 md:bg-white lg:translate-x-28">
                                         <ul class=" text-[15px] lg:w-52">
                                             <li class="px-4 py-3 m-0 rounded-t-xl hover:bg-teal-100">
-                                                <a href="./reading"
-                                                    class="block m-0 font-medium text-gray-800 ">
+                                                <a href="./reading" class="block m-0 font-medium text-gray-800 ">
                                                     IELTS Reading
                                                 </a>
                                             </li>
@@ -283,8 +276,7 @@
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="./downloads"
-                                                    class="block m-0 font-medium text-gray-800 ">
+                                                <a href="./downloads" class="block m-0 font-medium text-gray-800 ">
                                                     Downloads
                                                 </a>
                                             </li>
@@ -316,35 +308,33 @@
                                     Study Abroad
                                 </a>
                             </li>
-                            <li class="relative" onmouseover="showDropdown('dropdownMenu2')"
-                                onmouseout="hideDropdown('dropdownMenu2')" onclick="toggleDropdown('dropdownMenu2')">
+                            <li class="relative lg:hover:block" onclick="toggleDropdown('dropdownMenu2')">
                                 <button
                                     class="flex justify-between w-full px-4 py-2 font-medium rounded-md outline-none focus:outline-none hover:text-teal-500 text-[16px] "
                                     id="dropdownToggle2">
                                     About
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 lg:hidden ">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                      </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2.5" stroke="currentColor" class="w-4 h-4 mt-1 my-auto ms-2 mt-2 down">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
                                 </button>
                                 <div class="right-0 hidden p-2 lg:absolute dropdown-menu" id="dropdownMenu2">
                                     <div
                                         class="transform bg-gray-100 border-l-4 border-gray-500 rounded-lg shadow lg:border-0 md:bg-white lg:translate-x-28">
                                         <ul class="text-[16px] lg:w-48">
                                             <li class="px-4 py-3 m-0 rounded-t-lg hover:bg-teal-100">
-                                                <a href="./about-us"
-                                                    class="block m-0 font-medium text-gray-800 ">
+                                                <a href="./about-us" class="block m-0 font-medium text-gray-800 ">
                                                     Us
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 hover:bg-teal-100">
-                                                <a href="./team"
-                                                    class="block m-0 font-medium text-gray-800 ">
+                                                <a href="./team" class="block m-0 font-medium text-gray-800 ">
                                                     Team
                                                 </a>
                                             </li>
                                             <li class="px-4 py-3 m-0 rounded-b-xl hover:bg-teal-100">
-                                                <a href="./contactus"
-                                                    class="block m-0 font-medium text-gray-800 ">
+                                                <a href="./contactus" class="block m-0 font-medium text-gray-800 ">
                                                     Contact
                                                 </a>
                                             </li>
@@ -355,7 +345,7 @@
 
                             <li class="items-center hidden gap-2 my-auto lg:flex text-md">
                                 <a href="./contactus"
-                                    class="flex items-center px-5 py-1.5 my-auto mb-1  font-semibold rounded-lg bg-teal-500 group"
+                                    class="flex items-center px-5 py-1.5 my-auto mb-1  font-semibold rounded-lg bg-teal-custom text-white group"
                                     id="chatButton">
                                     <span class="mr-2 text-[16px] ">Chat</span>
                                     <svg class="stroke-current" width="10" height="10" stroke-width="2"
@@ -382,7 +372,6 @@
         </nav>
     </header>
     <hr>
-
      <!--Latest Post-->
      <x-homepage.post.index :data="$data" />
 
@@ -1246,26 +1235,26 @@
     </button>
 
     <!--Messages-->
-    <div id="message" class="fixed z-10 bottom-0 w-full py-1 space-x-8 bg-teal-custom">
-        <div class=" flex items-center justify-center" >
-        <a href="tel:+919866688666" class="flex items-center px-8 py-1 space-x-2 bg-black rounded">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
-            stroke="currentColor" class="w-4 h-4 text-white">
-            <path stroke-linecap="round" stroke-linejoin="round"
-            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-            </svg>
-            
-            <span class="text-sm font-bold text-white">Call</span>
-        </a>
+    <div id="message" class="fixed z-10 bottom-0 w-full py-2 space-x-8 bg-teal-custom">
+        <div class=" flex items-center justify-center space-x-2" >
+            <a href="tel:+919866688666" class="flex items-center px-4 py-2 bg-black rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                stroke="currentColor" class="text-white m-1" width="16px" height="16px">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                
+                <span class="text-sm md:text-md font-semibold text-white">Call</span>
+            </a>
 
-        <div>
-            <h1 class="hidden mx-4 text-white md:block">We would love to hear from you!</h1>
-        </div>
+            <span class="hidden mx-4 text-white sm:block">
+                We would love to hear from you!
+            </span>
 
-        <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-1 bg-black rounded">
-            <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp">
-            <span class="text-sm font-bold text-white">WhatsApp</span>
-        </a>
+            <a href="https://wa.me/+919866688666" class="flex items-center px-4 py-2 bg-black rounded-lg">
+                <img src="../assets/whatsap.svg" width="24px" height="24px" alt="whatsapp" class="me-1">
+                <span class="text-sm md:text-md font-semibold text-white">WhatsApp</span>
+            </a>
         </div>
     </div>
     
