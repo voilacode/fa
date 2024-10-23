@@ -11,5 +11,11 @@
     "bootstrap": "^5.3.1",
     "minify": "^11.0.1",
     "youtube-lite": "^1.0.0"
-  }
+  },
+  "name": "fa",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
