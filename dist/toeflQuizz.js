@@ -27,6 +27,7 @@ const resetSubmitButton = () => {
 };
 
 // Fetch and load quiz
+// Function to fetch and load the quiz
 const fetchAndLoadQuiz = async (quizUrl, directions) => {
     overlay.classList.add('active1');
     popupQn.classList.add('active1');
@@ -79,17 +80,20 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
             questionDiv.classList.add('mb-4');
 
             if (qdata.type === 'mcq') {
-                questionDiv.innerHTML = `
-                <div class="flex space-x-2">
-                    <div class="font-bold">${index + 1}.</div>
-                    <div>${qdata.question}</div>
-                </div>
-                    <div>
-                        <label><input type="radio" name="mcq${question.qno}" value="a"> ${qdata.a}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="b"> ${qdata.b}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="c"> ${qdata.c}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="d"> ${qdata.d}</label><br>
-                    </div>`;
+                const options = [];
+                if (qdata.a) options.push({ label: qdata.a, value: 'a' });
+                if (qdata.b) options.push({ label: qdata.b, value: 'b' });
+                if (qdata.c) options.push({ label: qdata.c, value: 'c' });
+                if (qdata.d) options.push({ label: qdata.d, value: 'd' });
+
+                // Create the question and options
+                questionDiv.innerHTML = `<div class="font-bold">${index + 1}. ${qdata.question}</div>`;
+                options.forEach(option => {
+                    const label = document.createElement('label');
+                    label.innerHTML = `<input type="radio" name="mcq${question.qno}" value="${option.value}"> ${option.label}`;
+                    questionDiv.appendChild(label);
+                    questionDiv.appendChild(document.createElement('br'));
+                });
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
                 questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
@@ -105,6 +109,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
         alert('There was an error loading the quiz. Please try again later.');
     }
 };
+
 
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
@@ -315,3 +320,17 @@ function handleRetest() {
     submitButton.removeEventListener('click', handleRetest);
     submitButton.addEventListener('click', handleSubmission);
 }
+
+
+
+
+
+
+
+
+
+// Reference the close button
+const closeQuizButton = document.getElementById('closeQuizButton');
+
+// Attach event listener for the close button
+closeQuizButton.addEventListener('click', closePopupQn);
