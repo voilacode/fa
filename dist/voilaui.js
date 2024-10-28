@@ -150,7 +150,6 @@ window.addEventListener('scroll', function () {
   var scrollToTopButton = document.getElementById('scrollToTop');
   // Check if user has scrolled more than 200px
   if (window.scrollY > 200) {
-    console.log(window.scrollY);
     scrollToTopButton.classList.remove('opacity-0');
     scrollToTopButton.classList.add('visible'); // Add a class to make the button visible
     scrollToTopButton.classList.remove('hidden');
