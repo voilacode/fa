@@ -31,6 +31,8 @@ module.exports = {
       }),
       fontFamily: {
         'open': ['Open Sans', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+
         // 'noto': ['Noto Serif', 'serif'],
         // 'source-sans': ['Source Sans 3', 'sans-serif'],
         // 'archivo': ["Archivo", 'sans-serif'],
