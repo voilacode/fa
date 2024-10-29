@@ -53,7 +53,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
 
         const directionsHeading2 = document.createElement('h3');
         directionsHeading2.textContent = heading2;
-        directionsHeading2.classList.add('text-lg', 'font-semibold');
+        directionsHeading2.classList.add('text-lg', 'font-medium');
         directionsContainer.appendChild(directionsHeading2);
 
         const fillupAnswers = new Set();
@@ -68,7 +68,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
         uniqueAnswersArray.sort(() => Math.random() - 0.5);
         uniqueAnswersArray.forEach(answer => {
             const answerDiv = document.createElement('div');
-            answerDiv.classList.add('p-2', 'font-bold', 'text-green-500', 'm-auto');
+            answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
             answerDiv.textContent = answer;
             answersContainer.appendChild(answerDiv);
         });
