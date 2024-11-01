@@ -43,8 +43,7 @@
         }
 
         @media (min-width: 768px) and (max-width: 800px) {
-            .count,
-            .count-label {
+            .count{
                 font-size: 1.5rem !important;
             }
         }
@@ -394,7 +393,6 @@
         </div>
     </div>
    
-
     <main>
         <!--hero-->
         <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:pt-12 lg:pb-8">
@@ -480,7 +478,6 @@
 
             </div>
         </section>
-
         
         <!--count blocks-->
         <section class="pt-4 pb-2 lg:pb-4 bg-teal-custom md:py-8" style="background-color:  #0d4a34;">
@@ -572,70 +569,58 @@
 
             <div class="max-w-screen-xl px-4 lg:pb-4 md:py-2 mx-auto sm:px-16 ">
                 <div class="grid w-full grid-cols-2 mx-auto gap-4 lg:gap-10 md:w-3/4 md:w-full">
-
                     <!--first-->
-                    <div class="col-span-2 p-4  bg-teal-100 rounded-lg sm:col-span-1 lg:p-8 pe-0">
-                        <div class="flex space-x-4">
-                            <div>
-                                <h2 class="mb-2 text-xl font-semibold lg:text-3xl ">Attend A Session</h2>
-                                <p>
-                                    We have <span class="italic text-teal-custom">the best</span> sessions on the
-                                    planet.
-                                    Attend one and see for yourself!
-                                </p>
+                    <div class="col-span-2 p-4 bg-teal-100 rounded-lg sm:col-span-1 lg:p-8 pe-0 flex flex-col justify-between h-full">
+                        <div class="flex space-x-4 h-full">
+                            <div class="flex flex-col justify-between">
+                                <div>
+                                    <h2 class="mb-2 text-xl font-semibold lg:text-3xl">Attend A Session</h2>
+                                    <p>We have <span class="italic text-teal-custom">the best</span> sessions on the planet. Attend one and see for yourself!</p>
+                                </div>
                                 <a href="./courses"
-                                    class="flex px-4 py-2 mt-3  font-semibold text-center text-white duration-200 ease-in transform rounded-lg bg-teal-custom w-52 md:my-4 hover:bg-teal-custom group"
+                                    class="flex px-4 py-2 mt-3 font-semibold text-center text-white duration-200 ease-in transform rounded-lg bg-teal-custom w-52 hover:bg-teal-custom group"
                                     aria-label="view">
                                     <span class="mx-auto mb-auto text-center">View Our Courses</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor"
                                         class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                     </svg>
                                 </a>
                             </div>
-
                             <div class="hidden mt-auto lg:block">
-                                <img src="../assets/vector1-min.png" alt="vector 1" class="h-full" width="263px"
-                                    height="200px">
+                                <img src="../assets/vector1-min.png" alt="vector 1" class="h-full" width="263px" height="200px">
                             </div>
                         </div>
                     </div>
-
+                
                     <!--second-->
-                    <div class="col-span-2 p-4 mb-1 rounded-lg bg-lime-100 sm:col-span-1 lg:p-8 pe-0">
-                        <div class="flex space-x-4">
-                            <div>
-                                <h2 class="my-2 text-xl font-semibold lg:text-3xl ">Go Abroad!</h2>
-                                <p>
-                                    Get into top universities! We are <i class="text-lime-800"> the only</i> place
-                                    you need!
-                                </p>
-                                <a href="./studyabroad"
-                                    class=""
-                                    aria-label="admission">
-                                    <button class="flex  px-4 py-2 mt-3  font-semibold text-center text-white duration-200 ease-in transform bg-yellow-600 rounded-lg md:my-4 group ">
-                                    <span class="mx-auto my-auto text-center">Admission Advice</span>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                    </svg>
-                                </button>
+                    <div class="col-span-2 p-4 mb-1 bg-lime-100 rounded-lg sm:col-span-1 lg:p-8 pe-0 flex flex-col justify-between h-full">
+                        <div class="flex space-x-4 h-full">
+                            <div class="flex flex-col justify-between">
+                                <div>
+                                    <h2 class="my-2 text-xl font-semibold lg:text-3xl">Go Abroad!</h2>
+                                    <p>Get into top universities! We are <i class="text-lime-800">the only</i> place you need!</p>
+                                </div>
+                                <a href="./studyabroad" aria-label="admission">
+                                    <button
+                                        class="flex px-4 py-2 mt-3 font-semibold text-center text-white duration-200 ease-in transform rounded-lg bg-yellow-600 w-52 group">
+                                        <span class="mx-auto my-auto text-center">Admission Advice</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                            stroke="currentColor"
+                                            class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </button>
                                 </a>
                             </div>
-
                             <div class="hidden mt-auto lg:block">
-                                <img src="../assets/vector2-min.png" alt="vector 1" class="h-full" width="263px"
-                                    height="280px">
+                                <img src="../assets/vector2-min.png" alt="vector 1" class="h-full" width="263px" height="280px">
                             </div>
                         </div>
                     </div>
-
                 </div>
+                
             </div>
 
         </section>
@@ -650,88 +635,66 @@
                 <div class="lg:flex lg:space-x-8">
 
                     <div class="mb-3 lg:mb-0">
-                        <div class="grid grid-cols-2 gap-4 sm:gap-x-8">
-                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1">
-                                <img src="../assets/file_storytelling2.webp" class="block mx-auto my-2 text-center"
-                                    alt="story" width="100px" height="100px">
-                                <h2 class="my-2 text-xl text-center ">Exclusive Material</h2>
-                                <p class="my-4 text-center">By Cambridge certified authors, <br>
-                                    exclusively for First Academy</p>
-                                <button data-popup="material1"
-                                    class="flex px-8 py-2 mx-auto my-2 duration-200 ease-in bg-white rounded-md hover:bg-gray-800 hover:text-white group"
-                                    aria-label="view">
-                                    <span class="my-auto">View Material</span>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8 items-stretch">
+                            <!-- Exclusive Material Card -->
+                            <div class="p-2 rounded-lg flex flex-col justify-between">
+                                <div class="text-center">
+                                    <img src="../assets/file_storytelling2.webp" class="block mx-auto my-2" alt="story" width="100px" height="100px">
+                                    <h2 class="my-2 text-xl">Exclusive Material</h2>
+                                    <p class="my-4">By Cambridge certified authors, exclusively for First Academy</p>
+                                </div>
+                                <button data-popup="material1" class="flex items-center justify-center px-4 py-2 mx-auto bg-white rounded-md hover:bg-gray-800 hover:text-white">
+                                    <span>View Material</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                     </svg>
                                 </button>
                             </div>
-                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1">
-                                <img src="../assets/file_interview2.webp" class="block mx-auto my-2 text-center "
-                                    alt="interview" width="100px" height="100px">
-                                <h2 class="my-2 text-xl text-center ">Personalised Inputs
-                                </h2>
-                                <p class="my-4 text-center">Individual, personalised feedback <br> for the work you
-                                    submit!</p>
-                                <button data-popup="material2"
-                                    class="flex px-8 py-2 mx-auto my-2 duration-200 ease-in bg-white rounded-md hover:bg-gray-800 hover:text-white group"
-                                    aria-label="view">
-                                    <span class="my-auto">View Feedback</span>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        
+                            <!-- Personalised Inputs Card -->
+                            <div class="p-2 rounded-lg flex flex-col justify-between">
+                                <div class="text-center">
+                                    <img src="../assets/file_interview2.webp" class="block mx-auto my-2" alt="interview" width="100px" height="100px">
+                                    <h2 class="my-2 text-xl">Personalised Inputs</h2>
+                                    <p class="my-4">Individual, personalised feedback for the work you submit!</p>
+                                </div>
+                                <button data-popup="material2" class="flex items-center justify-center px-4 py-2 mx-auto bg-white rounded-md hover:bg-gray-800 hover:text-white">
+                                    <span>View Feedback</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                                     </svg>
                                 </button>
                             </div>
                         </div>
-
-                        <div class="grid grid-cols-2 sm:gap-x-8">
-                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1">
-                                <img src="../assets/file_software.webp" class="block mx-auto my-2 text-center "
-                                    alt="software" width="100px" height="100px">
-                                <h2 class="my-2 text-xl text-center ">Practice Software</h2>
-                                <p class="my-4 text-center">Practice where you want, when you want. Get results on the
-                                    fly</p>
-                                <a href="https://prep.firstacademy.in/" target="_blank"
-                                    class="flex px-12 py-2 mx-auto my-2 duration-200 ease-in bg-white rounded-md w-fit hover:bg-gray-800 hover:text-white group"
-                                    aria-label="view">
-                                    <span class="my-auto">Login</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                    </svg>
-                                </a>
+                        
+                        <div class="grid grid-cols-2 items-stretch place-items-stretch sm:gap-x-8">
+                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1 h-full flex flex-col">
+                                <img src="../assets/file_software.webp" class="block mx-auto my-2 text-center" alt="software" width="100px" height="100px">
+                                <h2 class="my-2 text-xl text-center">Practice Software</h2>
+                                <p class="my-4 text-center">Practice where you want, when you want. Get results on the fly</p>
+                                <div class="mt-auto">
+                                    <a href="https://prep.firstacademy.in/" target="_blank" class="flex px-12 py-2 mx-auto my-2 duration-200 ease-in bg-white rounded-md w-fit hover:bg-gray-800 hover:text-white group" aria-label="view">
+                                        <span class="my-auto">Login</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1">
-                                <img src="../assets/file_grade.webp" class="block mx-auto my-2 text-center " alt="grade"
-                                    width="100px" height="100px">
-                                <h2 class="my-2 text-xl text-center ">Trainer Recommendations
-                                </h2>
-                                <p class="my-4 text-center">Our super focused training will put you <br> on your way to
-                                    a fantastic score!</p>
-                                <a href="https://www.youtube.com/watch?v=rNCxPIKzy2s"
-                                    class="flex px-8 py-2 mx-auto my-2 duration-200 ease-in bg-white rounded-md w-fit hover:bg-gray-800 hover:text-white group"
-                                    aria-label="view">
-                                    <span class="my-auto">Take a Look</span>
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="currentColor"
-                                        class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                    </svg>
-                                </a>
+                            <div class="col-span-2 p-2 rounded-lg sm:p-4 sm:col-span-1 sm:mt-1 h-full flex flex-col">
+                                <img src="../assets/file_grade.webp" class="block mx-auto my-2 text-center" alt="grade" width="100px" height="100px">
+                                <h2 class="my-2 text-xl text-center">Trainer Recommendations</h2>
+                                <p class="my-4 text-center">Our super focused training will put you <br> on your way to a fantastic score!</p>
+                                <div class="mt-auto">
+                                    <a href="https://www.youtube.com/watch?v=rNCxPIKzy2s" class="flex px-8 py-2 mx-auto my-2 duration-200 ease-in bg-white rounded-md w-fit hover:bg-gray-800 hover:text-white group" aria-label="view">
+                                        <span class="my-auto">Take a Look</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 my-auto font-bold duration-300 ease-in-out transform ms-2 group-hover:translate-x-1">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                        </div>    
                     </div>
 
                     <div class="my-auto md:w-3/4 lg:w-auto md:mx-auto">
@@ -1100,69 +1063,69 @@
                 <div class="flex flex-wrap justify-center mt-6 mb-4 gap-3">
                     <div class="">
                         <button id="openPopupQn1"
-                            class="w-full p-3 font-semibold text-white bg-yellow-600  rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap ">Some
+                            class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Some
                             Sample words</button>
                     </div>
                     <div class="">
                             <button id="openPopupQn2"
-                                class="w-full p-3  font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Do
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Do
                                 you know the difference?</button>
                        
                     </div>
                     <div class="">
                             <button id="openPopupQn3"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Right
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Right
                                 or Wrong?</button>
                    
                     </div>
                     <div class="">
                             <button id="openPopupQn4"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Whose
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Whose
                                 Line?</button>
                     </div>
                     
                     <div class="">
                             <button id="openPopupQn5"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Are
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Are
                                 you in form?</button>
                   
                     </div>
                     <div class="">
                             <button id="openPopupQn6"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Mine
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Mine
                                 or 🐭?</button>
                     
                     </div>
                     <div class="">
                             <button id="openPopupQn7"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Don't
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">Don't
                                 Get Tense!🥶</button>
                     </div>
                     <div class="">
                             <button id="openPopupQn8"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">But
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">But
                                 what?</button>
                        
                     </div>
                     <div class="">
                             <button id="openPopupQn9"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">🔎
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">🔎
                                 Where are you?</button>
                      
                     </div>
                     <div class="">
                             <button id="openPopupQn10"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">What's
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">What's
                                 your position?</button>
                   
                     </div>
                     <div class="">
                             <button data-popup="popup"
-                                class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">👩‍🏫
+                                class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">👩‍🏫
                                 Attend a session</button>
                     </div>
                     <div class="">
-                            <button class="w-full p-3 font-semibold text-white duration-200 ease-in bg-yellow-600 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">
+                            <button class="w-full p-3 font-semibold text-white border-2 text-yellow-600 border-yellow-600 duration-300 rounded-xl hover:text-yellow-700 hover:bg-yellow-100 px-7 text-wrap">
                                 <a href="https://prep.firstacademy.in/"> 🙌 More Tests</a>
                             </button>
                     </div>
@@ -1172,20 +1135,19 @@
             <div id="overlay" class="overlay"></div>
 
 
-            <div id="popupQn" class="p-6 rounded shadow-lg popupQn">
-                <div class="flex items-start justify-between px-2 py-5 bg-teal-200">
-                    <div id="directionsContainer" class="px-4 text-xl font-bold bg-teal-200 sm:text-2xl pb-0"></div>
+            <div id="popupQn" class="p-2 md:p-6 rounded shadow-lg popupQn">
+                <div class="flex items-start rounded-t-lg justify-between p-2 md:py-5 bg-teal-200">
+                    <div id="directionsContainer" class="p-2 md:px-4 text-xl font-bold bg-teal-200 sm:text-2xl pb-0"></div>
                     <button id="closePopupQn" class="mx-2 font-bold rounded">
                         <svg viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM8.96965 8.96967C9.26254 8.67678 9.73742 8.67678 10.0303 8.96967L12 10.9394L13.9696 8.96969C14.2625 8.6768 14.7374 8.6768 15.0303 8.96969C15.3232 9.26258 15.3232 9.73746 15.0303 10.0303L13.0606 12L15.0303 13.9697C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0303 15.0303C9.73744 15.3232 9.26256 15.3232 8.96967 15.0303C8.67678 14.7374 8.67678 14.2626 8.96967 13.9697L10.9393 12L8.96965 10.0303C8.67676 9.73744 8.67676 9.26256 8.96965 8.96967Z" fill="#036041"></path> </g></svg>
                     </button>
                 </div>
 
-                <div id="answersContainer"
-                    class="flex flex-wrap gap-2 font-normal px-5 m-auto pb-4 bg-teal-200 "></div>
-                <div id="questionsContainer" class=" p-4"></div>
-                <div class="flex justify-between items-center m-4">
+                <div id="answersContainer" class="flex flex-wrap gap-2 font-normal p-2 md:px-5 m-auto md:pb-4 bg-teal-200 "></div>
+                <div id="questionsContainer" class="p-2 pt-4 md:p-4"></div>
+                <div class="flex justify-between items-center m-4 mt-0">
                     <button id="submitQuiz" class="px-6 py-2 block font-semibold text-white bg-teal-500 rounded">Submit</button>
-                    <div id="scoreDisplay" class="mt-4 font-bold"></div>
+                    <div id="scoreDisplay" class=" font-bold"></div>
                 </div>
                 
             </div>
