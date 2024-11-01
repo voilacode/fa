@@ -106,7 +106,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
                 questionDiv.appendChild(optionsContainer);
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
-                questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
+                questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div class="font-semibold"> ${qdata.question.replace(/_+/g, () => {
                     return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
                 })}</div></div>`;
             }

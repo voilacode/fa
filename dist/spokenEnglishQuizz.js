@@ -77,7 +77,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
                 // Create the question content with number and text in a single line
                 const questionContent = document.createElement('div');
                 questionContent.classList.add('flex', 'items-center', 'space-x-2');
-                questionContent.innerHTML = `<div class="font-bold">${index + 1}.</div><div>${qdata.question}</div>`;
+                questionContent.innerHTML = `<div class="font-bold">${index + 1}.</div><div class="font-semibold">${qdata.question}</div>`;
                 questionDiv.appendChild(questionContent);
         
                 // Create the options container to place options on a new line
