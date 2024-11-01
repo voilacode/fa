@@ -1969,6 +1969,11 @@ video {
   border-top-right-radius: 0.75rem;
 }
 
+.rounded-t-2xl {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
 .rounded-br-none {
   border-bottom-right-radius: 0px;
 }
@@ -3689,11 +3694,6 @@ lite-youtube.lyt-activated>.lty-playbtn {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-yellow-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(161 98 7 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-opacity-40:hover {
   --tw-bg-opacity: 0.4;
 }
@@ -3859,6 +3859,14 @@ lite-youtube.lyt-activated>.lty-playbtn {
 .focus\:ring-teal-400:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(45 212 191 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-offset-1:focus {
+  --tw-ring-offset-width: 1px;
+}
+
+.focus\:ring-offset-white:focus {
+  --tw-ring-offset-color: #fff;
 }
 
 .active\:bg-green-800:active {
@@ -4069,6 +4077,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .sm\:w-\[500px\] {
     width: 500px;
+  }
+
+  .sm\:w-\[550px\] {
+    width: 550px;
   }
 
   .sm\:w-\[600px\] {
