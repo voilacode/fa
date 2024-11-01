@@ -81,6 +81,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('mb-4');
         
+        
             if (qdata.type === 'mcq') {
                 const options = [];
                 if (qdata.a) options.push({ label: qdata.a, value: 'a' });

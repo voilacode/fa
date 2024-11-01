@@ -27,6 +27,7 @@ const resetSubmitButton = () => {
 };
 
 // Fetch and load quiz
+// Function to fetch and load the quiz
 const fetchAndLoadQuiz = async (quizUrl, directions) => {
     overlay.classList.add('active1');
     popupQn.classList.add('active1');
@@ -77,28 +78,42 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
             const qdata = JSON.parse(question.qdata)[0];
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('mb-4');
-
+        
             if (qdata.type === 'mcq') {
-                questionDiv.innerHTML = `
-                <div class="flex space-x-2">
-                    <div class="font-bold">${index + 1}.</div>
-                    <div>${qdata.question}</div>
-                </div>
-                    <div>
-                        <label><input type="radio" name="mcq${question.qno}" value="a"> ${qdata.a}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="b"> ${qdata.b}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="c"> ${qdata.c}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="d"> ${qdata.d}</label><br>
-                    </div>`;
+                const options = [];
+                if (qdata.a) options.push({ label: qdata.a, value: 'a' });
+                if (qdata.b) options.push({ label: qdata.b, value: 'b' });
+                if (qdata.c) options.push({ label: qdata.c, value: 'c' });
+                if (qdata.d) options.push({ label: qdata.d, value: 'd' });
+        
+                // Create the question content with number and text in a single line
+                const questionContent = document.createElement('div');
+                questionContent.classList.add('flex', 'items-center', 'space-x-2');
+                questionContent.innerHTML = `<div class="font-bold">${index + 1}.</div><div>${qdata.question}</div>`;
+                questionDiv.appendChild(questionContent);
+        
+                // Create the options container to place options on a new line
+                const optionsContainer = document.createElement('div');
+                optionsContainer.classList.add('ml-6', 'mt-2'); // Adds some left margin and top margin for spacing
+        
+                options.forEach(option => {
+                    const label = document.createElement('label');
+                    label.classList.add('block', 'text-left', 'space-x-2'); // Each option on a new line
+                    label.innerHTML = `<input type="radio" name="mcq${question.qno}" value="${option.value}" class="mr-2"> ${option.label}`;
+                    optionsContainer.appendChild(label);
+                });
+        
+                questionDiv.appendChild(optionsContainer);
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
                 questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
                     return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
                 })}</div></div>`;
             }
-
+        
             questionsContainer.appendChild(questionDiv);
         });
+        
 
     } catch (error) {
         console.error('Error fetching quiz data:', error);
@@ -106,52 +121,54 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
     }
 };
 
+
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
-    const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwe52a9/vcgtwe52a9_questionbank.json';
-    const quiz1Directions = 'DYKTW?\nDo You Know These Words?';
+    const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwdd029/vcgtwdd029_questionbank.json';
+    const quiz1Directions = 'Section I\nUse the right Verbs';
     fetchAndLoadQuiz(quiz1Url, quiz1Directions);
 });
 
 openPopupQnButton2.addEventListener('click', () => {
-    const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwcf0da/vcgtwcf0da_questionbank.json';
-    const quiz2Directions = '👩‍⚕️ 👩‍🏫 👩‍🚀\nDo you know what are they called?';
+    const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw75d57/vcgtw75d57_questionbank.json';
+    const quiz2Directions = 'Section I\nFill in the blanks in the sentences below using the correct form of the words in the box.';
     fetchAndLoadQuiz(quiz2Url, quiz2Directions);
 });
 
+
 openPopupQnButton3.addEventListener('click', () => {
-    const quiz3Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw5ecc3/vcgtw5ecc3_questionbank.json';
-    const quiz3Directions = 'Name These Professions';
+    const quiz3Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw1bd73/vcgtw1bd73_questionbank.json';
+    const quiz3Directions = 'Section I\nChoose the right word';
     fetchAndLoadQuiz(quiz3Url, quiz3Directions);
 });
 
 openPopupQnButton4.addEventListener('click', () => {
-    const quiz4Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwc1fc2/vcgtwc1fc2_questionbank.json';
-    const quiz4Directions = '💪 Know Your Anatomy\nChoose the correct answer.';
+    const quiz4Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw73a50/vcgtw73a50_questionbank.json';
+    const quiz4Directions = 'Section I\nFill in the blanks with a suitable Verb.';
     fetchAndLoadQuiz(quiz4Url, quiz4Directions);
 });
 
 openPopupQnButton5.addEventListener('click', () => {
-    const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw2f995/vcgtw2f995_questionbank.json';
-    const quiz5Directions = '🚬 The Other Drugs\nUse the right form of the word.';
+    const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw15beb/vcgtw15beb_questionbank.json';
+    const quiz5Directions = 'Section I\nFill in the blanks with a suitable noun.';
     fetchAndLoadQuiz(quiz5Url, quiz5Directions);
 });
 
 
 openPopupQnButton6.addEventListener('click', () => {
-    const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw441f1/vcgtw441f1_questionbank.json';
-    const quiz6Directions = 'How Perfect is the Present?\nFill in the blanks so that the sentences are in the correct `Present Perfect` form.';
+    const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwae527/vcgtwae527_questionbank.json';
+    const quiz6Directions = 'Section I\nComplete the sentences below with the correct form of one of the verbs in the box.';
     fetchAndLoadQuiz(quiz6Url, quiz6Directions);
 });
 
 openPopupQnButton7.addEventListener('click', () => {
-    const quiz7Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwba5e4/vcgtwba5e4_questionbank.json';
-    const quiz7Directions = 'Section I\nUse the right form of these phrasal verbs.';
+    const quiz7Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwf8a6f/vcgtwf8a6f_questionbank.json';
+    const quiz7Directions = 'Section I\nSubject Verb agreement';
     fetchAndLoadQuiz(quiz7Url, quiz7Directions);
 });
 
 openPopupQnButton8.addEventListener('click', () => {
-    const quiz8Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwaa012/vcgtwaa012_questionbank.json';
+    const quiz8Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwd8737/vcgtwd8737_questionbank.json';
     const quiz8Directions = 'Section I\nChange the word from its Noun form to Verb form.';
     fetchAndLoadQuiz(quiz8Url, quiz8Directions);
 });
@@ -163,7 +180,7 @@ openPopupQnButton8.addEventListener('click', () => {
 // });
 
 openPopupQnButton10.addEventListener('click', () => {
-    const quiz10Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw16d5c/vcgtw16d5c_questionbank.json';
+    const quiz10Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwe075b/vcgtwe075b_questionbank.json';
     const quiz10Directions = 'Section I\nChoose the correct phrasal verb.';
     fetchAndLoadQuiz(quiz10Url, quiz10Directions);
 });
@@ -314,3 +331,17 @@ function handleRetest() {
     submitButton.removeEventListener('click', handleRetest);
     submitButton.addEventListener('click', handleSubmission);
 }
+
+
+
+
+
+
+
+
+
+// Reference the close button
+const closeQuizButton = document.getElementById('closeQuizButton');
+
+// Attach event listener for the close button
+closeQuizButton.addEventListener('click', closePopupQn);

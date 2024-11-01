@@ -77,7 +77,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
             const qdata = JSON.parse(question.qdata)[0];
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('mb-4');
-
+        
             if (qdata.type === 'mcq') {
                 questionDiv.innerHTML = `
                 <div class="flex space-x-2">
@@ -96,9 +96,10 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
                     return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
                 })}</div></div>`;
             }
-
+        
             questionsContainer.appendChild(questionDiv);
         });
+        
 
     } catch (error) {
         console.error('Error fetching quiz data:', error);

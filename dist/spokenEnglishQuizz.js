@@ -66,35 +66,48 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
             const qdata = JSON.parse(question.qdata)[0];
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('mb-4');
-
+        
             if (qdata.type === 'mcq') {
-                questionDiv.innerHTML = `
-                <div class="flex space-x-2">
-                    <div class="font-bold">${index + 1}.</div>
-                    <div>${qdata.question}</div>
-                </div>
-                    <div>
-                        <label><input type="radio" name="mcq${question.qno}" value="a"> ${qdata.a}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="b"> ${qdata.b}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="c"> ${qdata.c}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="d"> ${qdata.d}</label><br>
-                    </div>`;
+                const options = [];
+                if (qdata.a) options.push({ label: qdata.a, value: 'a' });
+                if (qdata.b) options.push({ label: qdata.b, value: 'b' });
+                if (qdata.c) options.push({ label: qdata.c, value: 'c' });
+                if (qdata.d) options.push({ label: qdata.d, value: 'd' });
+        
+                // Create the question content with number and text in a single line
+                const questionContent = document.createElement('div');
+                questionContent.classList.add('flex', 'items-center', 'space-x-2');
+                questionContent.innerHTML = `<div class="font-bold">${index + 1}.</div><div>${qdata.question}</div>`;
+                questionDiv.appendChild(questionContent);
+        
+                // Create the options container to place options on a new line
+                const optionsContainer = document.createElement('div');
+                optionsContainer.classList.add('ml-6', 'mt-2'); // Adds some left margin and top margin for spacing
+        
+                options.forEach(option => {
+                    const label = document.createElement('label');
+                    label.classList.add('block', 'text-left', 'space-x-2'); // Each option on a new line
+                    label.innerHTML = `<input type="radio" name="mcq${question.qno}" value="${option.value}" class="mr-2"> ${option.label}`;
+                    optionsContainer.appendChild(label);
+                });
+        
+                questionDiv.appendChild(optionsContainer);
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
                 questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
                     return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
                 })}</div></div>`;
             }
-
+        
             questionsContainer.appendChild(questionDiv);
         });
+        
 
     } catch (error) {
         console.error('Error fetching quiz data:', error);
         alert('There was an error loading the quiz. Please try again later.');
     }
 };
-
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
     const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw8c640/vcgtw8c640_questionbank.json';
@@ -250,3 +263,10 @@ function handleRetest() {
     submitButton.removeEventListener('click', handleRetest);
     submitButton.addEventListener('click', handleSubmission);
 }
+
+
+// Reference the close button
+const closeQuizButton = document.getElementById('closeQuizButton');
+
+// Attach event listener for the close button
+closeQuizButton.addEventListener('click', closePopupQn);
