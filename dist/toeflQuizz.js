@@ -89,7 +89,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
                 // Create the question content with number and text in a single line
                 const questionContent = document.createElement('div');
                 questionContent.classList.add('flex', 'items-center', 'space-x-2');
-                questionContent.innerHTML = `<div class="font-bold">${index + 1}.</div><div>${qdata.question}</div>`;
+                questionContent.innerHTML = `<div class="font-bold">${index + 1}.</div><div class="font-semibold">${qdata.question}</div>`;
                 questionDiv.appendChild(questionContent);
         
                 // Create the options container to place options on a new line
@@ -106,7 +106,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
                 questionDiv.appendChild(optionsContainer);
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
-                questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div class="font-semibold"> ${qdata.question.replace(/_+/g, () => {
+                questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div > ${qdata.question.replace(/_+/g, () => {
                     return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
                 })}</div></div>`;
             }

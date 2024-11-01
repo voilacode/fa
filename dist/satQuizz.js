@@ -302,3 +302,9 @@ function handleRetest() {
     submitButton.removeEventListener('click', handleRetest);
     submitButton.addEventListener('click', handleSubmission);
 }
+
+// Reference the close button
+const closeQuizButton = document.getElementById('closeQuizButton');
+
+// Attach event listener for the close button
+closeQuizButton.addEventListener('click', closePopupQn);
