@@ -27,7 +27,7 @@ const resetSubmitButton = () => {
 };
 
 // Fetch and load quiz
-const fetchAndLoadQuiz = async (quizUrl, directions) => {
+const fetchAndLoadQuiz = async (quizUrl, directions, showAnswers) => {
     overlay.classList.add('active1');
     popupQn.classList.add('active1');
 
@@ -37,47 +37,52 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
     try {
         const response = await fetch(quizUrl);
         data = await response.json();
-
+    
         directionsContainer.innerHTML = '';
         answersContainer.innerHTML = '';
         questionsContainer.innerHTML = '';
-
+    
         // Split the directions into two parts (heading1 and heading2)
         const [heading1, heading2] = directions.split('\n');
-
+    
         // Add custom directions to the container with two headings
         const directionsHeading1 = document.createElement('h2');
         directionsHeading1.textContent = heading1;
         directionsHeading1.classList.add('text-xl', 'font-bold', 'mb-2');
         directionsContainer.appendChild(directionsHeading1);
-
+    
         const directionsHeading2 = document.createElement('h3');
         directionsHeading2.textContent = heading2;
         directionsHeading2.classList.add('text-lg', 'font-medium');
         directionsContainer.appendChild(directionsHeading2);
-
-        const fillupAnswers = new Set();
-        data.questions.forEach(question => {
-            const qdata = JSON.parse(question.qdata)[0];
-            if (qdata.type === 'fillup') {
-                fillupAnswers.add(qdata.answer);
-            }
-        });
-
-        const uniqueAnswersArray = Array.from(fillupAnswers);
-        uniqueAnswersArray.sort(() => Math.random() - 0.5);
-        uniqueAnswersArray.forEach(answer => {
-            const answerDiv = document.createElement('div');
-            answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
-            answerDiv.textContent = answer;
-            answersContainer.appendChild(answerDiv);
-        });
-
+    
+        // Conditionally show answers only for specific quizzes
+        if (showAnswers) {
+            const fillupAnswers = new Set();
+            data.questions.forEach(question => {
+                const qdata = JSON.parse(question.qdata)[0];
+                if (qdata.type === 'fillup') {
+                    fillupAnswers.add(qdata.answer);
+                }
+            });
+        
+            const uniqueAnswersArray = Array.from(fillupAnswers);
+            uniqueAnswersArray.sort(() => Math.random() - 0.5);
+            uniqueAnswersArray.forEach(answer => {
+                const answerDiv = document.createElement('div');
+                answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
+                answerDiv.textContent = answer;
+                answersContainer.appendChild(answerDiv);
+            });
+        }
+    
+        const totalQuestions = data.questions.length; // Total number of questions
+    
         data.questions.forEach((question, index) => {
             const qdata = JSON.parse(question.qdata)[0];
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('mb-4');
-
+        
             if (qdata.type === 'mcq') {
                 questionDiv.innerHTML = `
                 <div class="flex space-x-2">
@@ -94,14 +99,84 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
                 });
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
-                questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
-                    return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
-                })}</div></div>`;
+                questionDiv.innerHTML = `<div class="flex space-x-2">
+                    <div class="font-bold">${index + 1}.</div>
+                    <div>${qdata.question.replace(/_+/g, () => {
+                        return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
+                    })}</div>
+                </div>`;
             }
-
+        
             questionsContainer.appendChild(questionDiv);
         });
-
+        
+        // Submit button listener for score calculation
+        document.getElementById('submitQuiz').addEventListener('click', () => {
+            correctCount = 0; // Reset correct count before calculation
+        
+            data.questions.forEach((question, index) => {
+                const qdata = JSON.parse(question.qdata)[0];
+                const questionDiv = questionsContainer.children[index]; // Find the question container div
+        
+                if (qdata.type === 'mcq') {
+                    const selectedOption = document.querySelector(`input[name="mcq${index}"]:checked`);
+                    const correctOption = qdata.answer;
+                    const statusIcon = document.createElement('span'); // Create an icon element for feedback
+        
+                    // Remove any existing icon from previous submissions
+                    const existingIcon = questionDiv.querySelector('.status-icon');
+                    if (existingIcon) {
+                        existingIcon.remove();
+                    }
+        
+                    if (selectedOption) {
+                        if (selectedOption.value === correctOption) {
+                            correctCount++;
+                            statusIcon.innerHTML = ' <span class="text-green-500">✔️</span>';
+                        } else {
+                            statusIcon.innerHTML = ' <span class="text-red-500">❌</span>';
+                        }
+                    } else {
+                        // Mark as incorrect if no option was selected
+                        statusIcon.innerHTML = ' <span class="text-red-500">❌</span>';
+                    }
+        
+                    // Disable all options for the question after submission
+                    const options = questionDiv.querySelectorAll(`input[name="mcq${index}"]`);
+                    options.forEach(option => option.disabled = true);
+        
+                    // Insert the status icon after the question content
+                    statusIcon.classList.add('status-icon');
+                    questionDiv.querySelector('.flex.space-x-2.items-start').appendChild(statusIcon);
+                } else if (qdata.type === 'fillup') {
+                    const fillupInputs = questionDiv.querySelectorAll('input[type="text"]');
+                    fillupInputs.forEach(input => {
+                        const correctAnswer = input.getAttribute('data-correct-answer');
+                        const userAnswer = input.value.toLowerCase().trim();
+                        const statusIcon = document.createElement('span');
+        
+                        if (input.nextElementSibling) {
+                            input.nextElementSibling.remove();
+                        }
+        
+                        if (userAnswer === correctAnswer) {
+                            statusIcon.innerHTML = ' <span class="text-green-500">✔️</span>';
+                            correctCount++;
+                        } else {
+                            statusIcon.innerHTML = ' <span class="text-red-500">❌</span>';
+                        }
+        
+                        input.disabled = true;
+                        input.parentNode.insertBefore(statusIcon, input.nextSibling);
+                    });
+                }
+            });
+        
+            // Calculate and display the score
+            const score = totalQuestions > 0 ? ((correctCount / totalQuestions) * 100).toFixed(2) : '0.00';
+            document.getElementById('scoreDisplay').textContent = `Score: ${score}%`;
+        });
+        
     } catch (error) {
         console.error('Error fetching quiz data:', error);
         alert('There was an error loading the quiz. Please try again later.');
@@ -109,68 +184,66 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
 };
 
 // Open popupQn listeners
-// Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
     const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw8bf07/vcgtw8bf07_questionbank.json';
     const quiz1Directions = 'How active are you?\nConvert these sentences into the right Passive form. An example has been done for you.';
-    fetchAndLoadQuiz(quiz1Url, quiz1Directions);
+    fetchAndLoadQuiz(quiz1Url, quiz1Directions, false);
 });
 
 openPopupQnButton2.addEventListener('click', () => {
     const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwa0560/vcgtwa0560_questionbank.json';
     const quiz2Directions = 'Can you change?\nUse the right form of the verb in the blanks provided';
-    fetchAndLoadQuiz(quiz2Url, quiz2Directions);
+    fetchAndLoadQuiz(quiz2Url, quiz2Directions, true);
 });
 
 openPopupQnButton3.addEventListener('click', () => {
     const quiz3Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwbed2e/vcgtwbed2e_questionbank.json';
     const quiz3Directions = 'What is your position on this?\nUse the correct preposition in the sentences below.';
-    fetchAndLoadQuiz(quiz3Url, quiz3Directions);
+    fetchAndLoadQuiz(quiz3Url, quiz3Directions, false);
 });
 
 openPopupQnButton4.addEventListener('click', () => {
     const quiz4Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw49c1c/vcgtw49c1c_questionbank.json';
     const quiz4Directions = '...ing or not ?\nA littel something to do with tenses! 😉';
-    fetchAndLoadQuiz(quiz4Url, quiz4Directions);
+    fetchAndLoadQuiz(quiz4Url, quiz4Directions, false);
 });
 
 openPopupQnButton5.addEventListener('click', () => {
     const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwa40ac/vcgtwa40ac_questionbank.json';
     const quiz5Directions = 'To ♾ and Beyond!\nUse the right form of the words in the brackets.';
-    fetchAndLoadQuiz(quiz5Url, quiz5Directions);
+    fetchAndLoadQuiz(quiz5Url, quiz5Directions, false);
 });
 
 
 openPopupQnButton6.addEventListener('click', () => {
     const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwb7912/vcgtwb7912_questionbank.json';
     const quiz6Directions = 'To or For?\nI am coming to you? OR I am coming for you?';
-    fetchAndLoadQuiz(quiz6Url, quiz6Directions);
+    fetchAndLoadQuiz(quiz6Url, quiz6Directions, false);
 });
 
 openPopupQnButton7.addEventListener('click', () => {
     const quiz7Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw1b2c8/vcgtw1b2c8_questionbank.json';
     const quiz7Directions = 'Do-Be-Do-Be-Do!\nDo you know the right `be`, `do` and `have` forms?';
-    fetchAndLoadQuiz(quiz7Url, quiz7Directions);
+    fetchAndLoadQuiz(quiz7Url, quiz7Directions, false);
 });
 
 openPopupQnButton8.addEventListener('click', () => {
     const quiz8Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw59221/vcgtw59221_questionbank.json';
     const quiz8Directions = 'How is your form?\nFill both blanks with the correct form of the word given.  An example has been done for you.';
-    fetchAndLoadQuiz(quiz8Url, quiz8Directions);
+    fetchAndLoadQuiz(quiz8Url, quiz8Directions, false);
 });
 
 openPopupQnButton9.addEventListener('click', () => {
     const quiz9Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwaa201/vcgtwaa201_questionbank.json';
     const quiz9Directions = 'Section I\nCorrect the verbs and/or helping verbs without changing the tense.';
-    fetchAndLoadQuiz(quiz9Url, quiz9Directions);
+    fetchAndLoadQuiz(quiz9Url, quiz9Directions, false);
 });
 
 openPopupQnButton10.addEventListener('click', () => {
     const quiz10Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw662d4/vcgtw662d4_questionbank.json';
     const quiz10Directions = 'Section I\nChange the word that could change the tone of the sentence';
-    fetchAndLoadQuiz(quiz10Url, quiz10Directions);
+    fetchAndLoadQuiz(quiz10Url, quiz10Directions, false);
 });
-
 
 // Close popupQn when clicking outside (on the overlay)
 overlay.addEventListener('click', (event) => {
@@ -213,7 +286,6 @@ function closePopupQn() {
     resetSubmitButton(); // Reset submit button to "Submit Quiz"
 }
 
-
 // Submit and Retest functionality
 const submitButton = document.getElementById('submitQuiz');
 
@@ -223,7 +295,7 @@ function handleSubmission() {
     const fillupInputs = document.querySelectorAll('.inline-input');
     const mcqInputs = document.querySelectorAll('input[type="radio"]:checked');
     let correctCount = 0;
-    let totalCount = 0; // To count total questions attempted
+    let totalCount = 0; // This will count the total number of questions, not just the attempted ones
 
     // Calculate score for fill-up questions
     fillupInputs.forEach(input => {
@@ -251,6 +323,8 @@ function handleSubmission() {
     });
 
     // Calculate score for MCQ questions
+    const totalQuestionsMCQ = mcqInputs.length + document.querySelectorAll('input[type="radio"]').length - mcqInputs.length;
+
     mcqInputs.forEach(mcqInput => {
         const questionIndex = mcqInput.name.replace('mcq', '') - 1;
         const qdata = JSON.parse(data.questions[questionIndex].qdata)[0];
@@ -275,6 +349,9 @@ function handleSubmission() {
         mcqInput.parentElement.appendChild(statusIcon);
     });
 
+    // Calculate the total questions attempted
+    // const totalQuestions = fillupInputs.length + totalQuestionsMCQ; // Total questions = fillups + total mcqs
+
     // Display score
     const totalQuestions = fillupInputs.length + mcqInputs.length; // Total questions = fillups + mcqs
     const scorePercentage = totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0.0;
@@ -289,6 +366,7 @@ function handleSubmission() {
     submitButton.removeEventListener('click', handleSubmission);
     submitButton.addEventListener('click', handleRetest);
 }
+
 
 function handleRetest() {
     const fillupInputs = document.querySelectorAll('.inline-input');
