@@ -10,7 +10,7 @@ const openPopupQnButton9 = document.getElementById('openPopupQn9');
 const openPopupQnButton10 = document.getElementById('openPopupQn10');
 /*const openPopupQnButton11 = document.getElementById('openPopupQn11');
 const openPopupQnButton12 = document.getElementById('openPopupQn12');*/
-const closePopupQnButton = document.getElementById('closePopupQn');
+const closePopupQnButtons = document.querySelectorAll('#closePopupQn');
 const overlay = document.getElementById('overlay');
 const popupQn = document.getElementById('popupQn');
 const answersContainer = document.getElementById('answersContainer');
@@ -53,7 +53,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
 
         const directionsHeading2 = document.createElement('h3');
         directionsHeading2.textContent = heading2;
-        directionsHeading2.classList.add('text-lg', 'font-semibold');
+        directionsHeading2.classList.add('text-lg', 'font-medium');
         directionsContainer.appendChild(directionsHeading2);
 
         const fillupAnswers = new Set();
@@ -68,7 +68,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
         uniqueAnswersArray.sort(() => Math.random() - 0.5);
         uniqueAnswersArray.forEach(answer => {
             const answerDiv = document.createElement('div');
-            answerDiv.classList.add('p-2', 'font-bold', 'text-green-500', 'm-auto');
+            answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
             answerDiv.textContent = answer;
             answersContainer.appendChild(answerDiv);
         });
@@ -83,13 +83,15 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
                 <div class="flex space-x-2">
                     <div class="font-bold">${index + 1}.</div>
                     <div>${qdata.question}</div>
-                </div>
-                    <div>
-                        <label><input type="radio" name="mcq${question.qno}" value="a"> ${qdata.a}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="b"> ${qdata.b}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="c"> ${qdata.c}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="d"> ${qdata.d}</label><br>
-                    </div>`;
+                </div>`;
+
+                const options = ['a', 'b', 'c', 'd'];
+                options.forEach(option => {
+                    if (qdata[option]) { // Check if the option has data
+                        questionDiv.innerHTML += `
+                            <label><input type="radio" name="mcq${question.qno}" value="${option}"> ${qdata[option]}</label><br>`;
+                    }
+                });
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
                 questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
@@ -164,8 +166,10 @@ overlay.addEventListener('click', (event) => {
     }
 });
 
-// Close popupQn functionality (reuse existing close logic)
-closePopupQnButton.addEventListener('click', closePopupQn);
+
+closePopupQnButtons.forEach(button => {
+    button.addEventListener('click', closePopupQn);
+});
 
 function closePopupQn() {
     overlay.classList.remove('active1');
@@ -252,17 +256,15 @@ function handleSubmission() {
             } else {
                 statusIcon.textContent = '❌'; // Incorrect answer
             }
+            totalCount++; // Increment totalCount for each attempted question
         }
-
-        // Increment totalCount for every attempted question
-        totalCount++;
 
         mcqInput.parentElement.appendChild(statusIcon);
     });
 
     // Display score
     const totalQuestions = fillupInputs.length + mcqInputs.length; // Total questions = fillups + mcqs
-    const scorePercentage = (correctCount / totalQuestions) * 100;
+    const scorePercentage = totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0.0;
     document.getElementById('scoreDisplay').innerHTML = `<p class="font-bold">Score: ${scorePercentage.toFixed(2)}%</p>`;
 
     // Change button to "Retry Test"
@@ -302,9 +304,3 @@ function handleRetest() {
     submitButton.removeEventListener('click', handleRetest);
     submitButton.addEventListener('click', handleSubmission);
 }
-
-// Reference the close button
-const closeQuizButton = document.getElementById('closeQuizButton');
-
-// Attach event listener for the close button
-closeQuizButton.addEventListener('click', closePopupQn);

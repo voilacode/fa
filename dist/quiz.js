@@ -10,7 +10,7 @@ const openPopupQnButton9 = document.getElementById('openPopupQn9');
 const openPopupQnButton10 = document.getElementById('openPopupQn10');
 /*const openPopupQnButton11 = document.getElementById('openPopupQn11');
 const openPopupQnButton12 = document.getElementById('openPopupQn12');*/
-const closePopupQnButton = document.getElementById('closePopupQn');
+const closePopupQnButtons = document.querySelectorAll('#closePopupQn');
 const overlay = document.getElementById('overlay');
 const popupQn = document.getElementById('popupQn');
 const answersContainer = document.getElementById('answersContainer');
@@ -83,13 +83,15 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
                 <div class="flex space-x-2">
                     <div class="font-bold">${index + 1}.</div>
                     <div>${qdata.question}</div>
-                </div>
-                    <div>
-                        <label><input type="radio" name="mcq${question.qno}" value="a"> ${qdata.a}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="b"> ${qdata.b}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="c"> ${qdata.c}</label><br>
-                        <label><input type="radio" name="mcq${question.qno}" value="d"> ${qdata.d}</label><br>
-                    </div>`;
+                </div>`;
+
+                const options = ['a', 'b', 'c', 'd'];
+                options.forEach(option => {
+                    if (qdata[option]) { // Check if the option has data
+                        questionDiv.innerHTML += `
+                            <label><input type="radio" name="mcq${question.qno}" value="${option}"> ${qdata[option]}</label><br>`;
+                    }
+                });
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
                 questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
@@ -176,8 +178,10 @@ overlay.addEventListener('click', (event) => {
     }
 });
 
-// Close popupQn functionality (reuse existing close logic)
-closePopupQnButton.addEventListener('click', closePopupQn);
+
+closePopupQnButtons.forEach(button => {
+    button.addEventListener('click', closePopupQn);
+});
 
 function closePopupQn() {
     overlay.classList.remove('active1');
@@ -264,17 +268,15 @@ function handleSubmission() {
             } else {
                 statusIcon.textContent = '❌'; // Incorrect answer
             }
+            totalCount++; // Increment totalCount for each attempted question
         }
-
-        // Increment totalCount for every attempted question
-        totalCount++;
 
         mcqInput.parentElement.appendChild(statusIcon);
     });
 
     // Display score
     const totalQuestions = fillupInputs.length + mcqInputs.length; // Total questions = fillups + mcqs
-    const scorePercentage = (correctCount / totalQuestions) * 100;
+    const scorePercentage = totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0.0;
     document.getElementById('scoreDisplay').innerHTML = `<p class="font-bold">Score: ${scorePercentage.toFixed(2)}%</p>`;
 
     // Change button to "Retry Test"

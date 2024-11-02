@@ -1,5 +1,5 @@
 const openPopupQnButton1 = document.getElementById('openPopupQn1');
-const closePopupQnButton = document.getElementById('closePopupQn');
+const closePopupQnButtons = document.querySelectorAll('#closePopupQn');
 const overlay = document.getElementById('overlay');
 const popupQn = document.getElementById('popupQn');
 const answersContainer = document.getElementById('answersContainer');
@@ -66,48 +66,38 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
             const qdata = JSON.parse(question.qdata)[0];
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('mb-4');
-        
+
             if (qdata.type === 'mcq') {
-                const options = [];
-                if (qdata.a) options.push({ label: qdata.a, value: 'a' });
-                if (qdata.b) options.push({ label: qdata.b, value: 'b' });
-                if (qdata.c) options.push({ label: qdata.c, value: 'c' });
-                if (qdata.d) options.push({ label: qdata.d, value: 'd' });
-        
-                // Create the question content with number and text in a single line
-                const questionContent = document.createElement('div');
-                questionContent.classList.add('flex', 'items-center', 'space-x-2');
-                questionContent.innerHTML = `<div class="font-bold">${index + 1}.</div><div class="font-semibold">${qdata.question}</div>`;
-                questionDiv.appendChild(questionContent);
-        
-                // Create the options container to place options on a new line
-                const optionsContainer = document.createElement('div');
-                optionsContainer.classList.add('ml-6', 'mt-2'); // Adds some left margin and top margin for spacing
-        
+                questionDiv.innerHTML = `
+                <div class="flex space-x-2">
+                    <div class="font-bold">${index + 1}.</div>
+                    <div>${qdata.question}</div>
+                </div>`;
+            
+                const options = ['a', 'b', 'c', 'd'];
                 options.forEach(option => {
-                    const label = document.createElement('label');
-                    label.classList.add('block', 'text-left', 'space-x-2'); // Each option on a new line
-                    label.innerHTML = `<input type="radio" name="mcq${question.qno}" value="${option.value}" class="mr-2"> ${option.label}`;
-                    optionsContainer.appendChild(label);
+                    if (qdata[option]) { // Check if the option has data
+                        questionDiv.innerHTML += `
+                            <label><input type="radio" name="mcq${question.qno}" value="${option}"> ${qdata[option]}</label><br>`;
+                    }
                 });
-        
-                questionDiv.appendChild(optionsContainer);
-            } else if (qdata.type === 'fillup') {
+            }
+             else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
                 questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
                     return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
                 })}</div></div>`;
             }
-        
+
             questionsContainer.appendChild(questionDiv);
         });
-        
 
     } catch (error) {
         console.error('Error fetching quiz data:', error);
         alert('There was an error loading the quiz. Please try again later.');
     }
 };
+
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
     const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw8c640/vcgtw8c640_questionbank.json';
@@ -126,7 +116,9 @@ overlay.addEventListener('click', (event) => {
 });
 
 // Close popupQn functionality (reuse existing close logic)
-closePopupQnButton.addEventListener('click', closePopupQn);
+closePopupQnButtons.forEach(button => {
+    button.addEventListener('click', closePopupQn);
+});
 
 function closePopupQn() {
     overlay.classList.remove('active1');
@@ -213,17 +205,15 @@ function handleSubmission() {
             } else {
                 statusIcon.textContent = '❌'; // Incorrect answer
             }
+            totalCount++; // Increment totalCount for each attempted question
         }
-
-        // Increment totalCount for every attempted question
-        totalCount++;
 
         mcqInput.parentElement.appendChild(statusIcon);
     });
 
     // Display score
     const totalQuestions = fillupInputs.length + mcqInputs.length; // Total questions = fillups + mcqs
-    const scorePercentage = (correctCount / totalQuestions) * 100;
+    const scorePercentage = totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0.0;
     document.getElementById('scoreDisplay').innerHTML = `<p class="font-bold">Score: ${scorePercentage.toFixed(2)}%</p>`;
 
     // Change button to "Retry Test"
@@ -263,10 +253,3 @@ function handleRetest() {
     submitButton.removeEventListener('click', handleRetest);
     submitButton.addEventListener('click', handleSubmission);
 }
-
-
-// Reference the close button
-const closeQuizButton = document.getElementById('closeQuizButton');
-
-// Attach event listener for the close button
-closeQuizButton.addEventListener('click', closePopupQn);
