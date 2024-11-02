@@ -27,7 +27,6 @@ const resetSubmitButton = () => {
 };
 
 // Fetch and load quiz
-// Function to fetch and load the quiz
 const fetchAndLoadQuiz = async (quizUrl, directions) => {
     overlay.classList.add('active1');
     popupQn.classList.add('active1');
@@ -37,8 +36,7 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
 
     try {
         const response = await fetch(quizUrl);
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        const data = await response.json();
+        data = await response.json();
 
         directionsContainer.innerHTML = '';
         answersContainer.innerHTML = '';
@@ -58,7 +56,6 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
         directionsHeading2.classList.add('text-lg', 'font-medium');
         directionsContainer.appendChild(directionsHeading2);
 
-        // Prepare answers for fill-in-the-blank questions
         const fillupAnswers = new Set();
         data.questions.forEach(question => {
             const qdata = JSON.parse(question.qdata)[0];
@@ -67,7 +64,8 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
             }
         });
 
-        const uniqueAnswersArray = Array.from(fillupAnswers).sort(() => Math.random() - 0.5);
+        const uniqueAnswersArray = Array.from(fillupAnswers);
+        uniqueAnswersArray.sort(() => Math.random() - 0.5);
         uniqueAnswersArray.forEach(answer => {
             const answerDiv = document.createElement('div');
             answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
@@ -75,48 +73,32 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
             answersContainer.appendChild(answerDiv);
         });
 
-        // Render questions and their options
         data.questions.forEach((question, index) => {
             const qdata = JSON.parse(question.qdata)[0];
             const questionDiv = document.createElement('div');
             questionDiv.classList.add('mb-4');
-        
-        
+
             if (qdata.type === 'mcq') {
-                const options = [];
-                if (qdata.a) options.push({ label: qdata.a, value: 'a' });
-                if (qdata.b) options.push({ label: qdata.b, value: 'b' });
-                if (qdata.c) options.push({ label: qdata.c, value: 'c' });
-                if (qdata.d) options.push({ label: qdata.d, value: 'd' });
-        
-                // Create the question content with number and text in a single line
-                const questionContent = document.createElement('div');
-                questionContent.classList.add('flex', 'items-center', 'space-x-2');
-                questionContent.innerHTML = `<div class="font-bold">${index + 1}.</div><div class="font-semibold">${qdata.question}</div>`;
-                questionDiv.appendChild(questionContent);
-        
-                // Create the options container to place options on a new line
-                const optionsContainer = document.createElement('div');
-                optionsContainer.classList.add('ml-6', 'mt-2'); // Adds some left margin and top margin for spacing
-        
-                options.forEach(option => {
-                    const label = document.createElement('label');
-                    label.classList.add('block', 'text-left', 'space-x-2'); // Each option on a new line
-                    label.innerHTML = `<input type="radio" name="mcq${question.qno}" value="${option.value}" class="mr-2"> ${option.label}`;
-                    optionsContainer.appendChild(label);
-                });
-        
-                questionDiv.appendChild(optionsContainer);
+                questionDiv.innerHTML = `
+                <div class="flex space-x-2">
+                    <div class="font-bold">${index + 1}.</div>
+                    <div>${qdata.question}</div>
+                </div>
+                    <div>
+                        <label><input type="radio" name="mcq${question.qno}" value="a"> ${qdata.a}</label><br>
+                        <label><input type="radio" name="mcq${question.qno}" value="b"> ${qdata.b}</label><br>
+                        <label><input type="radio" name="mcq${question.qno}" value="c"> ${qdata.c}</label><br>
+                        <label><input type="radio" name="mcq${question.qno}" value="d"> ${qdata.d}</label><br>
+                    </div>`;
             } else if (qdata.type === 'fillup') {
                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
                 questionDiv.innerHTML = `<div class="flex space-x-2"><div class="font-bold">${index + 1}.</div><div> ${qdata.question.replace(/_+/g, () => {
                     return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
                 })}</div></div>`;
             }
-        
+
             questionsContainer.appendChild(questionDiv);
         });
-        
 
     } catch (error) {
         console.error('Error fetching quiz data:', error);
@@ -124,68 +106,65 @@ const fetchAndLoadQuiz = async (quizUrl, directions) => {
     }
 };
 
-
-
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
-    const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwdd029/vcgtwdd029_questionbank.json';
-    const quiz1Directions = 'Section I\nUse the right Verbs';
+    const quiz1Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k2ac25b/pict5k2ac25b_questionbank.json';
+    const quiz1Directions = 'Choose the Right Word\n Fill in the blanks with the following words';
     fetchAndLoadQuiz(quiz1Url, quiz1Directions);
 });
 
 openPopupQnButton2.addEventListener('click', () => {
-    const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw75d57/vcgtw75d57_questionbank.json';
-    const quiz2Directions = 'Section I\nFill in the blanks in the sentences below using the correct form of the words in the box.';
+    const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k241314/pict5k241314_questionbank.json';
+    const quiz2Directions = 'Section I\nRead each sentence carefully and decide which of the following categories it falls under.';
     fetchAndLoadQuiz(quiz2Url, quiz2Directions);
 });
 
-
 openPopupQnButton3.addEventListener('click', () => {
-    const quiz3Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw1bd73/vcgtw1bd73_questionbank.json';
-    const quiz3Directions = 'Section I\nChoose the right word';
+    const quiz3Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k281fd6/pict5k281fd6_questionbank.json';
+    const quiz3Directions = 'Spot The Error\nIn each of the sentences, one verb is wrong. Identify the incorrect verb and write in the correct one in the space provided.';
     fetchAndLoadQuiz(quiz3Url, quiz3Directions);
 });
 
 openPopupQnButton4.addEventListener('click', () => {
-    const quiz4Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw73a50/vcgtw73a50_questionbank.json';
-    const quiz4Directions = 'Section I\nFill in the blanks with a suitable Verb.';
+    const quiz4Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k218d5a/pict5k218d5a_questionbank.json';
+    const quiz4Directions = 'Choose the Right Word\nSelect the right answer choice.';
     fetchAndLoadQuiz(quiz4Url, quiz4Directions);
 });
 
 openPopupQnButton5.addEventListener('click', () => {
-    const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtw15beb/vcgtw15beb_questionbank.json';
-    const quiz5Directions = 'Section I\nFill in the blanks with a suitable noun.';
+    const quiz5Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k2db2b9/pict5k2db2b9_questionbank.json';
+    const quiz5Directions = 'Word Forms\nUse the right form of the word in the brackets.';
     fetchAndLoadQuiz(quiz5Url, quiz5Directions);
 });
 
 
 openPopupQnButton6.addEventListener('click', () => {
-    const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwae527/vcgtwae527_questionbank.json';
-    const quiz6Directions = 'Section I\nComplete the sentences below with the correct form of one of the verbs in the box.';
+    const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k2e4cd0/pict5k2e4cd0_questionbank.json';
+    const quiz6Directions = 'Singular or Plural?\nChoose the right answer.';
     fetchAndLoadQuiz(quiz6Url, quiz6Directions);
 });
 
 openPopupQnButton7.addEventListener('click', () => {
-    const quiz7Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwf8a6f/vcgtwf8a6f_questionbank.json';
-    const quiz7Directions = 'Section I\nSubject Verb agreement';
+    const quiz7Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k292bd7/pict5k292bd7_questionbank.json';
+    const quiz7Directions = 'Tricky Tenses\nWhile most choices may seem correct, there is only ONE correct choice. Look at the context and pick the right answer!';
     fetchAndLoadQuiz(quiz7Url, quiz7Directions);
 });
 
 openPopupQnButton8.addEventListener('click', () => {
-    const quiz8Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwd8737/vcgtwd8737_questionbank.json';
-    const quiz8Directions = 'Section I\nChange the word from its Noun form to Verb form.';
+    const quiz8Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k2f3372/pict5k2f3372_questionbank.json';
+    const quiz8Directions = 'But what?\nFill in the blanks with BUT, AND, OR, or OR NOT.';
     fetchAndLoadQuiz(quiz8Url, quiz8Directions);
 });
 
-// openPopupQnButton9.addEventListener('click', () => {
-//     const quiz9Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwaa201/vcgtwaa201_questionbank.json';
-//     const quiz9Directions = 'Section I\nCorrect the verbs and/or helping verbs without changing the tense.';
-//     fetchAndLoadQuiz(quiz9Url, quiz9Directions);
-// });
+openPopupQnButton9.addEventListener('click', () => {
+    const quiz9Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k2825ac/pict5k2825ac_questionbank.json';
+    const quiz9Directions = 'Where are you?\nChoose the right answer.';
+    fetchAndLoadQuiz(quiz9Url, quiz9Directions);
+});
 
 openPopupQnButton10.addEventListener('click', () => {
-    const quiz10Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwe075b/vcgtwe075b_questionbank.json';
-    const quiz10Directions = 'Section I\nChoose the correct phrasal verb.';
+    const quiz10Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k205b27/pict5k205b27_questionbank.json';
+    const quiz10Directions = 'Add the Right Preposition\nUse the right preposition with the following verbs. An example has been done for you. It adds the preposition in this matter: Look+After';
     fetchAndLoadQuiz(quiz10Url, quiz10Directions);
 });
 
@@ -335,17 +314,3 @@ function handleRetest() {
     submitButton.removeEventListener('click', handleRetest);
     submitButton.addEventListener('click', handleSubmission);
 }
-
-
-
-
-
-
-
-
-
-// Reference the close button
-const closeQuizButton = document.getElementById('closeQuizButton');
-
-// Attach event listener for the close button
-closeQuizButton.addEventListener('click', closePopupQn);
