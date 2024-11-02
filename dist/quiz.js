@@ -219,7 +219,6 @@ openPopupQnButton5.addEventListener('click', () => {
     fetchAndLoadQuiz(quiz5Url, quiz5Directions);
 });
 
-
 openPopupQnButton6.addEventListener('click', () => {
     const quiz6Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/pi/pict5k2e4cd0/pict5k2e4cd0_questionbank.json';
     const quiz6Directions = 'Singular or Plural?\nChoose the right answer.';
@@ -249,7 +248,6 @@ openPopupQnButton10.addEventListener('click', () => {
     const quiz10Directions = 'Add the Right Preposition\nUse the right preposition with the following verbs. An example has been done for you. It adds the preposition in this matter: Look+After';
     fetchAndLoadQuiz(quiz10Url, quiz10Directions);
 });
-
 
 // Close popupQn when clicking outside (on the overlay)
 overlay.addEventListener('click', (event) => {
@@ -291,7 +289,6 @@ function closePopupQn() {
     resetSubmitButton(); // Reset submit button to "Submit Quiz"
 }
 
-
 // Submit and Retest functionality
 const submitButton = document.getElementById('submitQuiz');
 
@@ -301,7 +298,7 @@ function handleSubmission() {
     const fillupInputs = document.querySelectorAll('.inline-input');
     const mcqInputs = document.querySelectorAll('input[type="radio"]:checked');
     let correctCount = 0;
-    let totalCount = 0; // To count total questions attempted
+    let totalCount = 0; // This will count the total number of questions, not just the attempted ones
 
     // Calculate score for fill-up questions
     fillupInputs.forEach(input => {
@@ -329,6 +326,8 @@ function handleSubmission() {
     });
 
     // Calculate score for MCQ questions
+    const totalQuestionsMCQ = mcqInputs.length + document.querySelectorAll('input[type="radio"]').length - mcqInputs.length;
+
     mcqInputs.forEach(mcqInput => {
         const questionIndex = mcqInput.name.replace('mcq', '') - 1;
         const qdata = JSON.parse(data.questions[questionIndex].qdata)[0];
@@ -349,14 +348,14 @@ function handleSubmission() {
             }
         }
 
-        // Increment totalCount for every attempted question
-        totalCount++;
-
+        // Append the status icon regardless of whether it was answered or not
         mcqInput.parentElement.appendChild(statusIcon);
     });
 
+    // Calculate the total questions attempted
+    const totalQuestions = fillupInputs.length + totalQuestionsMCQ; // Total questions = fillups + total mcqs
+
     // Display score
-    const totalQuestions = fillupInputs.length + mcqInputs.length; // Total questions = fillups + mcqs
     const scorePercentage = (correctCount / totalQuestions) * 100;
     document.getElementById('scoreDisplay').innerHTML = `<p class="font-bold">Score: ${scorePercentage.toFixed(2)}%</p>`;
 
@@ -369,6 +368,7 @@ function handleSubmission() {
     submitButton.removeEventListener('click', handleSubmission);
     submitButton.addEventListener('click', handleRetest);
 }
+
 
 function handleRetest() {
     const fillupInputs = document.querySelectorAll('.inline-input');
