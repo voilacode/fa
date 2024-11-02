@@ -347,7 +347,7 @@ function handleSubmission() {
     });
 
     // Calculate the total questions attempted
-    const totalQuestions = fillupInputs.length + totalQuestionsMCQ; // Total questions = fillups + total mcqs
+    // const totalQuestions = fillupInputs.length + totalQuestionsMCQ; // Total questions = fillups + total mcqs
 
     // Display score
     const totalQuestions = fillupInputs.length + mcqInputs.length; // Total questions = fillups + mcqs
