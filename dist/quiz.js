@@ -27,108 +27,108 @@ const resetSubmitButton = () => {
 };
 
 // Fetch and load quiz
-const fetchAndLoadQuiz = async (quizUrl, directions, showAnswers, useCustomAnswers = false) => {
-    overlay.classList.add('active1');
-    popupQn.classList.add('active1');
+// const fetchAndLoadQuiz = async (quizUrl, directions, showAnswers, useCustomAnswers = false) => {
+//     overlay.classList.add('active1');
+//     popupQn.classList.add('active1');
 
-    resetSubmitButton();
+//     resetSubmitButton();
 
-    try {
-        const response = await fetch(quizUrl);
-        const data = await response.json();
+//     try {
+//         const response = await fetch(quizUrl);
+//         const data = await response.json();
     
-        directionsContainer.innerHTML = '';
-        answersContainer.innerHTML = '';
-        questionsContainer.innerHTML = '';
+//         directionsContainer.innerHTML = '';
+//         answersContainer.innerHTML = '';
+//         questionsContainer.innerHTML = '';
     
-        const [heading1, heading2] = directions.split('\n');
+//         const [heading1, heading2] = directions.split('\n');
     
-        const directionsHeading1 = document.createElement('h2');
-        directionsHeading1.textContent = heading1;
-        directionsHeading1.classList.add('text-xl', 'font-bold', 'mb-2');
-        directionsContainer.appendChild(directionsHeading1);
+//         const directionsHeading1 = document.createElement('h2');
+//         directionsHeading1.textContent = heading1;
+//         directionsHeading1.classList.add('text-xl', 'font-bold', 'mb-2');
+//         directionsContainer.appendChild(directionsHeading1);
     
-        const directionsHeading2 = document.createElement('h3');
-        directionsHeading2.textContent = heading2;
-        directionsHeading2.classList.add('text-lg', 'font-medium');
-        directionsContainer.appendChild(directionsHeading2);
+//         const directionsHeading2 = document.createElement('h3');
+//         directionsHeading2.textContent = heading2;
+//         directionsHeading2.classList.add('text-lg', 'font-medium');
+//         directionsContainer.appendChild(directionsHeading2);
     
-        // Custom answers for popup10
-        if (showAnswers) {
-            if (useCustomAnswers) {
-                // Use the custom set of answers for popup10
-                const customAnswers = ["agree", "find out", "know", "look", "teach", "think"];
-                customAnswers.forEach(answer => {
-                    const answerDiv = document.createElement('div');
-                    answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
-                    answerDiv.textContent = answer;
-                    answersContainer.appendChild(answerDiv);
-                });
-            } else {
-                // Default behavior for other quizzes
-                const fillupAnswers = new Set();
-                data.questions.forEach(question => {
-                    const qdata = JSON.parse(question.qdata)[0];
-                    if (qdata.type === 'fillup') {
-                        fillupAnswers.add(qdata.answer);
-                    }
-                });
+//         // Custom answers for popup10
+//         if (showAnswers) {
+//             if (useCustomAnswers) {
+//                 // Use the custom set of answers for popup10
+//                 const customAnswers = ["agree", "find out", "know", "look", "teach", "think"];
+//                 customAnswers.forEach(answer => {
+//                     const answerDiv = document.createElement('div');
+//                     answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
+//                     answerDiv.textContent = answer;
+//                     answersContainer.appendChild(answerDiv);
+//                 });
+//             } else {
+//                 // Default behavior for other quizzes
+//                 const fillupAnswers = new Set();
+//                 data.questions.forEach(question => {
+//                     const qdata = JSON.parse(question.qdata)[0];
+//                     if (qdata.type === 'fillup') {
+//                         fillupAnswers.add(qdata.answer);
+//                     }
+//                 });
             
-                const uniqueAnswersArray = Array.from(fillupAnswers);
-                uniqueAnswersArray.sort(() => Math.random() - 0.5);
-                uniqueAnswersArray.forEach(answer => {
-                    const answerDiv = document.createElement('div');
-                    answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
-                    answerDiv.textContent = answer;
-                    answersContainer.appendChild(answerDiv);
-                });
-            }
-        }
+//                 const uniqueAnswersArray = Array.from(fillupAnswers);
+//                 uniqueAnswersArray.sort(() => Math.random() - 0.5);
+//                 uniqueAnswersArray.forEach(answer => {
+//                     const answerDiv = document.createElement('div');
+//                     answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
+//                     answerDiv.textContent = answer;
+//                     answersContainer.appendChild(answerDiv);
+//                 });
+//             }
+//         }
     
-        // Remaining question display logic stays the same
-        const totalQuestions = data.questions.length;
+//         // Remaining question display logic stays the same
+//         const totalQuestions = data.questions.length;
     
-        data.questions.forEach((question, index) => {
-            const qdata = JSON.parse(question.qdata)[0];
-            const questionDiv = document.createElement('div');
-            questionDiv.classList.add('mb-4');
+//         data.questions.forEach((question, index) => {
+//             const qdata = JSON.parse(question.qdata)[0];
+//             const questionDiv = document.createElement('div');
+//             questionDiv.classList.add('mb-4');
         
-            if (qdata.type === 'mcq') {
-                questionDiv.innerHTML = `
-                <div class="flex space-x-2">
-                    <div class="font-bold">${index + 1}.</div>
-                    <div>${qdata.question}</div>
-                </div>`;
+//             if (qdata.type === 'mcq') {
+//                 questionDiv.innerHTML = `
+//                 <div class="flex space-x-2">
+//                     <div class="font-bold">${index + 1}.</div>
+//                     <div>${qdata.question}</div>
+//                 </div>`;
                 
-                const options = ['a', 'b', 'c', 'd'];
-                options.forEach(option => {
-                    if (qdata[option]) {
-                        questionDiv.innerHTML += `
-                            <label><input type="radio" name="mcq${question.qno}" value="${option}"> ${qdata[option]}</label><br>`;
-                    }
-                });
-            } else if (qdata.type === 'fillup') {
-                const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
-                questionDiv.innerHTML = `<div class="flex space-x-2">
-                    <div class="font-bold">${index + 1}.</div>
-                    <div>${qdata.question.replace(/_+/g, () => {
-                        return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
-                    })}</div>
-                </div>`;
-            }
+//                 const options = ['a', 'b', 'c', 'd'];
+//                 options.forEach(option => {
+//                     if (qdata[option]) {
+//                         questionDiv.innerHTML += `
+//                             <label><input type="radio" name="mcq${question.qno}" value="${option}"> ${qdata[option]}</label><br>`;
+//                     }
+//                 });
+//             } else if (qdata.type === 'fillup') {
+//                 const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
+//                 questionDiv.innerHTML = `<div class="flex space-x-2">
+//                     <div class="font-bold">${index + 1}.</div>
+//                     <div>${qdata.question.replace(/_+/g, () => {
+//                         return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
+//                     })}</div>
+//                 </div>`;
+//             }
         
-            questionsContainer.appendChild(questionDiv);
-        });
+//             questionsContainer.appendChild(questionDiv);
+//         });
         
-        document.getElementById('submitQuiz').addEventListener('click', () => {
-            // Score calculation logic remains unchanged
-        });
+//         document.getElementById('submitQuiz').addEventListener('click', () => {
+//             // Score calculation logic remains unchanged
+//         });
         
-    } catch (error) {
-        console.error('Error fetching quiz data:', error);
-        alert('There was an error loading the quiz. Please try again later.');
-    }
-};
+//     } catch (error) {
+//         console.error('Error fetching quiz data:', error);
+//         alert('There was an error loading the quiz. Please try again later.');
+//     }
+// };
 
 // Open popupQn listeners
 openPopupQnButton1.addEventListener('click', () => {
@@ -259,61 +259,198 @@ function closePopupQn() {
 const submitButton = document.getElementById('submitQuiz');
 submitButton.addEventListener('click', handleSubmission);
 
+let quizData; // Global variable to store quiz data
+
+const fetchAndLoadQuiz = async (quizUrl, directions, showAnswers, useCustomAnswers = false) => {
+    overlay.classList.add('active1');
+    popupQn.classList.add('active1');
+
+    resetSubmitButton();
+
+    try {
+        const response = await fetch(quizUrl);
+        quizData = await response.json(); // Store data in global variable
+    
+        directionsContainer.innerHTML = '';
+        answersContainer.innerHTML = '';
+        questionsContainer.innerHTML = '';
+    
+        const [heading1, heading2] = directions.split('\n');
+    
+        const directionsHeading1 = document.createElement('h2');
+        directionsHeading1.textContent = heading1;
+        directionsHeading1.classList.add('text-xl', 'font-bold', 'mb-2');
+        directionsContainer.appendChild(directionsHeading1);
+    
+        const directionsHeading2 = document.createElement('h3');
+        directionsHeading2.textContent = heading2;
+        directionsHeading2.classList.add('text-lg', 'font-medium');
+        directionsContainer.appendChild(directionsHeading2);
+    
+        // Custom answers for popup10
+        if (showAnswers) {
+            if (useCustomAnswers) {
+                const customAnswers = ["agree", "find out", "know", "look", "teach", "think"];
+                customAnswers.forEach(answer => {
+                    const answerDiv = document.createElement('div');
+                    answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
+                    answerDiv.textContent = answer;
+                    answersContainer.appendChild(answerDiv);
+                });
+            } else {
+                const fillupAnswers = new Set();
+                quizData.questions.forEach(question => {
+                    const qdata = JSON.parse(question.qdata)[0];
+                    if (qdata.type === 'fillup') {
+                        fillupAnswers.add(qdata.answer);
+                    }
+                });
+            
+                const uniqueAnswersArray = Array.from(fillupAnswers);
+                uniqueAnswersArray.sort(() => Math.random() - 0.5);
+                uniqueAnswersArray.forEach(answer => {
+                    const answerDiv = document.createElement('div');
+                    answerDiv.classList.add('p-2', 'text-green-500', 'm-auto');
+                    answerDiv.textContent = answer;
+                    answersContainer.appendChild(answerDiv);
+                });
+            }
+        }
+    
+        // Remaining question display logic stays the same
+        const totalQuestions = quizData.questions.length;
+    
+        quizData.questions.forEach((question, index) => {
+            const qdata = JSON.parse(question.qdata)[0];
+            const questionDiv = document.createElement('div');
+            questionDiv.classList.add('mb-4');
+        
+            if (qdata.type === 'mcq') {
+                questionDiv.innerHTML = `
+                <div class="flex space-x-2">
+                    <div class="font-bold">${index + 1}.</div>
+                    <div>${qdata.question}</div>
+                </div>`;
+                
+                const options = ['a', 'b', 'c', 'd'];
+                options.forEach(option => {
+                    if (qdata[option]) {
+                        questionDiv.innerHTML += `
+                            <label><input type="radio" name="mcq${question.qno}" value="${option}"> ${qdata[option]}</label><br>`;
+                    }
+                });
+            } else if (qdata.type === 'fillup') {
+                const correctAnswer = qdata.answer ? qdata.answer.toLowerCase().trim() : '';
+                questionDiv.innerHTML = `<div class="flex space-x-2">
+                    <div class="font-bold">${index + 1}.</div>
+                    <div>${qdata.question.replace(/_+/g, () => {
+                        return `<input type="text" class="border-b border-gray-500 outline-none inline-input w-100" data-correct-answer="${correctAnswer}" />`;
+                    })}</div>
+                </div>`;
+            }
+        
+            questionsContainer.appendChild(questionDiv);
+        });
+        
+        document.getElementById('submitQuiz').addEventListener('click', handleSubmission);
+        
+    } catch (error) {
+        console.error('Error fetching quiz data:', error);
+        alert('There was an error loading the quiz. Please try again later.');
+    }
+};
+
 function handleSubmission() {
     const fillupInputs = document.querySelectorAll('.inline-input');
     const mcqQuestions = document.querySelectorAll('input[type="radio"][name^="mcq"]');
-    const mcqInputs = document.querySelectorAll('input[type="radio"]:checked');
-
     let correctCount = 0;
-    let totalQuestions = fillupInputs.length + mcqQuestions.length; // Total number of questions in the quiz
+    let attemptedCount = 0;
+    const totalQuestions = fillupInputs.length + new Set(Array.from(mcqQuestions).map(q => q.name)).size;
 
     // Calculate score for fill-up questions
     fillupInputs.forEach(input => {
-        const correctAnswer = input.getAttribute('data-correct-answer');
+        const correctAnswer = input.getAttribute('data-correct-answer').toLowerCase().trim();
         const userAnswer = input.value.toLowerCase().trim();
+        const questionContainer = input.closest('div'); // Get the container div for the question
+
+        // Select the question text to append icon
+        const questionText = questionContainer.querySelector('.question-text');
+        
+        // Remove existing icon if present
+        const existingIcon = questionContainer.querySelector('.status-icon');
+        if (existingIcon) {
+            existingIcon.remove();
+        }
+
         const statusIcon = document.createElement('span');
+        statusIcon.classList.add('status-icon', 'ml-2'); // Add margin-left for spacing
+        statusIcon.style.minWidth = '20px';
 
-        if (input.nextElementSibling) {
-            input.nextElementSibling.remove(); // Remove existing icon if any
-        }
-
-        if (userAnswer === correctAnswer) {
-            statusIcon.innerHTML = ' <span class="text-green-500">✔️</span>';
-            correctCount++;
+        // Check if the user answered this question
+        if (userAnswer !== '') {
+            attemptedCount++;
+            if (userAnswer === correctAnswer) {
+                statusIcon.innerHTML = '<span class="text-green-500">✔️</span>';
+                correctCount++;
+            } else {
+                statusIcon.innerHTML = '<span class="text-red-500">❌</span>';
+            }
         } else {
-            statusIcon.innerHTML = ' <span class="text-red-500">❌</span>';
+            // Mark as incorrect for unattempted
+            statusIcon.innerHTML = '<span class="text-red-500">❌</span>';
         }
 
-        input.disabled = true; // Disable input after submission
-        input.parentNode.insertBefore(statusIcon, input.nextSibling);
+        input.disabled = true;
+        // Append icon next to the question text
+        if (questionText) questionText.appendChild(statusIcon);
     });
 
     // Calculate score for MCQ questions
-    const uniqueQuestionIndexes = new Set(); // Track unique MCQ questions
-    
-    mcqInputs.forEach(mcqInput => {
-        const questionIndex = parseInt(mcqInput.name.replace('mcq', ''), 10) - 1;
-        uniqueQuestionIndexes.add(questionIndex);
+    const mcqNames = new Set();
+    mcqQuestions.forEach(mcqQuestion => {
+        const questionName = mcqQuestion.name;
 
-        const qdata = JSON.parse(data.questions[questionIndex].qdata)[0];
+        if (mcqNames.has(questionName)) return;
+        mcqNames.add(questionName);
+
+        const questionIndex = parseInt(questionName.replace('mcq', ''), 10) - 1;
+        const qdata = JSON.parse(quizData.questions[questionIndex].qdata)[0];
         const correctAnswer = qdata.answer.toLowerCase().trim();
+        const questionContainer = mcqQuestion.closest('div'); // Get the container div for the question
+
+        // Select the question text to append icon
+        const questionText = questionContainer.querySelector('.question-text');
+        
+        // Remove existing icon if present
+        const existingIcon = questionContainer.querySelector('.status-icon');
+        if (existingIcon) {
+            existingIcon.remove();
+        }
+
         const statusIcon = document.createElement('span');
+        statusIcon.classList.add('status-icon', 'ml-2');
+        statusIcon.style.minWidth = '20px';
 
-        if (mcqInput.nextElementSibling) {
-            mcqInput.nextElementSibling.remove();
-        }
-
-        if (mcqInput.value === correctAnswer) {
-            statusIcon.innerHTML = ' <span class="text-green-500">✔️</span>';
-            correctCount++;
+        const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+        attemptedCount++;
+        if (selectedOption) {
+            const userAnswer = selectedOption.value;
+            if (userAnswer === correctAnswer) {
+                statusIcon.innerHTML = '<span class="text-green-500">✔️</span>';
+                correctCount++;
+            } else {
+                statusIcon.innerHTML = '<span class="text-red-500">❌</span>';
+            }
         } else {
-            statusIcon.innerHTML = ' <span class="text-red-500">❌</span>';
+            // Mark as incorrect for unattempted MCQs
+            statusIcon.innerHTML = '<span class="text-red-500">❌</span>';
         }
 
-        mcqInput.parentElement.appendChild(statusIcon);
+        // Append icon next to the question text
+        if (questionText) questionText.appendChild(statusIcon);
     });
 
-    // Display score based on total questions
+    // Calculate percentage based on total questions
     const scorePercentage = (correctCount / totalQuestions) * 100;
     document.getElementById('scoreDisplay').innerHTML = `<p class="font-bold">Score: ${scorePercentage.toFixed(2)}%</p>`;
 
@@ -322,7 +459,6 @@ function handleSubmission() {
     submitButton.classList.remove('bg-green-500');
     submitButton.classList.add('bg-red-500');
 
-    // Switch to retest mode
     submitButton.removeEventListener('click', handleSubmission);
     submitButton.addEventListener('click', handleRetest);
 }
