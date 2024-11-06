@@ -1361,6 +1361,10 @@ video {
   width: 75%;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-36 {
   width: 9rem;
 }
@@ -4410,6 +4414,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
     grid-column: span 11 / span 11;
   }
 
+  .md\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
   .md\:m-0 {
     margin: 0px;
   }
@@ -4608,6 +4616,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
     width: 10rem;
   }
 
+  .md\:w-48 {
+    width: 12rem;
+  }
+
   .md\:w-52 {
     width: 13rem;
   }
@@ -4663,6 +4675,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-44 {
+    width: 11rem;
   }
 
   .md\:max-w-md {
