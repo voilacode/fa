@@ -41,4 +41,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initCarousel('carousel1', 'pBtn1', 'nxtBtn1', 'slideNum1');
     initCarousel('carousel2', 'pBtn2', 'nxtBtn2', 'slideNum2');
+    initCarousel('carousel', 'pBtn', 'nxtBtn', 'slideNum');
 });
