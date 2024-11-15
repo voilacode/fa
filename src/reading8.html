@@ -767,11 +767,11 @@
         
                     // Add the "Check Answers" and "Clear Answers" buttons
                     const buttonContainer = document.createElement('div');
-                    buttonContainer.classList.add('mt-4');
-        
+                    buttonContainer.classList.add('md:mt-4');
+    
                     buttonContainer.innerHTML = `
-                        <button class="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600" onclick="checkAnswers('${setKey}')">Check Answers</button>
-                        <button class="px-4 py-2 ml-4 text-black bg-gray-300 rounded hover:bg-gray-400" onclick="clearAnswers('${setKey}')">Clear Answers</button>
+                        <button class="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600 duration-300" onclick="checkAnswers('${setKey}')">Check Answers</button>
+                        <button class="px-4 py-2 text-black bg-gray-300 rounded duration-300 hover:bg-gray-400" onclick="clearAnswers('${setKey}')">Clear</button>
                         <span id="score${setKey}" class="ml-4 text-lg font-bold"></span>
                     `;
         

@@ -306,43 +306,45 @@
     <x-homepage.post.index :data="$data" />
 
     <!-- Main section -->
-    <main class="min-h-screen p-4 sm:p-6 ">
-        <div class="max-w-screen-xl px-4 py-2 mx-auto sm:px-[60px]">
-            
-            <!-- Chapter Navigation Buttons -->
-            <div class="flex flex-wrap justify-center gap-4 mb-6">
-                <button onclick="location.href='reading'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
-                    Chapter 1
-                </button>
-                <button onclick="location.href='reading2'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
-                    Chapter 2
-                </button>
-                <button onclick="location.href='reading3'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
-                    Chapter 3
-                </button>
-                <button onclick="location.href='reading4'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
-                    Chapter 4
-                </button>
-                <button onclick="location.href='reading5'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
-                    Chapter 5
-                </button>
-                <button onclick="location.href='reading6'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
-                    Chapter 6
-                </button>
-                <button onclick="location.href='reading7'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
-                    Chapter 7
-                </button>
-                <button onclick="location.href='reading8'" class="px-4 py-2 text-white bg-teal-500 rounded-md shadow sm:px-6 sm:py-3 hover:bg-teal-600">
-                    Chapter 8
-                </button>
+    <main class="min-h-screen">
+        <div class="max-w-screen-xl sm:px-4 py-2 mx-auto sm:px-[60px]">
+            <div class="px-4 sm:p-0">
+                <h2 class="text-xl font-semibold sm:text-4xl my-2 sm:my-4">Yes | No | Not Given</h2>
+                <h2 class="text-lg font-medium text-gray-700 sm:text-3xl my-2 sm:my-4">Questions 285 - 304</h2>
+
+                <span class="bg-teal-custom text-white text-sm rounded p-1 px-2 block w-fit mb-2 lg:hidden">Chapter Navigation</span>
+                <!-- Chapter Navigation Buttons -->
+                <div class="flex flex-wrap justify-start lg:justify-center gap-1 md:gap-4 mb-6">
+                    <button onclick="location.href='reading'" class="text-white bg-teal-500 rounded shadow hover:bg-teal-600 text-sm lg:text-md flex lg:space-x-1 p-2 md:px-4">
+                        <span class="hidden lg:block">Chapter</span> <span>1</span>
+                    </button>
+                    <button onclick="location.href='reading2'" class="text-white bg-teal-500 rounded shadow hover:bg-teal-600 text-sm lg:text-md flex lg:space-x-1 p-2 md:px-4">
+                        <span class="hidden lg:block">Chapter</span> <span>2</span>
+                    </button>
+                    <button onclick="location.href='reading3'" class="text-white bg-teal-500 rounded shadow hover:bg-teal-600 text-sm lg:text-md flex lg:space-x-1 p-2 md:px-4">
+                        <span class="hidden lg:block">Chapter</span> <span>3</span>
+                    </button>
+                    <button onclick="location.href='reading4'" class="text-white bg-teal-500 rounded shadow hover:bg-teal-600 text-sm lg:text-md flex lg:space-x-1 p-2 md:px-4">
+                        <span class="hidden lg:block">Chapter</span> <span>4</span>
+                    </button>
+                    <button onclick="location.href='reading5'" class="text-white bg-teal-500 rounded shadow hover:bg-teal-600 text-sm lg:text-md flex lg:space-x-1 p-2 md:px-4">
+                        <span class="hidden lg:block">Chapter</span> <span>5</span>
+                    </button>
+                    <button onclick="location.href='reading6'" class="text-white bg-teal-500 rounded shadow hover:bg-teal-600 text-sm lg:text-md flex lg:space-x-1 p-2 md:px-4">
+                        <span class="hidden lg:block">Chapter</span> <span>6</span>
+                    </button>
+                    <button onclick="location.href='reading7'" class="text-white bg-teal-500 rounded shadow hover:bg-teal-600 text-sm lg:text-md flex lg:space-x-1 p-2 md:px-4">
+                        <span class="hidden lg:block">Chapter</span> <span>7</span>
+                    </button>
+                    <button onclick="location.href='reading8'" class="text-white bg-teal-500 rounded shadow hover:bg-teal-600 text-sm lg:text-md flex lg:space-x-1 p-2 md:px-4">
+                        <span class="hidden lg:block">Chapter</span> <span>8</span>
+                    </button>
+                </div>
             </div>
             
-
-
+        
             <!-- Questions Container -->
             <div id="questionsContainer" class="p-5 rounded-lg shadow-md bg-gray-50">
-                <h2 class="pt-4 mb-4 text-xl font-semibold sm:text-4xl">Multiple Choice Questions</h2>
-                <h2 class="mb-4 text-xl font-semibold sm:text-4xl">Questions 285 - 304</h2>
                 <div id="questions" class="space-y-4"></div>
             </div>
         </div>
@@ -772,11 +774,11 @@
     
                     // Add "Check Answers" and "Clear Answers" buttons
                     const buttonContainer = document.createElement('div');
-                    buttonContainer.classList.add('mt-4');
+                    buttonContainer.classList.add('md:mt-4');
     
                     buttonContainer.innerHTML = `
-                        <button class="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600" onclick="checkAnswers('${setKey}')">Check Answers</button>
-                        <button class="px-4 py-2 ml-4 text-black bg-gray-300 rounded hover:bg-gray-400" onclick="clearAnswers('${setKey}')">Clear Answers</button>
+                        <button class="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-600 duration-300" onclick="checkAnswers('${setKey}')">Check Answers</button>
+                        <button class="px-4 py-2 text-black bg-gray-300 rounded duration-300 hover:bg-gray-400" onclick="clearAnswers('${setKey}')">Clear</button>
                         <span id="score${setKey}" class="ml-4 text-lg font-bold"></span>
                     `;
     
