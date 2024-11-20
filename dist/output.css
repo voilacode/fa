@@ -2684,6 +2684,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-3\.5 {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -4136,6 +4141,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .sm\:p-0 {
+    padding: 0px;
+  }
+
   .sm\:p-24 {
     padding: 6rem;
   }
@@ -4148,20 +4157,8 @@ lite-youtube.lyt-activated>.lty-playbtn {
     padding: 1rem;
   }
 
-  .sm\:p-6 {
-    padding: 1.5rem;
-  }
-
   .sm\:p-8 {
     padding: 2rem;
-  }
-
-  .sm\:p-5 {
-    padding: 1.25rem;
-  }
-
-  .sm\:p-0 {
-    padding: 0px;
   }
 
   .sm\:px-0 {
@@ -4222,11 +4219,6 @@ lite-youtube.lyt-activated>.lty-playbtn {
   .sm\:py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
-  }
-
-  .sm\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
   }
 
   .sm\:py-4 {
@@ -4781,12 +4773,6 @@ lite-youtube.lyt-activated>.lty-playbtn {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .md\:space-x-1 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(0.25rem * var(--tw-space-x-reverse));
-    margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:overflow-visible {
