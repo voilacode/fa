@@ -3686,6 +3686,11 @@ lite-youtube.lyt-activated>.lty-playbtn {
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-yellow-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 240 138 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-opacity-40:hover {
   --tw-bg-opacity: 0.4;
 }
@@ -4127,6 +4132,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .sm\:items-center {
     align-items: center;
+  }
+
+  .sm\:justify-normal {
+    justify-content: normal;
   }
 
   .sm\:justify-start {
