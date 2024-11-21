@@ -26,7 +26,6 @@ openPopupQnButton3.addEventListener('click', () => {
     // Fetch and load the quiz
     fetchAndLoadQuiz(quiz3Url, quiz3Directions, false);
 
-    
     exampleContainer.style.display = 'block'; // Show the container
     exampleContainer.classList.add('bg-gray-50', 'border', 'border-gray-400', 'rounded', 'p-4', 'm-4', 'mx-6');
     exampleContainer.innerHTML = `

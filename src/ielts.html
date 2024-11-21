@@ -2615,53 +2615,51 @@
     <div id="talkForm"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+        <div class="p-8 bg-white rounded-md popup-content">
             <form id="talk" action="{{ route('talk.send') }}" method="POST">
                 @csrf
                 <div class="p-2">
-                    <div>
-                        <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-                            <div class="w-[97%]" role="alert">
-                                Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
-                                <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
-                            </div>
-                            <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="talkForm">&times;</button>
+                    <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-md">
+                        <div class="w-[97%]" role="alert">
+                            Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
+                            <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
                         </div>
-
-                        <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
-
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
-                                    required="">
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
-                                    required="">
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4 ">
-                                    <label class="block pb-2 text-center">Email address</label>
-                                    <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
-                                        placeholder="E-mail ID" required="">
-                                </div>
-                                <div class="">
-                                    <label class="block pb-2 text-center">Message</label>
-                                    <div>
-                                        <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
-                                            placeholder="Type your message here..." required=""></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn hover:bg-teal-custom">
-                            Submit
-                        </button>
+                        <button type="button" class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-teal-300 duration-300 opacity-75 p-2 px-4"
+                            data-popup-close="talkForm">&times;</button>
                     </div>
+
+                    <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
+
+                    <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                        <div class="w-full col-span-1">
+                            <label class="block pb-2 text-center input-label">Name</label>
+                            <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
+                                required="">
+                        </div>
+                        <div class="w-full col-span-1">
+                            <label class="block pb-2 text-center input-label">Phone</label>
+                            <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
+                                required="">
+                        </div>
+                        <div class="col-span-2 my-2">
+                            <div class="mb-4 ">
+                                <label class="block pb-2 text-center">Email address</label>
+                                <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
+                                    placeholder="E-mail ID" required="">
+                            </div>
+                            <div class="">
+                                <label class="block pb-2 text-center">Message</label>
+                                <div>
+                                    <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
+                                        placeholder="Type your message here..." required=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-md btn hover:bg-teal-custom">
+                        Submit
+                    </button>
                 </div>
             </form>
         </div>
@@ -2669,19 +2667,19 @@
 
     <div id="requestForm" class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
 
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+        <div class="p-8 bg-white rounded-md shadow-md popup-content">
             <form id="request" action="{{ route('request.send') }}" method="POST">
                 @csrf
                 <div class="p-2">
                     <div>
-                        <div class="flex items-center justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                        <div class="flex items-center justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-md">
 
                             <div class="w-[97%]" role="alert">
                                 <h1 class="my-auto text-2xl font-semibold">Request Free Test</h1> 
                             </div>
 
                             <button type="button"
-                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                                class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-teal-300 duration-300 opacity-75 p-2 px-4"
                                 data-popup-close="requestForm">&times;
                             </button>
 
@@ -2724,7 +2722,7 @@
                             </div>
                         </div>
                         <button type="submit"
-                            class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn btn-block transition-3d-hover contact_button hover:bg-teal-custom">Submit</button>
+                            class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-md btn btn-block transition-3d-hover contact_button hover:bg-teal-custom">Submit</button>
                     </div>
                 </div>
             </form>
@@ -2735,20 +2733,20 @@
     <div id="popup" class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
-        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92  sm:w-[550px] max-h-[95vh] overflow-y-auto">
+        class="p-4 m-8 bg-white rounded-md sm:p-8 w-92  sm:w-[550px] max-h-[95vh] overflow-y-auto">
                 @csrf
-                <div class="flex items-start justify-between p-4 mb-0 bg-gray-100 rounded-lg">
+                <div class="flex items-start justify-between p-4 mb-0 bg-gray-100 rounded-md">
                     <div class="w-[97%]" role="alert">
                         Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
                         USA.
                     </div>
                     <button type="button"
-                        class="mb-4 text-4xl text-gray-800 duration-300 ms-auto hover:text-teal-700"
+                        class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-gray-300 duration-300 opacity-75 p-2 py-1"
                         data-popup-close="popup">&times;</button>
                 </div>
 
                 <h3 class="mt-3 text-teal-900">Where would you want to attend a demo</h3>
-                <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
+                <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-md">
                     <div class="flex items-center">
                         <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
                         <label class="ml-2" for="Ameerpet">Ameerpet</label>
@@ -2765,7 +2763,7 @@
 
                 <h3 class="text-teal-900">Which session would you like to try?</h3>
                 <div class="bg-gray-100">
-                    <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
+                    <div class="flex justify-center p-3 mt-3 space-x-4 rounded-md">
                         <div class="flex items-center">
                             <input class="focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-white" type="checkbox" name="courses[]" id="gre" value="GRE">
                             <label class="ml-2" for="gre">GRE</label>
@@ -2783,7 +2781,7 @@
                             <label class="ml-2" for="pte">PTE</label>
                         </div>
                     </div>
-                    <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
+                    <div class="flex justify-center p-3 mb-3 space-x-4 rounded-md">
                         <div class="flex items-center">
                             <input class="focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-white" type="checkbox" name="courses[]" id="oet" value="OET">
                             <label class="ml-2" for="oet">OET</label>

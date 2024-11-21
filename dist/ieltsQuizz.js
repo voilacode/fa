@@ -31,7 +31,6 @@ openPopupQnButton1.addEventListener('click', () => {
     `;
 });
 
-
 openPopupQnButton2.addEventListener('click', () => {
     const quiz2Url = 'https://live-ai.s3.ap-south-1.amazonaws.com/test/vc/vcgtwa0560/vcgtwa0560_questionbank.json';
     const quiz2Directions = 'Can you change?\nUse the right form of the verb in the blanks provided';

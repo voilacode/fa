@@ -1728,58 +1728,56 @@
     </div>
 
     <div id="talkForm"
-        class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
+    class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
-        <div class="p-8 bg-white rounded-md shadow-md popup-content">
-            <form id="talk" action="{{ route('talk.send') }}" method="POST">
-                @csrf
-                <div class="p-2">
-                    <div>
-                        <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-md">
-                            <div class="w-[97%]" role="alert">
-                                Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
-                                <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
-                            </div>
-                            <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="talkForm">&times;</button>
+    <div class="p-8 bg-white rounded-md popup-content">
+        <form id="talk" action="{{ route('talk.send') }}" method="POST">
+            @csrf
+            <div class="p-2">
+                <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-md">
+                    <div class="w-[97%]" role="alert">
+                        Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
+                        <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
+                    </div>
+                    <button type="button" class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-teal-300 duration-300 opacity-75 p-2 px-4"
+                        data-popup-close="talkForm">&times;</button>
+                </div>
+
+                <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
+
+                <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                    <div class="w-full col-span-1">
+                        <label class="block pb-2 text-center input-label">Name</label>
+                        <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
+                            required="">
+                    </div>
+                    <div class="w-full col-span-1">
+                        <label class="block pb-2 text-center input-label">Phone</label>
+                        <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
+                            required="">
+                    </div>
+                    <div class="col-span-2 my-2">
+                        <div class="mb-4 ">
+                            <label class="block pb-2 text-center">Email address</label>
+                            <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
+                                placeholder="E-mail ID" required="">
                         </div>
-
-                        <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
-
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
-                                    required="">
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
-                                    required="">
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4 ">
-                                    <label class="block pb-2 text-center">Email address</label>
-                                    <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
-                                        placeholder="E-mail ID" required="">
-                                </div>
-                                <div class="">
-                                    <label class="block pb-2 text-center">Message</label>
-                                    <div>
-                                        <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
-                                            placeholder="Type your message here..." required=""></textarea>
-                                    </div>
-                                </div>
+                        <div class="">
+                            <label class="block pb-2 text-center">Message</label>
+                            <div>
+                                <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
+                                    placeholder="Type your message here..." required=""></textarea>
                             </div>
                         </div>
-
-                        <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-md btn hover:bg-teal-custom">
-                            Submit
-                        </button>
                     </div>
                 </div>
-            </form>
-        </div>
+
+                <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-md btn hover:bg-teal-custom">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
     </div>
 
     <div id="requestForm" class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
@@ -1796,7 +1794,7 @@
                             </div>
 
                             <button type="button"
-                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                                class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-teal-300 duration-300 opacity-75 p-2 px-4"
                                 data-popup-close="requestForm">&times;
                             </button>
 
@@ -1858,7 +1856,7 @@
                         USA.
                     </div>
                     <button type="button"
-                        class="mb-4 text-4xl text-gray-800 duration-300 ms-auto hover:text-teal-700"
+                        class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-gray-300 duration-300 opacity-75 p-2 py-1"
                         data-popup-close="popup">&times;</button>
                 </div>
 

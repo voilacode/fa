@@ -20,13 +20,6 @@
         #header, #message{
              display: block;
          }
-         .crsl-item {
-             min-width: 100%;
-             transition: transform 0.5s ease-in-out;
-         }    
-         #pBtn1, #nxtBtn1, #pBtn2, #nxtBtn2, #pBtn, #nxtBtn {
-             z-index: 1;
-         }
          .popupQn {
              display: none;
              position: fixed;
@@ -357,16 +350,14 @@
     <x-homepage.post.index :data="$data" />
 
     <!---Hero Section---->
-    <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 lg:pt-10 lg:pb-8">
+    <section class="max-w-screen-xl px-4 py-4 mx-auto sm:px-16 sm:py-8">
         <!--text-->
-        <div class="items-center my-5 md:flex md:justify-between lg:m-0">
-            <div class="my-auto sm:mx-28 md:mx-0">
-                <div class="py-1 my-4 text-4xl font-semibold md:text-5xl lg:text-7xl text" style="color: #3e4855;">
-                    <p class="pb-2 ">Get Grade A!</p>
-                </div>
-                <div class="py-2 my-2 rounded" style="width: 150px; background-color: #d1a47d;"></div>
+        <div class="items-center my-5 sm:flex sm:justify-between space-x-4 sm:m-0">
+            <div class="text-center sm:text-start">
+                <div class="py-1 my-4 text-4xl font-semibold md:text-5xl lg:text-7xl" style="color: #3e4855;">Get Grade A!</div>
+                <div class="py-2 my-2 rounded mx-auto sm:mx-0" style="width: 150px; background-color: #d1a47d;"></div>
                 <ul class="text-lg">
-                    <li class="flex items-center gap-2 py-1 md:gap-0">
+                    <li class="flex items-center gap-2 justify-center sm:justify-start py-1 md:gap-0">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" class="w-6 h-6 text-black">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -375,7 +366,7 @@
                         <p class="mx-2 opacity-75 ">Authors as Trainers</p>
 
                     </li>
-                    <li class="flex items-center gap-2 py-1 md:gap-0">
+                    <li class="flex items-center gap-2 justify-center sm:justify-start py-1 md:gap-0">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" class="w-6 h-6 text-black">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -383,7 +374,7 @@
                     </svg>
                         <p class="mx-2 opacity-75 ">Individual Attention</p>
                     </li>
-                    <li class="flex items-center gap-2 py-1 md:gap-0">
+                    <li class="flex items-center gap-2 justify-center sm:justify-start py-1 md:gap-0">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" class="w-6 h-6 text-black">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -391,7 +382,7 @@
                     </svg>
                         <p class="mx-2 opacity-75 ">Cambridge certified trainers</p>
                     </li>
-                    <li class="flex items-center gap-2 py-1 md:gap-0">
+                    <li class="flex items-center gap-2 justify-center sm:justify-start py-1 md:gap-0">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="2" class="w-6 h-6 text-black">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -401,291 +392,290 @@
                     </li>
                 </ul>
 
-                <div class="my-4 sm:flex sm:space-x-4 me-auto">
-                    <button class="block px-2 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-full sm:p-3 bg-teal-custom hover:bg-green-500 w-60" aria-label="attend session" data-popup="popup">Attend a Free Session</button>
+                <button class="block mx-auto sm:mx-0 w-fit px-6 py-3 mt-2 font-semibold text-center text-white duration-200 ease-in transform rounded-md bg-teal-custom hover:bg-emerald-600"
+                aria-label="attend session" data-popup="popup">Attend a Free Session</button>            
             </div>
 
-            </div>
-
-            <div class="mx-auto my-4 md:block md:my-auto md:ms-auto md:me-0">
+            <div class="pt-8">
                 <img class="block mx-auto w-[400px] lg:w-[500px]" src="../assets/oetimg.svg" alt="hello">
             </div>
-
         </div>
     </section>
 
     <!--random blocks-->
     <section class="bg-gray-100">
-        <div class="max-w-screen-xl p-4 mx-auto sm:px-12 ">
-                <h1 class="py-2 text-2xl font-semibold text-center md:text-4xl" style="color: #3e4855">OET Vocab and Grammar</h1>
-                <p class="font-semibold text-center" style="color: #66ade1;">You will love these tiny tests</p>
-    
-                <!-- simple test buttons-->
-                <div class="flex flex-wrap justify-center mt-6 mb-4 space-x-2 sm:space-x-2 ">
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn1"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup1">🤷&zwj;♂️ Do you know these?</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn2"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup2">🤏 Are you professional?</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn3"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup3">🤏🤏 Professional too?</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn4"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup4">👁 Anatomy 101</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn5"
-                                  class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup5"> 👔 Will this work?</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn6"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup6">🦚 Are you an action man?</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn7"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup7">⚔️ Make them agree!</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn8"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup8">🖼 Change Them!</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn9"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup9">🚁 Get them to the right place</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button id="openPopupQn10"
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup10">🥂 Better Together!</button>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup">👩&zwj;🏫 Attend a session</a>
-                    </div>
-                    <div class="inline my-5 ">
-                            <button
-                                class="w-full p-3 ml-3 font-semibold text-white duration-200 ease-in shadow-xl rounded-2xl hover:text-gray-300 px-7 text-wrap" style="background-color: #59687b;"
-                                data-popup="popup12">🙌 More Tests</a>
-                    </div>
+        <div class="max-w-screen-xl p-4 mx-auto sm:p-6">
+            <h1 class="py-2 text-2xl font-semibold text-center md:text-4xl" style="color: #3e4855">OET Vocab and Grammar</h1>
+            <p class="font-semibold text-center" style="color: #66ade1;">You will love these tiny tests</p>
+
+            <!-- simple test buttons-->
+            <div class="flex flex-wrap justify-center mt-6 mb-4 gap-3">
+                <div class="">
+                        <button id="openPopupQn1"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup1">🤷&zwj;♂️ Do you know these?</button>
                 </div>
+                <div class="">
+                        <button id="openPopupQn2"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup2">🤏 Are you professional?</button>
+                </div>
+                <div class="">
+                        <button id="openPopupQn3"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup3">🤏🤏 Professional too?</button>
+                </div>
+                <div class="">
+                        <button id="openPopupQn4"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup4">👁 Anatomy 101</button>
+                </div>
+                <div class="">
+                        <button id="openPopupQn5"
+                                class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup5"> 👔 Will this work?</button>
+                </div>
+                <div class="">
+                        <button id="openPopupQn6"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup6">🦚 Are you an action man?</button>
+                </div>
+                <div class="">
+                        <button id="openPopupQn7"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup7">⚔️ Make them agree!</button>
+                </div>
+                <div class="">
+                        <button id="openPopupQn8"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup8">🖼 Change Them!</button>
+                </div>
+                <div class="">
+                        <button id="openPopupQn9"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup9">🚁 Get them to the right place</button>
+                </div>
+                <div class="">
+                        <button id="openPopupQn10"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup10">🥂 Better Together!</button>
+                </div>
+                <div class="">
+                        <button
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup">👩&zwj;🏫 Attend a session</a>
+                </div>
+                <div class="my-3">
+                        <a href="https://prep.firstacademy.in/" target="_blank"
+                            class="w-full p-3 font-semibold text-gray-700 border-2 text-gray-600 border-gray-600 duration-300 rounded-md hover:bg-gray-700 hover:text-white px-7 text-wrap"
+                            data-popup="popup12">🙌 More Tests</a>
+                </div>
+            </div>
 
-                <div id="overlay" class="overlay"></div>
-
-
-            <div id="popupQn" class="p-2 rounded shadow-lg md:p-6 popupQn">
-                <div class="flex items-start justify-between p-2 bg-teal-200 rounded-t-lg md:py-5">
-                    <div id="directionsContainer" class="p-2 pb-0 text-xl font-bold bg-teal-200 md:px-4 sm:text-2xl"></div>
-                    <button id="closePopupQn" class="mx-2 font-bold rounded">
-                        <svg viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22ZM8.96965 8.96967C9.26254 8.67678 9.73742 8.67678 10.0303 8.96967L12 10.9394L13.9696 8.96969C14.2625 8.6768 14.7374 8.6768 15.0303 8.96969C15.3232 9.26258 15.3232 9.73746 15.0303 10.0303L13.0606 12L15.0303 13.9697C15.3232 14.2625 15.3232 14.7374 15.0303 15.0303C14.7374 15.3232 14.2625 15.3232 13.9696 15.0303L12 13.0607L10.0303 15.0303C9.73744 15.3232 9.26256 15.3232 8.96967 15.0303C8.67678 14.7374 8.67678 14.2626 8.96967 13.9697L10.9393 12L8.96965 10.0303C8.67676 9.73744 8.67676 9.26256 8.96965 8.96967Z" fill="#036041"></path> </g></svg>
+            <div id="overlay" class="overlay"></div>
+            <div id="popupQn" class="p-2 md:p-6 rounded shadow-lg popupQn">
+                <div class="flex items-start justify-between rounded-t-lg p-2 md:py-5 bg-teal-200">
+                    <div id="directionsContainer" class="p-2 md:px-4 text-xl font-bold sm:text-2xl pb-0"></div>
+                    <button id="closePopupQn" class="mx-2 font-bold rounded hover:bg-teal-300 duration-300 opacity-75 p-2">
+                        <svg viewBox="0 0 24 24" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C7.286 22 4.929 22 3.464 20.536 2 19.071 2 16.714 2 12 2 7.286 2 4.929 3.464 3.464 4.929 2 7.286 2 12 2c4.714 0 7.071 0 8.536 1.464C22 4.929 22 7.286 22 12c0 4.714 0 7.071-1.464 8.536C19.071 22 16.714 22 12 22zM8.97 8.97c.293-.293.768-.293 1.06 0L12 10.939l1.97-1.97c.293-.293.768-.293 1.06 0 .293.293.293.768 0 1.06L13.061 12l1.97 1.97c.293.293.293.768 0 1.06-.293.293-.768.293-1.06 0L12 13.061l-1.97 1.97c-.293.293-.768.293-1.06 0-.293-.293-.293-.768 0-1.06L10.939 12 8.97 10.03c-.293-.293-.293-.768 0-1.06z" fill="#036041"></path>
+                        </svg>
                     </button>
                 </div>
-
-                <div id="answersContainer" class="flex flex-wrap gap-2 p-2 m-auto font-normal bg-teal-200 md:px-5 md:pb-4 "></div>
+                <div id="answersContainer" class="flex flex-wrap gap-2 justify-center p-2 md:px-5 md:pb-4 bg-teal-200 font-semibold"></div>
+                <div id="exampleContainer"></div>
                 <div id="questionsContainer" class="p-2 pt-4 md:p-4"></div>
-                <div class="flex items-center justify-between m-4 mt-0">
-                    <div class="flex justify-between space-x-2">
-                        <button id="submitQuiz" class="px-4 py-2 text-white bg-teal-500 rounded">Submit</button>
-                        <button id="closePopupQn" class="px-4 py-2 text-white bg-teal-500 rounded">Close</button>
-                    </div>                    <div id="scoreDisplay" class="font-bold "></div>
+                <div class="flex justify-between items-center m-4 mt-0">
+                    <div class="flex space-x-2">
+                        <button id="submitQuiz" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 duration-300">Submit</button>
+                        <button id="closePopupQn" class="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600 duration-300">Close</button>
+                    </div>
+                    <div id="scoreDisplay" class="font-bold"></div>
                 </div>
-                
             </div>
     
         </div>
     </section>
 
     <!-- coaching details -->
-    <section class="">
-        <section class="max-w-screen-xl py-4 mx-auto sm:px-16 ">
-            <div class="flex flex-col justify-center max-w-screen-xl mx-auto md:py-4">
-    
-                <h1 class="px-5 text-2xl font-semibold md:text-4xl lg:px-0" style="color: #3e4855;">OET Coaching Details</h1>
-                <div class="py-4 ">
-                    <!--d1-->
-                    <div class="flex items-center gap-2 px-5 text-xl font-open lg:px-0">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                            </svg>    
-                        </div>
-                        <p class="text-lg font-open ">Customizable training duration</p>
-    
+    <section class="max-w-screen-xl p-4 mx-auto sm:px-16 ">
+        <div class="flex flex-col justify-center max-w-screen-xl mx-auto md:py-4">
+
+            <h1 class="text-2xl font-semibold md:text-4xl" style="color: #3e4855;">OET Coaching Details</h1>
+            <div class="py-4">
+                <!--d1-->
+                <div class="flex items-center gap-2">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>    
                     </div>
-                    <!--d2-->
-                    <div class="flex items-center gap-2 px-5 text-xl font-open lg:px-0">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                            </svg>
-    
-    
-                        </div>
-                        <p class="text-lg font-open "> Small Batch Sizes</p>
-    
-                    </div>
-                    <!---d3-->
-                    <div class="flex items-center gap-2 px-5 text-xl font-open lg:px-0">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                            </svg>
-    
-    
-                        </div>
-                        <p class="text-lg font-open ">Exclusive Material</p>
-    
-                    </div>
-                    <!---d4-->
-                    <div class="flex items-center gap-2 px-5 text-xl font-open lg:px-0">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                            </svg>
-    
-    
-                        </div>
-                        <p class="text-lg font-open ">Individual Writing Evaluations</p>
-    
-                    </div>
-                    <!---d5-->
-                    <div class="flex items-center gap-2 px-5 text-xl font-open lg:px-0">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                            </svg>
-    
-    
-                        </div>
-                        <p class="text-lg font-open "> Practice Portal</p>
-    
-                    </div>
-                    <!---d6-->
-                    <div class="flex items-center gap-2 px-5 text-xl font-open lg:px-0">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                            </svg>
-    
-    
-                        </div>
-                        <p class="text-lg font-open ">Practice Anywhere - Online Access</p>
-    
-                    </div>
+                    <p class="">Customizable training duration</p>
+
                 </div>
-                <p class="px-5 font-open lg:px-0 lg:text-lg">First Academy is the only institute that authors
-                    books
-                    on OET. We understand the requirements and the nuances of the test. We help you in understanding the
-                    text and thereby score better.</p>
-    
-    
-                <p class="px-5 py-4 font-open lg:text-lg lg:px-0"> The material is aligned to meet the
-                    exacting standards
-                    set by the OET. In many cases, the material is sourced from actual case studies, patient interactions,
-                    and peer reviewed articles for authenticity and accuracy.</p>
-    
+                <!--d2-->
+                <div class="flex items-center gap-2">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+
+
+                    </div>
+                    <p class=""> Small Batch Sizes</p>
+
+                </div>
+                <!---d3-->
+                <div class="flex items-center gap-2">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+
+
+                    </div>
+                    <p class="">Exclusive Material</p>
+
+                </div>
+                <!---d4-->
+                <div class="flex items-center gap-2">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+
+
+                    </div>
+                    <p class="">Individual Writing Evaluations</p>
+
+                </div>
+                <!---d5-->
+                <div class="flex items-center gap-2">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+
+
+                    </div>
+                    <p class=""> Practice Portal</p>
+
+                </div>
+                <!---d6-->
+                <div class="flex items-center gap-2">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-5 h-5 p-1 text-white rounded bg-cyan-800">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+
+
+                    </div>
+                    <p class="">Practice Anywhere - Online Access</p>
+
+                </div>
             </div>
-    
-        </section>
+            <p class="">First Academy is the only institute that authors
+                books
+                on OET. We understand the requirements and the nuances of the test. We help you in understanding the
+                text and thereby score better.</p>
+<br>
+            <p class=""> The material is aligned to meet the
+                exacting standards
+                set by the OET. In many cases, the material is sourced from actual case studies, patient interactions,
+                and peer reviewed articles for authenticity and accuracy.</p>
+
+        </div>
+
     </section>
 
     <!-- three cards -->
     <section class="max-w-screen-xl p-4 mx-auto sm:px-16">
-        <div class="flex flex-col items-center ">
-            <div class="grid grid-cols-1 gap-x-10 gap-y-4 lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-2">
-                <div class="p-6 rounded-br-none rounded-3xl" style="background-color: #2cd0db;">
+        <div class="grid grid-cols-6 gap-4 md:gap-8">
+            <!--  -->
+            <div class="col-span-6 sm:col-span-3 lg:col-span-2 p-6 rounded-br-none rounded-3xl flex flex-col justify-between" style="background-color: #2cd0db;">
+                <div>
                     <h1 class="mb-2 text-2xl font-semibold lg:text-3xl">Can I avoid taking the OET?</h1>
                     <div class="w-full pt-2 my-5 mb-2 border-t border-black"></div>
-
+    
                     <p class="leading-relaxed font-open">Yes, you do not need to take the OET. There are always options.
                         You can in place of OET take the <a href="./ielts"
                             class="text-blue-700 underline decoration-red-600">IELTS</a>. Alternatively, if you are
                         comfortable with English, you might not need any coaching. Take a free test to see how you fare
                         in the OET!ble with English, you might not need any coaching. Take a free test to see what the
                         tests are like!</p>
-
-                    <div class="flex items-center justify-start mt-12 space-x-4">
-                        <button
-                            class="w-auto p-4 text-base font-semibold text-center text-white duration-300 ease-in-out rounded-full bg-cyan-800 hover:bg-black focus:outline-none focus:ring-4 focus:ring-blue-300 "
-                            data-popup="requestForm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class=" size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </button>
-                        <div class="text-lg font-semibold">Request Free Test</div>
-                    </div>
-
                 </div>
-                <!---->
-                <div class="p-6 rounded-br-none rounded-3xl" style="background-color: #009f70;">
+
+                <div class="flex items-center justify-start space-x-4 pt-4">
+                    <button
+                        class="w-auto p-4 text-base font-semibold text-center text-white duration-300 ease-in-out rounded-full bg-cyan-800 hover:bg-black focus:outline-none focus:ring-4 focus:ring-blue-300 "
+                        data-popup="requestForm">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class=" size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </button>
+                    <div class="text-lg font-semibold">Request Free Test</div>
+                </div>
+
+            </div>
+            <!---->
+            <div class="col-span-6 sm:col-span-3 lg:col-span-2 p-6 rounded-br-none rounded-3xl flex flex-col justify-between" style="background-color: #009f70;">
+                <div>
                     <h1 class="text-2xl font-semibold lg:text-3xl ">What is your OET Success rate?</h1>
                     <div class="w-full pt-2 my-5 mb-2 border-t border-black"></div>
-
+    
                     <p class="mt-3 text-base font-open ">Our success rate is close to 100%. It might sound surprising,
                         but almost all our students clear the OET in their first attempt. You only need to look at our
                         reviews! or attend a free session to see how fantastic our classes are!
-
                     </p>
-
-                    <div class="flex items-center justify-start mt-8 space-x-4 sm:mt-36 lg:mt-32">
-                        <button
-                            class="w-auto p-4 text-base font-semibold text-center text-white duration-300 ease-in-out rounded-full bg-emerald-400 hover:bg-black focus:outline-none focus:ring-4 focus:ring-blue-300 "
-                            data-popup="popup">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class=" size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </button>
-                        <div class="text-lg font-semibold">Attend Session</div>
-                    </div>
                 </div>
-                <!---d3-->
-                <div class="p-6 rounded-br-none rounded-3xl"
-                    style="background-color: #ffd639;">
+                
+                <div class="flex items-center justify-start space-x-4 pt-4">
+                    <button
+                        class="w-auto p-4 text-base font-semibold text-center text-white duration-300 ease-in-out rounded-full bg-emerald-400 hover:bg-black focus:outline-none focus:ring-4 focus:ring-blue-300 "
+                        data-popup="popup">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class=" size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </button>
+                    <div class="text-lg font-semibold">Attend Session</div>
+                </div>
+            </div>
+            <!---d3-->
+            <div class="col-span-6 sm:col-span-3 lg:col-span-2 p-6 rounded-br-none rounded-3xl flex flex-col justify-between"
+                style="background-color: #ffd639;">
+                <div>
                     <h1 class="text-2xl font-semibold lg:text-3xl">Can I get a job abroad?
                     </h1>
                     <div class="w-full pt-2 my-5 mb-2 border-t border-black"></div>
-
+    
                     <p class="mt-3 text-base font-open ">Yes. OET is a test designed to test the readiness of medical
                         professionals. A good score in the OET can be a pathway for a career in the medical profession.
                         We can help you chart the course.</p>
-                    <div class="flex items-center justify-start mt-8 space-x-4 md:mt-40">
-                        <button
-                            class="w-auto p-4 text-base font-semibold text-center text-white duration-300 ease-in-out bg-yellow-700 rounded-full hover:bg-black focus:outline-none focus:ring-4 focus:ring-blue-300 "
-                            data-popup="talkForm">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                stroke="currentColor" class=" size-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                            </svg>
-                        </button>
-                        <div class="text-lg font-semibold">Talk to Us</div>
-                    </div>
-
                 </div>
+                
+                <div class="flex items-center justify-start space-x-4 pt-4">
+                    <button
+                        class="w-auto p-4 text-base font-semibold text-center text-white duration-300 ease-in-out bg-yellow-700 rounded-full hover:bg-black focus:outline-none focus:ring-4 focus:ring-blue-300 "
+                        data-popup="talkForm">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class=" size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </button>
+                    <div class="text-lg font-semibold">Talk to Us</div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -993,17 +983,17 @@
                 <h1 class="p-2 text-2xl font-semibold md:text-4xl" style="color: #3e4855;">About the Test</h1>
                 <div>
                     <div class="flex items-start gap-1">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="2.0" stroke="currentColor" class="w-6 h-6 mt-5 text-gray-500">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
-                            <p class="mt-2 text-gray-900 md:mt-5 font-open lg:text-lg">
-                                The OET is available for 12 professions:
-                                Dentistry, Dietetics, Medicine, Nursing, Occupational Therapy, Optometry, Pharmacy,
-                                Physiotherapy, Podiatry, Radiography, Speech Pathology, and Veterinary Science.</p>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="2.0" stroke="currentColor" class="w-6 h-6 mt-5 text-gray-500">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-gray-900 md:mt-5 font-open lg:text-lg">
+                            The OET is available for 12 professions:
+                            Dentistry, Dietetics, Medicine, Nursing, Occupational Therapy, Optometry, Pharmacy,
+                            Physiotherapy, Podiatry, Radiography, Speech Pathology, and Veterinary Science.</p>
                     </div>
 
                     <div class="flex items-start gap-1">
@@ -1048,9 +1038,9 @@
 
     <section class="max-w-screen-xl p-4 mx-auto md:py-8 sm:px-16">
         <div class="relative py-6 text-center rounded-lg bg-emerald-100">
-            <img src="../assets/icon2.svg" alt="hi" class="mx-auto w-[120px] sm:w-[180px]">
+            <img src="../assets/icon2.svg" alt="hi" class="mx-auto w-[120px] sm:w-[160px]">
             <div class="py-2">
-                <p class="text-lg font-semibold text-gray-500 md:text-2xl">Fully customized training to match your needs!
+                <p class="text-lg text-gray-500">Fully customized training to match your needs!
             </div>
             <div class="my-4">
                 <button
@@ -1637,53 +1627,51 @@
     <div id="talkForm"
         class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50">
 
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+        <div class="p-8 bg-white rounded-md popup-content">
             <form id="talk" action="{{ route('talk.send') }}" method="POST">
                 @csrf
                 <div class="p-2">
-                    <div>
-                        <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
-                            <div class="w-[97%]" role="alert">
-                                Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
-                                <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
-                            </div>
-                            <button type="button" class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
-                                data-popup-close="talkForm">&times;</button>
+                    <div class="flex justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-md">
+                        <div class="w-[97%]" role="alert">
+                            Do enter the country code of your phone number.<br> Ex: <kbd class="p-1 text-white bg-black rounded">+91</kbd> for India,
+                            <kbd class="p-1 text-white bg-black rounded">+1</kbd> for the USA.
                         </div>
-
-                        <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
-
-                        <div class="grid grid-cols-2 gap-4 my-2 mt-4">
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Name</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
-                                    required="">
-                            </div>
-                            <div class="w-full col-span-1">
-                                <label class="block pb-2 text-center input-label">Phone</label>
-                                <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
-                                    required="">
-                            </div>
-                            <div class="col-span-2 my-2">
-                                <div class="mb-4 ">
-                                    <label class="block pb-2 text-center">Email address</label>
-                                    <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
-                                        placeholder="E-mail ID" required="">
-                                </div>
-                                <div class="">
-                                    <label class="block pb-2 text-center">Message</label>
-                                    <div>
-                                        <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
-                                            placeholder="Type your message here..." required=""></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn hover:bg-teal-custom">
-                            Submit
-                        </button>
+                        <button type="button" class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-teal-300 duration-300 opacity-75 p-2 px-4"
+                            data-popup-close="talkForm">&times;</button>
                     </div>
+
+                    <h1 class="my-2 font-semibold text-center">Talk to Us!</h1>
+
+                    <div class="grid grid-cols-2 gap-4 my-2 mt-4">
+                        <div class="w-full col-span-1">
+                            <label class="block pb-2 text-center input-label">Name</label>
+                            <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="username" placeholder="Full Name"
+                                required="">
+                        </div>
+                        <div class="w-full col-span-1">
+                            <label class="block pb-2 text-center input-label">Phone</label>
+                            <input type="text" class="p-2 px-4 border border-gray-200 rounded w-100" name="userphone" placeholder="Phone Number"
+                                required="">
+                        </div>
+                        <div class="col-span-2 my-2">
+                            <div class="mb-4 ">
+                                <label class="block pb-2 text-center">Email address</label>
+                                <input type="email" class="w-full p-2 px-4 border border-gray-200 rounded" name="useremail"
+                                    placeholder="E-mail ID" required="">
+                            </div>
+                            <div class="">
+                                <label class="block pb-2 text-center">Message</label>
+                                <div>
+                                    <textarea class="w-full p-2 px-4 border border-gray-200 rounded resize-none" rows="4" name="message"
+                                        placeholder="Type your message here..." required=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-md btn hover:bg-teal-custom">
+                        Submit
+                    </button>
                 </div>
             </form>
         </div>
@@ -1691,19 +1679,19 @@
 
     <div id="requestForm" class="fixed top-0 left-0 z-50 flex items-center justify-center hidden w-full h-full overflow-y-auto bg-black bg-opacity-50">
 
-        <div class="p-8 bg-white rounded-lg shadow-md popup-content">
+        <div class="p-8 bg-white rounded-md shadow-md popup-content">
             <form id="request" action="{{ route('request.send') }}" method="POST">
                 @csrf
                 <div class="p-2">
                     <div>
-                        <div class="flex items-center justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-lg">
+                        <div class="flex items-center justify-between p-4 mb-0 space-x-4 bg-teal-200 rounded-md">
 
                             <div class="w-[97%]" role="alert">
                                 <h1 class="my-auto text-2xl font-semibold">Request Free Test</h1> 
                             </div>
 
                             <button type="button"
-                                class="relative top-0 left-0 mb-4 text-3xl text-gray-500 w-[3%] ms-auto hover:text-gray-700"
+                                class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-teal-300 duration-300 opacity-75 p-2 px-4"
                                 data-popup-close="requestForm">&times;
                             </button>
 
@@ -1746,7 +1734,7 @@
                             </div>
                         </div>
                         <button type="submit"
-                            class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-lg btn btn-block transition-3d-hover contact_button hover:bg-teal-custom">Submit</button>
+                            class="block px-6 py-2 mx-auto text-white duration-300 bg-teal-700 rounded-md btn btn-block transition-3d-hover contact_button hover:bg-teal-custom">Submit</button>
                     </div>
                 </div>
             </form>
@@ -1757,20 +1745,20 @@
     <div id="popup" class="fixed inset-0 z-50 flex items-center justify-center hidden w-screen h-full bg-gray-700 bg-opacity-50 ">
         <div class="popup-content">
             <form id="demoForm" action="{{ route('demo.send') }}" method="POST"
-        class="p-4 m-8 bg-white rounded-lg sm:p-8 w-92  sm:w-[550px] max-h-[95vh] overflow-y-auto">
+        class="p-4 m-8 bg-white rounded-md sm:p-8 w-92  sm:w-[550px] max-h-[95vh] overflow-y-auto">
                 @csrf
-                <div class="flex items-start justify-between p-4 mb-0 bg-gray-100 rounded-lg">
+                <div class="flex items-start justify-between p-4 mb-0 bg-gray-100 rounded-md">
                     <div class="w-[97%]" role="alert">
                         Do enter the country code of your phone number.<br> Ex: <kbd>+91</kbd> for India, <kbd>+1</kbd> for the
                         USA.
                     </div>
                     <button type="button"
-                        class="mb-4 text-4xl text-gray-800 duration-300 ms-auto hover:text-teal-700"
+                        class="relative top-0 left-0 text-3xl text-gray-500 ms-auto hover:text-gray-700 rounded hover:bg-gray-300 duration-300 opacity-75 p-2 py-1"
                         data-popup-close="popup">&times;</button>
                 </div>
 
                 <h3 class="mt-3 text-teal-900">Where would you want to attend a demo</h3>
-                <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-lg">
+                <div class="flex justify-center p-3 my-3 space-x-4 bg-gray-100 rounded-md">
                     <div class="flex items-center">
                         <input class="" type="radio" name="location" id="Ameerpet" value="Ameerpet">
                         <label class="ml-2" for="Ameerpet">Ameerpet</label>
@@ -1787,7 +1775,7 @@
 
                 <h3 class="text-teal-900">Which session would you like to try?</h3>
                 <div class="bg-gray-100">
-                    <div class="flex justify-center p-3 mt-3 space-x-4 rounded-lg">
+                    <div class="flex justify-center p-3 mt-3 space-x-4 rounded-md">
                         <div class="flex items-center">
                             <input class="focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-white" type="checkbox" name="courses[]" id="gre" value="GRE">
                             <label class="ml-2" for="gre">GRE</label>
@@ -1805,7 +1793,7 @@
                             <label class="ml-2" for="pte">PTE</label>
                         </div>
                     </div>
-                    <div class="flex justify-center p-3 mb-3 space-x-4 rounded-lg">
+                    <div class="flex justify-center p-3 mb-3 space-x-4 rounded-md">
                         <div class="flex items-center">
                             <input class="focus:ring-2 focus:ring-blue-500 focus:ring-offset-1 focus:ring-offset-white" type="checkbox" name="courses[]" id="oet" value="OET">
                             <label class="ml-2" for="oet">OET</label>
@@ -1940,6 +1928,7 @@
 
     <script src="../dist/voilaui.js"></script>  
     <script src="../dist/token.js"></script>
+    <script src="../dist/quiz.js"></script>
     <script src="../dist/oetQuizz.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
 

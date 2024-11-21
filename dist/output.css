@@ -1262,10 +1262,6 @@ video {
   height: max-content;
 }
 
-.h-\[350px\] {
-  height: 350px;
-}
-
 .max-h-0 {
   max-height: 0px;
 }
@@ -3698,6 +3694,11 @@ lite-youtube.lyt-activated>.lty-playbtn {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-opacity-40:hover {
   --tw-bg-opacity: 0.4;
 }
@@ -3894,12 +3895,6 @@ lite-youtube.lyt-activated>.lty-playbtn {
   opacity: 1;
 }
 
-@media (max-width: 1700px) {
-  .max-\[1700px\]\:h-\[400px\] {
-    height: 400px;
-  }
-}
-
 @media (min-width: 640px) {
   .sm\:relative {
     position: relative;
@@ -3931,6 +3926,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .sm\:m-8 {
     margin: 2rem;
+  }
+
+  .sm\:m-0 {
+    margin: 0px;
   }
 
   .sm\:mx-0 {
@@ -4113,6 +4112,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
     width: auto;
   }
 
+  .sm\:w-\[160px\] {
+    width: 160px;
+  }
+
   .sm\:max-w-sm {
     max-width: 24rem;
   }
@@ -4212,6 +4215,10 @@ lite-youtube.lyt-activated>.lty-playbtn {
 
   .sm\:p-8 {
     padding: 2rem;
+  }
+
+  .sm\:p-6 {
+    padding: 1.5rem;
   }
 
   .sm\:px-0 {
@@ -5699,10 +5706,6 @@ lite-youtube.lyt-activated>.lty-playbtn {
   .xl\:text-8xl {
     font-size: 6rem;
     line-height: 1;
-  }
-
-  .min-\[1200px\]\:h-\[350px\] {
-    height: 350px;
   }
 }
 
