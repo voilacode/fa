@@ -36,8 +36,10 @@ module.exports = {
         // 'julius': ["Julius Sans One", 'sans-serif'],
         // 'league': ["League Gothic", 'sans-serif'],
         // 'sifonn': ["Sifonn", 'sans-serif'],
-    }
-    
+      },
+      screens: {
+        'xl': '1200px', // Custom breakpoint
+      },    
   },
   
   plugins: [],
