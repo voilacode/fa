@@ -4000,6 +4000,14 @@ lite-youtube.lyt-activated>.lty-playbtn {
     margin-top: 1.75rem;
   }
 
+  .sm\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .sm\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .sm\:block {
     display: block;
   }
